@@ -113,4 +113,45 @@ class ProjectContracts(unittest.TestCase):
   result=subprocess.run([sys.executable,str(ROOT/"tools/validate_project.py")],capture_output=True,text=True)
   self.assertEqual(result.returncode,0,result.stdout+result.stderr)
 
+
+ def test_daily_intelligence_contract_matches_project_instructions(self):
+  instructions=(ROOT/"01_INSTRUKSI_PROJECT.md").read_text(encoding="utf-8")
+  daily=(ROOT/"06_DAILY_INTELLIGENCE_PROTOCOL.md").read_text(encoding="utf-8")
+  setup=(ROOT/"00_SETUP_AND_OPERATIONS.md").read_text(encoding="utf-8")
+  for text in (instructions,daily,setup):
+   self.assertIn("3–5",text)
+   self.assertIn("lebih sedikit",text.lower())
+   self.assertIn("HUMAN BODY & MIND",text)
+   self.assertIn("EARTH & COSMOS",text)
+   self.assertIn("CIVILIZATION & FUTURE",text)
+  self.assertIn("Jangan memenuhi kuota dengan ide lemah",daily)
+  self.assertIn("HOLD",instructions)
+
+ def test_daily_discovery_lanes_are_not_editorial_pillars(self):
+  daily=(ROOT/"06_DAILY_INTELLIGENCE_PROTOCOL.md").read_text(encoding="utf-8")
+  self.assertIn("Lima lane discovery",daily)
+  self.assertIn("Tiga pilar editorial",daily)
+  self.assertIn("bukan pilar utama baru",daily)
+
+ def test_official_scoring_weights_are_unchanged_and_sum_to_100(self):
+  scoring=(ROOT/"08_IDEA_SCORING_SYSTEM.md").read_text(encoding="utf-8")
+  expected=["10%","25%","15%","20%","15%","10%","5%"]
+  for weight in expected: self.assertIn(weight,scoring)
+  self.assertIn("Formula:",scoring)
+
+ def test_asset_identifier_contract_is_typed(self):
+  architecture=(ROOT/"02A_MODULE_ARCHITECTURE.md").read_text(encoding="utf-8")
+  register=(ROOT/"10_ASSET_AND_SHOT_REGISTER.md").read_text(encoding="utf-8")
+  for token in ["AST-CHAR-###","AST-LOC-###","AST-PROP-###","AST-REF-###","AST-KF-###","AST-VIDEO-###","AST-AUDIO-###","AST-MASTER-###"]:
+   self.assertIn(token,architecture)
+   self.assertIn(token,register)
+  self.assertNotIn("Asset: AST-###",architecture)
+
+ def test_persistence_and_human_approval_are_explicit(self):
+  instructions=(ROOT/"01_INSTRUKSI_PROJECT.md").read_text(encoding="utf-8")
+  daily=(ROOT/"06_DAILY_INTELLIGENCE_PROTOCOL.md").read_text(encoding="utf-8")
+  self.assertIn("Percakapan atau sitasi bukan bukti persistensi",instructions)
+  self.assertIn("Jangan mengklaim GitHub/Project Files diperbarui tanpa konfirmasi",daily)
+  self.assertIn("persetujuan eksplisit",instructions.lower())
+
 if __name__=="__main__": unittest.main()
