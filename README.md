@@ -33,7 +33,8 @@ WHAT IF WORLD is a repeatable production system turning monitored questions and 
 - 11_QA_AND_RELEASE_PROTOCOL.md — quality and release gates.
 - 12_GITHUB_REFERENCE_REVIEW.md — architecture references.
 - LICENSING_DECISION_RECORD.md — owner-selected licensing direction and remaining release gates; not a license grant.
-- RIGHTS_AND_PROVENANCE_REGISTER.md — ownership and third-party rights audit work queue; no item is pre-cleared.
+- RIGHTS_AND_PROVENANCE_REGISTER.md — evidence-based ownership and third-party rights audit; no project-wide clearance claimed.
+- PRODUCTION_INTEGRATION_READINESS.md — verified automation boundary, adapter contracts, security controls and implementation phases.
 - schemas/ — JSON Schema contracts.
 - examples/ — sample manifest.
 - tools/ — dependency-free operational validators.
