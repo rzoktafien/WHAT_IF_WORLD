@@ -62,6 +62,17 @@ def validate(data,release_gate=False):
         if not isinstance(c,dict): continue
         cid=c.get("id"); status=c.get("status"); canonical=c.get("canonical_reference")
         if status not in CHARACTER_STATUSES: errors.append(f"character {cid} has invalid status")
+        if not isinstance(c.get("owner"),str) or not c.get("owner","").strip(): errors.append(f"character {cid} is missing owner")
+        for field in ("created_at","updated_at"):
+            value=c.get(field)
+            if not isinstance(value,str) or not value.strip(): errors.append(f"character {cid} is missing {field}")
+        if not isinstance(canonical,dict): errors.append(f"character {cid} has no canonical_reference")
+        else:
+            for field in ("provenance","creator","source"):
+                if not isinstance(canonical.get(field),str) or not canonical.get(field,"").strip():
+                    errors.append(f"character {cid} canonical_reference is missing {field}")
+        if "linked_shots" not in c or not isinstance(c.get("linked_shots"),list):
+            errors.append(f"character {cid} linked_shots must be an array")
         if not PATTERNS["version"].fullmatch(str(c.get("version",""))): errors.append(f"character {cid} has invalid version")
         if status=="APPROVED":
             approval=c.get("approval")
