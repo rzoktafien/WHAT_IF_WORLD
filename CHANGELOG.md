@@ -1,5 +1,14 @@
 # Changelog
 
+## [Unreleased] — V3.2 semantic manifest validation
+- Enforced production-manifest required fields, claim/source shape, and the full required shot contract in the semantic validator.
+- Rejected invalid shot states and collisions between typed asset IDs and character IDs.
+- Added regression tests for incomplete shots, invalid shot states, and cross-namespace ID collisions.
+
+
+## [Unreleased] — V3.2 generation-stage state alignment
+- Added explicit PILOT_GENERATION and BATCH_GENERATION manifest states to match the documented stage transitions and semantic validator.
+
 ## [Unreleased] — V3.2 character metadata contract
 - Require character profile owner, created/updated timestamps, linked-shot array, and canonical-reference creator/source provenance in the schema and semantic validator.
 - Add regression coverage for required profile metadata and canonical provenance.
