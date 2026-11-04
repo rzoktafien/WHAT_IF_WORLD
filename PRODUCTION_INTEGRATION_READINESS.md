@@ -45,7 +45,7 @@ Treat publishing as a separately authorized action. Use least-privilege OAuth sc
 ## 4. Security and operational controls
 - Store credentials only in an approved secret manager or GitHub Actions secrets; never in repository files, prompts, logs or manifests.
 - Use least-privilege tokens and rotate/revoke credentials on suspected exposure.
-- Pin CI actions to immutable commit SHAs after verifying upstream releases and licenses.
+- CI actions are pinned to immutable, GitHub-signature-verified upstream commits; the corresponding upstream MIT license files were inspected. Review security advisories and refresh pins through tested changes.
 - Generate a resolved dependency SBOM for the supported environment; review direct and transitive licenses.
 - Preserve immutable attempt records and hashes; never overwrite prior outputs.
 - Record provider terms, model versions, account-tier limitations and asset restrictions.
