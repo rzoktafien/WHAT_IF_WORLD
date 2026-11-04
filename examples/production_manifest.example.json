@@ -1,0 +1,38 @@
+{
+  "production_id": "WW-003",
+  "version": "0.1.0",
+  "title": "[Judul setelah ide disetujui]",
+  "state": "IDEA_APPROVED",
+  "pillar": "[PILAR]",
+  "premise": "[Premis hipotetis]",
+  "intelligence_report_id": "[REPORT-ID]",
+  "idea_id": "[IDEA-ID]",
+  "claims": [
+    {
+      "id": "CLM-001",
+      "status": "UNVERIFIED",
+      "class": "FACT",
+      "critical": true
+    }
+  ],
+  "sources": [],
+  "assets": [],
+  "shots": [],
+  "approvals": {
+    "idea": {
+      "status": "PENDING",
+      "by": null,
+      "at": null
+    },
+    "release": {
+      "status": "PENDING",
+      "by": null,
+      "at": null
+    }
+  },
+  "release": {
+    "status": "UNRELEASED",
+    "url": null,
+    "published_at": null
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WHAT IF WORLD Claim",
+  "type": "object",
+  "required": [
+    "id",
+    "claim",
+    "class",
+    "status",
+    "confidence",
+    "safe_wording"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^CLM-[0-9]{3,}$"
+    },
+    "claim": {
+      "type": "string",
+      "minLength": 5
+    },
+    "class": {
+      "enum": [
+        "FACT",
+        "EXTRAPOLATION",
+        "FICTIONAL_ASSUMPTION"
+      ]
+    },
+    "status": {
+      "enum": [
+        "SUPPORTED",
+        "QUALIFIED",
+        "UNVERIFIED",
+        "REJECTED"
+      ]
+    },
+    "confidence": {
+      "enum": [
+        "HIGH",
+        "MEDIUM",
+        "LOW"
+      ]
+    },
+    "source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^SRC-[0-9]{3,}$"
+      }
+    },
+    "safe_wording": {
+      "type": "string",
+      "minLength": 5
+    },
+    "critical": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
