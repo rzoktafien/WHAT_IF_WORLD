@@ -108,7 +108,7 @@ class ProjectContracts(unittest.TestCase):
  def test_validator_rejects_asset_character_id_collision(self):
   data=copy.deepcopy(self.manifest)
   data["assets"]=[{"id":"AST-CHAR-001","rights_status":"NOT_REQUIRED"}]
-  data["character_references"]=[{"id":"AST-CHAR-001","owner":"WHAT IF WORLD team","created_at":"2026-11-05T00:00:00Z",
+  data["character_references"]=[{"id":"AST-CHAR-001","production_id":"WW-003","name":"Protagonis","identity":{"face_shape":"oval","hair":"short black hair","invariant_traits":["distinctive scar"]},"wardrobe_variants":[],"owner":"WHAT IF WORLD team","created_at":"2026-11-05T00:00:00Z",
    "updated_at":"2026-11-05T00:00:00Z","status":"DRAFT","rights_status":"NOT_REQUIRED","version":"1.0.0",
    "canonical_reference":{"kind":"prompt","prompt":"Original reference prompt","provenance":"Original","creator":"WHAT IF WORLD team","source":"Original generation"},"linked_shots":[]}]
   errors,_=validate(data)
@@ -140,13 +140,13 @@ class ProjectContracts(unittest.TestCase):
 
  def test_approved_character_requires_canonical_reference(self):
   data=copy.deepcopy(self.manifest)
-  data["character_references"]=[{"id":"AST-CHAR-001","owner":"WHAT IF WORLD team","created_at":"2026-11-05T00:00:00Z","updated_at":"2026-11-05T00:00:00Z","status":"APPROVED","rights_status":"CLEARED","version":"1.0.0"}]
+  data["character_references"]=[{"id":"AST-CHAR-001","production_id":"WW-003","name":"Protagonis","identity":{"face_shape":"oval","hair":"short black hair","invariant_traits":["distinctive scar"]},"wardrobe_variants":[],"owner":"WHAT IF WORLD team","created_at":"2026-11-05T00:00:00Z","updated_at":"2026-11-05T00:00:00Z","status":"APPROVED","rights_status":"CLEARED","version":"1.0.0"}]
   errors,_=validate(data)
   self.assertTrue(any("no canonical_reference" in e for e in errors))
 
  def test_character_reference_version_is_required_and_matches(self):
   data=copy.deepcopy(self.manifest)
-  data["character_references"]=[{"id":"AST-CHAR-001","owner":"WHAT IF WORLD team","created_at":"2026-11-05T00:00:00Z","updated_at":"2026-11-05T00:00:00Z","status":"APPROVED","rights_status":"NOT_REQUIRED","version":"1.0.0",
+  data["character_references"]=[{"id":"AST-CHAR-001","production_id":"WW-003","name":"Protagonis","identity":{"face_shape":"oval","hair":"short black hair","invariant_traits":["distinctive scar"]},"wardrobe_variants":[],"owner":"WHAT IF WORLD team","created_at":"2026-11-05T00:00:00Z","updated_at":"2026-11-05T00:00:00Z","status":"APPROVED","rights_status":"NOT_REQUIRED","version":"1.0.0",
    "canonical_reference":{"kind":"prompt","prompt":"Original prompt","provenance":"Original","creator":"WHAT IF WORLD team","source":"Original project generation"},"approval":{"by":"Producer","at":"2026-11-05T01:00:00Z"},"linked_shots":["SH-001"]}]
   data["shots"]=[{"id":"SH-001","production_id":"WW-003","purpose":"Test shot purpose","start_state":"Initial state","action":"A single action","camera_move":"Slow push in","end_state":"Final state","duration_seconds":6,
    "character_ids":["AST-CHAR-001"],"character_reference_versions":{"AST-CHAR-001":"1.0.0"},"status":"PLANNED"}]
@@ -157,7 +157,7 @@ class ProjectContracts(unittest.TestCase):
 
  def test_valid_character_and_shot_link(self):
   data=copy.deepcopy(self.manifest)
-  data["character_references"]=[{"id":"AST-CHAR-001","owner":"WHAT IF WORLD team","created_at":"2026-11-05T00:00:00Z","updated_at":"2026-11-05T00:00:00Z","status":"APPROVED","rights_status":"NOT_REQUIRED","version":"1.0.0",
+  data["character_references"]=[{"id":"AST-CHAR-001","production_id":"WW-003","name":"Protagonis","identity":{"face_shape":"oval","hair":"short black hair","invariant_traits":["distinctive scar"]},"wardrobe_variants":[],"owner":"WHAT IF WORLD team","created_at":"2026-11-05T00:00:00Z","updated_at":"2026-11-05T00:00:00Z","status":"APPROVED","rights_status":"NOT_REQUIRED","version":"1.0.0",
     "canonical_reference":{"kind":"prompt","prompt":"Original character reference prompt.","provenance":"Original","creator":"WHAT IF WORLD team","source":"Original project generation"},"approval":{"by":"Producer","at":"2026-11-05T01:00:00Z"},"linked_shots":["SH-001"]}]
   data["shots"]=[{"id":"SH-001","production_id":"WW-003","purpose":"Test shot purpose","start_state":"Initial state","action":"A single action","camera_move":"Slow push in","end_state":"Final state","duration_seconds":6,
     "character_ids":["AST-CHAR-001"],"character_reference_versions":{"AST-CHAR-001":"1.0.0"},"status":"PLANNED"}]
@@ -222,16 +222,44 @@ class ProjectContracts(unittest.TestCase):
   profile["approval"]["at"]="not-a-date-time"
   with self.assertRaises(Exception): Draft202012Validator(schema,format_checker=FormatChecker()).validate(profile)
 
+ def test_validator_rejects_character_missing_invariant_identity(self):
+  data=copy.deepcopy(self.manifest)
+  data["character_references"]=[{"id":"AST-CHAR-001","production_id":"WW-003","name":"Protagonis","identity":{"face_shape":"oval","hair":"short black hair","invariant_traits":[]},"wardrobe_variants":[],"owner":"WHAT IF WORLD team","created_at":"2026-11-05T00:00:00Z","updated_at":"2026-11-05T00:00:00Z","status":"DRAFT","rights_status":"NOT_REQUIRED","version":"1.0.0",
+   "canonical_reference":{"kind":"prompt","prompt":"Original reference prompt","provenance":"Original","creator":"WHAT IF WORLD team","source":"Original generation"},"linked_shots":[]}]
+  errors,_=validate(data)
+  self.assertTrue(any("invariant_traits" in e for e in errors))
+
+ def test_validator_blocks_unapproved_character_before_batch_generation(self):
+  data=copy.deepcopy(self.manifest); data["state"]="BATCH_GENERATION"
+  data["character_references"]=[{"id":"AST-CHAR-001","production_id":"WW-003","name":"Protagonis","identity":{"face_shape":"oval","hair":"short black hair","invariant_traits":["distinctive scar"]},"wardrobe_variants":[],"owner":"WHAT IF WORLD team","created_at":"2026-11-05T00:00:00Z","updated_at":"2026-11-05T00:00:00Z","status":"DRAFT","rights_status":"NOT_REQUIRED","version":"1.0.0",
+   "canonical_reference":{"kind":"prompt","prompt":"Original reference prompt","provenance":"Original","creator":"WHAT IF WORLD team","source":"Original generation"},"linked_shots":["SH-001"]}]
+  data["shots"]=[{"id":"SH-001","production_id":"WW-003","purpose":"Character continuity shot","duration_seconds":6,
+   "start_state":"Initial state","action":"A single action","camera_move":"Slow push in","end_state":"Final state",
+   "character_ids":["AST-CHAR-001"],"character_reference_versions":{"AST-CHAR-001":"1.0.0"},"status":"PLANNED"}]
+  errors,blockers=validate(data)
+  self.assertEqual(errors,[])
+  self.assertTrue(any("not APPROVED for generation" in b for b in blockers))
+
+ def test_validator_blocks_unresolved_asset_rights_before_pilot(self):
+  data=copy.deepcopy(self.manifest); data["state"]="PILOT_GENERATION"
+  data["assets"]=[{"id":"AST-VIDEO-001","rights_status":"PENDING"}]
+  data["shots"]=[{"id":"SH-001","production_id":"WW-003","purpose":"Asset rights gate shot","duration_seconds":6,
+   "start_state":"Initial state","action":"A single action","camera_move":"Slow push in","end_state":"Final state",
+   "asset_ids":["AST-VIDEO-001"],"status":"PLANNED"}]
+  errors,blockers=validate(data)
+  self.assertEqual(errors,[])
+  self.assertTrue(any("asset AST-VIDEO-001 rights are unresolved" in b for b in blockers))
+
  def test_validator_rejects_approved_character_without_approval_metadata(self):
   data=copy.deepcopy(self.manifest)
-  data["character_references"]=[{"id":"AST-CHAR-001","owner":"WHAT IF WORLD team","created_at":"2026-11-05T00:00:00Z","updated_at":"2026-11-05T00:00:00Z","status":"APPROVED","rights_status":"NOT_REQUIRED","version":"1.0.0",
+  data["character_references"]=[{"id":"AST-CHAR-001","production_id":"WW-003","name":"Protagonis","identity":{"face_shape":"oval","hair":"short black hair","invariant_traits":["distinctive scar"]},"wardrobe_variants":[],"owner":"WHAT IF WORLD team","created_at":"2026-11-05T00:00:00Z","updated_at":"2026-11-05T00:00:00Z","status":"APPROVED","rights_status":"NOT_REQUIRED","version":"1.0.0",
    "canonical_reference":{"kind":"prompt","prompt":"Original reference","provenance":"Original","creator":"WHAT IF WORLD team","source":"Original project generation"}}]
   errors,_=validate(data)
   self.assertTrue(any("missing approval.by or approval.at" in e for e in errors))
 
  def test_validator_rejects_non_reciprocal_shot_to_character_link(self):
   data=copy.deepcopy(self.manifest)
-  data["character_references"]=[{"id":"AST-CHAR-001","owner":"WHAT IF WORLD team","created_at":"2026-11-05T00:00:00Z","updated_at":"2026-11-05T00:00:00Z","status":"DRAFT","rights_status":"NOT_REQUIRED","version":"1.0.0",
+  data["character_references"]=[{"id":"AST-CHAR-001","production_id":"WW-003","name":"Protagonis","identity":{"face_shape":"oval","hair":"short black hair","invariant_traits":["distinctive scar"]},"wardrobe_variants":[],"owner":"WHAT IF WORLD team","created_at":"2026-11-05T00:00:00Z","updated_at":"2026-11-05T00:00:00Z","status":"DRAFT","rights_status":"NOT_REQUIRED","version":"1.0.0",
    "canonical_reference":{"kind":"prompt","prompt":"Original reference","provenance":"Original","creator":"WHAT IF WORLD team","source":"Original project generation"},"linked_shots":[]}]
   data["shots"]=[{"id":"SH-001","production_id":"WW-003","purpose":"Test shot purpose","start_state":"Initial state","action":"A single action","camera_move":"Slow push in","end_state":"Final state","duration_seconds":6,"character_ids":["AST-CHAR-001"],
    "character_reference_versions":{"AST-CHAR-001":"1.0.0"},"status":"PLANNED"}]
