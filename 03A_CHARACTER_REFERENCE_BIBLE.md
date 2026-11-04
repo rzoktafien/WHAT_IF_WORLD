@@ -7,10 +7,10 @@ Menjaga identitas visual karakter berulang/kritis lintas shot. Karakter latar sa
 
 ## Kontrak identitas
 - ID permanen: AST-CHAR-###. Jangan pernah mendaur ulang ID.
-- Catat production ID, versi profil semver, nama/label fiksi, status, pemilik, timestamp, dan shot terkait.
+- Catat production ID, versi profil semver, nama/label fiksi, status, pemilik (`owner`), timestamp `created_at`/`updated_at`, dan `linked_shots` (array, termasuk kosong bila belum dipakai).
 - Catat ciri visual yang diperlukan untuk kontinuitas: bentuk wajah, fitur pembeda, rambut, warna kulit bila relevan secara visual, postur/build, dan ciri invariant.
 - Pisahkan identitas invariant dari ekspresi, pose, pencahayaan, kondisi basah/kotor, riasan luka, dan wardrobe.
-- Simpan canonical reference: URI gambar master atau prompt referensi persis, provenance, creator/source, rights status, checksum bila tersedia.
+- Simpan canonical reference: URI gambar master atau prompt referensi persis, `provenance`, `creator`, `source`, rights status pada profil, dan checksum bila tersedia.
 - Wardrobe variants harus diberi ID dan shot/fase pemakaian.
 - Catat prohibited drift dan perubahan yang diizinkan.
 - Hindari inferensi identitas orang nyata, etnisitas, kondisi medis, atau atribut sensitif dari gambar generatif.
@@ -55,6 +55,9 @@ id: AST-CHAR-001
 production_id: WW-003
 version: 1.0.0
 name: "[label karakter fiksi]"
+owner: "[pemilik profil]"
+created_at: "2026-11-05T00:00:00Z"
+updated_at: "2026-11-05T00:00:00Z"
 status: DRAFT
 identity:
   face_shape: "[bentuk wajah]"
@@ -66,6 +69,8 @@ canonical_reference:
   prompt: "[prompt referensi persis dalam bahasa Inggris]"
   uri: null
   provenance: "originally generated for this project"
+  creator: "WHAT IF WORLD team"
+  source: "original project generation"
   checksum: null
 wardrobe_variants: []
 rights_status: NOT_REQUIRED
