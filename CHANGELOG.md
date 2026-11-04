@@ -8,6 +8,7 @@
 - Added GitHub Actions CI for Python 3.11, 3.12, and 3.13, including JSON Schema meta-validation and manifest-schema validation.
 - Reconciled setup/README with repository contents and removed the unsupported legacy-file assumption.
 - Replaced stale validation claims with GitHub Actions as the authoritative execution record.
+- Recorded the owner-selected source-available commercial licensing direction; final license text, rights inventory, legal review, and publication remain pending.
 
 ## 3.0.0 — 2026-11-04
 - Reframed WHAT IF WORLD as a stage-gated production module.
