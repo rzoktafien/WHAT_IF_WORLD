@@ -12,10 +12,11 @@ WHAT IF WORLD is a repeatable production system turning monitored questions and 
 1. Read AGENTS.md and 00_SETUP_AND_OPERATIONS.md.
 2. Copy 01_INSTRUKSI_PROJECT.md into ChatGPT Project Instructions.
 3. Upload operating documents listed in the setup guide.
-4. Run `python tools/validate_project.py`.
-5. Run `python -m unittest discover -s tests -v`.
-6. Validate a production record with `python tools/validate_manifest.py path/to/manifest.json`.
-7. Never pass a stage gate without evidence and human approval.
+4. Install development checks with `python -m pip install -r requirements-dev.txt`.
+5. Run `python tools/validate_project.py`.
+6. Run `python -m unittest discover -s tests -v`.
+7. Validate a production record with `python tools/validate_manifest.py path/to/manifest.json`.
+8. Never pass a stage gate without evidence and human approval.
 
 ## Core operating model
 `MONITOR → TRIAGE → RESEARCH → STORY → PRE-PRODUCTION → GENERATE → EDIT → QA → RELEASE → ARCHIVE`
@@ -33,8 +34,9 @@ WHAT IF WORLD is a repeatable production system turning monitored questions and 
 - 12_GITHUB_REFERENCE_REVIEW.md — architecture references.
 - schemas/ — JSON Schema contracts.
 - examples/ — sample manifest.
-- tools/ — dependency-free validators.
-- tests/ — automated contract tests.
+- tools/ — dependency-free operational validators.
+- tests/ — automated contract and JSON Schema tests.
+- requirements-dev.txt — pinned development-only schema validation dependency.
 - .github/workflows/validate.yml — CI on push, pull request, and manual dispatch.
 
 ## Not automated

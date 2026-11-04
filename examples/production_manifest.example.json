@@ -10,25 +10,22 @@
   "claims": [
     {
       "id": "CLM-001",
+      "claim": "[Klaim faktual yang belum diverifikasi]",
       "status": "UNVERIFIED",
       "class": "FACT",
+      "confidence": "LOW",
+      "source_ids": [],
+      "safe_wording": "[Redaksi aman setelah riset]",
       "critical": true
     }
   ],
   "sources": [],
   "assets": [],
+  "character_references": [],
   "shots": [],
   "approvals": {
-    "idea": {
-      "status": "PENDING",
-      "by": null,
-      "at": null
-    },
-    "release": {
-      "status": "PENDING",
-      "by": null,
-      "at": null
-    }
+    "idea": {"status": "PENDING", "by": null, "at": null},
+    "release": {"status": "PENDING", "by": null, "at": null}
   },
   "release": {
     "status": "UNRELEASED",

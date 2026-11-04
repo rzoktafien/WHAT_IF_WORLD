@@ -5,6 +5,9 @@ import sys
 import unittest
 from pathlib import Path
 
+from jsonschema import Draft202012Validator
+from referencing import Registry, Resource
+
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"tools"))
 from validate_manifest import validate
@@ -19,14 +22,26 @@ class ProjectContracts(unittest.TestCase):
  def test_required_documents_and_workflow_exist(self):
   for name in ["AGENTS.md","02A_MODULE_ARCHITECTURE.md","03A_CHARACTER_REFERENCE_BIBLE.md",
                "07_SOURCE_AND_CLAIM_LEDGER.md","10_ASSET_AND_SHOT_REGISTER.md",
-               "11_QA_AND_RELEASE_PROTOCOL.md",".github/workflows/validate.yml"]:
+               "11_QA_AND_RELEASE_PROTOCOL.md",".github/workflows/validate.yml","requirements-dev.txt"]:
    self.assertTrue((ROOT/name).is_file(),name)
 
- def test_all_schemas_are_valid_json(self):
+ def test_all_schemas_are_valid_json_schema(self):
   for path in (ROOT/"schemas").glob("*.json"):
    schema=json.loads(path.read_text(encoding="utf-8"))
    self.assertEqual(schema["$schema"],"https://json-schema.org/draft/2020-12/schema")
-   self.assertEqual(schema["type"],"object"); self.assertTrue(schema["required"])
+   Draft202012Validator.check_schema(schema)
+
+ def test_example_manifest_conforms_to_production_schema(self):
+  schema_dir=ROOT/"schemas"
+  resources=[]
+  for path in schema_dir.glob("*.schema.json"):
+   item=json.loads(path.read_text(encoding="utf-8"))
+   item["$id"]=path.resolve().as_uri()
+   resources.append((path.resolve().as_uri(),Resource.from_contents(item)))
+  root=json.loads((schema_dir/"production_manifest.schema.json").read_text(encoding="utf-8"))
+  root["$id"]=(schema_dir/"production_manifest.schema.json").resolve().as_uri()
+  registry=Registry().with_resources(resources)
+  Draft202012Validator(root,registry=registry).validate(self.manifest)
 
  def test_example_manifest_passes_format_validation(self):
   errors,blockers=validate(self.manifest)
