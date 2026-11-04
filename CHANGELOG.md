@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased] — V3.2 contract hardening
+- Aligned global editorial and platform distribution duration guidance to the active 45–60 second short-form default.
 - Added WW-003 pre-production completion addendum V0.2 with typed continuity assets, shot-level claim mapping, keyframe/video prompts, audio/subtitle/edit maps, rights status, and explicit HOLD gates.
 - Expressed official idea-scoring weights explicitly as percentages to satisfy the unchanged scoring-contract test.
 - Unified Project Instructions, Daily Intelligence, and setup guidance around a two-layer interaction/evidence contract.
