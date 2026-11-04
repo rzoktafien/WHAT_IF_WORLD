@@ -2,32 +2,36 @@
   "module": "WHAT IF WORLD Production Module",
   "development_line": "V3.2",
   "status": "PASS",
-  "validated_commit": "17b3f6b09c607d9474e5915050c9c27162b17a4c",
-  "pull_request": "https://github.com/rzoktafien/WHAT_IF_WORLD/pull/1",
+  "validated_commit": "621ddf61a325e93568213cb06070785ec55e9653",
+  "pull_request": "https://github.com/rzoktafien/WHAT_IF_WORLD/pull/4",
   "workflow": "WHAT IF WORLD validation",
   "workflow_runs": [
     {
-      "run_id": 41834330823,
+      "run_id": 41887657882,
       "event": "push",
-      "url": "https://github.com/rzoktafien/WHAT_IF_WORLD/actions/runs/41834330823",
+      "url": "https://github.com/rzoktafien/WHAT_IF_WORLD/actions/runs/41887657882",
       "conclusion": "success"
     },
     {
-      "run_id": 41834340242,
+      "run_id": 41887669236,
       "event": "pull_request",
-      "url": "https://github.com/rzoktafien/WHAT_IF_WORLD/actions/runs/41834340242",
+      "url": "https://github.com/rzoktafien/WHAT_IF_WORLD/actions/runs/41887669236",
       "conclusion": "success"
     }
   ],
   "matrix": {
-    "python_versions": ["3.11", "3.12", "3.13"],
+    "python_versions": [
+      "3.11",
+      "3.12",
+      "3.13"
+    ],
     "repository_contract_validation": "PASS on all versions",
-    "json_schema_meta_validation": "PASS on all versions using Draft 2020-12 validator",
+    "json_schema_meta_validation": "PASS on all versions",
     "example_manifest_schema_validation": "PASS on all versions with local references resolved",
-    "character_profile_schema_validation": "PASS for valid profile; rejects missing identity invariants",
+    "character_profile_schema_validation": "PASS for valid profile; rejects missing identity invariants and missing approval evidence",
     "unit_tests": {
-      "count_per_version": 15,
-      "total_matrix_executions": 45,
+      "count_per_version": 19,
+      "total_matrix_executions": 57,
       "failures": 0,
       "errors": 0,
       "result": "PASS on all versions"
@@ -39,17 +43,18 @@
     "dangling source references",
     "dangling character references",
     "approved character missing canonical reference",
+    "approved character missing approval metadata",
     "character profile version must match shot reference version",
     "character-to-shot links must be reciprocal",
     "valid character-to-shot linkage",
     "invalid shot duration",
     "critical unresolved claim release blocker"
   ],
-  "corrective_test_history": "An earlier V3.2 test run exposed an over-escaped semantic-version regular expression. The defect was corrected and the final 15-test matrix passed on all supported Python versions.",
   "limitations": [
+    "These workflow runs validate the merge commit 621ddf61; they do not validate later commits in this PR branch.",
     "No video generation, audio rendering, editing, or publication integration was exercised.",
     "The example manifest is intentionally incomplete and must remain blocked from release.",
     "Commercial distribution and repository license remain owner decisions."
   ],
-  "report_note": "This report records the successful push and pull_request CI runs for validated_commit. The report metadata is maintained separately from the code snapshot it records; CI on the current PR head remains the authoritative check."
+  "report_note": "This report is a historical record of the post-merge validation snapshot. The GitHub Actions run attached to the current commit/PR head is authoritative for subsequent changes; update this report only with evidence from completed runs."
 }
