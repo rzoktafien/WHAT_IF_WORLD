@@ -77,6 +77,20 @@ class ProjectContracts(unittest.TestCase):
   errors,blockers=validate(self.manifest)
   self.assertEqual(errors,[]); self.assertTrue(blockers)
 
+ def test_generation_substages_are_valid_manifest_states(self):
+  schema_dir=ROOT/"schemas"; resources=[]
+  for path in schema_dir.glob("*.schema.json"):
+   item=json.loads(path.read_text(encoding="utf-8")); item["$id"]=path.resolve().as_uri()
+   resources.append((path.resolve().as_uri(),Resource.from_contents(item)))
+  root=json.loads((schema_dir/"production_manifest.schema.json").read_text(encoding="utf-8"))
+  root["$id"]=(schema_dir/"production_manifest.schema.json").resolve().as_uri()
+  validator=Draft202012Validator(root,registry=Registry().with_resources(resources),format_checker=FormatChecker())
+  for state in ("PILOT_GENERATION","BATCH_GENERATION"):
+   data=copy.deepcopy(self.manifest); data["state"]=state
+   validator.validate(data)
+   errors,_=validate(data)
+   self.assertEqual(errors,[],state)
+
  def test_release_gate_blocks_unverified_critical_claim(self):
   errors,blockers=validate(self.manifest,release_gate=True)
   self.assertEqual(errors,[])
