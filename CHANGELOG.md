@@ -1,5 +1,10 @@
 # Changelog
 
+## [Unreleased] — V3.2 CI supply-chain hardening
+- Pinned GitHub Actions checkout/setup-python to immutable, GitHub-signature-verified upstream commits after inspecting their MIT license files.
+- Recorded preliminary dependency and CI-action provenance evidence; full transitive SBOM and project ownership review remain open.
+
+
 ## [Unreleased] — V3.2 character schema and generation gates
 - Enforced character identity invariants, production ownership, canonical-reference kind/payload, wardrobe variants, rights status, and timezone-aware timestamps in semantic validation.
 - Blocked pilot/batch generation and downstream stages when shot-linked character approval or asset/character rights are unresolved.
