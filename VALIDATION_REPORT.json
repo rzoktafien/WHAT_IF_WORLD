@@ -3,7 +3,7 @@
   "development_line": "V3.2",
   "status": "PASS",
   "validated_commit": "f24f9d842c40a64ed62bd20ccc11177f1dc72481",
-  "pull_request": "https://github.com/rzoktafien/WHAT_IF_WORLD/pull/5",
+  "pull_request": "https://github.com/rzoktafien/WHAT_IF_WORLD/pull/6",
   "workflow": "WHAT IF WORLD validation",
   "workflow_runs": [
     {
@@ -45,10 +45,9 @@
     "critical unresolved claim release blocker"
   ],
   "limitations": [
-    "The recorded workflow runs validate the merge commit 621ddf61; they do not validate later commits in this PR branch.",
     "No video generation, audio rendering, editing, or publication integration was exercised.",
     "The example manifest is intentionally incomplete and must remain blocked from release.",
     "Commercial distribution and repository license remain owner decisions."
   ],
-  "report_note": "Post-merge validation snapshot for commit f24f9d842c40a64ed62bd20ccc11177f1dc72481. GitHub Actions run 41901666963 completed successfully on Python 3.11, 3.12, and 3.13. A subsequent CI run will validate the report update itself."
+  "report_note": "Post-merge validation snapshot for commit f24f9d842c40a64ed62bd20ccc11177f1dc72481. GitHub Actions run 41901666963 completed successfully on Python 3.11, 3.12, and 3.13. This report update is separately validated by the CI run attached to this pull request."
 }
