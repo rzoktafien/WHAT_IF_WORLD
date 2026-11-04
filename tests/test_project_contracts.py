@@ -104,7 +104,7 @@ class ProjectContracts(unittest.TestCase):
  def test_valid_character_and_shot_link(self):
   data=copy.deepcopy(self.manifest)
   data["character_references"]=[{"id":"AST-CHAR-001","status":"APPROVED","rights_status":"NOT_REQUIRED","version":"1.0.0",
-    "canonical_reference":{"kind":"prompt","prompt":"Original character reference prompt."},"linked_shots":["SH-001"]}]
+    "canonical_reference":{"kind":"prompt","prompt":"Original character reference prompt."},"approval":{"by":"Producer","at":"2026-11-05T01:00:00Z"},"linked_shots":["SH-001"]}]
   data["shots"]=[{"id":"SH-001","production_id":"WW-003","duration_seconds":6,
     "character_ids":["AST-CHAR-001"],"character_reference_versions":{"AST-CHAR-001":"1.0.0"},"status":"PLANNED"}]
   errors,_=validate(data); self.assertEqual(errors,[])
