@@ -1,5 +1,9 @@
 # Changelog
 
+## [Unreleased] — V3.2 character metadata contract
+- Require character profile owner, created/updated timestamps, linked-shot array, and canonical-reference creator/source provenance in the schema and semantic validator.
+- Add regression coverage for required profile metadata and canonical provenance.
+
 ## [Unreleased] — V3.2 validation hardening
 - Upgraded repository validation to execute Draft 2020-12 schema validation with format checking and resolved local schema references, in addition to structural checks.
 - Added regression coverage for malformed approval timestamps and refreshed the validation report to identify the exact post-merge commit and CI evidence.
