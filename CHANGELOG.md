@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased] — V3.2 contract hardening
+- Expressed official idea-scoring weights explicitly as percentages to satisfy the unchanged scoring-contract test.
 - Unified Project Instructions, Daily Intelligence, and setup guidance around a two-layer interaction/evidence contract.
 - Aligned the repository's default short-form duration with active Project Instructions (9:16, 45–60 seconds).
 - Standardized the 3–5 qualified-candidate target while allowing fewer when evidence is insufficient; removed quota pressure.
