@@ -120,12 +120,12 @@ class ProjectContracts(unittest.TestCase):
   setup=(ROOT/"00_SETUP_AND_OPERATIONS.md").read_text(encoding="utf-8")
   for text in (instructions,daily,setup):
    self.assertIn("3–5",text)
-  self.assertIn("Satu atau dua kandidat tetap sah",instructions)
-  self.assertIn("Satu atau dua kandidat dapat diterima",daily)
-  self.assertIn("fewer are valid",setup)
    self.assertIn("HUMAN BODY & MIND",text)
    self.assertIn("EARTH & COSMOS",text)
    self.assertIn("CIVILIZATION & FUTURE",text)
+  self.assertIn("Satu atau dua kandidat tetap sah",instructions)
+  self.assertIn("Satu atau dua kandidat dapat diterima",daily)
+  self.assertIn("fewer are valid",setup)
   self.assertIn("Jangan memenuhi kuota dengan ide lemah",daily)
   self.assertIn("HOLD",instructions)
 
