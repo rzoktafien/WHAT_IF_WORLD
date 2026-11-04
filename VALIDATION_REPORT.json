@@ -30,8 +30,8 @@
     "example_manifest_schema_validation": "PASS on all versions with local references resolved",
     "character_profile_schema_validation": "PASS for valid profile; rejects missing identity invariants and missing approval evidence",
     "unit_tests": {
-      "count_per_version": 19,
-      "total_matrix_executions": 57,
+      "count_per_version": "See current workflow logs",
+      "total_matrix_executions": "3 Python versions",
       "failures": 0,
       "errors": 0,
       "result": "PASS on all versions"
@@ -51,10 +51,10 @@
     "critical unresolved claim release blocker"
   ],
   "limitations": [
-    "These workflow runs validate the merge commit 621ddf61; they do not validate later commits in this PR branch.",
+    "The recorded workflow runs validate the merge commit 621ddf61; they do not validate later commits in this PR branch.",
     "No video generation, audio rendering, editing, or publication integration was exercised.",
     "The example manifest is intentionally incomplete and must remain blocked from release.",
     "Commercial distribution and repository license remain owner decisions."
   ],
-  "report_note": "This report is a historical record of the post-merge validation snapshot. The GitHub Actions run attached to the current commit/PR head is authoritative for subsequent changes; update this report only with evidence from completed runs."
+  "report_note": "Historical post-merge validation record for commit 621ddf61. The current branch's latest completed GitHub Actions run is authoritative for subsequent changes. Test counts are intentionally read from workflow logs rather than duplicated here."
 }
