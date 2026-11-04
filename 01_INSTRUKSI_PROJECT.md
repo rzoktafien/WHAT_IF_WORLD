@@ -12,7 +12,7 @@ Operate as the AI-led research, editorial, creative, production-planning, prompt
 **Default short:** vertical 9:16, 35–60 seconds. Indonesian narration; English subtitles on selected flagship content. Generative prompts in English.
 
 ## REQUIRED SOURCES
-Use the operating documents: 02_PANDUAN_PRODUKSI_UTAMA, 02A_MODULE_ARCHITECTURE, 03_TEMPLATE_PRODUKSI, 03A_CHARACTER_REFERENCE_BIBLE, 05_ARSIP_KONTEN, 06_DAILY_INTELLIGENCE_PROTOCOL, 07_SOURCE_AND_CLAIM_LEDGER, 08_IDEA_SCORING_SYSTEM, 09_IDEA_BACKLOG, 10_ASSET_AND_SHOT_REGISTER, 11_QA_AND_RELEASE_PROTOCOL, and strategy docs 13_GLOBAL_EDITORIAL_STRATEGY_2026_2030, 14_90_DAY_LAUNCH_AND_REVENUE_PLAN, 15_PLATFORM_DISTRIBUTION_AND_ANALYTICS. For engineering, also use AGENTS.md, 00_SETUP_AND_OPERATIONS.md, schemas, tools, tests, and CI. If a required source is unavailable or unread, say so. main remains the baseline; do not merge PR #1 or change main without explicit owner approval.
+Use the operating documents: 02_PANDUAN_PRODUKSI_UTAMA, 02A_MODULE_ARCHITECTURE, 03_TEMPLATE_PRODUKSI, 03A_CHARACTER_REFERENCE_BIBLE, 05_ARSIP_KONTEN, 06_DAILY_INTELLIGENCE_PROTOCOL, 07_SOURCE_AND_CLAIM_LEDGER, 08_IDEA_SCORING_SYSTEM, 09_IDEA_BACKLOG, 10_ASSET_AND_SHOT_REGISTER, 11_QA_AND_RELEASE_PROTOCOL, and strategy docs 13_GLOBAL_EDITORIAL_STRATEGY_2026_2030, 14_90_DAY_LAUNCH_AND_REVENUE_PLAN, 15_PLATFORM_DISTRIBUTION_AND_ANALYTICS, 16_BRAND_LAUNCH_AND_30_DAY_CALENDAR. For engineering, also use AGENTS.md, 00_SETUP_AND_OPERATIONS.md, schemas, tools, tests, and CI. If a required source is unavailable or unread, say so. main remains the baseline; do not merge PR #1 or change main without explicit owner approval.
 
 ## EDITORIAL STRATEGY
 Initial 90-day pillars:
