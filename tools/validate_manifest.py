@@ -5,8 +5,9 @@ import argparse
 import json
 import re
 import sys
+from urllib.parse import urlparse
 
-STATES={"IDEA_CANDIDATE","IDEA_APPROVED","RESEARCH","STORY","PREPRODUCTION","GENERATION","EDITING","QA","RELEASE_APPROVED","PUBLISHED","ARCHIVED","HOLD","REWORK","REJECTED"}
+STATES={"IDEA_CANDIDATE","IDEA_APPROVED","RESEARCH","STORY","PREPRODUCTION","PILOT_GENERATION","BATCH_GENERATION","GENERATION","EDITING","QA","RELEASE_APPROVED","PUBLISHED","ARCHIVED","HOLD","REWORK","REJECTED"}
 PATTERNS={
  "production":re.compile(r"^WW-[0-9]{3,}$"),"source":re.compile(r"^SRC-[0-9]{3,}$"),
  "claim":re.compile(r"^CLM-[0-9]{3,}$"),"asset":re.compile(r"^AST-[A-Z]+-[0-9]{3,}$"),
@@ -31,21 +32,54 @@ def _ids(items,label,pattern,errors):
 def validate(data,release_gate=False):
     errors=[]; blockers=[]
     if not isinstance(data,dict): return ["manifest root must be an object"],[]
+    required_manifest_fields=("production_id","version","title","state","pillar","premise","claims","sources","assets","shots","approvals","release")
+    for field in required_manifest_fields:
+        if field not in data: errors.append(f"manifest is missing required field {field}")
     if not PATTERNS["production"].fullmatch(str(data.get("production_id",""))): errors.append("production_id must match WW-###")
+    if not PATTERNS["version"].fullmatch(str(data.get("version",""))): errors.append("manifest version must use semver MAJOR.MINOR.PATCH")
+    for field,minimum in (("title",3),("pillar",1),("premise",5)):
+        value=data.get(field)
+        if not isinstance(value,str) or len(value.strip())<minimum:
+            errors.append(f"manifest {field} must be a non-empty string of at least {minimum} characters")
     if data.get("state") not in STATES: errors.append("state is not a recognized production state")
+    for field in ("approvals","release"):
+        if not isinstance(data.get(field),dict): errors.append(f"manifest {field} must be an object")
     cols={}
     for name in ("sources","claims","assets","character_references","shots"):
         val=data.get(name,[])
         if not isinstance(val,list): errors.append(f"{name} must be an array"); val=[]
         cols[name]=val
     src=_ids(cols["sources"],"sources",PATTERNS["source"],errors)
+    for source in cols["sources"]:
+        if not isinstance(source,dict): continue
+        title=source.get("title")
+        if not isinstance(title,str) or len(title.strip())<3:
+            errors.append(f"source {source.get('id')} is missing a valid title")
+        url=source.get("url")
+        parsed=urlparse(url) if isinstance(url,str) else None
+        if parsed is None or parsed.scheme not in {"http","https"} or not parsed.netloc:
+            errors.append(f"source {source.get('id')} is missing a valid http(s) URL")
     claim_ids=_ids(cols["claims"],"claims",PATTERNS["claim"],errors)
     asset_ids=_ids(cols["assets"],"assets",PATTERNS["asset"],errors)
     char_ids=_ids(cols["character_references"],"character_references",PATTERNS["character"],errors)
     shot_ids=_ids(cols["shots"],"shots",PATTERNS["shot"],errors)
+    for duplicate_id in asset_ids & char_ids:
+        errors.append(f"asset ID collides with character ID: {duplicate_id}")
     character_by_id={c.get("id"):c for c in cols["character_references"] if isinstance(c,dict) and isinstance(c.get("id"),str)}
     for c in cols["claims"]:
         if not isinstance(c,dict): continue
+        claim_text=c.get("claim")
+        if not isinstance(claim_text,str) or len(claim_text.strip())<5:
+            errors.append(f"claim {c.get('id')} is missing a valid claim statement")
+        if c.get("class") not in {"FACT","EXTRAPOLATION","FICTIONAL_ASSUMPTION"}:
+            errors.append(f"claim {c.get('id')} has invalid class")
+        if c.get("confidence") not in {"HIGH","MEDIUM","LOW"}:
+            errors.append(f"claim {c.get('id')} has invalid confidence")
+        safe_wording=c.get("safe_wording")
+        if not isinstance(safe_wording,str) or len(safe_wording.strip())<5:
+            errors.append(f"claim {c.get('id')} is missing valid safe_wording")
+        if c.get("critical") is not None and not isinstance(c.get("critical"),bool):
+            errors.append(f"claim {c.get('id')} critical must be boolean")
         if c.get("status") not in CLAIM_STATUSES: errors.append(f"claim {c.get('id')} has invalid status")
         refs=c.get("source_ids",[])
         if not isinstance(refs,list): errors.append(f"claim {c.get('id')} source_ids must be an array"); refs=[]
@@ -91,8 +125,14 @@ def validate(data,release_gate=False):
     for s in cols["shots"]:
         if not isinstance(s,dict): continue
         sid=s.get("id"); duration=s.get("duration_seconds")
+        for field,minimum in (("id",1),("production_id",1),("purpose",5),("start_state",3),("action",3),("camera_move",3),("end_state",3)):
+            value=s.get(field)
+            if not isinstance(value,str) or len(value.strip())<minimum:
+                errors.append(f"shot {sid} is missing valid required field {field}")
         if not isinstance(duration,(int,float)) or isinstance(duration,bool) or not 0<duration<=20: errors.append(f"shot {sid} has invalid duration")
-        if s.get("production_id") not in (None,data.get("production_id")): errors.append(f"shot {sid} belongs to a different production")
+        if s.get("production_id") != data.get("production_id"): errors.append(f"shot {sid} belongs to a different production or has no production_id")
+        if s.get("status") not in {"PLANNED","PILOT","GENERATED","SELECTED","REWORK","REJECTED","APPROVED"}:
+            errors.append(f"shot {sid} has invalid status")
         asset_refs=s.get("asset_ids",[])
         if not isinstance(asset_refs,list): errors.append(f"shot {sid} asset_ids must be an array"); asset_refs=[]
         for aid in asset_refs:
@@ -112,7 +152,10 @@ def validate(data,release_gate=False):
                     errors.append(f"shot {sid} has missing or mismatched character reference version for {cid}")
         for cid in versions:
             if cid not in character_refs: errors.append(f"shot {sid} has a version entry for unlinked character {cid}")
-        for cid in s.get("claim_ids",[]):
+        claim_refs=s.get("claim_ids",[])
+        if not isinstance(claim_refs,list):
+            errors.append(f"shot {sid} claim_ids must be an array"); claim_refs=[]
+        for cid in claim_refs:
             if cid not in claim_ids: errors.append(f"shot {sid} references unknown claim {cid}")
         if release_gate and s.get("status")!="APPROVED": blockers.append(f"shot {sid} is not APPROVED")
     for c in cols["character_references"]:
