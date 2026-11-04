@@ -1,76 +1,16 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "WHAT IF WORLD Shot",
-  "type": "object",
-  "required": [
-    "id",
-    "production_id",
-    "purpose",
-    "duration_seconds",
-    "start_state",
-    "action",
-    "camera_move",
-    "end_state",
-    "status"
-  ],
-  "properties": {
-    "id": {
-      "type": "string",
-      "pattern": "^SH-[0-9]{3,}$"
-    },
-    "production_id": {
-      "type": "string",
-      "pattern": "^WW-[0-9]{3,}$"
-    },
-    "purpose": {
-      "type": "string",
-      "minLength": 5
-    },
-    "duration_seconds": {
-      "type": "number",
-      "exclusiveMinimum": 0,
-      "maximum": 20
-    },
-    "start_state": {
-      "type": "string",
-      "minLength": 3
-    },
-    "action": {
-      "type": "string",
-      "minLength": 3
-    },
-    "camera_move": {
-      "type": "string",
-      "minLength": 3
-    },
-    "end_state": {
-      "type": "string",
-      "minLength": 3
-    },
-    "asset_ids": {
-      "type": "array",
-      "items": {
-        "type": "string",
-        "pattern": "^AST-[A-Z]+-[0-9]{3,}$"
-      }
-    },
-    "claim_ids": {
-      "type": "array",
-      "items": {
-        "type": "string",
-        "pattern": "^CLM-[0-9]{3,}$"
-      }
-    },
-    "status": {
-      "enum": [
-        "PLANNED",
-        "PILOT",
-        "GENERATED",
-        "SELECTED",
-        "REWORK",
-        "REJECTED",
-        "APPROVED"
-      ]
-    }
-  }
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"WHAT IF WORLD Shot","type":"object",
+  "required":["id","production_id","purpose","duration_seconds","start_state","action","camera_move","end_state","status"],
+  "properties":{
+    "id":{"type":"string","pattern":"^SH-[0-9]{3,}$"},"production_id":{"type":"string","pattern":"^WW-[0-9]{3,}$"},
+    "purpose":{"type":"string","minLength":5},"duration_seconds":{"type":"number","exclusiveMinimum":0,"maximum":20},
+    "start_state":{"type":"string","minLength":3},"action":{"type":"string","minLength":3},
+    "camera_move":{"type":"string","minLength":3},"end_state":{"type":"string","minLength":3},
+    "asset_ids":{"type":"array","items":{"type":"string","pattern":"^AST-[A-Z]+-[0-9]{3,}$"}},
+    "character_ids":{"type":"array","items":{"type":"string","pattern":"^AST-CHAR-[0-9]{3,}$"}},
+    "character_reference_versions":{"type":"object","patternProperties":{"^AST-CHAR-[0-9]{3,}$":{"type":"string","pattern":"^[0-9]+\\.[0-9]+\\.[0-9]+$"}},"additionalProperties":false},
+    "claim_ids":{"type":"array","items":{"type":"string","pattern":"^CLM-[0-9]{3,}$"}},
+    "status":{"enum":["PLANNED","PILOT","GENERATED","SELECTED","REWORK","REJECTED","APPROVED"]}
+  },"additionalProperties":true
 }

@@ -1,42 +1,58 @@
 {
   "module": "WHAT IF WORLD Production Module",
-  "version": "3.0.0",
-  "validation": "PASS",
-  "project_instructions_characters": 4764,
-  "project_instructions_limit": 8000,
-  "remaining_characters": 3236,
-  "validator_output": "01_INSTRUKSI_PROJECT.md: 4764/8000 characters\nRESULT: PASS",
-  "unit_test_output": "Spreadsheet runtime warmup failed during python startup\nTraceback (most recent call last):\n  File \"/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py\", line 26, in warm_spreadsheet_runtime_on_startup\n  File \"/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py\", line 785, in warm_spreadsheet_runtime\n  File \"/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py\", line 718, in _warm_feature_flows\n  File \"/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py\", line 509, in _warm_drawing_and_image_flows\n  File \"/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/generated/interface/models.py\", line 32861, in bring_to_front\n  File \"/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/remote.py\", line 764, in __call__\n  File \"/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/client.py\", line 175, in call\nartifact_tool.rpc.client.RemoteError: Element ordering requires an owning element collection.\ntest_example_manifest_has_valid_identity (test_project_contracts.ProjectContracts.test_example_manifest_has_valid_identity) ... ok\ntest_project_instructions_under_8000_chars (test_project_contracts.ProjectContracts.test_project_instructions_under_8000_chars) ... ok\ntest_required_stage_and_qa_docs_exist (test_project_contracts.ProjectContracts.test_required_stage_and_qa_docs_exist) ... ok\ntest_schemas_are_valid_json (test_project_contracts.ProjectContracts.test_schemas_are_valid_json) ... ok\ntest_validator_passes (test_project_contracts.ProjectContracts.test_validator_passes) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 4.801s\n\nOK\n",
-  "files": [
-    ".github/workflows/validate.yml",
-    "00_SETUP_AND_OPERATIONS.md",
-    "01_INSTRUKSI_PROJECT.md",
-    "02A_MODULE_ARCHITECTURE.md",
-    "02_PANDUAN_PRODUKSI_UTAMA.md",
-    "03_TEMPLATE_PRODUKSI.md",
-    "05_ARSIP_KONTEN.md",
-    "06_DAILY_INTELLIGENCE_PROTOCOL.md",
-    "07_SOURCE_AND_CLAIM_LEDGER.md",
-    "08_IDEA_SCORING_SYSTEM.md",
-    "09_IDEA_BACKLOG.md",
-    "10_ASSET_AND_SHOT_REGISTER.md",
-    "11_QA_AND_RELEASE_PROTOCOL.md",
-    "12_GITHUB_REFERENCE_REVIEW.md",
-    "CHANGELOG.md",
-    "README.md",
-    "VALIDATION_REPORT.json",
-    "examples/production_manifest.example.json",
-    "schemas/claim.schema.json",
-    "schemas/idea.schema.json",
-    "schemas/shot.schema.json",
-    "tests/__pycache__/test_project_contracts.cpython-313.pyc",
-    "tests/test_project_contracts.py",
-    "tools/validate_manifest.py",
-    "tools/validate_project.py"
+  "development_line": "V3.2",
+  "status": "ENGINEERING_VALIDATION_PASS_WITH_LIMITATIONS",
+  "validated_commit": "186baf1798bc558e3e1bc2d101d0e629a5d2c8da",
+  "validation_scope": "Repository contracts, JSON Schema validation, semantic manifest validation, character-profile metadata/provenance validation, unit tests, and negative release-gate behavior only.",
+  "pull_request": "https://github.com/rzoktafien/WHAT_IF_WORLD/pull/9",
+  "workflow": "WHAT IF WORLD validation",
+  "workflow_runs": [
+    {
+      "run_id": 41902776395,
+      "event": "push",
+      "url": "https://github.com/rzoktafien/WHAT_IF_WORLD/actions/runs/41902776395",
+      "conclusion": "success",
+      "matrix_jobs": {"python_3_11":"success","python_3_12":"success","python_3_13":"success"}
+    },
+    {
+      "run_id": 41902842223,
+      "event": "push",
+      "url": "https://github.com/rzoktafien/WHAT_IF_WORLD/actions/runs/41902842223",
+      "conclusion": "success",
+      "matrix_jobs": {"python_3_11":"success","python_3_12":"success","python_3_13":"success"},
+      "note": "Run executed on the feature branch head also referenced by open PR #1."
+    }
   ],
-  "github_remote_status": "Not modified: branch creation request returned HTTP 403 Resource not accessible by integration. Local package is prepared; no commit or PR is claimed.",
-  "repository_validator": "01_INSTRUKSI_PROJECT.md: 4764/8000 characters\nRESULT: PASS",
-  "manifest_format_validator": "BLOCKER: critical claim CLM-001 is unresolved or has no source\nFORMAT PASS; 1 release blocker(s)",
-  "release_gate_negative_test": "PASS — intentionally incomplete example is blocked from release",
-  "unit_tests": "Spreadsheet runtime warmup failed during python startup\nTraceback (most recent call last):\n  File \"/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py\", line 26, in warm_spreadsheet_runtime_on_startup\n  File \"/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py\", line 785, in warm_spreadsheet_runtime\n  File \"/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py\", line 718, in _warm_feature_flows\n  File \"/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py\", line 509, in _warm_drawing_and_image_flows\n  File \"/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/generated/interface/models.py\", line 32861, in bring_to_front\n  File \"/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/remote.py\", line 764, in __call__\n  File \"/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/client.py\", line 175, in call\nartifact_tool.rpc.client.RemoteError: Element ordering requires an owning element collection.\ntest_example_manifest_has_valid_identity (test_project_contracts.ProjectContracts.test_example_manifest_has_valid_identity) ... ok\ntest_project_instructions_under_8000_chars (test_project_contracts.ProjectContracts.test_project_instructions_under_8000_chars) ... ok\ntest_release_gate_blocks_unverified_critical_claim (test_project_contracts.ProjectContracts.test_release_gate_blocks_unverified_critical_claim) ... ok\ntest_required_stage_and_qa_docs_exist (test_project_contracts.ProjectContracts.test_required_stage_and_qa_docs_exist) ... ok\ntest_schemas_are_valid_json (test_project_contracts.ProjectContracts.test_schemas_are_valid_json) ... ok\ntest_validator_passes (test_project_contracts.ProjectContracts.test_validator_passes) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 9.416s\n\nOK\n"
+  "checks": {
+    "repository_contract_validation": "PASS",
+    "json_schema_meta_validation": "PASS",
+    "example_manifest_schema_validation": "PASS",
+    "character_profile_schema_validation": "PASS",
+    "character_profile_owner_timestamps_linkage_and_canonical_provenance": "PASS",
+    "unit_tests": "PASS on Python 3.11, 3.12, and 3.13",
+    "release_gate_negative_test": "PASS; intentionally incomplete example manifest remains blocked"
+  },
+  "validator_regressions": [
+    "duplicate IDs",
+    "dangling source references",
+    "dangling character references",
+    "approved character missing canonical reference",
+    "approved character missing approval metadata",
+    "character profile missing owner or timestamps",
+    "canonical reference missing creator/source/provenance",
+    "empty canonical image URI or prompt",
+    "character profile version must match shot reference version",
+    "character-to-shot links must be reciprocal",
+    "invalid shot duration",
+    "critical unresolved claim release blocker"
+  ],
+  "release_readiness": "HOLD",
+  "release_blockers": [
+    "No video generation, audio rendering, editing, or publication integration was exercised.",
+    "The example manifest is intentionally incomplete and must remain blocked from release.",
+    "Repository ownership and third-party rights inventory remain pending; no global rights clearance is claimed.",
+    "Final source-available commercial license and customer terms require qualified legal review and explicit owner approval.",
+    "GitHub reports main and the feature branch as unprotected; the connected integration cannot access branch-protection administration endpoints."
+  ],
+  "report_note": "Engineering validation of commit 186baf1798bc558e3e1bc2d101d0e629a5d2c8da passed on Python 3.11, 3.12, and 3.13. This report correction is itself subject to PR #9 CI. Engineering CI success is not production release approval, rights clearance, legal approval, branch protection, or proof of rendered media."
 }
