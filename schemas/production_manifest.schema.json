@@ -1,25 +1,172 @@
 {
-  "$schema":"https://json-schema.org/draft/2020-12/schema",
-  "title":"WHAT IF WORLD Production Manifest",
-  "type":"object",
-  "required":["production_id","version","title","state","pillar","premise","claims","sources","assets","shots","approvals","release"],
-  "properties":{
-    "production_id":{"type":"string","pattern":"^WW-[0-9]{3,}$"},
-    "version":{"type":"string","pattern":"^[0-9]+\\.[0-9]+\\.[0-9]+$"},
-    "title":{"type":"string","minLength":3},
-    "state":{"enum":["IDEA_CANDIDATE","IDEA_APPROVED","RESEARCH","STORY","PREPRODUCTION","PILOT_GENERATION","BATCH_GENERATION","GENERATION","EDITING","QA","RELEASE_APPROVED","PUBLISHED","ARCHIVED","HOLD","REWORK","REJECTED"]},
-    "pillar":{"type":"string"},"premise":{"type":"string","minLength":5},
-    "intelligence_report_id":{"type":["string","null"]},"idea_id":{"type":["string","null"]},
-    "claims":{"type":"array","items":{"$ref":"claim.schema.json"}},
-    "sources":{"type":"array","items":{"type":"object","required":["id","title","url"],"properties":{
-      "id":{"type":"string","pattern":"^SRC-[0-9]{3,}$"},"title":{"type":"string","minLength":3},
-      "url":{"type":"string","format":"uri"},"publisher":{"type":"string"},"accessed_at":{"type":"string","format":"date-time"}}}},
-    "assets":{"type":"array","items":{"type":"object","required":["id"],"properties":{
-      "id":{"type":"string","pattern":"^AST-[A-Z]+-[0-9]{3,}$"},
-      "rights_status":{"enum":["CLEARED","NOT_REQUIRED","PENDING","REJECTED"]},"status":{"type":"string"}}}},
-    "character_references":{"type":"array","items":{"$ref":"character_reference.schema.json"}},
-    "shots":{"type":"array","items":{"$ref":"shot.schema.json"}},
-    "approvals":{"type":"object"},"release":{"type":"object"}
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WHAT IF WORLD Production Manifest",
+  "type": "object",
+  "required": [
+    "production_id",
+    "version",
+    "title",
+    "state",
+    "pillar",
+    "premise",
+    "claims",
+    "sources",
+    "assets",
+    "shots",
+    "approvals",
+    "release"
+  ],
+  "properties": {
+    "production_id": {
+      "type": "string",
+      "pattern": "^WW-[0-9]{3,}$"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 3
+    },
+    "state": {
+      "enum": [
+        "IDEA_CANDIDATE",
+        "IDEA_APPROVED",
+        "RESEARCH",
+        "STORY",
+        "PREPRODUCTION",
+        "PILOT_GENERATION",
+        "BATCH_GENERATION",
+        "GENERATION",
+        "EDITING",
+        "QA",
+        "RELEASE_APPROVED",
+        "PUBLISHED",
+        "ARCHIVED",
+        "HOLD",
+        "REWORK",
+        "REJECTED"
+      ]
+    },
+    "pillar": {
+      "type": "string"
+    },
+    "premise": {
+      "type": "string",
+      "minLength": 5
+    },
+    "intelligence_report_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "idea_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "$ref": "claim.schema.json"
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "url"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^SRC-[0-9]{3,}$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 3
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "publisher": {
+            "type": "string"
+          },
+          "accessed_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^AST-[A-Z]+-[0-9]{3,}$"
+          },
+          "rights_status": {
+            "enum": [
+              "CLEARED",
+              "NOT_REQUIRED",
+              "PENDING",
+              "REJECTED"
+            ]
+          },
+          "status": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "character_references": {
+      "type": "array",
+      "items": {
+        "$ref": "character_reference.schema.json"
+      }
+    },
+    "shots": {
+      "type": "array",
+      "items": {
+        "$ref": "shot.schema.json"
+      }
+    },
+    "approvals": {
+      "type": "object"
+    },
+    "release": {
+      "type": "object"
+    },
+    "generation_attempts": {
+      "type": "array",
+      "items": {
+        "$ref": "generation_attempt.schema.json"
+      },
+      "default": []
+    },
+    "media_assets": {
+      "type": "array",
+      "items": {
+        "$ref": "media_asset.schema.json"
+      },
+      "default": []
+    },
+    "edit_timeline": {
+      "$ref": "edit_timeline.schema.json"
+    }
   },
-  "additionalProperties":true
+  "additionalProperties": true
 }

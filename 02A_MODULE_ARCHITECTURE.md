@@ -86,6 +86,11 @@ IDs remain stable across revisions and are never recycled. Do not use generic AS
 ## 6. Artifact contract
 Every artifact records id, production_id or idea_id, version, status, created_at, updated_at, owner, source_refs, approval, and change_note where applicable. Dates use ISO 8601 with timezone. Timecodes use integer frames or HH:MM:SS.mmm; do not mix decimal comma and decimal point.
 
+Execution provenance is represented by `schemas/generation_attempt.schema.json`, `schemas/media_asset.schema.json`, and `schemas/edit_timeline.schema.json`, referenced from optional `generation_attempts`, `media_assets`, and `edit_timeline` manifest fields. A generation success record must point to an output asset; an asset must carry a checksum and provenance; timeline clips reference media IDs and frame ranges. Schema validity is not proof of completed rendering or media availability.
+
+
+Every artifact records id, production_id or idea_id, version, status, created_at, updated_at, owner, source_refs, approval, and change_note where applicable. Dates use ISO 8601 with timezone. Timecodes use integer frames or HH:MM:SS.mmm; do not mix decimal comma and decimal point.
+
 ## 7. Role boundaries
 - AI Researcher: collect and compare evidence; no source invention.
 - Science Reviewer: challenge mechanisms, units, timescales, and causal claims.

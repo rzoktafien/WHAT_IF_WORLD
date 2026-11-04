@@ -26,6 +26,11 @@ Do not describe WHAT IF WORLD as end-to-end automated media production until ada
 
 ## 3. Recommended adapter contracts
 
+### 3.0 Machine-readable execution records (V3.2 contract increment)
+The repository now defines JSON Schema contracts for `generation_attempts`, `media_assets`, and `edit_timeline`, and exposes them as optional fields on the production manifest. A successful generation attempt must reference an output asset; media assets require a SHA-256 checksum, URI, MIME type, provenance, and rights disposition; edit clips are frame-addressed and reference stable media asset IDs. These contracts validate records only: they do not call a provider, store media, probe a file, render a timeline, or prove that a URI is retrievable. Semantic cross-record checks and a real storage/provider adapter remain future work.
+
+
+
 ### 3.1 Generation adapter
 Inputs: production_id, shot_id, generation_attempt_id, approved prompt/version, canonical reference URIs, character profile versions, actual provider/model/mode, duration, aspect ratio, rights disposition and disclosure flags.
 

@@ -1,6 +1,15 @@
 # Changelog
 
-## [Unreleased] — V3.2 CI supply-chain hardening
+## [Unreleased]
+
+### Added
+- Machine-readable generation-attempt, media-asset, and frame-addressed edit-timeline schemas, wired into the production manifest.
+- Regression tests for successful-render output references, media checksums/provenance, and timeline clip frame ranges.
+
+### Notes
+- These are execution-record contracts, not provider, storage, or rendering integrations.
+
+ — V3.2 CI supply-chain hardening
 - Pinned GitHub Actions checkout/setup-python to immutable, GitHub-signature-verified upstream commits after inspecting their MIT license files.
 - Recorded preliminary dependency and CI-action provenance evidence; full transitive SBOM and project ownership review remain open.
 

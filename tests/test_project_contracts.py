@@ -266,4 +266,48 @@ class ProjectContracts(unittest.TestCase):
   errors,_=validate(data)
   self.assertTrue(any("character linked_shots does not include the shot" in e for e in errors))
 
+
+ def test_execution_record_schemas_are_registered_and_manifest_wired(self):
+  for name in ("generation_attempt.schema.json","media_asset.schema.json","edit_timeline.schema.json"):
+   schema=json.loads((ROOT/"schemas"/name).read_text(encoding="utf-8"))
+   Draft202012Validator.check_schema(schema)
+  manifest_schema=json.loads((ROOT/"schemas/production_manifest.schema.json").read_text(encoding="utf-8"))
+  self.assertIn("generation_attempts",manifest_schema["properties"])
+  self.assertIn("media_assets",manifest_schema["properties"])
+  self.assertIn("edit_timeline",manifest_schema["properties"])
+  result=subprocess.run([sys.executable,str(ROOT/"tools/validate_project.py")],capture_output=True,text=True)
+  self.assertEqual(result.returncode,0,result.stdout+result.stderr)
+
+ def test_generation_attempt_success_requires_retrievable_output_reference(self):
+  schema=json.loads((ROOT/"schemas/generation_attempt.schema.json").read_text(encoding="utf-8"))
+  attempt={"id":"GEN-SH-001-01","production_id":"WW-003","shot_id":"SH-001","status":"SUCCEEDED",
+   "requested_at":"2026-11-05T00:00:00Z","provider":"Example Provider","model":"Example Model","mode":"image-to-video",
+   "prompt_sha256":"a"*64}
+  with self.assertRaises(Exception):
+   Draft202012Validator(schema,format_checker=FormatChecker()).validate(attempt)
+  attempt["completed_at"]="2026-11-05T00:01:00Z"; attempt["output_asset_id"]="AST-VIDEO-001"
+  Draft202012Validator(schema,format_checker=FormatChecker()).validate(attempt)
+
+ def test_media_asset_requires_checksum_and_provenance(self):
+  schema=json.loads((ROOT/"schemas/media_asset.schema.json").read_text(encoding="utf-8"))
+  asset={"id":"AST-VIDEO-001","production_id":"WW-003","version":"1.0.0","type":"VIDEO",
+   "uri":"https://example.invalid/video.mp4","mime_type":"video/mp4","sha256":"b"*64,
+   "created_at":"2026-11-05T00:00:00Z","origin":"GENERATED","provenance":"Pilot render record",
+   "rights_status":"PENDING"}
+  Draft202012Validator(schema,format_checker=FormatChecker()).validate(asset)
+  asset["sha256"]="not-a-checksum"
+  with self.assertRaises(Exception):
+   Draft202012Validator(schema,format_checker=FormatChecker()).validate(asset)
+
+ def test_edit_timeline_requires_frame_addressed_media_clips(self):
+  schema=json.loads((ROOT/"schemas/edit_timeline.schema.json").read_text(encoding="utf-8"))
+  timeline={"id":"EDL-WW-003-v1","production_id":"WW-003","version":"1.0.0","status":"DRAFT",
+   "frame_rate":30,"width":1080,"height":1920,"created_at":"2026-11-05T00:00:00Z",
+   "tracks":[{"id":"V1","kind":"VIDEO","clips":[{"media_asset_id":"AST-VIDEO-001",
+   "source_in_frame":0,"source_out_frame":90,"timeline_start_frame":0}]}]}
+  Draft202012Validator(schema,format_checker=FormatChecker()).validate(timeline)
+  timeline["tracks"][0]["clips"][0]["source_out_frame"]=0
+  with self.assertRaises(Exception):
+   Draft202012Validator(schema,format_checker=FormatChecker()).validate(timeline)
+
 if __name__=="__main__": unittest.main()
