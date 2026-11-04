@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WHAT IF WORLD Media Asset",
+  "type": "object",
+  "required": ["id", "production_id", "version", "type", "uri", "mime_type", "sha256", "created_at", "origin", "provenance", "rights_status"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^AST-(IMAGE|VIDEO|AUDIO|MASTER|KF|REF)-[0-9]{3,}$"},
+    "production_id": {"type": "string", "pattern": "^WW-[0-9]{3,}$"},
+    "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "type": {"enum": ["IMAGE", "VIDEO", "AUDIO", "MASTER", "KEYFRAME", "REFERENCE"]},
+    "uri": {"type": "string", "format": "uri"},
+    "mime_type": {"type": "string", "pattern": "^[a-zA-Z0-9.+-]+/[a-zA-Z0-9.+-]+$"},
+    "sha256": {"type": "string", "pattern": "^[a-fA-F0-9]{64}$"},
+    "size_bytes": {"type": ["integer", "null"], "minimum": 0},
+    "created_at": {"type": "string", "format": "date-time"},
+    "origin": {"enum": ["GENERATED", "RECORDED", "UPLOADED", "EDITED", "SYNTHESIZED", "THIRD_PARTY"]},
+    "provider": {"type": ["string", "null"]},
+    "model": {"type": ["string", "null"]},
+    "source_asset_ids": {"type": "array", "items": {"type": "string", "pattern": "^AST-[A-Z]+-[0-9]{3,}$"}},
+    "provenance": {"type": "string", "minLength": 3},
+    "license_url": {"type": ["string", "null"], "format": "uri"},
+    "rights_status": {"enum": ["CLEARED", "NOT_REQUIRED", "PENDING", "REJECTED"]},
+    "duration_seconds": {"type": ["number", "null"], "exclusiveMinimum": 0},
+    "width": {"type": ["integer", "null"], "minimum": 1},
+    "height": {"type": ["integer", "null"], "minimum": 1},
+    "frame_rate": {"type": ["number", "null"], "exclusiveMinimum": 0}
+  },
+  "additionalProperties": false
+}
