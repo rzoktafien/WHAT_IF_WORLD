@@ -1,5 +1,15 @@
 # Changelog
 
+## [Unreleased] — V3.2 contract hardening
+- Expressed official idea-scoring weights explicitly as percentages to satisfy the unchanged scoring-contract test.
+- Unified Project Instructions, Daily Intelligence, and setup guidance around a two-layer interaction/evidence contract.
+- Aligned the repository's default short-form duration with active Project Instructions (9:16, 45–60 seconds).
+- Standardized the 3–5 qualified-candidate target while allowing fewer when evidence is insufficient; removed quota pressure.
+- Distinguished three strategic editorial pillars from five daily discovery lanes and documented their mapping.
+- Clarified daily source attribution versus full research/audit provenance; prohibited claims of persistence without confirmed writes.
+- Standardized typed asset IDs across architecture and asset register; removed generic AST-### ambiguity.
+- Preserved human approval, rights blockers, scientific integrity, and stage-gated release requirements.
+
 ## [Unreleased] — V3.2 foundation
 - Added a dedicated character-reference bible and machine-readable character profile schema.
 - Added a production-manifest schema and shot-to-character linkage with exact character-profile version locking.

@@ -1,74 +1,104 @@
 # WHAT IF WORLD — DAILY INTELLIGENCE PROTOCOL V3.2
 
-## 1. Objective
-Produce original, evidence-led editorial intelligence through active AI research every day. The daily report must surface new discoveries, assess their significance for Indonesian audiences, eliminate weak or misleading ideas, and recommend the strongest candidate.
+## 1. Tujuan dan batas
+Lakukan riset AI aktif setiap hari untuk menghasilkan intelijen editorial orisinal, berbasis bukti, relevan bagi audiens Indonesia. Laporan bukan rangkuman project files, arsip, backlog, atau laporan terdahulu. Automation selesai bukan berarti bukti telah diverifikasi, ide disetujui, atau produksi dirilis.
 
-This is not a summary of project files, archive entries, backlog seeds, or previous daily reports.
+## 2. Dua lapisan kontrak
+- Interaction Contract menentukan apa yang ditampilkan, bagaimana persetujuan diminta, dan bagaimana keterbatasan dijelaskan.
+- Internal Evidence Contract menentukan bagaimana sumber, klaim, deduplikasi, scoring, dan provenance dicatat.
+- Project archive/backlog hanya menjadi kontrol internal untuk deduplikasi dan novelty; jangan tampilkan judul/ID, tabel pembanding, narasi perbandingan, atau detail produksi yang belum dirilis dalam laporan harian.
+- Laporan terdahulu bukan bukti baru. Gunakan hanya untuk menghindari pengulangan riset dan menindaklanjuti gap.
+- Bila dokumen instruksi bertentangan, HOLD proses terdampak dan laporkan konflik; jangan menafsirkan diam-diam.
 
-## 2. Separation of data roles
-- External, freshly accessed sources are the basis for daily discovery and factual claims.
-- Project archive and backlog are private internal controls for deduplication and novelty assessment only.
-- Never present archive/backlog titles, IDs, comparison tables, or comparison narratives in the user-facing daily report.
-- Prior reports may be consulted only to avoid repeating research and to identify unresolved follow-up work; they are not fresh evidence.
-- Preserve source provenance and claim traceability in an internal research record when repository write access is available. If unavailable, state that provenance capture could not be persisted; never pretend otherwise.
-- The user-facing report should not contain a bibliography or raw URL dump. Present concise evidence summaries, confidence, and limitations. Source records remain available for audit in the research record.
+## 3. Pilar dan lane riset
+Tiga pilar editorial utama untuk fokus 90 hari pertama:
+1. HUMAN BODY & MIND.
+2. EARTH & COSMOS.
+3. CIVILIZATION & FUTURE.
 
-## 3. Source lanes and fresh research
-1. **Science and technical evidence:** peer-reviewed papers, official datasets, government/technical agencies, universities, operator documentation, and primary research.
-2. **Current events:** primary authorities/operators first; reputable reporting for context.
-3. **Search and social signals:** Google Trends, TikTok Creative Center, or other directly accessible sources only. Name third-party trackers as proxies and disclose their coverage and limitations. Never invent platform access or account analytics.
-4. **Public discussion:** a discovery signal for audience questions, not proof of a scientific claim.
+Lima lane discovery untuk pencarian harian:
+1. EARTH.
+2. NATURE & PHYSICS.
+3. HUMAN.
+4. ECOSYSTEM.
+5. CIVILIZATION & TECHNOLOGY.
 
-Every run must perform fresh web discovery. Prioritize 0–7 day signals, use 8–30 day sources as context, and label evergreen ideas honestly. Separate event date, publication date, and measurement period. Open source pages before relying on critical claims; search snippets are discovery-only.
+Lane discovery dipetakan ke pilar editorial yang paling sesuai. Topik ekspansi (OCEAN & UNKNOWN EARTH, NATURE & ECOSYSTEMS, HISTORY & MYSTERY, HUMAN EVOLUTION, ALIEN LIFE & EXOPLANETS) dapat dipantau sebagai sinyal, tetapi bukan pilar utama baru tanpa keputusan strategi. Alokasi awal 90 hari: HUMAN BODY & MIND 35%, EARTH & COSMOS 35%, CIVILIZATION & FUTURE 30%. Ini target portofolio, bukan kuota kaku untuk satu laporan harian.
 
-## 4. Daily AI workflow
-1. Set Asia/Jakarta report timestamp and observation window.
-2. Search across EARTH, NATURE & PHYSICS, HUMAN, ECOSYSTEM, and CIVILIZATION & TECHNOLOGY.
-3. Identify new signals, then open primary/authoritative evidence.
-4. Cross-check critical claims independently where possible; record scope, population, geography, units, methodology, uncertainty, and conflicts.
-5. Evaluate trend evidence separately from scientific evidence.
-6. Quietly deduplicate candidates against archive/backlog. Suppress duplicate concepts or develop a materially distinct angle; do not expose the comparison.
-7. Generate up to three strong candidates. Fewer are acceptable when evidence is insufficient.
-8. Score candidates using the editorial scorecard below.
-9. Recommend one candidate and explain its trade-offs, risks, and next verification step.
-10. Stop before script, VO, production prompt, rendering, or publication until the user approves a candidate.
+## 4. Fresh research dan sumber
+Setiap run harus melakukan discovery web baru. Prioritaskan sinyal 0–7 hari; gunakan sumber 8–30 hari sebagai konteks; evergreen boleh dipakai tetapi jangan disebut tren terkini. Catat terpisah tanggal kejadian, publikasi, periode pengukuran, dan akses.
+Source lanes:
+- Sains/teknis: paper peer-reviewed, dataset resmi, lembaga pemerintah/teknis, universitas, dokumentasi operator, riset primer.
+- Peristiwa: otoritas/operator primer dahulu; media bereputasi untuk konteks.
+- Search/social: Google Trends, TikTok Creative Center, atau sumber yang benar-benar dapat diakses. Tracker pihak ketiga harus disebut proxy dan keterbatasannya dijelaskan.
+- Diskusi publik: sinyal pertanyaan audiens, bukan bukti klaim ilmiah.
+Buka dan periksa sumber otoritatif sebelum mengandalkan klaim kritis. Search snippet hanya bukti discovery. Pisahkan BUKTI TREN, BUKTI SAINS, dan PENILAIAN EDITORIAL. Jangan mengklaim analitik privat atau akses platform yang tidak dimiliki.
 
-## 5. Candidate scorecard
-Score 0–5 per dimension, then apply weights:
-- Evidence freshness/relevance: 10%
-- Scientific foundation: 25%
-- Human stakes: 15%
-- Visual originality: 20%
-- Story potential: 15%
-- Novelty: 10%
-- Indonesian relevance: 5%
+## 5. Workflow harian
+1. Tetapkan timestamp Asia/Jakarta dan observation window.
+2. Periksa laporan terbaru: tanggal, run/completion status, sumber, cakupan lima lane, freshness, aksesibilitas, truncation, dan gap.
+3. Bila laporan hilang/gagal/terpotong material/lebih dari 7 hari, lakukan riset baru.
+4. Lakukan pencarian baru pada lima lane discovery.
+5. Buka sumber primer/otoritatif dan cross-check klaim kritis.
+6. Catat metodologi, ruang lingkup, populasi, geografi, satuan, ketidakpastian, dan konflik.
+7. Deduplikasi diam-diam terhadap arsip/backlog dan research record.
+8. Hasilkan 3–5 kandidat berkualitas bila bukti memungkinkan. Satu atau dua kandidat dapat diterima bila hanya itu yang lolos. Jangan memenuhi kuota dengan ide lemah.
+9. Skor setiap kandidat memakai rubrik resmi di 08_IDEA_SCORING_SYSTEM.md.
+10. Rekomendasikan satu kandidat beserta trade-off, risiko, dan langkah verifikasi berikutnya.
+11. Berhenti sebelum script, VO, prompt produksi, rendering, atau publikasi sampai pengguna memilih secara eksplisit.
 
-Report total /100. This is an editorial judgment, not a probability of virality. Reject or hold candidates with fatal scientific blockers, unfixable misleading framing, or insufficient evidence.
+## 6. Scoring resmi
+Skor setiap dimensi 0–5 dan terapkan bobot persis:
+- Evidence freshness/relevance: 10%.
+- Scientific foundation: 25%.
+- Human stakes: 15%.
+- Visual originality: 20%.
+- Story potential: 15%.
+- Novelty vs archive: 10%.
+- Indonesian relevance: 5%.
 
-## 6. User-facing daily report
-Keep the report concise, decision-oriented, and in Indonesian:
-- Date/time, audience region, and research completion status.
-- 3–5 genuinely new findings, where available.
-- Up to three candidate idea cards: title, pillar, evidence label, What If question, 1–3 second visual hook, scientific mechanism, staged consequences, Indonesian relevance, score, confidence, and key misinterpretation risk.
-- One AI recommendation with rationale and trade-off.
-- Unresolved evidence gaps or inaccessible data sources.
-- Ask for the user's selection/approval.
+Formula: total = Σ(score / 5 × weight). Total adalah prioritas editorial, bukan probabilitas viral. Tampilkan skor per dimensi, total, alasan, evidence label, confidence, dan trade-off. Fatal scientific, ethical, duplicate, rights, atau misleading-framing blocker tidak dapat dikompensasi skor tinggi. Decision bands dan definisi dimensi mengikuti 08_IDEA_SCORING_SYSTEM.md; jangan mengubah bobot di dokumen ini.
 
-Do not show archive/backlog comparison, old idea titles, archive IDs, backlog IDs, bibliography, or raw source URLs in the daily report. Keep source traceability in the internal research record.
+## 7. Kandidat dan evidence labels
+Setiap kandidat memuat:
+- Working title dan pilar strategis.
+- Evidence label.
+- What If question dan visual hook 1–3 detik.
+- Premis dan asumsi fiksi eksplisit.
+- Mekanisme sains dan konsekuensi bertahap/timescale.
+- Human stakes dan relevansi Indonesia.
+- Potensi visual, risiko salah tafsir, confidence.
+- Source attribution dan weighted score.
 
-## 7. Evidence labels
-- CURRENT_VERIFIED: current signal and material factual claims directly verified from authoritative sources.
-- CURRENT_LIMITED: a current signal exists but access, sample, or evidence is limited.
-- EVERGREEN: scientifically grounded idea without a verified current trend claim.
-- ORIGINAL_EDITORIAL: original framing or hypothesis; explicitly not a verified trend.
+Gunakan label:
+- CURRENT_VERIFIED
+- CURRENT_LIMITED
+- EVERGREEN
+- ORIGINAL_EDITORIAL
 
-Separate FACT, EXTRAPOLATION, and FICTIONAL_ASSUMPTION in research records. Never promote an assumption to fact.
+Jangan menyebut tren bila bukti tren tidak ada. Satu case report tidak membuktikan outcome klinis universal. Bedakan FACT, EXTRAPOLATION, FICTIONAL_ASSUMPTION.
 
-## 8. Integrity and safety
-- Never invent rankings, views, growth, search volume, dates, quotes, sources, or access.
-- Never call a topic viral without adequate data.
-- Never imply that a third-party tracker is native TikTok or Google data.
-- Never use a single case report to establish a deterministic medical outcome.
-- Avoid unsupported timelines, false precision, and sensational causal claims.
-- If critical evidence is missing or contradictory, qualify or reject the claim.
-- Automation completion does not equal evidence verification, repository persistence, human approval, or production release.
+## 8. Source register dan claim traceability
+Untuk setiap sumber, simpan source ID, judul, penulis/lembaga, URL/persistent ID, tanggal publikasi, tanggal kejadian/data, tanggal akses, tipe sumber, primer/sekunder, cakupan populasi/geografi, claim IDs, metodologi, keterbatasan, konflik, dan apakah full text atau hanya abstrak/metadata yang diperiksa.
+Untuk setiap klaim, simpan claim ID, redaksi persis, klasifikasi, source IDs, confidence, verification status, safe wording, satuan, scope, timescale, dan caveat.
+Klaim kritis memerlukan dukungan primer langsung atau dua sumber independen kuat bila sumber primer tidak tersedia. Jangan mengarang sumber, DOI, tanggal, angka, atau kutipan.
+Simpan provenance ke research record/repository jika write access tersedia. Jika tidak, nyatakan belum tersimpan dan pertahankan mapping di output yang tersedia. Jangan mengklaim GitHub/Project Files diperbarui tanpa konfirmasi.
+
+## 9. Format laporan harian kepada pengguna
+Bahasa Indonesia, ringkas namun dapat dipahami sendiri. Sertakan:
+1. Tanggal/waktu, zona waktu, wilayah audiens, observation window.
+2. Status penyelesaian riset dan keterbatasan akses.
+3. Tiga sampai lima temuan baru jika tersedia; lebih sedikit bila bukti tidak cukup.
+4. Tiga sampai lima kandidat jika tersedia; lebih sedikit bila hanya itu yang memenuhi standar.
+5. Pilar, evidence label, confidence, skor per dimensi dan total, serta alasan.
+6. Satu rekomendasi dan trade-off.
+7. Gap bukti dan permintaan pilihan eksplisit.
+
+Atribusikan klaim material ke lembaga/publikasi/peneliti yang dapat diidentifikasi dan berikan sitasi/link relevan yang dapat dibuka. Jangan tampilkan dump URL mentah atau bibliografi panjang. Jangan ungkap informasi internal arsip/backlog. Audit atau riset mendalam wajib menyediakan source register dan claim-to-source mapping secara eksplisit.
+
+## 10. Human approval dan integritas
+- Ide hanya menjadi IDEA_APPROVED setelah pilihan eksplisit pengguna.
+- Tidak ada produksi final sebelum selection gate.
+- Factual-risk exception, rights exception, canonical character, inspeksi hasil generasi, dan final release memerlukan persetujuan manusia sesuai stage gate.
+- Gunakan PASS, REWORK, HOLD, FAIL hanya dengan bukti.
+- Jangan mengklaim monitoring hari ini, persistensi, rendering, editing, publishing, atau approval tanpa bukti.
