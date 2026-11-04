@@ -53,7 +53,9 @@ No default values for these terms are approved by LDR-001.
 
 ## 5. Rights and provenance audit required
 
-Before a public commercial license or paid distribution is announced, create an inventory of:
+The operational audit is tracked in [RIGHTS_AND_PROVENANCE_REGISTER.md](RIGHTS_AND_PROVENANCE_REGISTER.md). Its initial entries are all PENDING and it does not assert ownership or commercial clearance.
+
+Before a public commercial license or paid distribution is announced, verify:
 
 - authorship and ownership of repository code, documentation, schemas, prompts, and original examples;
 - employee, contractor, commissioned, and collaborator contributions, with supporting agreements where required;
@@ -68,7 +70,7 @@ Items with unclear provenance or permissions must be excluded, replaced, or held
 The following gates apply:
 
 - **G1 — Direction:** source-available commercial strategy selected by repository owner. COMPLETE.
-- **G2 — Rights inventory:** ownership and third-party provenance audit. PENDING.
+- **G2 — Rights inventory:** ownership and third-party provenance audit, recorded in the register. PENDING.
 - **G3 — Legal drafting:** jurisdiction-aware license and, if needed, commercial customer agreement drafted by qualified counsel. PENDING.
 - **G4 — Owner approval:** final text and commercial permissions explicitly approved by repository owner. PENDING.
 - **G5 — Publication:** approved license, notices, and README wording published together. BLOCKED until G2–G4 pass.
