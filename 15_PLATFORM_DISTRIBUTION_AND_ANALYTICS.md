@@ -67,7 +67,7 @@ Every episode should have:
 ### Vertical short master
 - Aspect ratio: 9:16.
 - Target resolution: 1080 × 1920 where source quality permits.
-- Initial duration: 35–60 seconds; extend only when narrative value justifies it.
+- Initial duration: 45–60 seconds; extend only when narrative value justifies it.
 - Burned-in captions must be legible and kept clear of platform interface zones.
 - Mix voice for intelligibility on mobile speakers.
 - No platform watermark on cross-posted master exports.
