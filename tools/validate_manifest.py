@@ -5,6 +5,7 @@ import argparse
 import json
 import re
 import sys
+from datetime import datetime
 from urllib.parse import urlparse
 
 STATES={"IDEA_CANDIDATE","IDEA_APPROVED","RESEARCH","STORY","PREPRODUCTION","PILOT_GENERATION","BATCH_GENERATION","GENERATION","EDITING","QA","RELEASE_APPROVED","PUBLISHED","ARCHIVED","HOLD","REWORK","REJECTED"}
@@ -16,6 +17,15 @@ PATTERNS={
 CLAIM_STATUSES={"SUPPORTED","QUALIFIED","UNVERIFIED","REJECTED"}
 RIGHTS={"CLEARED","NOT_REQUIRED","PENDING","REJECTED"}
 CHARACTER_STATUSES={"DRAFT","REVIEW","APPROVED","SUPERSEDED","REJECTED"}
+GENERATION_STATES={"PILOT_GENERATION","BATCH_GENERATION","GENERATION","EDITING","QA","RELEASE_APPROVED","PUBLISHED","ARCHIVED"}
+
+def _valid_datetime(value):
+    if not isinstance(value,str) or not value.strip(): return False
+    try:
+        parsed=datetime.fromisoformat(value.replace("Z","+00:00"))
+        return parsed.tzinfo is not None and parsed.utcoffset() is not None
+    except ValueError:
+        return False
 
 def _ids(items,label,pattern,errors):
     seen=set(); found=set()
@@ -61,6 +71,7 @@ def validate(data,release_gate=False):
             errors.append(f"source {source.get('id')} is missing a valid http(s) URL")
     claim_ids=_ids(cols["claims"],"claims",PATTERNS["claim"],errors)
     asset_ids=_ids(cols["assets"],"assets",PATTERNS["asset"],errors)
+    asset_by_id={a.get("id"):a for a in cols["assets"] if isinstance(a,dict) and isinstance(a.get("id"),str)}
     char_ids=_ids(cols["character_references"],"character_references",PATTERNS["character"],errors)
     shot_ids=_ids(cols["shots"],"shots",PATTERNS["shot"],errors)
     for duplicate_id in asset_ids & char_ids:
@@ -96,26 +107,59 @@ def validate(data,release_gate=False):
         if not isinstance(c,dict): continue
         cid=c.get("id"); status=c.get("status"); canonical=c.get("canonical_reference")
         if status not in CHARACTER_STATUSES: errors.append(f"character {cid} has invalid status")
-        if not isinstance(c.get("owner"),str) or not c.get("owner","").strip(): errors.append(f"character {cid} is missing owner")
+        if not isinstance(c.get("owner"),str) or len(c.get("owner","").strip())<2: errors.append(f"character {cid} is missing owner")
+        if not isinstance(c.get("name"),str) or len(c.get("name","").strip())<2: errors.append(f"character {cid} is missing name")
+        if c.get("production_id") != data.get("production_id"): errors.append(f"character {cid} belongs to a different production or has no production_id")
         for field in ("created_at","updated_at"):
-            value=c.get(field)
-            if not isinstance(value,str) or not value.strip(): errors.append(f"character {cid} is missing {field}")
+            if not _valid_datetime(c.get(field)): errors.append(f"character {cid} has invalid {field} date-time")
+        identity=c.get("identity")
+        if not isinstance(identity,dict):
+            errors.append(f"character {cid} is missing identity object")
+        else:
+            for field in ("face_shape","hair"):
+                if not isinstance(identity.get(field),str) or len(identity.get(field,"").strip())<2:
+                    errors.append(f"character {cid} identity is missing valid {field}")
+            traits=identity.get("invariant_traits")
+            if not isinstance(traits,list) or not traits or any(not isinstance(t,str) or len(t.strip())<2 for t in traits):
+                errors.append(f"character {cid} identity invariant_traits must be a non-empty array of valid strings")
+        wardrobe=c.get("wardrobe_variants")
+        if not isinstance(wardrobe,list):
+            errors.append(f"character {cid} wardrobe_variants must be an array")
+        else:
+            for index,variant in enumerate(wardrobe):
+                if not isinstance(variant,dict):
+                    errors.append(f"character {cid} wardrobe_variants[{index}] must be an object"); continue
+                for field in ("variant_id","description"):
+                    if not isinstance(variant.get(field),str) or len(variant.get(field,"").strip())<2:
+                        errors.append(f"character {cid} wardrobe_variants[{index}] is missing valid {field}")
+                applicable=variant.get("applicable_shots",[])
+                if not isinstance(applicable,list):
+                    errors.append(f"character {cid} wardrobe_variants[{index}] applicable_shots must be an array")
+                else:
+                    for shot_id in applicable:
+                        if shot_id not in shot_ids: errors.append(f"character {cid} wardrobe variant references unknown shot {shot_id}")
+        if c.get("rights_status") not in RIGHTS: errors.append(f"character {cid} has invalid or missing rights_status")
         if not isinstance(canonical,dict): errors.append(f"character {cid} has no canonical_reference")
         else:
             for field in ("provenance","creator","source"):
-                if not isinstance(canonical.get(field),str) or not canonical.get(field,"").strip():
+                if not isinstance(canonical.get(field),str) or len(canonical.get(field,"").strip())<2:
                     errors.append(f"character {cid} canonical_reference is missing {field}")
+            kind=canonical.get("kind")
+            if kind not in {"image","prompt"}: errors.append(f"character {cid} canonical_reference has invalid kind")
+            elif kind=="image" and (not isinstance(canonical.get("uri"),str) or not canonical.get("uri","").strip()):
+                errors.append(f"character {cid} image canonical_reference is missing uri")
+            elif kind=="prompt" and (not isinstance(canonical.get("prompt"),str) or not canonical.get("prompt","").strip()):
+                errors.append(f"character {cid} prompt canonical_reference is missing prompt")
+            checksum=canonical.get("checksum")
+            if checksum is not None and not re.fullmatch(r"[a-fA-F0-9]{64}",str(checksum)):
+                errors.append(f"character {cid} canonical_reference checksum must be a SHA-256 hex digest")
         if "linked_shots" not in c or not isinstance(c.get("linked_shots"),list):
             errors.append(f"character {cid} linked_shots must be an array")
         if not PATTERNS["version"].fullmatch(str(c.get("version",""))): errors.append(f"character {cid} has invalid version")
         if status=="APPROVED":
             approval=c.get("approval")
-            if not isinstance(approval,dict) or not isinstance(approval.get("by"),str) or not approval.get("by").strip() or not isinstance(approval.get("at"),str) or not approval.get("at").strip():
-                errors.append(f"approved character {cid} is missing approval.by or approval.at")
-            if not isinstance(canonical,dict): errors.append(f"approved character {cid} has no canonical_reference")
-            elif canonical.get("kind")=="image" and not canonical.get("uri"): errors.append(f"approved character {cid} image reference has no uri")
-            elif canonical.get("kind")=="prompt" and not canonical.get("prompt"): errors.append(f"approved character {cid} prompt reference has no prompt")
-            elif canonical.get("kind") not in {"image","prompt"}: errors.append(f"approved character {cid} has invalid canonical reference kind")
+            if not isinstance(approval,dict) or not isinstance(approval.get("by"),str) or not approval.get("by").strip() or not _valid_datetime(approval.get("at")):
+                errors.append(f"approved character {cid} is missing approval.by or approval.at (approval.at must be a timezone-aware date-time)")
         linked=c.get("linked_shots",[])
         if not isinstance(linked,list): errors.append(f"character {cid} linked_shots must be an array"); linked=[]
         for shot_id in linked:
@@ -165,6 +209,21 @@ def validate(data,release_gate=False):
             linked_shot=next((s for s in cols["shots"] if isinstance(s,dict) and s.get("id")==shot_id),None)
             if linked_shot and cid not in linked_shot.get("character_ids",[]):
                 errors.append(f"character {cid} linked_shots includes {shot_id} but shot does not link character")
+    if data.get("state") in GENERATION_STATES:
+        for shot in cols["shots"]:
+            if not isinstance(shot,dict): continue
+            sid=shot.get("id")
+            for cid in shot.get("character_ids",[]) if isinstance(shot.get("character_ids",[]),list) else []:
+                character=character_by_id.get(cid)
+                if character is None: continue
+                if character.get("status")!="APPROVED":
+                    blockers.append(f"shot {sid} character {cid} is not APPROVED for generation/edit/release")
+                if character.get("rights_status") not in {"CLEARED","NOT_REQUIRED"}:
+                    blockers.append(f"shot {sid} character {cid} reference rights are unresolved")
+            for aid in shot.get("asset_ids",[]) if isinstance(shot.get("asset_ids",[]),list) else []:
+                asset=asset_by_id.get(aid)
+                if asset is not None and asset.get("rights_status") not in {"CLEARED","NOT_REQUIRED"}:
+                    blockers.append(f"shot {sid} asset {aid} rights are unresolved")
     if release_gate:
         if data.get("state") not in {"RELEASE_APPROVED","PUBLISHED","ARCHIVED"}: blockers.append("production state has not reached release approval")
         approvals=data.get("approvals") if isinstance(data.get("approvals"),dict) else {}
@@ -186,7 +245,8 @@ def main():
     errors,blockers=validate(data,args.release_gate)
     for e in errors: print("ERROR:",e)
     for b in blockers: print("BLOCKER:",b)
-    if errors or (args.release_gate and blockers): print("RESULT: FAIL"); return 1
+    stage_gate=data.get("state") in GENERATION_STATES
+    if errors or ((args.release_gate or stage_gate) and blockers): print("RESULT: FAIL"); return 1
     print("RESULT: PASS" if not blockers else f"FORMAT PASS; {len(blockers)} release blocker(s)")
     return 0
 
