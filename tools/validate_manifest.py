@@ -64,6 +64,9 @@ def validate(data,release_gate=False):
         if status not in CHARACTER_STATUSES: errors.append(f"character {cid} has invalid status")
         if not PATTERNS["version"].fullmatch(str(c.get("version",""))): errors.append(f"character {cid} has invalid version")
         if status=="APPROVED":
+            approval=c.get("approval")
+            if not isinstance(approval,dict) or not isinstance(approval.get("by"),str) or not approval.get("by").strip() or not isinstance(approval.get("at"),str) or not approval.get("at").strip():
+                errors.append(f"approved character {cid} is missing approval.by or approval.at")
             if not isinstance(canonical,dict): errors.append(f"approved character {cid} has no canonical_reference")
             elif canonical.get("kind")=="image" and not canonical.get("uri"): errors.append(f"approved character {cid} image reference has no uri")
             elif canonical.get("kind")=="prompt" and not canonical.get("prompt"): errors.append(f"approved character {cid} prompt reference has no prompt")
@@ -88,6 +91,8 @@ def validate(data,release_gate=False):
         versions=s.get("character_reference_versions",{})
         if not isinstance(versions,dict): errors.append(f"shot {sid} character_reference_versions must be an object"); versions={}
         for cid in character_refs:
+            if cid in char_ids and sid not in character_by_id[cid].get("linked_shots",[]):
+                errors.append(f"shot {sid} links character {cid} but character linked_shots does not include the shot")
             if cid not in char_ids:
                 errors.append(f"shot {sid} references unknown character {cid}")
             else:

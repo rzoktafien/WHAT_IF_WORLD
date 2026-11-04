@@ -26,5 +26,9 @@
     "linked_shots":{"type":"array","items":{"type":"string","pattern":"^SH-[0-9]{3,}$"}},
     "approval":{"type":"object","properties":{"by":{"type":["string","null"]},"at":{"type":["string","null"],"format":"date-time"}}}
   },
+  "allOf":[{
+    "if":{"properties":{"status":{"const":"APPROVED"}},"required":["status"]},
+    "then":{"required":["approval"],"properties":{"approval":{"type":"object","required":["by","at"],"properties":{"by":{"type":"string","minLength":1},"at":{"type":"string","format":"date-time"}}}}}
+  }],
   "additionalProperties":true
 }
