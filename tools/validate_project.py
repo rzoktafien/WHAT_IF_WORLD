@@ -13,10 +13,11 @@ REQUIRED=[
  "03A_CHARACTER_REFERENCE_BIBLE.md","05_ARSIP_KONTEN.md","06_DAILY_INTELLIGENCE_PROTOCOL.md",
  "07_SOURCE_AND_CLAIM_LEDGER.md","08_IDEA_SCORING_SYSTEM.md","09_IDEA_BACKLOG.md",
  "10_ASSET_AND_SHOT_REGISTER.md","11_QA_AND_RELEASE_PROTOCOL.md","12_GITHUB_REFERENCE_REVIEW.md",
+ "LICENSING_DECISION_RECORD.md","RIGHTS_AND_PROVENANCE_REGISTER.md",
  "schemas/claim.schema.json","schemas/idea.schema.json","schemas/shot.schema.json",
  "schemas/character_reference.schema.json","schemas/production_manifest.schema.json",
  "examples/production_manifest.example.json","tools/validate_manifest.py",
- "tests/test_project_contracts.py",".github/workflows/validate.yml"]
+ "tests/test_project_contracts.py","requirements-dev.txt",".github/workflows/validate.yml"]
 
 def check():
  errors=[]
