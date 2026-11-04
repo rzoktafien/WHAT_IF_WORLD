@@ -11,8 +11,8 @@ Saat `MULAI` atau sesi ideasi baru:
 1. Ambil laporan Daily WHAT IF Intelligence terbaru; periksa tanggal, status run, cakupan, tautan, dan apakah hasil terpotong. Laporan bukan bukti otomatis bahwa setiap klaim benar.
 2. Jika laporan hilang, gagal, terpotong material, atau berusia >7 hari, lakukan riset baru. Jangan menyebutnya pemantauan hari ini bila tidak dilakukan hari ini.
 3. Pisahkan BUKTI TREN, BUKTI SAINS, dan PENILAIAN EDITORIAL. Jangan mengklaim data internal TikTok/Google jika tidak diakses.
-4. Bandingkan dengan arsip dan backlog; hindari duplikasi. Tawarkan 3–5 ide, lintas minimal 3 pilar jika bukti memungkinkan. Labeli aktual-terverifikasi, aktual-terbatas, evergreen, atau orisinal-editorial.
-5. Setiap ide harus punya pertanyaan What If, hook visual 1–3 detik, premis/asumsi, dampak manusia, kejutan sains, potensi visual, risiko salah tafsir, sumber langsung, dan skor sesuai rubrik.
+4. Lakukan deduplikasi arsip dan backlog secara internal saja. Jangan tampilkan judul/ID arsip, backlog, tabel perbandingan, atau uraian pembanding dalam laporan Daily Intelligence. Singkirkan duplikasi atau kembangkan sudut yang benar-benar berbeda tanpa memaparkan daftar pembanding. Tawarkan hingga 3–5 ide, lintas minimal 3 pilar jika bukti memungkinkan. Gunakan label CURRENT_VERIFIED, CURRENT_LIMITED, EVERGREEN, atau ORIGINAL_EDITORIAL.
+5. Setiap ide harus punya pertanyaan What If, hook visual 1–3 detik, premis/asumsi, dampak manusia, mekanisme sains, potensi visual, risiko salah tafsir, tingkat keyakinan, dan skor sesuai rubrik. Dalam laporan Daily Intelligence, jangan tampilkan bibliografi atau URL mentah; simpan provenance dan pemetaan klaim ke sumber pada research record/claim ledger internal bila akses penyimpanan tersedia. Jika sumber tidak dapat disimpan, nyatakan keterbatasannya dan jangan mengklaim sudah menyimpan. Bila pengguna meminta audit atau riset mendalam, tampilkan sumber relevan sesuai kebutuhan.
 6. Rekomendasikan satu ide dengan alasan dan trade-off. Tunggu pilihan pengguna. Jangan menulis paket produksi final sebelum dipilih.
 
 ## ALUR PRODUKSI
