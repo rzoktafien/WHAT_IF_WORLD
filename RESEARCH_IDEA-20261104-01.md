@@ -171,3 +171,132 @@ Water balance is regulated by coordinated but distinguishable neural, hormonal, 
 - Rendering/publishing: HOLD
 
 No story, voice-over, production prompt, rendering, or publication is authorized by this research dossier.
+
+
+---
+
+# RESEARCH ADDENDUM 01 — CLINICAL NUANCE AND SCENARIO CORRECTION
+Date: 2026-11-04
+Status: Evidence update; supersedes over-broad interpretation in preliminary sections 2 and 4.
+
+## A. Important correction
+
+The preliminary dossier correctly noted that thirst perception and AVP-mediated renal water conservation are distinguishable mechanisms, but it risked making their separation sound more straightforward than the clinical evidence supports.
+
+The real clinical entity **adipsic arginine vasopressin deficiency (AAVP-D)** commonly involves both impaired thirst and inadequate osmotically stimulated AVP secretion. It can cause hypernatremia, dilute urine, and polyuria. It must not be used as evidence for a simple, isolated "thirst-off, kidneys-normal" switch.
+
+At the same time, published cases show that adipsia and AVP physiology do not always fail in an identical way:
+- Some patients have impaired thirst with preserved non-osmotic AVP secretion.
+- A 2024 Endocrine Journal case report documented impaired thirst and impaired osmolality-driven AVP response, while non-osmotic AVP secretion remained present and contributed to hyponatremia in that patient's complex endocrine/clinical context.
+- A 2026 JCEM Case Reports article describes AAVP-D after neurosurgery, with adipsia, hypernatremia, low urine osmolality and polyuria, illustrating the combined defect.
+- A 2026 case report indexed in PubMed describes adipsic hypernatremia with preserved AVP response and concentrated urine, without structural hypothalamic abnormality. This supports clinical heterogeneity, not a universal mechanism.
+
+Therefore, the fictional premise must be framed as a **selective hypothetical disruption of conscious thirst perception**, not as a representation of typical AAVP-D.
+
+## B. Additional source records
+
+### SRC-005 — Approach to the Patient With Suspected Hypotonic Polyuria
+- Authors: John Newell-Price et al.
+- Journal: The Journal of Clinical Endocrinology & Metabolism, 2025 collection; published 2024-08-16.
+- URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC11747752/
+- DOI: https://doi.org/10.1210/clinem/dgae565
+- Access date: 2026-11-04
+- Type: peer-reviewed clinical review
+- Evidence inspected: PubMed/PMC search record and abstract; PMC page itself presented an access interstitial in this session.
+- Key support: dysregulated thirst can coexist with AVP deficiency; some AVP-D patients have dysdipsia or adipsia; clinical evaluation of thirst is important; management is complex and requires clinical monitoring.
+- Limitation: review of clinical diagnosis/management, not evidence for a healthy person with isolated temporary thirst suppression.
+
+### SRC-006 — Hyponatremia due to preserved non-osmotic arginine vasopressin secretion in adipsic diabetes insipidus
+- Authors: Yasufumi Seki et al.
+- Journal: Endocrine Journal 71(11):1087–1092 (2024).
+- DOI: https://doi.org/10.1507/endocrj.EJ23-0643
+- Full text: https://pmc.ncbi.nlm.nih.gov/articles/PMC11778385/
+- Access date: 2026-11-04
+- Type: peer-reviewed case report with literature review
+- Evidence inspected: full text search result content, including case details and discussion.
+- Key support: thirst and osmolality-driven AVP responses can be impaired while non-osmotic AVP secretion remains preserved; the reported patient had complex endocrine comorbidities and sodium disturbances.
+- Limitation: single complex case; cannot generalize to healthy people or a simple isolated thirst switch.
+
+### SRC-007 — Clinical and diagnostic complexities of adipsic arginine vasopressin deficiency
+- Authors: Nadia Chaudhury, Abdur-Raoof Sheikh, Ranganatha Rao
+- Journal: JCEM Case Reports 4(8), luag175 (published 2026-07-22).
+- DOI: https://doi.org/10.1210/jcemcr/luag175
+- URL: https://academic.oup.com/jcemcr/article/4/8/luag175/8739674
+- Access date: 2026-11-04
+- Type: peer-reviewed case report
+- Evidence inspected: publisher page and abstract.
+- Key support: AAVP-D is a rare hypothalamic disorder involving inadequate AVP production and impaired thirst; the reported patient developed hypernatremia, raised plasma osmolality, low urine osmolality, and polyuria after neurosurgery.
+- Limitation: single postoperative clinical case; not a model for isolated adipsia.
+
+### SRC-008 — Adipsic hypernatraemia without hypothalamic structural abnormality
+- Type: 2026 clinical case report indexed in PubMed.
+- URL: https://pubmed.ncbi.nlm.nih.gov/42919603/
+- Access date: 2026-11-04
+- Evidence inspected: PubMed abstract only.
+- Key support: a reported patient had absent thirst perception with concentrated urine and preserved AVP response; this demonstrates that thirst impairment can occur without classic AVP deficiency.
+- Limitation: abstract-level review in this session; full article and publication details must be checked before any detailed claim is used.
+
+### SRC-009 — Neurochemical Aspects of the Role of Thirst in Body Fluid Homeostasis and Their Significance in Health and Disease
+- Author: Ewa Szczepanska-Sadowska
+- Publication date: 2025-08-14
+- URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC12386622/
+- Access date: 2026-11-04
+- Type: literature review
+- Evidence inspected: indexed full-text/search content and abstract.
+- Key support: thirst involves multiple neural structures and neurochemical pathways; adipsia and polydipsia are dysregulations of water intake.
+- Limitation: review-level synthesis; use primary cited studies for specific mechanisms or numerical thresholds.
+
+## C. Updated claim decisions
+
+### CLM-003 — revised
+- Draft claim: "Gangguan rasa haus tidak selalu berarti seluruh mekanisme AVP dan respons ginjal berhenti."
+- Class: FACT, with clinical qualification
+- Sources: SRC-001, SRC-005, SRC-006, SRC-008
+- Confidence: medium-high for the broad distinction; low for predicting any particular individual's physiology without clinical data
+- Status: QUALIFIED
+- Safe wording: "Rasa haus dan pengaturan air oleh ginjal saling terhubung, tetapi bukan proses yang identik. Pada kondisi klinis tertentu, keduanya dapat terganggu dengan pola yang berbeda."
+- Prohibited simplification: "Ginjal pasti tetap normal ketika rasa haus hilang."
+
+### CLM-007
+- Draft claim: "Adipsic AVP deficiency commonly involves impaired thirst and inadequate osmotically stimulated AVP secretion."
+- Class: FACT
+- Sources: SRC-005, SRC-007
+- Confidence: high
+- Status: SUPPORTED
+- Safe wording: "Pada salah satu gangguan langka, adipsic AVP deficiency, sinyal haus dan pelepasan vasopresin yang seharusnya merespons peningkatan kepekatan darah dapat sama-sama terganggu."
+- Caveat: This is a rare clinical disorder, not a general consequence of temporarily not feeling thirsty.
+
+### CLM-008
+- Draft claim: "Some clinical cases show impaired thirst with preserved components of AVP secretion or renal concentrating response."
+- Class: FACT
+- Sources: SRC-006, SRC-008
+- Confidence: medium
+- Status: QUALIFIED
+- Safe wording: "Laporan klinis menunjukkan pola gangguan rasa haus dan vasopresin tidak selalu seragam."
+- Caveat: SRC-006 is a complex single case; SRC-008 was abstract-only in this review. Do not infer prevalence.
+
+## D. Scenario decision
+
+The original 24-hour scenario remains a **fictional editorial thought experiment**, not a medically validated syndrome. It may proceed only if story design explicitly states:
+1. The fictional intervention selectively suppresses conscious thirst perception.
+2. The scenario does not claim that this is typical adipsic AVP deficiency.
+3. AVP secretion, kidney response, and ongoing water loss are specified as separate scenario variables rather than silently assumed to be normal.
+4. No universal 24-hour clinical outcome, dehydration percentage, collapse time, or mortality claim is made.
+5. Any consequences are presented as conditional on environment, fluid losses, baseline hydration, and other scenario parameters.
+
+## E. Research remaining
+
+- Retrieve and inspect the full text of SRC-008; verify bibliographic metadata.
+- Review human studies on hypodipsia/adipsia outside postoperative case reports, including hypothalamic lesions and congenital/idiopathic cases.
+- Separate osmotic AVP response from non-osmotic AVP secretion and renal responsiveness in the narrative.
+- Search for controlled human heat/humidity data relevant to Indonesia before depicting heat-related escalation.
+- Do not use a precise 24-hour physiological progression unless a suitable human evidence base supports it.
+
+## F. Revised gate
+
+- Preliminary physiology: PASS WITH QUALIFICATIONS
+- Clinical framing: REVISED
+- Human evidence base: INCOMPLETE
+- Scenario rule: NEEDS EXPLICIT DESIGN
+- Story design: HOLD
+- VO/production: HOLD
