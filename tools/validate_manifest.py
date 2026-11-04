@@ -11,7 +11,7 @@ PATTERNS={
  "production":re.compile(r"^WW-[0-9]{3,}$"),"source":re.compile(r"^SRC-[0-9]{3,}$"),
  "claim":re.compile(r"^CLM-[0-9]{3,}$"),"asset":re.compile(r"^AST-[A-Z]+-[0-9]{3,}$"),
  "character":re.compile(r"^AST-CHAR-[0-9]{3,}$"),"shot":re.compile(r"^SH-[0-9]{3,}$"),
- "version":re.compile(r"^[0-9]+\\.[0-9]+\\.[0-9]+$")}
+ "version":re.compile(r"^[0-9]+\.[0-9]+\.[0-9]+$")}
 CLAIM_STATUSES={"SUPPORTED","QUALIFIED","UNVERIFIED","REJECTED"}
 RIGHTS={"CLEARED","NOT_REQUIRED","PENDING","REJECTED"}
 CHARACTER_STATUSES={"DRAFT","REVIEW","APPROVED","SUPERSEDED","REJECTED"}
