@@ -56,12 +56,16 @@ No AST-CHAR profile is allocated. The protagonist is anonymous first-person POV,
 | Asset ID | Invariant / specification | Used by | Status |
 |---|---|---|---|
 | AST-LOC-001 | One contemporary domestic interior; same table, window direction, and neutral background | SH-001, SH-002, SH-007 | DRAFT; no location image created |
+| AST-REF-001 | Textual science reference for conceptual thirst circuitry; based on SRC-014; no external diagram copied | SH-003 | NOT_CREATED; source mapping only |
+| AST-REF-002 | Textual science reference for AVP/nephron water reabsorption; based on SRC-001 and SRC-014; no external diagram copied | SH-004 | NOT_CREATED; source mapping only |
 | AST-PROP-001 | Same clear, straight-sided drinking glass; consistent rim, height, water level, and condensation | SH-001, SH-007 | DRAFT; no prop reference created |
 | AST-PROP-002 | Clear unbranded water bottle with simple silhouette | SH-002 | DRAFT; no prop reference created |
 | AST-KF-001–007 | Keyframe IDs reserved in V0.1 | SH-001–004, SH-006–007 | NOT_CREATED |
 | AST-KF-008–009 | New keyframes for sweat and conceptual ongoing water loss | SH-008–009 | NOT_CREATED |
 | AST-AUDIO-001 | Indonesian VO master | All | NOT_CREATED |
-| AST-AUDIO-002 | Original or commercially licensed music / ambience / SFX | All | NOT_CREATED |
+| AST-AUDIO-002 | Music bed | All | NOT_CREATED |
+| AST-AUDIO-003 | Ambience | All | NOT_CREATED |
+| AST-AUDIO-004 | SFX | All | NOT_CREATED |
 
 No IDs are recycled. Add filenames, URIs, checksums, creator/provider, model/version, prompt version, seed/settings, license URL, exact rights terms, and inspection notes after actual creation. Current rights status for all not-yet-created generated/audio assets is PENDING_PROVIDER_AND_ASSET_TERMS.
 
@@ -112,8 +116,8 @@ The V0.1 Indonesian VO contains **107 whitespace-delimited words** across seven 
 |---|---|---|---|---|
 | AST-AUDIO-001 | VO | 00:00–00:57 | Indonesian, calm documentary delivery; target pacing about 112.6 wpm | TTS tool/voice/provider not selected; NOT_CREATED; rights pending |
 | AST-AUDIO-002 | Music bed | 00:00–00:57 | Restrained low pulse; duck under VO; no recognizable copyrighted melody | Not selected; NOT_CREATED; license pending |
-| AST-AUDIO-002 | Ambience | 00:00–00:57 | Quiet room tone and subtle air; no fabricated clinical ambience | Not created; source/license pending |
-| AST-AUDIO-002 | SFX | By edit points | Glass/soft water movement only where needed; avoid sensational alarms | Not created; source/license pending |
+| AST-AUDIO-003 | Ambience | 00:00–00:57 | Quiet room tone and subtle air; no fabricated clinical ambience | Not created; source/license pending |
+| AST-AUDIO-004 | SFX | By edit points | Glass/soft water movement only where needed; avoid sensational alarms | Not created; source/license pending |
 
 No dialogue or audio is baked into generated video plates. Mix levels, loudness target, peak ceiling, sample rate, and final sync are TBD until the editor and delivery specification are selected.
 
@@ -161,9 +165,9 @@ No internet image, stock clip, diagram, music, voice, font, or model output is p
 
 | Check | Type | Current result | Evidence / blocker |
 |---|---|---|---|
-| Scientific wording | Science | PASS WITH QUALIFICATIONS for narrative wording only | Research Addendum 02; CLM-009–014 |
+| Scientific wording | Science | PASS for approved/qualified narrative wording only | Research Addendum 02; CLM-009–014 |
 | Story causality and timing | Story | REWORK / timing verification pending | VO calculation is planning-only; TTS not rendered |
-| Shot granularity | Visual plan | REWORK completed in this addendum | SH-005 triptych split into SH-005/008/009 |
+| Shot granularity | Visual plan | PASS | SH-005 triptych split into SH-005/008/009 |
 | Character continuity | Continuity | PASS — no recurring/identity-critical character | Anonymous one-time POV; no AST-CHAR allocated |
 | Location/prop continuity | Continuity | DRAFT | Typed IDs assigned; reference images not created |
 | Asset generation | Asset QA | NOT STARTED | No assets exist |
@@ -184,7 +188,7 @@ Release blockers: unresolved asset/provider rights, no generated assets, no TTS/
 |---|---|---|
 | Intake / idea selection | Explicit user selection recorded | PASS |
 | Research | Critical story claims supported/qualified or removed; uncertainty explicit | PASS for this bounded thought experiment only |
-| Story | No unsupported deterministic timeline; fictional assumption explicit; 57s structure drafted | PASS as draft, subject to TTS timing check |
+| Story | No unsupported deterministic timeline; fictional assumption explicit; 57s structure drafted | PASS (draft; TTS timing is checked at generation/edit) |
 | Pre-production | Typed assets, shot IDs, purposes, prompts, target durations, claim mapping, Plan B, rights status, audio/subtitle/edit maps documented | HOLD until tool/provider and asset-rights route are selected |
 | Pilot generation | 1–2 shots rendered and human-inspected | HOLD |
 | Batch generation | Pilot approved; all shot references and rights reconciled | HOLD |
