@@ -26,8 +26,8 @@
     "retry_of": {"type": ["string", "null"], "pattern": "^GEN-SH-[0-9]{3,}-[0-9]{2,}$"}
   },
   "allOf": [
-    {"if": {"properties": {"status": {"const": "SUCCEEDED"}}, "required": ["status"]}, "then": {"required": ["completed_at", "output_asset_id"], "properties": {"completed_at": {"type": "string", "format": "date-time"}, "output_asset_id": {"type": "string"}}},
-    {"if": {"properties": {"status": {"const": "FAILED"}}, "required": ["status"]}, "then": {"required": ["completed_at", "failure_note"], "properties": {"completed_at": {"type": "string", "format": "date-time"}, "failure_note": {"type": "string", "minLength": 3}}}
+    {"if": {"properties": {"status": {"const": "SUCCEEDED"}}, "required": ["status"]}, "then": {"required": ["completed_at", "output_asset_id"], "properties": {"completed_at": {"type": "string", "format": "date-time"}, "output_asset_id": {"type": "string"}}}},
+    {"if": {"properties": {"status": {"const": "FAILED"}}, "required": ["status"]}, "then": {"required": ["completed_at", "failure_note"], "properties": {"completed_at": {"type": "string", "format": "date-time"}, "failure_note": {"type": "string", "minLength": 3}}}}
   ],
   "additionalProperties": false
 }
