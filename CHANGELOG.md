@@ -1,5 +1,10 @@
 # Changelog
 
+## [Unreleased] — V3.2 validation hardening
+- Upgraded repository validation to execute Draft 2020-12 schema validation with format checking and resolved local schema references, in addition to structural checks.
+- Added regression coverage for malformed approval timestamps and refreshed the validation report to identify the exact post-merge commit and CI evidence.
+
+
 ## [Unreleased] — V3.2 contract hardening
 - Expressed official idea-scoring weights explicitly as percentages to satisfy the unchanged scoring-contract test.
 - Unified Project Instructions, Daily Intelligence, and setup guidance around a two-layer interaction/evidence contract.

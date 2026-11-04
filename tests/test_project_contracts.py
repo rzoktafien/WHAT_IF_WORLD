@@ -5,7 +5,7 @@ import sys
 import unittest
 from pathlib import Path
 
-from jsonschema import Draft202012Validator
+from jsonschema import Draft202012Validator, FormatChecker
 from referencing import Registry, Resource
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -38,7 +38,7 @@ class ProjectContracts(unittest.TestCase):
    resources.append((path.resolve().as_uri(),Resource.from_contents(item)))
   root=json.loads((schema_dir/"production_manifest.schema.json").read_text(encoding="utf-8"))
   root["$id"]=(schema_dir/"production_manifest.schema.json").resolve().as_uri()
-  Draft202012Validator(root,registry=Registry().with_resources(resources)).validate(self.manifest)
+  Draft202012Validator(root,registry=Registry().with_resources(resources),format_checker=FormatChecker()).validate(self.manifest)
 
  def test_character_profile_schema_accepts_valid_profile(self):
   schema=json.loads((ROOT/"schemas/character_reference.schema.json").read_text(encoding="utf-8"))
@@ -46,7 +46,7 @@ class ProjectContracts(unittest.TestCase):
    "status":"DRAFT","identity":{"face_shape":"oval","hair":"short black hair","invariant_traits":["small scar above left eyebrow"]},
    "canonical_reference":{"kind":"prompt","prompt":"Photorealistic fictional character reference.","provenance":"Original project prompt"},
    "wardrobe_variants":[],"rights_status":"NOT_REQUIRED"}
-  Draft202012Validator(schema).validate(profile)
+  Draft202012Validator(schema,format_checker=FormatChecker()).validate(profile)
 
  def test_character_profile_schema_rejects_missing_identity_invariant(self):
   schema=json.loads((ROOT/"schemas/character_reference.schema.json").read_text(encoding="utf-8"))
@@ -162,9 +162,11 @@ class ProjectContracts(unittest.TestCase):
    "status":"APPROVED","identity":{"face_shape":"oval","hair":"short black hair","invariant_traits":["scar"]},
    "canonical_reference":{"kind":"prompt","prompt":"Original reference","provenance":"Original project prompt"},
    "wardrobe_variants":[],"rights_status":"NOT_REQUIRED"}
-  with self.assertRaises(Exception): Draft202012Validator(schema).validate(profile)
+  with self.assertRaises(Exception): Draft202012Validator(schema,format_checker=FormatChecker()).validate(profile)
   profile["approval"]={"by":"Producer","at":"2026-11-05T01:00:00Z"}
-  Draft202012Validator(schema).validate(profile)
+  Draft202012Validator(schema,format_checker=FormatChecker()).validate(profile)
+  profile["approval"]["at"]="not-a-date-time"
+  with self.assertRaises(Exception): Draft202012Validator(schema,format_checker=FormatChecker()).validate(profile)
 
  def test_validator_rejects_approved_character_without_approval_metadata(self):
   data=copy.deepcopy(self.manifest)
