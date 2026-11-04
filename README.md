@@ -33,6 +33,7 @@ WHAT IF WORLD is a repeatable production system turning monitored questions and 
 - 11_QA_AND_RELEASE_PROTOCOL.md — quality and release gates.
 - 12_GITHUB_REFERENCE_REVIEW.md — architecture references.
 - LICENSING_DECISION_RECORD.md — owner-selected licensing direction and remaining release gates; not a license grant.
+- RIGHTS_AND_PROVENANCE_REGISTER.md — ownership and third-party rights audit work queue; no item is pre-cleared.
 - schemas/ — JSON Schema contracts.
 - examples/ — sample manifest.
 - tools/ — dependency-free operational validators.
@@ -44,7 +45,7 @@ WHAT IF WORLD is a repeatable production system turning monitored questions and 
 Google Flow/Veo generation, TTS rendering, editing, TikTok publishing, account-level trend analytics, third-party rights clearance, and actual rendered-media inspection remain manual or require separately approved integrations.
 
 ## Licensing and commercial use
-**Selected direction: source-available commercial.** This is a product/licensing direction recorded in [LICENSING_DECISION_RECORD.md](LICENSING_DECISION_RECORD.md), not a published license grant. No `LICENSE` file or custom license terms are issued by this branch. Do not describe this repository as open source, commercially licensed, or cleared for unrestricted commercial use. Public source visibility is not a substitute for explicit license terms. Rights inventory, third-party provenance review, jurisdiction-aware legal drafting, and explicit owner approval remain required before a license is published or commercial permissions are offered. Third-party code, assets, fonts, music, models, datasets, and references remain subject to their own terms.
+**Selected direction: source-available commercial.** This is a product/licensing direction recorded in [LICENSING_DECISION_RECORD.md](LICENSING_DECISION_RECORD.md), not a published license grant. No `LICENSE` file or custom license terms are issued by this branch. Do not describe this repository as open source, commercially licensed, or cleared for unrestricted commercial use. Public source visibility is not a substitute for explicit license terms. The [rights and provenance register](RIGHTS_AND_PROVENANCE_REGISTER.md) is open and no material is globally cleared by it. Complete ownership/contributor and third-party provenance review, jurisdiction-aware legal drafting, and explicit owner approval before a license is published or commercial permissions are offered. Third-party code, assets, fonts, music, models, datasets, and references remain subject to their own terms.
 
 ## Versioning
 MAJOR: incompatible workflow/schema changes. MINOR: new stages/artifacts/capabilities. PATCH: non-breaking clarifications and QA improvements. See CHANGELOG.md.
