@@ -43,6 +43,7 @@ The repository is a document-driven blueprint and MVP. It does not claim that vi
 - 13_GLOBAL_EDITORIAL_STRATEGY_2026_2030.md — brand, audience, editorial pillars, franchises.
 - 14_90_DAY_LAUNCH_AND_REVENUE_PLAN.md — execution phases, publishing cadence, monetization.
 - 15_PLATFORM_DISTRIBUTION_AND_ANALYTICS.md — channel roles, website architecture, analytics, release checklist.
+- 16_BRAND_LAUNCH_AND_30_DAY_CALENDAR.md — profile copy, brand direction, first-month content calendar, studio service architecture.
 - WW-003_RESEARCH_ADDENDUM_02.md — final source clarification for the first approved episode.
 - WW-003_PRODUCTION_DOSSIER_V0.1.md — first story and production-plan draft; not rendered or released.
 - LICENSING_DECISION_RECORD.md — owner-selected licensing direction and remaining release gates; not a license grant.
