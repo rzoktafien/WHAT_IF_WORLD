@@ -33,9 +33,17 @@ Retrieve the latest completed report; check report date, evidence dates, source 
 5. Link shots through character_ids and record the exact profile version in character_reference_versions.
 6. If canonical reference changes, mark dependent shots STALE and re-review them.
 
-## E. Responsibility split
+## E. Licensing and commercial readiness
+1. Read LICENSING_DECISION_RECORD.md. The selected direction is source-available commercial; this is not yet a published license.
+2. Do not add generic or placeholder license text, and do not claim open-source or commercial-use clearance.
+3. Complete an ownership/contributor and third-party rights inventory for code, documentation, schemas, prompts, examples, dependencies, media, fonts, music, models, datasets, and research excerpts.
+4. Obtain jurisdiction-aware legal drafting and review for the actual license and any customer/enterprise agreements.
+5. Obtain explicit repository-owner approval of the final terms before publishing a LICENSE file or offering commercial permissions.
+6. Keep unresolved or uncleared materials out of commercial distributions.
+
+## F. Responsibility split
 AI: research synthesis, claim-ledger draft, story, prompts, timing, asset naming, QA checklist, package assembly.
 Human: idea approval, factual-risk exceptions, rights clearance, generation operation, render inspection, final edit approval, publication. No automatic publishing is implied.
 
-## F. Recovery
+## G. Recovery
 Retain disappeared-source metadata and seek independent sources. Preserve failed prompts/renders and failure notes. Resume from last persisted approved artifact. If premise or canonical character changes, increment version and reopen affected science, story, continuity, and QA gates.
