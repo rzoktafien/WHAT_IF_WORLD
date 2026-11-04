@@ -91,6 +91,29 @@ class ProjectContracts(unittest.TestCase):
    errors,_=validate(data)
    self.assertEqual(errors,[],state)
 
+ def test_validator_rejects_shot_missing_required_narrative_fields(self):
+  data=copy.deepcopy(self.manifest)
+  data["shots"]=[{"id":"SH-001","production_id":"WW-003","duration_seconds":6,
+   "start_state":"Initial state","action":"A single action","camera_move":"Slow push in","end_state":"Final state","status":"PLANNED"}]
+  errors,_=validate(data)
+  self.assertTrue(any("missing valid required field purpose" in e for e in errors))
+
+ def test_validator_rejects_invalid_shot_status(self):
+  data=copy.deepcopy(self.manifest)
+  data["shots"]=[{"id":"SH-001","production_id":"WW-003","purpose":"Test shot purpose","duration_seconds":6,
+   "start_state":"Initial state","action":"A single action","camera_move":"Slow push in","end_state":"Final state","status":"DONE"}]
+  errors,_=validate(data)
+  self.assertTrue(any("has invalid status" in e for e in errors))
+
+ def test_validator_rejects_asset_character_id_collision(self):
+  data=copy.deepcopy(self.manifest)
+  data["assets"]=[{"id":"AST-CHAR-001","rights_status":"NOT_REQUIRED"}]
+  data["character_references"]=[{"id":"AST-CHAR-001","owner":"WHAT IF WORLD team","created_at":"2026-11-05T00:00:00Z",
+   "updated_at":"2026-11-05T00:00:00Z","status":"DRAFT","rights_status":"NOT_REQUIRED","version":"1.0.0",
+   "canonical_reference":{"kind":"prompt","prompt":"Original reference prompt","provenance":"Original","creator":"WHAT IF WORLD team","source":"Original generation"},"linked_shots":[]}]
+  errors,_=validate(data)
+  self.assertTrue(any("asset ID collides with character ID" in e for e in errors))
+
  def test_release_gate_blocks_unverified_critical_claim(self):
   errors,blockers=validate(self.manifest,release_gate=True)
   self.assertEqual(errors,[])
@@ -110,7 +133,7 @@ class ProjectContracts(unittest.TestCase):
 
  def test_dangling_character_reference_is_rejected(self):
   data=copy.deepcopy(self.manifest)
-  data["shots"]=[{"id":"SH-001","production_id":"WW-003","duration_seconds":5,
+  data["shots"]=[{"id":"SH-001","production_id":"WW-003","purpose":"Test shot purpose","start_state":"Initial state","action":"A single action","camera_move":"Slow push in","end_state":"Final state","duration_seconds":5,
                   "character_ids":["AST-CHAR-999"],"status":"PLANNED"}]
   errors,_=validate(data)
   self.assertTrue(any("unknown character AST-CHAR-999" in e for e in errors))
@@ -125,7 +148,7 @@ class ProjectContracts(unittest.TestCase):
   data=copy.deepcopy(self.manifest)
   data["character_references"]=[{"id":"AST-CHAR-001","owner":"WHAT IF WORLD team","created_at":"2026-11-05T00:00:00Z","updated_at":"2026-11-05T00:00:00Z","status":"APPROVED","rights_status":"NOT_REQUIRED","version":"1.0.0",
    "canonical_reference":{"kind":"prompt","prompt":"Original prompt","provenance":"Original","creator":"WHAT IF WORLD team","source":"Original project generation"},"approval":{"by":"Producer","at":"2026-11-05T01:00:00Z"},"linked_shots":["SH-001"]}]
-  data["shots"]=[{"id":"SH-001","production_id":"WW-003","duration_seconds":6,
+  data["shots"]=[{"id":"SH-001","production_id":"WW-003","purpose":"Test shot purpose","start_state":"Initial state","action":"A single action","camera_move":"Slow push in","end_state":"Final state","duration_seconds":6,
    "character_ids":["AST-CHAR-001"],"character_reference_versions":{"AST-CHAR-001":"1.0.0"},"status":"PLANNED"}]
   errors,_=validate(data); self.assertEqual(errors,[])
   data["shots"][0]["character_reference_versions"]["AST-CHAR-001"]="2.0.0"
@@ -136,7 +159,7 @@ class ProjectContracts(unittest.TestCase):
   data=copy.deepcopy(self.manifest)
   data["character_references"]=[{"id":"AST-CHAR-001","owner":"WHAT IF WORLD team","created_at":"2026-11-05T00:00:00Z","updated_at":"2026-11-05T00:00:00Z","status":"APPROVED","rights_status":"NOT_REQUIRED","version":"1.0.0",
     "canonical_reference":{"kind":"prompt","prompt":"Original character reference prompt.","provenance":"Original","creator":"WHAT IF WORLD team","source":"Original project generation"},"approval":{"by":"Producer","at":"2026-11-05T01:00:00Z"},"linked_shots":["SH-001"]}]
-  data["shots"]=[{"id":"SH-001","production_id":"WW-003","duration_seconds":6,
+  data["shots"]=[{"id":"SH-001","production_id":"WW-003","purpose":"Test shot purpose","start_state":"Initial state","action":"A single action","camera_move":"Slow push in","end_state":"Final state","duration_seconds":6,
     "character_ids":["AST-CHAR-001"],"character_reference_versions":{"AST-CHAR-001":"1.0.0"},"status":"PLANNED"}]
   errors,_=validate(data); self.assertEqual(errors,[])
 
@@ -210,7 +233,7 @@ class ProjectContracts(unittest.TestCase):
   data=copy.deepcopy(self.manifest)
   data["character_references"]=[{"id":"AST-CHAR-001","owner":"WHAT IF WORLD team","created_at":"2026-11-05T00:00:00Z","updated_at":"2026-11-05T00:00:00Z","status":"DRAFT","rights_status":"NOT_REQUIRED","version":"1.0.0",
    "canonical_reference":{"kind":"prompt","prompt":"Original reference","provenance":"Original","creator":"WHAT IF WORLD team","source":"Original project generation"},"linked_shots":[]}]
-  data["shots"]=[{"id":"SH-001","production_id":"WW-003","duration_seconds":6,"character_ids":["AST-CHAR-001"],
+  data["shots"]=[{"id":"SH-001","production_id":"WW-003","purpose":"Test shot purpose","start_state":"Initial state","action":"A single action","camera_move":"Slow push in","end_state":"Final state","duration_seconds":6,"character_ids":["AST-CHAR-001"],
    "character_reference_versions":{"AST-CHAR-001":"1.0.0"},"status":"PLANNED"}]
   errors,_=validate(data)
   self.assertTrue(any("character linked_shots does not include the shot" in e for e in errors))
