@@ -159,7 +159,7 @@ def validate(data,release_gate=False):
         if status=="APPROVED":
             approval=c.get("approval")
             if not isinstance(approval,dict) or not isinstance(approval.get("by"),str) or not approval.get("by").strip() or not _valid_datetime(approval.get("at")):
-                errors.append(f"approved character {cid} is missing valid approval.by or approval.at date-time")
+                errors.append(f"approved character {cid} is missing approval.by or approval.at (approval.at must be a timezone-aware date-time)")
         linked=c.get("linked_shots",[])
         if not isinstance(linked,list): errors.append(f"character {cid} linked_shots must be an array"); linked=[]
         for shot_id in linked:
