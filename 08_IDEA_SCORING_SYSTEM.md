@@ -4,13 +4,13 @@ Score each dimension 0–5; weighted total is out of 100. Scores are editorial p
 
 | Dimension | Weight | 0 | 3 | 5 |
 |---|---:|---|---|---|
-| Evidence freshness/relevance | 10 | No signal and falsely presented as trend | Some credible contextual signal | Strong, repeated, current evidence |
-| Scientific foundation | 25 | Contradicted/unsupported | Plausible, research still needed | Clear mechanism and primary support |
-| Human stakes | 15 | Abstract/no consequence | Understandable consequence | Concrete, emotionally legible stakes |
-| Visual originality | 20 | Generic/static | Some memorable imagery | Distinct, executable visual hook |
-| Story potential | 15 | No causal escalation | Basic progression | Clear escalation, twist, payoff |
-| Novelty vs archive | 10 | Duplicate | Moderate angle change | Materially distinct premise/angle |
-| Indonesian relevance | 5 | No meaningful relevance | General relevance | Strong local evidence/context |
+| Evidence freshness/relevance | 10% | No signal and falsely presented as trend | Some credible contextual signal | Strong, repeated, current evidence |
+| Scientific foundation | 25% | Contradicted/unsupported | Plausible, research still needed | Clear mechanism and primary support |
+| Human stakes | 15% | Abstract/no consequence | Understandable consequence | Concrete, emotionally legible stakes |
+| Visual originality | 20% | Generic/static | Some memorable imagery | Distinct, executable visual hook |
+| Story potential | 15% | No causal escalation | Basic progression | Clear escalation, twist, payoff |
+| Novelty vs archive | 10% | Duplicate | Moderate angle change | Materially distinct premise/angle |
+| Indonesian relevance | 5% | No meaningful relevance | General relevance | Strong local evidence/context |
 
 Formula: `sum(score / 5 * weight)`.
 
