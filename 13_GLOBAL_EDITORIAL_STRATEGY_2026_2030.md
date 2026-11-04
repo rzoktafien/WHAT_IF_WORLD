@@ -85,7 +85,7 @@ Each franchise needs a recognizable opening grammar, pacing, sound identity, vis
 
 ## 6. Short-form narrative grammar
 
-Default master format: vertical 9:16, 35–60 seconds. Extend to 60–90 seconds only when the evidence or narrative genuinely needs it.
+Default master format: vertical 9:16, 45–60 seconds. Extend to 60–90 seconds only when the evidence or narrative genuinely needs it.
 
 Suggested structure:
 - **0–2s:** visual anomaly and sharp question; no logo intro.
