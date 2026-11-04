@@ -300,3 +300,66 @@ The original 24-hour scenario remains a **fictional editorial thought experiment
 - Scenario rule: NEEDS EXPLICIT DESIGN
 - Story design: HOLD
 - VO/production: HOLD
+
+
+## G. Additional human evidence and Indonesia context
+
+### SRC-010 — Acquired disorder of thirst perception with intact osmoregulation of vasopressin
+- Authors: S. Zünd, C. Fretz, R. Krapf
+- Journal: Wiener Klinische Wochenschrift 110(15):538–541 (1998)
+- PMID: https://pubmed.ncbi.nlm.nih.gov/9782573/
+- Access date: 2026-11-04
+- Type: human case report
+- Evidence inspected: PubMed abstract.
+- Key support: a 45-year-old man had severe hypodipsia with intact vasopressin secretion and maximal renal response to vasopressin; presented during hot summer conditions with severe hypernatremia after prior frontal-lobe hemorrhage.
+- Limitation: single case, old publication, German-language original; it demonstrates biological plausibility, not frequency, a general mechanism, or a 24-hour progression.
+
+### SRC-011 — The Association between Heat Exposure and Hydration Status Among Production Workers in Fish Processing Company
+- Authors: Sutarto T, Soemarko DS, Ichsan S
+- Journal: The Indonesian Journal of Community and Occupational Medicine 1(3):146–153 (2022)
+- DOI: https://doi.org/10.53773/ijcom.v1i3.33.146-53
+- Article: https://ijcom.org/index.php/ijcom/article/view/33
+- Access date: 2026-11-04
+- Type: Indonesian occupational-health observational study
+- Evidence inspected: indexed abstract and university repository record.
+- Key support: in a sample of 88 production workers, 37.5% were classified as dehydrated; workplace temperature and water intake were associated with hydration status; temperature was reported as the dominant risk factor in the study model.
+- Limitation: single workplace and occupational sample; observational association does not establish causal effect for the general Indonesian population or an individual with adipsia.
+
+### SRC-012 — Environmental Factors that are at Risk of Heat Stress Exposure to Fishermen in Indonesia
+- Authors: Putri Ayuni Alayyannur, Doni Hikmat Ramdhan, Mila Tejamaya
+- Journal: Indonesian Journal of Occupational Safety and Health 12, Special Issue 1 (2023), pp. 20–24
+- DOI: https://doi.org/10.20473/ijosh.v12i1SI.2023.20-24
+- Access date: 2026-11-04
+- Type: Indonesian cross-sectional study
+- Evidence inspected: university repository abstract.
+- Key support: study of 42 fishermen in coastal Surabaya found access to clean water was significantly associated with heat-stress risk; reported relationship between heat stress and dehydration was weak.
+- Limitation: small convenience/accidental sample; do not generalize nationally or use as a quantitative prediction.
+
+### SRC-013 — Fluid balance during hot-dry and warm-humid heat stress while adhering to occupational hydration recommendations
+- Authors: Xiujing Zhao et al.
+- Journal: Annals of Work Exposures and Health 70(8) (2026), published 2026-10-05
+- DOI: https://doi.org/10.1093/annweh/wxag085
+- PMID: https://pubmed.ncbi.nlm.nih.gov/42831410/
+- Access date: 2026-11-04
+- Type: randomized crossover human study
+- Evidence inspected: PubMed abstract.
+- Key support: 20 healthy adults completed simulated moderate work in hot-dry and warm-humid conditions; sweat rate and fluid balance differed by environment; thirst sensation did not differ between the two conditions in that protocol.
+- Limitation: small sample, controlled simulated work, US research setting, and participants followed a fixed hydration protocol. Not an adipsia study and not a direct estimate for Indonesian outdoor workers.
+
+## H. Updated scientific and editorial interpretation
+
+1. Isolated impaired thirst with preserved AVP secretion and renal responsiveness is biologically plausible and has been documented in human case literature (SRC-010). It is not the typical definition of adipsic AVP deficiency.
+2. The more familiar AAVP-D phenotype involves both impaired thirst and inadequate osmotically stimulated AVP secretion, with potential hypernatremia, dilute urine, and polyuria (SRC-005, SRC-007).
+3. AVP regulation is multidimensional. Osmotic stimulation and non-osmotic signals (e.g. volume, stress, illness, glucocorticoid context) must not be collapsed into a single "vasopressin on/off" switch (SRC-006).
+4. Indonesian occupational studies support the relevance of heat exposure and access to drinking water as real-world context, but they do not establish the consequences of adipsia (SRC-011, SRC-012).
+5. A recent controlled study confirms that heat/humidity conditions affect fluid balance and sweating, but its small sample and fixed drinking protocol do not justify a universal timeline or hydration prescription (SRC-013).
+
+**Recommended editorial framing:** use a fictional, selective neural interruption of conscious thirst perception as the thought experiment, explicitly distinguishing it from the rare clinical diagnoses. Build the story around the loss of a behavioral warning signal, while treating renal/AVP responses as separate variables. Heat may be a contextual stressor, but not a deterministic trigger for collapse.
+
+## I. Final evidence status after this pass
+- Human case evidence for hypodipsia with intact AVP/renal response: FOUND, limited to case report evidence.
+- Clinical evidence distinguishing adipsia from adipsic AVP deficiency: FOUND.
+- Indonesian heat/hydration context: FOUND, observational and limited to specific occupational groups.
+- Human controlled 24-hour isolated thirst-suppression study: NOT FOUND.
+- Universal time-to-dehydration/collapse outcome: NOT SUPPORTED.
+- Scenario can be responsibly developed as a clearly disclosed thought experiment; it cannot be presented as a real clinical prediction.
