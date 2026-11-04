@@ -12,14 +12,22 @@
       "event": "push",
       "url": "https://github.com/rzoktafien/WHAT_IF_WORLD/actions/runs/41902776395",
       "conclusion": "success",
-      "matrix_jobs": {"python_3_11":"success","python_3_12":"success","python_3_13":"success"}
+      "matrix_jobs": {
+        "python_3_11": "success",
+        "python_3_12": "success",
+        "python_3_13": "success"
+      }
     },
     {
       "run_id": 41902842223,
       "event": "push",
       "url": "https://github.com/rzoktafien/WHAT_IF_WORLD/actions/runs/41902842223",
       "conclusion": "success",
-      "matrix_jobs": {"python_3_11":"success","python_3_12":"success","python_3_13":"success"},
+      "matrix_jobs": {
+        "python_3_11": "success",
+        "python_3_12": "success",
+        "python_3_13": "success"
+      },
       "note": "Run executed on the feature branch head also referenced by open PR #1."
     }
   ],
@@ -54,5 +62,28 @@
     "Final source-available commercial license and customer terms require qualified legal review and explicit owner approval.",
     "GitHub reports main and the feature branch as unprotected; the connected integration cannot access branch-protection administration endpoints."
   ],
-  "report_note": "Engineering validation of commit 186baf1798bc558e3e1bc2d101d0e629a5d2c8da passed on Python 3.11, 3.12, and 3.13. This report correction is itself subject to PR #9 CI. Engineering CI success is not production release approval, rights clearance, legal approval, branch protection, or proof of rendered media."
+  "report_note": "Engineering validation of commit 186baf1798bc558e3e1bc2d101d0e629a5d2c8da passed on Python 3.11, 3.12, and 3.13. This report correction is itself subject to PR #9 CI. Engineering CI success is not production release approval, rights clearance, legal approval, branch protection, or proof of rendered media. Main integration was subsequently verified at fa60f05dcfe5e48927a3e7bd26bb8fa0aac224b1 by workflow run 41903230955; all three Python matrix jobs and their contract, unit-test, and negative release-gate steps succeeded.",
+  "main_integration": {
+    "branch": "main",
+    "merge_commit": "fa60f05dcfe5e48927a3e7bd26bb8fa0aac224b1",
+    "post_merge_workflow_run": {
+      "run_id": 41903230955,
+      "url": "https://github.com/rzoktafien/WHAT_IF_WORLD/actions/runs/41903230955",
+      "event": "push",
+      "head_sha": "fa60f05dcfe5e48927a3e7bd26bb8fa0aac224b1",
+      "conclusion": "success",
+      "completed_at": "2026-11-04T20:05:41Z",
+      "matrix_jobs": {
+        "python_3_11": "success",
+        "python_3_12": "success",
+        "python_3_13": "success"
+      },
+      "verified_steps": [
+        "Validate repository contracts",
+        "Run unit tests",
+        "Verify release gate rejects incomplete example"
+      ]
+    },
+    "note": "The validated_commit above identifies the feature-branch code revision covered by the detailed schema and regression evidence. The main_integration record separately documents the squash-merge commit and its post-merge CI run; the merge commit is not represented as the validated_commit for the earlier PR #9 evidence."
+  }
 }
