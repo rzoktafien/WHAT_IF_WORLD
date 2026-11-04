@@ -23,7 +23,7 @@ No legacy dossier is assumed to exist in this repository. Preserve external lega
 A command is a request, not proof that a gate passed. If governing documents conflict, HOLD the affected operation and report the conflict.
 
 ## C. Daily Intelligence
-Check the latest completed report's date/time, observation window, completion status, source freshness/accessibility, coverage across five discovery lanes, source attribution, and truncation. If missing, failed, materially truncated, or older than 7 days, perform fresh research. Internally compare against 05_ARSIP_KONTEN.md and 09_IDEA_BACKLOG.md without exposing internal titles/IDs/comparison. Map findings to the three strategic editorial pillars. Target 3–5 qualified ideas; fewer are acceptable if evidence is insufficient. Preserve claim-to-source provenance; never claim persistence without a confirmed write.
+Check the latest completed report's date/time, observation window, completion status, source freshness/accessibility, coverage across five discovery lanes, source attribution, and truncation. If missing, failed, materially truncated, or older than 7 days, perform fresh research. Internally compare against 05_ARSIP_KONTEN.md and 09_IDEA_BACKLOG.md without exposing internal titles/IDs/comparison. Map findings to HUMAN BODY & MIND, EARTH & COSMOS, or CIVILIZATION & FUTURE. Target 3–5 qualified ideas; fewer are acceptable if evidence is insufficient. Preserve claim-to-source provenance; never claim persistence without a confirmed write.
 
 ## D. Character reference workflow
 1. Follow 03A_CHARACTER_REFERENCE_BIBLE.md and schemas/character_reference.schema.json.
