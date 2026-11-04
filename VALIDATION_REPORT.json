@@ -1,13 +1,35 @@
 {
   "module": "WHAT IF WORLD Production Module",
   "development_line": "V3.2",
-  "status": "AWAITING_CI_AFTER_SCHEMA_VALIDATION_EXPANSION",
-  "previous_validated_commit": "e07f46125cab46e3acae11ff93a519e68ae274f5",
-  "previous_successful_matrix": ["Python 3.11", "Python 3.12", "Python 3.13"],
-  "current_checks_added": [
-    "Validate JSON Schema documents against Draft 2020-12 meta-schema",
-    "Validate example production manifest against production_manifest.schema.json with local references resolved",
-    "Install pinned development-only schema validation dependency"
+  "status": "PASS",
+  "validated_commit": "08fd29e2eb4e3ded13253126428114cf3aae3413",
+  "pull_request": "https://github.com/rzoktafien/WHAT_IF_WORLD/pull/1",
+  "workflow": "WHAT IF WORLD validation",
+  "workflow_runs": [
+    {"run_id": 41831313851, "event": "push", "url": "https://github.com/rzoktafien/WHAT_IF_WORLD/actions/runs/41831313851", "conclusion": "success"},
+    {"run_id": 41831321514, "event": "pull_request", "url": "https://github.com/rzoktafien/WHAT_IF_WORLD/actions/runs/41831321514", "conclusion": "success"}
   ],
-  "authority": "GitHub Actions for the latest feature-branch commit is authoritative. Do not interpret this interim report as a passing result."
+  "matrix": {
+    "python_versions": ["3.11", "3.12", "3.13"],
+    "repository_contract_validation": "PASS on all versions",
+    "json_schema_meta_validation": "PASS on all versions using Draft 2020-12 validator",
+    "example_manifest_schema_validation": "PASS on all versions with local references resolved",
+    "unit_tests": {"count_per_version": 12, "failures": 0, "errors": 0, "result": "PASS on all versions"},
+    "release_gate_negative_test": "PASS on all versions; intentionally incomplete example manifest was blocked"
+  },
+  "validator_regressions": [
+    "duplicate IDs",
+    "dangling source references",
+    "dangling character references",
+    "approved character missing canonical reference",
+    "valid character-to-shot linkage",
+    "invalid shot duration",
+    "critical unresolved claim release blocker"
+  ],
+  "limitations": [
+    "No video generation, audio rendering, editing, or publication integration was exercised.",
+    "The example manifest is intentionally incomplete and must remain blocked from release.",
+    "Commercial distribution and repository license remain owner decisions."
+  ],
+  "report_note": "This report records the successful push and pull_request CI runs for validated_commit. The report metadata commit itself triggers another CI run."
 }
