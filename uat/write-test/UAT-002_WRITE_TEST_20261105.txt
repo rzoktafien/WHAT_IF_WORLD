@@ -1,0 +1,9 @@
+# UAT-002 WRITE–READ ROUND-TRIP TEST
+
+Purpose: verify that a GitHub write performed through the Project-connected GitHub connector can be read back through the same connector.
+Repository: rzoktafien/WHAT_IF_WORLD
+Test branch: uat-002/write-test-2026-11-05
+Base branch: feat/v3.2-character-reference-system
+Baseline branch main: not modified.
+Production documents: not modified.
+Test date: 2026-11-05
