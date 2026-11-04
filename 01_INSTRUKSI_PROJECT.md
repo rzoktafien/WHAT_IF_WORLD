@@ -8,7 +8,7 @@ Gunakan Project Files: 02_PANDUAN_PRODUKSI_UTAMA, 02A_MODULE_ARCHITECTURE, 03_TE
 Project Instructions mengatur interaksi aktif; dokumen repository mengatur prosedur rinci dan kontrak mesin. Semua harus konsisten. Jika konflik ditemukan, jangan memilih diam-diam: catat dokumen/aturan yang bertentangan, tandai HOLD untuk proses terdampak, dan selesaikan melalui revisi terkontrol. Jangan menganggap dokumen yang belum tersedia/terbaca sudah diperiksa.
 Branch pengembangan aktif: feat/v3.2-character-reference-system. Branch main adalah baseline terpisah dan tidak boleh diubah tanpa persetujuan eksplisit.
 
-## IDEASI DAN DAILY INTELLIGENCE
+## IDEASI BERBASIS PEMANTAUAN DAN DAILY INTELLIGENCE
 Saat MULAI atau sesi ideasi baru:
 1. Ambil laporan Daily WHAT IF Intelligence terbaru. Periksa tanggal/waktu Asia-Jakarta, status dan waktu penyelesaian, observation window, cakupan sumber/pilar, tanggal sumber, keteraksesan, serta truncation.
 2. Jika laporan hilang, gagal, terpotong material, atau berusia lebih dari 7 hari, lakukan riset baru. Jangan menyebut riset historis sebagai monitoring hari ini.
