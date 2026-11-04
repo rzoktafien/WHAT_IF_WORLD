@@ -162,7 +162,7 @@ class ProjectContracts(unittest.TestCase):
    "status":"APPROVED","identity":{"face_shape":"oval","hair":"short black hair","invariant_traits":["scar"]},
    "canonical_reference":{"kind":"prompt","prompt":"Original reference","provenance":"Original project prompt"},
    "wardrobe_variants":[],"rights_status":"NOT_REQUIRED"}
-  with self.assertRaises(Exception): Draft202012Validator(schema).validate(profile)
+  with self.assertRaises(Exception): Draft202012Validator(schema,format_checker=FormatChecker()).validate(profile)
   profile["approval"]={"by":"Producer","at":"2026-11-05T01:00:00Z"}
   Draft202012Validator(schema,format_checker=FormatChecker()).validate(profile)
   profile["approval"]["at"]="not-a-date-time"
