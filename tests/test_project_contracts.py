@@ -152,7 +152,7 @@ class ProjectContracts(unittest.TestCase):
  def test_persistence_and_human_approval_are_explicit(self):
   instructions=(ROOT/"01_INSTRUKSI_PROJECT.md").read_text(encoding="utf-8")
   daily=(ROOT/"06_DAILY_INTELLIGENCE_PROTOCOL.md").read_text(encoding="utf-8")
-  self.assertIn("Percakapan atau sitasi bukan bukti persistensi",instructions)
+  self.assertIn("Percakapan bukan bukti persistensi",instructions)
   self.assertIn("Jangan mengklaim GitHub/Project Files diperbarui tanpa konfirmasi",daily)
   self.assertIn("persetujuan eksplisit",instructions.lower())
 
