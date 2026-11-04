@@ -1,5 +1,10 @@
 # Changelog
 
+## [Unreleased] — V3.2 character schema and generation gates
+- Enforced character identity invariants, production ownership, canonical-reference kind/payload, wardrobe variants, rights status, and timezone-aware timestamps in semantic validation.
+- Blocked pilot/batch generation and downstream stages when shot-linked character approval or asset/character rights are unresolved.
+- Added regression tests for incomplete character profiles and stage-specific generation blockers.
+
 ## [Unreleased] — V3.2 semantic manifest validation
 - Enforced production-manifest required fields, claim/source shape, and the full required shot contract in the semantic validator.
 - Rejected invalid shot states and collisions between typed asset IDs and character IDs.
