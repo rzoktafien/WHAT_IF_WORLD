@@ -4,7 +4,7 @@
 WHAT IF WORLD is a document-driven, stage-gated production system for Indonesian short-form cinematic science/hypothetical content. This repository is a production blueprint, not proof that external rendering, editing, or publishing occurred.
 
 ## Source of truth
-Read 02A_MODULE_ARCHITECTURE.md and 01_INSTRUKSI_PROJECT.md first, then relevant domain documents. Character identity and continuity are governed by 03A_CHARACTER_REFERENCE_BIBLE.md and 10_ASSET_AND_SHOT_REGISTER.md. Machine contracts live in schemas/, examples/, tools/, and tests/. Identify conflicts; do not silently resolve them.
+Read 02A_MODULE_ARCHITECTURE.md and 01_INSTRUKSI_PROJECT.md first, then relevant domain documents. Character identity and continuity are governed by 03A_CHARACTER_REFERENCE_BIBLE.md and 10_ASSET_AND_SHOT_REGISTER.md. Licensing direction and gates are governed by LICENSING_DECISION_RECORD.md; ownership and third-party provenance are tracked in RIGHTS_AND_PROVENANCE_REGISTER.md. Machine contracts live in schemas/, examples/, tools/, and tests/. Identify conflicts; do not silently resolve them.
 
 ## Change control
 - Feature work uses a branch from current main; never commit feature work directly to main.
@@ -22,6 +22,14 @@ Read 02A_MODULE_ARCHITECTURE.md and 01_INSTRUKSI_PROJECT.md first, then relevant
 - Link shots through shots[].character_ids and record the profile version used.
 - Canonical reference changes invalidate dependent continuity checks; mark affected shots STALE.
 - Record provenance and rights. Do not use real-person likeness/voice without documented authority.
+
+## Licensing and rights
+- Treat source-available commercial as the selected direction, not as an issued license grant.
+- Do not add guessed, placeholder, or generic license text.
+- Do not describe the repository as open source or commercially cleared without an approved license and supporting rights review.
+- Track ownership, contributors, dependencies, and third-party materials in RIGHTS_AND_PROVENANCE_REGISTER.md.
+- Hold, replace, or exclude material whose ownership, provenance, or permissions are unresolved.
+- Publish license terms or claim commercial permissions only after qualified legal review and explicit owner approval.
 
 ## Scientific and production integrity
 - Preserve MONITOR → TRIAGE → RESEARCH → STORY → PRE-PRODUCTION → GENERATE → EDIT → QA → RELEASE → ARCHIVE.
