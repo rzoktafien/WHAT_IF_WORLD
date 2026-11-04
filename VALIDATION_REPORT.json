@@ -2,12 +2,22 @@
   "module": "WHAT IF WORLD Production Module",
   "development_line": "V3.2",
   "status": "PASS",
-  "validated_commit": "63d50d4dc6864aa2ce09c6cf37c8f9e71e9afa54",
+  "validated_commit": "17b3f6b09c607d9474e5915050c9c27162b17a4c",
   "pull_request": "https://github.com/rzoktafien/WHAT_IF_WORLD/pull/1",
   "workflow": "WHAT IF WORLD validation",
   "workflow_runs": [
-    {"run_id": 41832043628, "event": "push", "url": "https://github.com/rzoktafien/WHAT_IF_WORLD/actions/runs/41832043628", "conclusion": "success"},
-    {"run_id": 41832056912, "event": "pull_request", "url": "https://github.com/rzoktafien/WHAT_IF_WORLD/actions/runs/41832056912", "conclusion": "success"}
+    {
+      "run_id": 41834330823,
+      "event": "push",
+      "url": "https://github.com/rzoktafien/WHAT_IF_WORLD/actions/runs/41834330823",
+      "conclusion": "success"
+    },
+    {
+      "run_id": 41834340242,
+      "event": "pull_request",
+      "url": "https://github.com/rzoktafien/WHAT_IF_WORLD/actions/runs/41834340242",
+      "conclusion": "success"
+    }
   ],
   "matrix": {
     "python_versions": ["3.11", "3.12", "3.13"],
@@ -15,7 +25,13 @@
     "json_schema_meta_validation": "PASS on all versions using Draft 2020-12 validator",
     "example_manifest_schema_validation": "PASS on all versions with local references resolved",
     "character_profile_schema_validation": "PASS for valid profile; rejects missing identity invariants",
-    "unit_tests": {"count_per_version": 15, "total_matrix_executions": 45, "failures": 0, "errors": 0, "result": "PASS on all versions"},
+    "unit_tests": {
+      "count_per_version": 15,
+      "total_matrix_executions": 45,
+      "failures": 0,
+      "errors": 0,
+      "result": "PASS on all versions"
+    },
     "release_gate_negative_test": "PASS on all versions; intentionally incomplete example manifest was blocked"
   },
   "validator_regressions": [
@@ -35,5 +51,5 @@
     "The example manifest is intentionally incomplete and must remain blocked from release.",
     "Commercial distribution and repository license remain owner decisions."
   ],
-  "report_note": "This report records successful push and pull_request CI runs for validated_commit. CI is the authoritative execution record."
+  "report_note": "This report records the successful push and pull_request CI runs for validated_commit. The report metadata is maintained separately from the code snapshot it records; CI on the current PR head remains the authoritative check."
 }
