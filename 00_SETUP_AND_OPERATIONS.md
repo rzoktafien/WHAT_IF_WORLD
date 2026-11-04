@@ -6,7 +6,8 @@
 3. Upload operating documents present in this repository: 02, 02A, 03, 03A, 05, 06, 07, 08, 09, 10, and 11.
 4. Read AGENTS.md before asking a coding agent to modify this repository.
 5. Ensure web research is available; otherwise mark research blocked.
-6. Run `python tools/validate_project.py` and `python -m unittest discover -s tests -v`.
+6. Install dev checks with `python -m pip install -r requirements-dev.txt`.
+7. Run `python tools/validate_project.py` and `python -m unittest discover -s tests -v`.
 
 No legacy dossier is assumed to exist in this repository. Preserve any external legacy file separately; do not treat it as a validated release.
 
@@ -29,7 +30,7 @@ Retrieve the latest completed report; check report date, evidence dates, source 
 2. Assign permanent AST-CHAR-### ID.
 3. Store canonical image or exact prompt with provenance and rights status.
 4. Keep new profiles DRAFT until explicit human approval.
-5. Link shots through shots[].character_ids and record profile version.
+5. Link shots through character_ids and record the exact profile version in character_reference_versions.
 6. If canonical reference changes, mark dependent shots STALE and re-review them.
 
 ## E. Responsibility split

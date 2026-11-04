@@ -7,10 +7,10 @@ Menjaga identitas visual karakter berulang/kritis lintas shot. Karakter latar sa
 
 ## Kontrak identitas
 - ID permanen: AST-CHAR-###. Jangan pernah mendaur ulang ID.
-- Catat production ID, versi profil, nama/label fiksi, status, pemilik, timestamp, dan shot terkait.
+- Catat production ID, versi profil semver, nama/label fiksi, status, pemilik, timestamp, dan shot terkait.
 - Catat ciri visual yang diperlukan untuk kontinuitas: bentuk wajah, fitur pembeda, rambut, warna kulit bila relevan secara visual, postur/build, dan ciri invariant.
 - Pisahkan identitas invariant dari ekspresi, pose, pencahayaan, kondisi basah/kotor, riasan luka, dan wardrobe.
-- Simpan satu canonical reference: URI gambar master atau prompt referensi persis, provenance, creator/source, rights status, checksum bila tersedia.
+- Simpan canonical reference: URI gambar master atau prompt referensi persis, provenance, creator/source, rights status, checksum bila tersedia.
 - Wardrobe variants harus diberi ID dan shot/fase pemakaian.
 - Catat prohibited drift dan perubahan yang diizinkan.
 - Hindari inferensi identitas orang nyata, etnisitas, kondisi medis, atau atribut sensitif dari gambar generatif.
@@ -37,17 +37,17 @@ File gambar yang ada bukan bukti persetujuan.
 3. Simpan prompt, model/tool/version/mode, parameter, seed bila ada, provenance, dan rights.
 4. Master asli immutable; setiap edit menjadi versi baru dan catat parent asset.
 5. Buat wardrobe/condition variant dari identitas yang sudah disetujui.
-6. Hubungkan setiap shot ke character ID dan profile version yang dipakai.
+6. Hubungkan setiap shot ke character ID dan profile version yang dipakai; simpan versi itu pada character_reference_versions di shot.
 7. Bila tool tidak menerima image reference, gunakan identity-lock prompt dan naikkan continuity risk.
 
 ## Pemeriksaan per shot
-Periksa wajah, rambut, build, wardrobe sesuai fase cerita, aksesori/prop, umur visual, screen direction, eyeline, geografi, cahaya, perubahan keadaan, extra character, identity blending, teks/logo/artifact. Catat PASS/REWORK/HOLD dan bukti. Perubahan master membuat semua shot dependen STALE sampai diperiksa ulang.
+Periksa wajah, rambut, build, wardrobe sesuai fase cerita, aksesori/prop, umur visual, screen direction, eyeline, geografi, cahaya, perubahan keadaan, extra character, identity blending, teks/logo/artifact. Catat PASS/REWORK/HOLD dan bukti. Perubahan master membuat semua shot dependen STALE sampai diperiksa ulang. Validator memeriksa bahwa ID dan versi referensi pada shot cocok dengan profil karakter.
 
 ## Hak dan privasi
 Catat creator/source, lisensi/izin, hak komersial, atribusi, dan tanggal akses. Jangan gunakan likeness/voice orang nyata tanpa hak dan persetujuan terdokumentasi. "Ditemukan online" bukan lisensi.
 
 ## Kontrak data
-Gunakan schemas/character_reference.schema.json. Manifest menyimpan character_references; shot menghubungkan karakter melalui character_ids. ID selalu AST-CHAR-###.
+Gunakan schemas/character_reference.schema.json. Manifest menyimpan character_references; shot menghubungkan karakter melalui character_ids dan mengikat versi profil melalui character_reference_versions. ID selalu AST-CHAR-###.
 
 ## Template ringkas
 ```yaml
@@ -67,10 +67,7 @@ canonical_reference:
   uri: null
   provenance: "originally generated for this project"
   checksum: null
-wardrobe_variants:
-  - variant_id: WARDROBE-A
-    description: "[deskripsi]"
-    applicable_shots: ["SH-001"]
+wardrobe_variants: []
 rights_status: NOT_REQUIRED
 linked_shots: ["SH-001"]
 approval:

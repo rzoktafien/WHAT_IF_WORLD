@@ -2,10 +2,10 @@
 
 ## [Unreleased] — V3.2 foundation
 - Added a dedicated character-reference bible and machine-readable character profile schema.
-- Added a production-manifest schema and shot-to-character linkage.
+- Added a production-manifest schema and shot-to-character linkage with exact character-profile version locking.
 - Standardized category-specific asset IDs and character approval/rights states.
-- Strengthened manifest validation for duplicate IDs, dangling references, character canonical references, rights, and release blockers.
-- Added GitHub Actions CI for Python 3.11, 3.12, and 3.13.
+- Strengthened manifest validation for duplicate IDs, dangling references, profile-version mismatches, character canonical references, rights, and release blockers.
+- Added GitHub Actions CI for Python 3.11, 3.12, and 3.13, including JSON Schema meta-validation and manifest-schema validation.
 - Reconciled setup/README with repository contents and removed the unsupported legacy-file assumption.
 - Replaced stale validation claims with GitHub Actions as the authoritative execution record.
 

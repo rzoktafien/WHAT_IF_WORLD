@@ -19,7 +19,7 @@ Record ID, production ID, version, type, filename/URI, checksum, creator/source,
 Recurring or identity-critical characters require a profile governed by 03A_CHARACTER_REFERENCE_BIBLE.md and schemas/character_reference.schema.json. Use AST-CHAR-###. A profile is not canonical until the human producer approves it. Separate identity invariants from wardrobe, pose, expression, lighting, and scene state.
 
 ## 4. Shot identity
-Every shot uses SH-### and records story beat, narrative purpose, duration/frame rate, start state, one principal action, camera move, end state, location/character/prop IDs, claim IDs, prompt/tool/mode, attempts, acceptance criteria, actual inspection, Plan B, and defect IDs. Use shots[].character_ids to link character profiles. Production cross-references are checked by tools/validate_manifest.py.
+Every shot uses SH-### and records story beat, narrative purpose, duration/frame rate, start state, one principal action, camera move, end state, location/character/prop IDs, claim IDs, prompt/tool/mode, attempts, acceptance criteria, actual inspection, Plan B, and defect IDs. Link characters with character_ids and lock the exact profile version in character_reference_versions, for example {"AST-CHAR-001":"1.0.0"}. The validator rejects missing or mismatched versions and dangling links.
 
 ## 5. Continuity invariants
 Track face identity, hair, build, wardrobe phase, prop orientation, geography, screen direction, eyeline, time, weather, light direction, and environmental state. Assign permitted state changes to shot/timecode. If an upstream reference changes, mark dependent shots STALE.

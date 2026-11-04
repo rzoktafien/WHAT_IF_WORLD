@@ -10,7 +10,8 @@ STATES={"IDEA_CANDIDATE","IDEA_APPROVED","RESEARCH","STORY","PREPRODUCTION","GEN
 PATTERNS={
  "production":re.compile(r"^WW-[0-9]{3,}$"),"source":re.compile(r"^SRC-[0-9]{3,}$"),
  "claim":re.compile(r"^CLM-[0-9]{3,}$"),"asset":re.compile(r"^AST-[A-Z]+-[0-9]{3,}$"),
- "character":re.compile(r"^AST-CHAR-[0-9]{3,}$"),"shot":re.compile(r"^SH-[0-9]{3,}$")}
+ "character":re.compile(r"^AST-CHAR-[0-9]{3,}$"),"shot":re.compile(r"^SH-[0-9]{3,}$"),
+ "version":re.compile(r"^[0-9]+\\.[0-9]+\\.[0-9]+$")}
 CLAIM_STATUSES={"SUPPORTED","QUALIFIED","UNVERIFIED","REJECTED"}
 RIGHTS={"CLEARED","NOT_REQUIRED","PENDING","REJECTED"}
 CHARACTER_STATUSES={"DRAFT","REVIEW","APPROVED","SUPERSEDED","REJECTED"}
@@ -41,7 +42,8 @@ def validate(data,release_gate=False):
     claim_ids=_ids(cols["claims"],"claims",PATTERNS["claim"],errors)
     asset_ids=_ids(cols["assets"],"assets",PATTERNS["asset"],errors)
     char_ids=_ids(cols["character_references"],"character_references",PATTERNS["character"],errors)
-    _ids(cols["shots"],"shots",PATTERNS["shot"],errors)
+    shot_ids=_ids(cols["shots"],"shots",PATTERNS["shot"],errors)
+    character_by_id={c.get("id"):c for c in cols["character_references"] if isinstance(c,dict) and isinstance(c.get("id"),str)}
     for c in cols["claims"]:
         if not isinstance(c,dict): continue
         if c.get("status") not in CLAIM_STATUSES: errors.append(f"claim {c.get('id')} has invalid status")
@@ -60,11 +62,16 @@ def validate(data,release_gate=False):
         if not isinstance(c,dict): continue
         cid=c.get("id"); status=c.get("status"); canonical=c.get("canonical_reference")
         if status not in CHARACTER_STATUSES: errors.append(f"character {cid} has invalid status")
+        if not PATTERNS["version"].fullmatch(str(c.get("version",""))): errors.append(f"character {cid} has invalid version")
         if status=="APPROVED":
             if not isinstance(canonical,dict): errors.append(f"approved character {cid} has no canonical_reference")
             elif canonical.get("kind")=="image" and not canonical.get("uri"): errors.append(f"approved character {cid} image reference has no uri")
             elif canonical.get("kind")=="prompt" and not canonical.get("prompt"): errors.append(f"approved character {cid} prompt reference has no prompt")
             elif canonical.get("kind") not in {"image","prompt"}: errors.append(f"approved character {cid} has invalid canonical reference kind")
+        linked=c.get("linked_shots",[])
+        if not isinstance(linked,list): errors.append(f"character {cid} linked_shots must be an array"); linked=[]
+        for shot_id in linked:
+            if shot_id not in shot_ids: errors.append(f"character {cid} links unknown shot {shot_id}")
         if release_gate and status!="APPROVED": blockers.append(f"character {cid} is not APPROVED")
         if release_gate and c.get("rights_status") not in {"CLEARED","NOT_REQUIRED"}: blockers.append(f"character {cid} reference rights are unresolved")
     for s in cols["shots"]:
@@ -72,13 +79,33 @@ def validate(data,release_gate=False):
         sid=s.get("id"); duration=s.get("duration_seconds")
         if not isinstance(duration,(int,float)) or isinstance(duration,bool) or not 0<duration<=20: errors.append(f"shot {sid} has invalid duration")
         if s.get("production_id") not in (None,data.get("production_id")): errors.append(f"shot {sid} belongs to a different production")
-        for aid in s.get("asset_ids",[]):
+        asset_refs=s.get("asset_ids",[])
+        if not isinstance(asset_refs,list): errors.append(f"shot {sid} asset_ids must be an array"); asset_refs=[]
+        for aid in asset_refs:
             if aid not in asset_ids and aid not in char_ids: errors.append(f"shot {sid} references unknown asset {aid}")
-        for cid in s.get("character_ids",[]):
-            if cid not in char_ids: errors.append(f"shot {sid} references unknown character {cid}")
+        character_refs=s.get("character_ids",[])
+        if not isinstance(character_refs,list): errors.append(f"shot {sid} character_ids must be an array"); character_refs=[]
+        versions=s.get("character_reference_versions",{})
+        if not isinstance(versions,dict): errors.append(f"shot {sid} character_reference_versions must be an object"); versions={}
+        for cid in character_refs:
+            if cid not in char_ids:
+                errors.append(f"shot {sid} references unknown character {cid}")
+            else:
+                profile_version=character_by_id[cid].get("version")
+                if versions.get(cid)!=profile_version:
+                    errors.append(f"shot {sid} has missing or mismatched character reference version for {cid}")
+        for cid in versions:
+            if cid not in character_refs: errors.append(f"shot {sid} has a version entry for unlinked character {cid}")
         for cid in s.get("claim_ids",[]):
             if cid not in claim_ids: errors.append(f"shot {sid} references unknown claim {cid}")
         if release_gate and s.get("status")!="APPROVED": blockers.append(f"shot {sid} is not APPROVED")
+    for c in cols["character_references"]:
+        if not isinstance(c,dict): continue
+        cid=c.get("id")
+        for shot_id in c.get("linked_shots",[]) if isinstance(c.get("linked_shots",[]),list) else []:
+            linked_shot=next((s for s in cols["shots"] if isinstance(s,dict) and s.get("id")==shot_id),None)
+            if linked_shot and cid not in linked_shot.get("character_ids",[]):
+                errors.append(f"character {cid} linked_shots includes {shot_id} but shot does not link character")
     if release_gate:
         if data.get("state") not in {"RELEASE_APPROVED","PUBLISHED","ARCHIVED"}: blockers.append("production state has not reached release approval")
         approvals=data.get("approvals") if isinstance(data.get("approvals"),dict) else {}

@@ -9,6 +9,7 @@
     "camera_move":{"type":"string","minLength":3},"end_state":{"type":"string","minLength":3},
     "asset_ids":{"type":"array","items":{"type":"string","pattern":"^AST-[A-Z]+-[0-9]{3,}$"}},
     "character_ids":{"type":"array","items":{"type":"string","pattern":"^AST-CHAR-[0-9]{3,}$"}},
+    "character_reference_versions":{"type":"object","patternProperties":{"^AST-CHAR-[0-9]{3,}$":{"type":"string","pattern":"^[0-9]+\\.[0-9]+\\.[0-9]+$"}},"additionalProperties":false},
     "claim_ids":{"type":"array","items":{"type":"string","pattern":"^CLM-[0-9]{3,}$"}},
     "status":{"enum":["PLANNED","PILOT","GENERATED","SELECTED","REWORK","REJECTED","APPROVED"]}
   },"additionalProperties":true

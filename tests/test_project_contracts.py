@@ -32,16 +32,29 @@ class ProjectContracts(unittest.TestCase):
    Draft202012Validator.check_schema(schema)
 
  def test_example_manifest_conforms_to_production_schema(self):
-  schema_dir=ROOT/"schemas"
-  resources=[]
+  schema_dir=ROOT/"schemas"; resources=[]
   for path in schema_dir.glob("*.schema.json"):
-   item=json.loads(path.read_text(encoding="utf-8"))
-   item["$id"]=path.resolve().as_uri()
+   item=json.loads(path.read_text(encoding="utf-8")); item["$id"]=path.resolve().as_uri()
    resources.append((path.resolve().as_uri(),Resource.from_contents(item)))
   root=json.loads((schema_dir/"production_manifest.schema.json").read_text(encoding="utf-8"))
   root["$id"]=(schema_dir/"production_manifest.schema.json").resolve().as_uri()
-  registry=Registry().with_resources(resources)
-  Draft202012Validator(root,registry=registry).validate(self.manifest)
+  Draft202012Validator(root,registry=Registry().with_resources(resources)).validate(self.manifest)
+
+ def test_character_profile_schema_accepts_valid_profile(self):
+  schema=json.loads((ROOT/"schemas/character_reference.schema.json").read_text(encoding="utf-8"))
+  profile={"id":"AST-CHAR-001","production_id":"WW-003","version":"1.0.0","name":"Protagonis",
+   "status":"DRAFT","identity":{"face_shape":"oval","hair":"short black hair","invariant_traits":["small scar above left eyebrow"]},
+   "canonical_reference":{"kind":"prompt","prompt":"Photorealistic fictional character reference.","provenance":"Original project prompt"},
+   "wardrobe_variants":[],"rights_status":"NOT_REQUIRED"}
+  Draft202012Validator(schema).validate(profile)
+
+ def test_character_profile_schema_rejects_missing_identity_invariant(self):
+  schema=json.loads((ROOT/"schemas/character_reference.schema.json").read_text(encoding="utf-8"))
+  profile={"id":"AST-CHAR-001","production_id":"WW-003","version":"1.0.0","name":"Protagonis",
+   "status":"DRAFT","identity":{"face_shape":"oval","hair":"short black hair","invariant_traits":[]},
+   "canonical_reference":{"kind":"prompt","prompt":"Reference prompt","provenance":"Original"},
+   "wardrobe_variants":[],"rights_status":"NOT_REQUIRED"}
+  with self.assertRaises(Exception): Draft202012Validator(schema).validate(profile)
 
  def test_example_manifest_passes_format_validation(self):
   errors,blockers=validate(self.manifest)
@@ -73,16 +86,27 @@ class ProjectContracts(unittest.TestCase):
 
  def test_approved_character_requires_canonical_reference(self):
   data=copy.deepcopy(self.manifest)
-  data["character_references"]=[{"id":"AST-CHAR-001","status":"APPROVED","rights_status":"CLEARED"}]
+  data["character_references"]=[{"id":"AST-CHAR-001","status":"APPROVED","rights_status":"CLEARED","version":"1.0.0"}]
   errors,_=validate(data)
   self.assertTrue(any("no canonical_reference" in e for e in errors))
 
+ def test_character_reference_version_is_required_and_matches(self):
+  data=copy.deepcopy(self.manifest)
+  data["character_references"]=[{"id":"AST-CHAR-001","status":"APPROVED","rights_status":"NOT_REQUIRED","version":"1.0.0",
+   "canonical_reference":{"kind":"prompt","prompt":"Original prompt"}}]
+  data["shots"]=[{"id":"SH-001","production_id":"WW-003","duration_seconds":6,
+   "character_ids":["AST-CHAR-001"],"character_reference_versions":{"AST-CHAR-001":"1.0.0"},"status":"PLANNED"}]
+  errors,_=validate(data); self.assertEqual(errors,[])
+  data["shots"][0]["character_reference_versions"]["AST-CHAR-001"]="2.0.0"
+  errors,_=validate(data)
+  self.assertTrue(any("mismatched character reference version" in e for e in errors))
+
  def test_valid_character_and_shot_link(self):
   data=copy.deepcopy(self.manifest)
-  data["character_references"]=[{"id":"AST-CHAR-001","status":"APPROVED","rights_status":"NOT_REQUIRED",
-    "canonical_reference":{"kind":"prompt","prompt":"Original character reference prompt."}}]
+  data["character_references"]=[{"id":"AST-CHAR-001","status":"APPROVED","rights_status":"NOT_REQUIRED","version":"1.0.0",
+    "canonical_reference":{"kind":"prompt","prompt":"Original character reference prompt."},"linked_shots":["SH-001"]}]
   data["shots"]=[{"id":"SH-001","production_id":"WW-003","duration_seconds":6,
-    "character_ids":["AST-CHAR-001"],"status":"PLANNED"}]
+    "character_ids":["AST-CHAR-001"],"character_reference_versions":{"AST-CHAR-001":"1.0.0"},"status":"PLANNED"}]
   errors,_=validate(data); self.assertEqual(errors,[])
 
  def test_repository_validator_passes(self):
