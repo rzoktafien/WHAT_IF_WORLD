@@ -2,6 +2,7 @@
 
 ## [Unreleased] — V3.2 contract hardening
 - Unified Project Instructions, Daily Intelligence, and setup guidance around a two-layer interaction/evidence contract.
+- Aligned the repository's default short-form duration with active Project Instructions (9:16, 45–60 seconds).
 - Standardized the 3–5 qualified-candidate target while allowing fewer when evidence is insufficient; removed quota pressure.
 - Distinguished three strategic editorial pillars from five daily discovery lanes and documented their mapping.
 - Clarified daily source attribution versus full research/audit provenance; prohibited claims of persistence without confirmed writes.
