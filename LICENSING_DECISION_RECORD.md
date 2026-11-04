@@ -53,7 +53,7 @@ No default values for these terms are approved by LDR-001.
 
 ## 5. Rights and provenance audit required
 
-The operational audit is tracked in [RIGHTS_AND_PROVENANCE_REGISTER.md](RIGHTS_AND_PROVENANCE_REGISTER.md). Its initial entries are all PENDING and it does not assert ownership or commercial clearance.
+The operational audit is tracked in [RIGHTS_AND_PROVENANCE_REGISTER.md](RIGHTS_AND_PROVENANCE_REGISTER.md). The 2026-11-05 snapshot records preliminary MIT metadata for the two direct development dependencies as IN_REVIEW; ownership, contribution, research, media and brand categories remain HOLD. It does not assert ownership or commercial clearance.
 
 Before a public commercial license or paid distribution is announced, verify:
 
