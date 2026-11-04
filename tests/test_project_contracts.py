@@ -42,18 +42,18 @@ class ProjectContracts(unittest.TestCase):
 
  def test_character_profile_schema_accepts_valid_profile(self):
   schema=json.loads((ROOT/"schemas/character_reference.schema.json").read_text(encoding="utf-8"))
-  profile={"id":"AST-CHAR-001","production_id":"WW-003","version":"1.0.0","name":"Protagonis",
+  profile={"id":"AST-CHAR-001","production_id":"WW-003","version":"1.0.0","name":"Protagonis","owner":"WHAT IF WORLD team","created_at":"2026-11-05T00:00:00Z","updated_at":"2026-11-05T00:00:00Z",
    "status":"DRAFT","identity":{"face_shape":"oval","hair":"short black hair","invariant_traits":["small scar above left eyebrow"]},
-   "canonical_reference":{"kind":"prompt","prompt":"Photorealistic fictional character reference.","provenance":"Original project prompt"},
-   "wardrobe_variants":[],"rights_status":"NOT_REQUIRED"}
+   "canonical_reference":{"kind":"prompt","prompt":"Photorealistic fictional character reference.","provenance":"Original project prompt","creator":"WHAT IF WORLD team","source":"Original project generation"},
+   "wardrobe_variants":[],"rights_status":"NOT_REQUIRED","linked_shots":[]}
   Draft202012Validator(schema,format_checker=FormatChecker()).validate(profile)
 
  def test_character_profile_schema_rejects_missing_identity_invariant(self):
   schema=json.loads((ROOT/"schemas/character_reference.schema.json").read_text(encoding="utf-8"))
-  profile={"id":"AST-CHAR-001","production_id":"WW-003","version":"1.0.0","name":"Protagonis",
+  profile={"id":"AST-CHAR-001","production_id":"WW-003","version":"1.0.0","name":"Protagonis","owner":"WHAT IF WORLD team","created_at":"2026-11-05T00:00:00Z","updated_at":"2026-11-05T00:00:00Z",
    "status":"DRAFT","identity":{"face_shape":"oval","hair":"short black hair","invariant_traits":[]},
-   "canonical_reference":{"kind":"prompt","prompt":"Reference prompt","provenance":"Original"},
-   "wardrobe_variants":[],"rights_status":"NOT_REQUIRED"}
+   "canonical_reference":{"kind":"prompt","prompt":"Reference prompt","provenance":"Original","creator":"WHAT IF WORLD team","source":"Original project generation"},
+   "wardrobe_variants":[],"rights_status":"NOT_REQUIRED","linked_shots":[]}
   with self.assertRaises(Exception): Draft202012Validator(schema).validate(profile)
 
  def test_example_manifest_passes_format_validation(self):
@@ -93,7 +93,7 @@ class ProjectContracts(unittest.TestCase):
  def test_character_reference_version_is_required_and_matches(self):
   data=copy.deepcopy(self.manifest)
   data["character_references"]=[{"id":"AST-CHAR-001","status":"APPROVED","rights_status":"NOT_REQUIRED","version":"1.0.0",
-   "canonical_reference":{"kind":"prompt","prompt":"Original prompt"},"approval":{"by":"Producer","at":"2026-11-05T01:00:00Z"},"linked_shots":["SH-001"]}]
+   "canonical_reference":{"kind":"prompt","prompt":"Original prompt","provenance":"Original","creator":"WHAT IF WORLD team","source":"Original project generation"},"approval":{"by":"Producer","at":"2026-11-05T01:00:00Z"},"linked_shots":["SH-001"]}]
   data["shots"]=[{"id":"SH-001","production_id":"WW-003","duration_seconds":6,
    "character_ids":["AST-CHAR-001"],"character_reference_versions":{"AST-CHAR-001":"1.0.0"},"status":"PLANNED"}]
   errors,_=validate(data); self.assertEqual(errors,[])
@@ -158,10 +158,10 @@ class ProjectContracts(unittest.TestCase):
 
  def test_approved_character_requires_explicit_approval_metadata(self):
   schema=json.loads((ROOT/"schemas/character_reference.schema.json").read_text(encoding="utf-8"))
-  profile={"id":"AST-CHAR-001","production_id":"WW-003","version":"1.0.0","name":"Protagonis",
+  profile={"id":"AST-CHAR-001","production_id":"WW-003","version":"1.0.0","name":"Protagonis","owner":"WHAT IF WORLD team","created_at":"2026-11-05T00:00:00Z","updated_at":"2026-11-05T00:00:00Z",
    "status":"APPROVED","identity":{"face_shape":"oval","hair":"short black hair","invariant_traits":["scar"]},
-   "canonical_reference":{"kind":"prompt","prompt":"Original reference","provenance":"Original project prompt"},
-   "wardrobe_variants":[],"rights_status":"NOT_REQUIRED"}
+   "canonical_reference":{"kind":"prompt","prompt":"Original reference","provenance":"Original project prompt","creator":"WHAT IF WORLD team","source":"Original project generation"},
+   "wardrobe_variants":[],"rights_status":"NOT_REQUIRED","linked_shots":[]}
   with self.assertRaises(Exception): Draft202012Validator(schema,format_checker=FormatChecker()).validate(profile)
   profile["approval"]={"by":"Producer","at":"2026-11-05T01:00:00Z"}
   Draft202012Validator(schema,format_checker=FormatChecker()).validate(profile)
@@ -171,14 +171,14 @@ class ProjectContracts(unittest.TestCase):
  def test_validator_rejects_approved_character_without_approval_metadata(self):
   data=copy.deepcopy(self.manifest)
   data["character_references"]=[{"id":"AST-CHAR-001","status":"APPROVED","rights_status":"NOT_REQUIRED","version":"1.0.0",
-   "canonical_reference":{"kind":"prompt","prompt":"Original reference"}}]
+   "canonical_reference":{"kind":"prompt","prompt":"Original reference","provenance":"Original","creator":"WHAT IF WORLD team","source":"Original project generation"}}]
   errors,_=validate(data)
   self.assertTrue(any("missing approval.by or approval.at" in e for e in errors))
 
  def test_validator_rejects_non_reciprocal_shot_to_character_link(self):
   data=copy.deepcopy(self.manifest)
   data["character_references"]=[{"id":"AST-CHAR-001","status":"DRAFT","rights_status":"NOT_REQUIRED","version":"1.0.0",
-   "canonical_reference":{"kind":"prompt","prompt":"Original reference"},"linked_shots":[]}]
+   "canonical_reference":{"kind":"prompt","prompt":"Original reference","provenance":"Original","creator":"WHAT IF WORLD team","source":"Original project generation"},"linked_shots":[]}]
   data["shots"]=[{"id":"SH-001","production_id":"WW-003","duration_seconds":6,"character_ids":["AST-CHAR-001"],
    "character_reference_versions":{"AST-CHAR-001":"1.0.0"},"status":"PLANNED"}]
   errors,_=validate(data)
