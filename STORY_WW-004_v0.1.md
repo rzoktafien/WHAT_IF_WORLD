@@ -58,8 +58,8 @@
 | VO-05 | 00:34 | 00:49 | “Studi tahun 2026 juga merekam aktivitas neuron pada 13 pasien yang menjalani pemantauan epilepsi. Setelah belajar mengenali gambar, respons di sejumlah wilayah otak berubah.” | CLM-023 |
 | VO-06 | 00:49 | 00:58 | “Peneliti menduga informasi baru membantu otak membaca pola yang sebelumnya sulit dikenali. Bukan gambarnya yang berubah—petunjuknya yang bertambah.” | CLM-024, CLM-026 |
 
-- Approximate VO length: 99 words (final count to be checked after timing read).
-- Effective speaking rate target: approximately 110–125 words/minute, allowing deliberate pauses during the visual test.
+- Approximate VO length: 96 words (counted from the six VO segments; punctuation does not affect the count).
+- Effective speaking rate target: approximately 105–110 words/minute, allowing deliberate pauses during the visual test; with the pause budget below, the working read should land near 55–58 seconds.
 - Pause budget: 1.0–1.5 seconds for initial observation; 0.5–0.8 seconds after grayscale cue; 0.5 seconds before final payoff.
 - Pronunciation: “Mooney” may be omitted from VO; if used in source notes, pronounce “MU-ni”.
 - TTS voice/model/settings: not selected; out of STORY scope.
@@ -116,7 +116,7 @@ No new factual claim is introduced by this story draft. Any additional number, a
 | Clinical sample context preserved | PASS | 13 patients are identified as undergoing epilepsy monitoring. |
 | Overclaim / certainty audit | PASS WITH QUALIFICATIONS | “Dapat”, “menduga”; no universal one-exposure claim. |
 | 45–60 second structure | PASS — PROVISIONAL | 55–58 second beat map; read-through timing still needs validation. |
-| VO timing | REWORK REQUIRED | Approximate word count and target rate supplied; final timed read not yet performed. |
+| VO timing | PROVISIONAL PASS — READ-THROUGH PENDING | 96-word VO at 105–110 words/minute plus planned observation pauses targets approximately 55–58 seconds; final timed read still required. |
 | Demonstration stimulus selected/tested | HOLD — PRE-PRODUCTION INPUT | No source image chosen, phone-size test or checksum yet. |
 | Asset rights | HOLD — PRE-PRODUCTION INPUT | Exact stimulus asset and tool terms not yet established. |
 | Character/continuity bible | NOT REQUIRED AT STORY | No recurring human character is necessary for this concept. |
