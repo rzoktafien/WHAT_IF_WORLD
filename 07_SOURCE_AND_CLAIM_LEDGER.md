@@ -432,3 +432,122 @@ Scoring order: freshness/relevance, scientific foundation, human stakes, visual 
 - CLM-040 FACT — chlorine/bromine participate in catalytic cycles and are regenerated; SRC-036; HIGH/SUPPORTED.
 - CLM-041 EXTRAPOLATION — Antarctic total-column ozone projected to return to 1980 value around 2066, model range 2049–2077, under continued compliance; SRC-036; MEDIUM/QUALIFIED.
 - CLM-042 FACT — Montreal Protocol adopted 1987-09-16, entered into force 1989-01-01, 198 parties on 2026-11-03 registry; SRC-037, SRC-038; HIGH/SUPPORTED.
+
+
+---
+
+## Research provenance — DI-20261105-02 / IDEA-20261105-02 / WW-006
+
+- Research run: 2026-11-05; public sources inspected during the current RESEARCH stage.
+- Selected candidate: IDEA-20261105-02 — “Bisakah Batu Venus Menyimpan Jejak Air Purba?”
+- Selection mapping: the preceding user-facing shortlist called this “IDE 01”; the canonical Daily Intelligence report records it as candidate IDEA-20261105-02. The canonical report ID is retained to avoid inventing a second idea identity.
+- Production ID: WW-006 (next available after WW-003, WW-004, and WW-005 in the active branch).
+- Branch: feat/v3.2-character-reference-system.
+- Scope: mineral alteration under simulated present-day Venus surface conditions and the conditional value of fluorinated hydrous minerals as possible indicators of an earlier water-rich period.
+- Evidence label: CURRENT_VERIFIED for the newly published peer-reviewed experimental study and traceable supporting literature; this label does not mean minerals have been detected on Venus or that the topic is trending on social platforms.
+- Archive/backlog: inspected; no matching production entry found in the canonical production register. No archive/backlog mutation performed at RESEARCH stage.
+- Platform analytics: TikTok Creative Center, Google Trends, and private TikTok account analytics were not accessed in this research pass.
+
+### Source records
+
+#### SRC-040 — Primary experimental study
+- Title: “New Insights into Venus’s Volatile Cycles Revealed by the Formation of Magnesite and Fluoro–Micas”
+- Authors: Sara Taeko Port, Maitrayee Bose, Jean-Philippe Harvey, Dorothy Lukco, Tibor Kremic, Gary Hunter.
+- Journal: The Planetary Science Journal 7, 247 (2026); published 2026-10-30.
+- DOI: https://doi.org/10.3847/PSJ/aea909
+- URL: https://iopscience.iop.org/article/10.3847/PSJ/aea909
+- Accessed: 2026-11-05.
+- Type/scope: peer-reviewed primary laboratory research; six minerals tested in NASA Glenn Research Center’s GEER under simulated Venus surface conditions.
+- Method: 60 days at 460 ± 0 °C and 93 ± 1 bar; simulated atmospheric gas mixture; XRD, XPS, microscopy/spectroscopy and thermodynamic calculations.
+- Inspection: publisher-indexed article content exposed abstract, methods, results, discussion and summary excerpts. Direct DOI/publisher-page retrieval failed in this session; complete publisher HTML and supplementary dataset were not independently downloaded.
+- Claims: CLM-044–CLM-047.
+- Limitations: laboratory simulation, selected starting minerals and finite experimental duration; does not establish natural abundance, in-situ occurrence or geological-timescale rates on Venus. Magnesite formation from brucite is not by itself proof of ancient surface liquid water.
+
+#### SRC-041 — Peer-reviewed Venus surface mineralogy review
+- Title: “Mineralogy of the Venus Surface”
+- Authors: Martha S. Gilmore, M. Darby Dyar, Nils Mueller, Jérémy Brossier, Alison R. Santos, Mikhail Ivanov, Richard Ghail, Justin Filiberto, Jörn Helbert, et al.
+- Journal: Space Science Reviews 219, article 52 (2023); published 2023-09-20.
+- DOI: https://doi.org/10.1007/s11214-023-00988-6
+- URL: https://link.springer.com/article/10.1007/s11214-023-00988-6
+- Accessed: 2026-11-05.
+- Type/scope: peer-reviewed synthesis of lander measurements, remote sensing, laboratory experiments and thermodynamic modelling.
+- Inspection: full open-access article page opened; abstract and relevant mineralogy/measurement statements inspected.
+- Claims: CLM-043, CLM-047, CLM-048.
+- Limitations: synthesis of limited landed measurements and remote-sensing proxies; not a new in-situ mineral survey.
+
+#### SRC-042 — NASA planetary reference
+- Title: “Venus: Facts”; NASA Science.
+- URL: https://science.nasa.gov/venus/venus-facts/
+- Accessed: 2026-11-05.
+- Type/scope: official reference for Venus surface temperature, pressure and atmosphere.
+- Inspection: page opened.
+- Claims: CLM-043.
+- Limitations: rounded reference values; conditions vary with elevation.
+
+#### SRC-043 — Primary ancient-Venus climate model
+- Title: “Was Venus the first habitable world of our solar system?”
+- Authors: M. J. Way, Anthony D. Del Genio, Nancy Y. Kiang, Linda E. Sohl, David H. Grinspoon, Igor Aleinov, Maxwell Kelley, Thomas Clune.
+- Journal: Geophysical Research Letters 43(16), 8376–8383 (2016); published 2016-08-11.
+- DOI: https://doi.org/10.1002/2016GL069790
+- URL: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/2016GL069790
+- Accessed: 2026-11-05.
+- Type/scope: peer-reviewed primary 3-D climate modelling of selected ancient-Venus scenarios.
+- Inspection: publisher PDF opened; abstract and introduction inspected.
+- Claims: CLM-049, CLM-050.
+- Limitations: depends on assumed early atmosphere, ocean inventory, topography, solar input and rotation; not observation or proof of an ancient ocean.
+
+#### SRC-044 — Primary Venus atmospheric isotope measurement
+- Title: “Venus was wet: a measurement of the ratio of deuterium to hydrogen”
+- Authors: T. M. Donahue, J. H. Hoffman, R. R. Hodges Jr., A. J. Watson.
+- Journal: Science 216(4546), 630–633 (1982); published 1982-05-07.
+- DOI: https://doi.org/10.1126/science.216.4546.630
+- URL: https://pubmed.ncbi.nlm.nih.gov/17783310/
+- Accessed: 2026-11-05.
+- Type/scope: primary atmospheric isotope measurement using Pioneer Venus probe data.
+- Inspection: PubMed record and abstract opened; full Science article not inspected.
+- Claims: CLM-049.
+- Limitations: indirect inference; depends on assumptions about sources, sinks and escape.
+
+#### SRC-045 — Alternative interpretation of Venus D/H
+- Title: “Was venus wet? Deuterium reconsidered”
+- Author: David H. Grinspoon.
+- Journal: Science 238(4834), 1702–1704 (1987); published 1987-12-18.
+- DOI: https://doi.org/10.1126/science.238.4834.1702
+- URL: https://pubmed.ncbi.nlm.nih.gov/17737672/
+- Accessed: 2026-11-05.
+- Type/scope: peer-reviewed alternative interpretation of Venus atmospheric isotope evidence.
+- Inspection: PubMed record and abstract opened; full Science article not inspected.
+- Claims: CLM-049.
+- Limitations: alternative interpretation, not definitive disproof of past water.
+
+#### SRC-046 — Venus evolution and mission science review
+- Title: “Venus Evolution Through Time: Key Science Questions, Selected Mission Concepts and Future Investigations”
+- Lead authors: Thomas Widemann, Suzanne E. Smrekar, James B. Garvin, et al.
+- Journal: Space Science Reviews 219, article 56 (2023); published 2023-10-03.
+- DOI: https://doi.org/10.1007/s11214-023-00992-w
+- URL: https://link.springer.com/article/10.1007/s11214-023-00992-w
+- Accessed: 2026-11-05.
+- Type/scope: peer-reviewed multi-author synthesis of Venus evolution questions and future mission investigations.
+- Inspection: full open-access article page opened; relevant sections on tesserae, mineral composition and unresolved interpretations inspected.
+- Claims: CLM-048, CLM-050.
+- Limitations: identifies open questions and candidate interpretations; does not establish that tesserae are felsic, hydrated or evidence of an ocean.
+
+### Claim records
+
+- CLM-043 FACT — Venus surface reference conditions are approximately 460–467 °C and 92–93 bar; SRC-040, SRC-041, SRC-042; HIGH/SUPPORTED. Safe wording: “Permukaan Venus bersuhu sekitar 460 derajat Celsius, dengan tekanan sekitar 92–93 kali tekanan udara di permukaan laut Bumi.” Conditions vary with elevation.
+- CLM-044 FACT — six selected minerals were exposed for 60 days in GEER at 460 ± 0 °C and 93 ± 1 bar under a simulated Venus gas mixture; SRC-040; HIGH/SUPPORTED. Safe wording: “Enam jenis mineral diuji selama 60 hari dalam kondisi laboratorium yang meniru suhu dan tekanan permukaan Venus.” This is a controlled laboratory test, not a stay on Venus or a simulation of every geological process.
+- CLM-045 FACT — brucite partly transformed; XRD identified magnesite and periclase while residual brucite remained; SRC-040; HIGH/SUPPORTED. Safe wording: “Brucite berubah sebagian dan menghasilkan magnesite dalam eksperimen simulasi Venus.” Do not claim this reaction was observed on Venus or that it proves an ancient ocean.
+- CLM-046 FACT — phlogopite and muscovite reacted with HF to form fluorine-bearing mica phases through partial OH-to-F substitution; SRC-040; HIGH/SUPPORTED. Safe wording: “Fluor menggantikan sebagian gugus hidroksil pada dua jenis mika dalam eksperimen.” This is a laboratory result, not an in-situ detection.
+- CLM-047 EXTRAPOLATION — fluorination may increase thermal stability; future detection plus geological context could help test a past water-richer origin; SRC-040, SRC-041; MEDIUM/QUALIFIED. Safe wording: “Jika mineral mika berfluor seperti ini ditemukan di Venus, mineral itu mungkin menjadi petunjuk sejarah air planet tersebut.” Detection alone would not prove oceans, habitability or life.
+- CLM-048 FACT — as of the 2023 review, comprehensive in-situ mineralogical confirmation of Venus surface assemblages was not available; interpretations rely on limited lander data, remote sensing, experiments and models; SRC-041, SRC-046; HIGH/QUALIFIED. Safe wording: “Komposisi mineral permukaan Venus masih belum dipetakan secara langsung dan menyeluruh.” Recheck mission updates before STORY and release.
+- CLM-049 FACT + EXTRAPOLATION — published D/H measurements and interpretations differ; past water loss is one interpretation, while a steady-state alternative has been proposed; SRC-043, SRC-044, SRC-045; HIGH for existence of disagreement, MEDIUM for water-history inference/QUALIFIED. Safe wording: “Isotop hidrogen memberi petunjuk, tetapi sejarah air Venus masih diperdebatkan.” D/H alone is not proof of a large ancient ocean.
+- CLM-050 EXTRAPOLATION — one 3-D climate model found moderate early-Venus conditions under selected assumptions; SRC-043, SRC-046; MEDIUM/QUALIFIED. Safe wording: “Sebagian model mengusulkan Venus mungkin pernah lebih sejuk, tetapi skenario itu belum terkonfirmasi.” Not a consensus conclusion or direct observation.
+
+### Research red-team conclusions
+1. The 2026 paper demonstrates mineral reactions under a simulated environment, not discovery of those minerals on Venus.
+2. Magnesite formed from brucite in the experiment; the result alone does not establish ancient liquid water.
+3. The stronger proposed past-water clue is conditional: hydrous micas may have formed during a water-richer period, fluorination may help preserve them, and future detection plus geological context could test that history.
+4. D/H evidence is not simple proof; published interpretations differ.
+5. Ancient climate models are scenario-dependent and must not be presented as direct evidence.
+6. No claim of ancient life, a confirmed ocean, or a proven habitable Venus is allowed.
+7. Use generated scientific reconstructions unless exact source-media rights are verified; journal sample photographs are not automatically cleared for reuse.
