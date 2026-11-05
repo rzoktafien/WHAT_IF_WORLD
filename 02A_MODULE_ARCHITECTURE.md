@@ -18,13 +18,13 @@ RESEARCH_AND_CLAIM_LEDGER --evidence failure--> HOLD/RESEARCH
 STORY_DESIGN --causality/story failure--> REWORK
        |
        v
-PREPRODUCTION (assets + shot plan + rights)
+PREPRODUCTION (assets + shot plan + rights + copy-ready prompts)
        |
        v
-PILOT_GENERATION --pilot fail--> PLAN_B / REWORK
+PILOT_GENERATION (manual Google Flow handoff + render return) --pilot fail--> PLAN_B / REWORK
        |
        v
-BATCH_GENERATION
+BATCH_GENERATION (manual Google Flow handoff + render return)
        |
        v
 EDIT_ASSEMBLY
@@ -45,8 +45,8 @@ RELEASE_PACKAGE -> PUBLISHED -> ARCHIVED
 | Research | selected idea | claim ledger + source register | critical claims supported; uncertainty explicit | AI drafts; human reviews high-risk |
 | Story | approved claims | beat sheet + VO draft | causal chain coherent; word/time fit | Human if premise materially changes |
 | Preproduction | story | bible, assets, shotlist, rights log | every shot traceable to assets and claims | AI drafts |
-| Pilot | prompts + references | pilot renders + failure log | pilot meets shot acceptance criteria | Human inspects |
-| Generation | approved pilot plan | all shot renders + generation log | all required shots accounted for | Human operates generator |
+| Pilot | prompts + references | ChatGPT prompt pack → Human Producer manually runs Google Flow → returned pilot render + attempt log | actual render inspected; pilot explicitly approved | Human operates Flow and approves pilot |
+| Generation | approved pilot plan + ChatGPT prompt pack | Human Producer manually runs Google Flow; returned renders + generation log | each required shot accounted for; only returned files count as generated | Human operates Flow; ChatGPT records and inspects returned renders |
 | Editing | approved renders + audio | edit timeline + master candidate | sync, timing, export spec pass | Human editor |
 | QA | master candidate + dossier | QA report + blockers | score threshold and zero blockers | Human review |
 | Release | QA report + rights + metadata | release package | approval, disclosure, metadata complete | Human final approval |
@@ -56,8 +56,8 @@ RELEASE_PACKAGE -> PUBLISHED -> ARCHIVED
 - IDEA_CANDIDATE → IDEA_APPROVED: only explicit user selection.
 - RESEARCH → STORY: all critical claims are SUPPORTED/QUALIFIED or removed; no critical claim remains UNVERIFIED.
 - STORY → PREPRODUCTION: premise, causal chain, duration, VO budget, and risk framing accepted.
-- PREPRODUCTION → PILOT_GENERATION: every shot has ID, purpose, prompt, asset references, duration, Plan B, and rights status.
-- PILOT_GENERATION → BATCH_GENERATION: pilot inspected and approved; never infer approval from file existence.
+- PREPRODUCTION → PILOT_GENERATION: every shot has ID, purpose, copy-ready Google Flow prompt, asset references, duration, Plan B, and rights status. ChatGPT prepares prompts; Human Producer manually operates Flow.
+- PILOT_GENERATION → BATCH_GENERATION: returned pilot render is inspected and explicitly approved; never infer submission, success, or approval from prompt readiness or file existence.
 - EDITING → QA: planned shots are used, intentionally omitted, or marked failed; timeline and audio map complete.
 - QA → RELEASE_APPROVED: zero blockers, score ≥85, rights cleared, disclosure prepared, human approval.
 - RELEASE_APPROVED → PUBLISHED: only after actual platform publication is confirmed.
@@ -112,7 +112,7 @@ One AI may perform multiple roles, but records must show which checks actually o
 ## 9. Minimum viable implementation
 Phase 1: documents + JSON records + validator + manual gates.
 Phase 2: asset storage conventions, shot/render log, automated metadata checks, CI.
-Phase 3: optional adapters for ComfyUI/API workflows, TTS, FFmpeg/Remotion, and OTIO interchange.
+Phase 3: optional adapters for genuinely authorized API workflows, TTS, FFmpeg/Remotion, and OTIO interchange. Google Flow manual generation is an intentional supported operating mode and does not require an adapter.
 Phase 4: orchestration with n8n/LangGraph only if manual operations become a bottleneck.
 Do not adopt infrastructure before workflow and record contracts stabilize.
 

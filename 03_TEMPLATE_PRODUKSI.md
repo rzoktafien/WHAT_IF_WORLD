@@ -103,7 +103,22 @@ Required: anomaly → question/premise → evidence → mechanism → consequenc
 - Generation attempts and output filenames:
 - Selected take and reason:
 - Failure notes:
+- Generation operator: Human Producer (manual Google Flow)
+- Execution mode: MANUAL_USER
+- Model / model version / mode (exact displayed value; otherwise belum ditentukan):
+- Submitted timestamp (if known):
+- Actual aspect ratio / duration / resolution:
+- Seed / settings (only if exposed; otherwise null/blank):
+- Returned output filename / URI (only after supplied and accessible):
+- Generation attempt status: REQUESTED / SUBMITTED / RUNNING / SUCCEEDED / FAILED / CANCELLED
 - Human inspection: PASS / REWORK / HOLD:
+
+## 9A. Manual Google Flow handoff
+- ChatGPT supplies copy-ready English prompts and Plan B per shot.
+- Human Producer manually runs prompts in Google Flow; no API/connector is assumed.
+- Record actual model/mode/settings only when visible; unknown values are belum ditentukan.
+- A render counts as returned only when the file is supplied and accessible for inspection.
+- Runway is optional, not a dependency. TTS/music/SFX are separate manual/optional workflows unless an authorized tool is actually used.
 
 ## 10. Audio plan
 | Track ID | Type | Source | Start/end | Level/processing | Rights | Filename |

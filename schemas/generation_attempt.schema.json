@@ -2,32 +2,249 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "WHAT IF WORLD Generation Attempt",
   "type": "object",
-  "required": ["id", "production_id", "shot_id", "status", "requested_at", "provider", "model", "mode", "prompt_sha256"],
+  "required": [
+    "id",
+    "production_id",
+    "shot_id",
+    "status",
+    "requested_at",
+    "provider",
+    "model",
+    "mode",
+    "prompt_sha256",
+    "execution_mode",
+    "aspect_ratio",
+    "duration_seconds"
+  ],
   "properties": {
-    "id": {"type": "string", "pattern": "^GEN-SH-[0-9]{3,}-[0-9]{2,}$"},
-    "production_id": {"type": "string", "pattern": "^WW-[0-9]{3,}$"},
-    "shot_id": {"type": "string", "pattern": "^SH-[0-9]{3,}$"},
-    "status": {"enum": ["REQUESTED", "SUBMITTED", "RUNNING", "SUCCEEDED", "FAILED", "CANCELLED"]},
-    "requested_at": {"type": "string", "format": "date-time"},
-    "completed_at": {"type": ["string", "null"], "format": "date-time"},
-    "provider": {"type": "string", "minLength": 2},
-    "model": {"type": "string", "minLength": 2},
-    "model_version": {"type": ["string", "null"]},
-    "mode": {"type": "string", "minLength": 2},
-    "prompt_version": {"type": ["string", "null"]},
-    "prompt_sha256": {"type": "string", "pattern": "^[a-fA-F0-9]{64}$"},
-    "reference_sha256": {"type": "array", "items": {"type": "string", "pattern": "^[a-fA-F0-9]{64}$"}},
-    "seed": {"type": ["integer", "null"], "minimum": 0},
-    "settings": {"type": "object"},
-    "provider_job_id": {"type": ["string", "null"]},
-    "output_asset_id": {"type": ["string", "null"], "pattern": "^AST-(VIDEO|IMAGE)-[0-9]{3,}$"},
-    "failure_code": {"type": ["string", "null"]},
-    "failure_note": {"type": ["string", "null"]},
-    "retry_of": {"type": ["string", "null"], "pattern": "^GEN-SH-[0-9]{3,}-[0-9]{2,}$"}
+    "id": {
+      "type": "string",
+      "pattern": "^GEN-SH-[0-9]{3,}-[0-9]{2,}$"
+    },
+    "production_id": {
+      "type": "string",
+      "pattern": "^WW-[0-9]{3,}$"
+    },
+    "shot_id": {
+      "type": "string",
+      "pattern": "^SH-[0-9]{3,}$"
+    },
+    "status": {
+      "enum": [
+        "REQUESTED",
+        "SUBMITTED",
+        "RUNNING",
+        "SUCCEEDED",
+        "FAILED",
+        "CANCELLED"
+      ]
+    },
+    "requested_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "completed_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "provider": {
+      "type": "string",
+      "minLength": 2
+    },
+    "model": {
+      "type": "string",
+      "minLength": 2
+    },
+    "model_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "mode": {
+      "type": "string",
+      "minLength": 2
+    },
+    "prompt_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "prompt_sha256": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{64}$"
+    },
+    "reference_sha256": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-fA-F0-9]{64}$"
+      }
+    },
+    "seed": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "settings": {
+      "type": "object"
+    },
+    "provider_job_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "output_asset_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^AST-(VIDEO|IMAGE)-[0-9]{3,}$"
+    },
+    "failure_code": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "failure_note": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "retry_of": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^GEN-SH-[0-9]{3,}-[0-9]{2,}$"
+    },
+    "execution_mode": {
+      "enum": [
+        "MANUAL_USER",
+        "API_AUTOMATION"
+      ]
+    },
+    "operator": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "aspect_ratio": {
+      "type": "string",
+      "minLength": 3
+    },
+    "duration_seconds": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "exclusiveMinimum": 0
+    },
+    "resolution": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reference_uris": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "output_uri": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    },
+    "output_filename": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "submitted_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    }
   },
   "allOf": [
-    {"if": {"properties": {"status": {"const": "SUCCEEDED"}}, "required": ["status"]}, "then": {"required": ["completed_at", "output_asset_id"], "properties": {"completed_at": {"type": "string", "format": "date-time"}, "output_asset_id": {"type": "string"}}}},
-    {"if": {"properties": {"status": {"const": "FAILED"}}, "required": ["status"]}, "then": {"required": ["completed_at", "failure_note"], "properties": {"completed_at": {"type": "string", "format": "date-time"}, "failure_note": {"type": "string", "minLength": 3}}}}
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "SUCCEEDED"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "required": [
+          "completed_at",
+          "output_asset_id",
+          "output_uri"
+        ],
+        "properties": {
+          "completed_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "output_asset_id": {
+            "type": "string"
+          },
+          "output_uri": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "FAILED"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "required": [
+          "completed_at",
+          "failure_note"
+        ],
+        "properties": {
+          "completed_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "failure_note": {
+            "type": "string",
+            "minLength": 3
+          }
+        }
+      }
+    }
   ],
   "additionalProperties": false
 }

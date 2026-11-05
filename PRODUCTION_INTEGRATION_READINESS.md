@@ -2,12 +2,12 @@
 
 **Document ID:** PIR-001  
 **Audit snapshot:** 2026-11-05  
-**Status:** PHASE 1 ENGINEERING BASELINE VERIFIED; MEDIA EXECUTION INTEGRATIONS NOT IMPLEMENTED
+**Status:** PHASE 1 ENGINEERING BASELINE VERIFIED; MANUAL GOOGLE FLOW WORKFLOW IS THE INTENDED GENERATION MODE
 
 ## 1. Executive finding
-The repository implements a document-driven production blueprint: stage contracts, JSON Schemas, semantic validators, regression tests and GitHub Actions CI. It does not currently implement or prove external video generation, TTS rendering, editing, platform analytics or publishing. This boundary is explicit in 02A_MODULE_ARCHITECTURE.md and README.md.
+The repository implements a document-driven production blueprint: stage contracts, JSON Schemas, semantic validators, regression tests and GitHub Actions CI. Video generation is intentionally performed manually by the Human Producer in Google Flow after ChatGPT prepares copy-ready per-shot prompts. The repository does not implement a Google Flow API/connector, automatic generation submission, or output retrieval. TTS rendering, editing, platform analytics and publishing are also not claimed as automated.
 
-Do not describe WHAT IF WORLD as end-to-end automated media production until adapters are built, connected to authorized accounts, tested with real outputs and accepted by a human producer.
+Describe WHAT IF WORLD accurately as an AI-assisted, human-operated production workflow: ChatGPT prepares and QA-checks production artifacts; the Human Producer manually generates in Google Flow and returns renders. Do not describe external media execution as automated.
 
 ## 2. Capability inventory
 
@@ -18,7 +18,7 @@ Do not describe WHAT IF WORLD as end-to-end automated media production until ada
 | Rights/release blockers | Validator blocks unresolved linked asset/character rights in generation/downstream states | IMPLEMENTED | Asset-level evidence and human rights disposition |
 | GitHub CI | Python 3.11/3.12/3.13 matrix, schema/contract checks, tests, negative release-gate test | IMPLEMENTED | Monitor future CI |
 | Asset storage and immutable media versioning | No integrated object store or asset service evidenced | NOT IMPLEMENTED | Provider, access controls, immutable IDs, checksums, retention and backup test |
-| Google Flow / Veo | No authenticated provider adapter or API workflow evidenced | MANUAL / NOT INTEGRATED | Confirm account/API capability, terms, model/mode, output retrieval and usage rights |
+| Google Flow / Veo | Copy-ready prompt pack + manual handoff and render-return procedure documented; no API/connector assumed | INTENDED MANUAL WORKFLOW | Human Producer runs prompts, supplies actual render and visible metadata; rights and render QA remain required |
 | TTS | No TTS adapter, voice consent ledger or render log evidenced | NOT IMPLEMENTED | Provider, licensed voice, pronunciation tests, audio export and provenance |
 | Editing / FFmpeg / Remotion / OTIO | No executable editing pipeline evidenced | NOT IMPLEMENTED | Versioned edit spec, media probes, audio mix, subtitle burn-in, export preset and render QA |
 | TikTok publishing | README specifies manual publishing; no publishing adapter or credential flow evidenced | MANUAL | Authorized app/scopes, disclosure workflow, upload test and confirmed public post URL |
@@ -31,7 +31,7 @@ The repository now defines JSON Schema contracts for `generation_attempts`, `med
 
 
 
-### 3.1 Generation adapter
+### 3.1 Generation adapter (optional; not required for Google Flow manual workflow)
 Inputs: production_id, shot_id, generation_attempt_id, approved prompt/version, canonical reference URIs, character profile versions, actual provider/model/mode, duration, aspect ratio, rights disposition and disclosure flags.
 
 Outputs: provider job ID, execution timestamp, actual model/version/mode, prompt hash, reference hashes, seed/settings if exposed, output URI, MIME type, dimensions, duration, checksum, status, failure code and retry lineage.
