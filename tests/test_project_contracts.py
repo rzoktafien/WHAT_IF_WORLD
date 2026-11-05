@@ -339,3 +339,21 @@ class ProjectContracts(unittest.TestCase):
   self.assertTrue(any("older than 7 days" in e for e in validate_report(report,datetime(2026,11,14,tzinfo=timezone.utc))))
 
  if __name__=="__main__": unittest.main()
+
+ def test_manual_google_flow_generation_attempt_contract(self):
+  schema=json.loads((ROOT/"schemas/generation_attempt.schema.json").read_text(encoding="utf-8"))
+  attempt={"id":"GEN-SH-001-01","production_id":"WW-003","shot_id":"SH-001","status":"REQUESTED",
+   "requested_at":"2026-11-05T00:00:00Z","provider":"Google Flow","model":"belum ditentukan",
+   "model_version":None,"mode":"belum ditentukan","prompt_sha256":"a"*64,
+   "execution_mode":"MANUAL_USER","operator":"Human Producer","aspect_ratio":"9:16",
+   "duration_seconds":8,"resolution":None,"reference_uris":[],"output_uri":None,
+   "output_filename":None,"submitted_at":None,"seed":None,"settings":{}}
+  Draft202012Validator(schema,format_checker=FormatChecker()).validate(attempt)
+  submitted=copy.deepcopy(attempt); submitted["status"]="SUBMITTED"
+  Draft202012Validator(schema,format_checker=FormatChecker()).validate(submitted)
+  succeeded=copy.deepcopy(attempt); succeeded.update({"status":"SUCCEEDED",
+   "completed_at":"2026-11-05T00:01:00Z","output_asset_id":"AST-VIDEO-001",
+   "output_uri":"https://example.invalid/render.mp4"})
+  Draft202012Validator(schema,format_checker=FormatChecker()).validate(succeeded)
+  invalid=copy.deepcopy(attempt); invalid["status"]="SUCCEEDED"
+  with self.assertRaises(Exception): Draft202012Validator(schema,format_checker=FormatChecker()).validate(invalid)
