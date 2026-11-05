@@ -173,3 +173,15 @@ Types: science, story, visual, continuity, audio, edit, rights, platform.
 - Performance snapshot (only measured data):
 - Lessons learned:
 - Archive row:
+
+### Shot packet addendum — mandatory Google Flow fields V3.2
+Every shot must contain these three independent fields:
+- **Keyframe image prompt (English):** exact still-image generation prompt; specify subject, setting, composition, camera angle/lens, lighting, texture, realism, and exclusions.
+- **Video prompt (English):** explicitly animate the selected keyframe; state duration/aspect ratio when supported, one main action, one camera move, start/end state, continuity locks, and negative constraints.
+- **Audio prompt (English):** separate diegetic ambience/SFX prompt for this shot; state sound source, perspective, intensity, texture, and exclusions. Default no music and no VO.
+- **Plan B:** a simpler composition/motion/audio fallback if generation is unstable.
+- **Keyframe selected URI/filename + checksum:** fill only after actual output is supplied and accessible.
+- **Google Flow actual model/mode/features:** record only what the Human Producer sees in the UI; otherwise mark belum ditentukan.
+
+### Google Flow audio and music separation
+Google Flow audio is used per shot when the active account/mode supports it. The operator pastes the video prompt and the separate audio prompt into the corresponding supported fields. Do not assume feature availability or silently merge the prompts. Keep music as a separate master track selected during editing or TikTok posting. Keep VO separate from generated ambience/SFX. If a mode does not support audio generation, record AUDIO_GENERATION_UNAVAILABLE and provide a manual SFX fallback.

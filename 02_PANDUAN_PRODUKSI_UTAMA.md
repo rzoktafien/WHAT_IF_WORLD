@@ -82,3 +82,17 @@ Production dossier; intelligence provenance; source & claim ledger; story beat s
 ## 14. Status produksi
 `IDEA_CANDIDATE → IDEA_APPROVED → RESEARCH → STORY → PREPRODUCTION → GENERATION → EDITING → QA → RELEASE_APPROVED → PUBLISHED → ARCHIVED`
 Cabang: `HOLD`, `REWORK`, `REJECTED`. Status tidak boleh dinaikkan tanpa bukti dan approval yang ditentukan.
+
+## 15. Google Flow prompt handoff — standar V3.2
+Untuk setiap shot yang digenerasi di Google Flow, dossier WAJIB menyediakan tiga prompt terpisah dan siap salin:
+1. **KEYFRAME IMAGE PROMPT** — menghasilkan gambar referensi awal yang menetapkan komposisi, subjek, lingkungan, tekstur, pencahayaan, sudut/lensa, dan framing.
+2. **VIDEO PROMPT** — menggerakkan keyframe yang sama; wajib menyebut durasi, aspect ratio, satu aksi utama, satu gerak kamera, kondisi awal/akhir, serta elemen yang harus dipertahankan.
+3. **AUDIO PROMPT** — menghasilkan audio diegetik shot tersebut (ambience/SFX) secara terpisah dari prompt video. Nyatakan perspektif, intensitas, tekstur, dan larangan suara yang tidak sesuai. Default: tanpa musik dan tanpa VO.
+
+**Workflow operator:** Human Producer menyalin prompt keyframe ke image generation; memilih hasil terbaik; memasukkan hasil itu sebagai visual reference untuk video; lalu memasukkan prompt video dan prompt audio secara terpisah pada fitur Google Flow yang tersedia di akun/mode aktual. ChatGPT tidak mengasumsikan nama model, dukungan audio, durasi, atau parameter yang belum diverifikasi pada UI akun. Catat model/mode/setting yang benar-benar terlihat.
+
+**Continuity:** keyframe adalah anchor visual per shot. Video harus mempertahankan komposisi, geometri, identitas, objek, pencahayaan, dan kondisi yang ditetapkan keyframe. Untuk elemen berulang lintas shot, gunakan canonical reference yang sama; jangan mengandalkan teks saja bila image reference tersedia.
+
+**Audio policy:** musik adalah track master terpisah yang dipilih saat editing/posting; jangan meminta musik generatif per shot. VO dibuat/direkam terpisah dan disinkronkan saat editing. Audio prompt per shot hanya ambience/SFX yang relevan. Jika fitur audio tidak tersedia pada mode akun yang dipakai, tandai AUDIO_PROMPT_READY / AUDIO_GENERATION_UNAVAILABLE dan siapkan fallback SFX manual; jangan klaim audio berhasil dibuat.
+
+**Minimal handoff:** tampilkan hanya ID/durasi, keyframe prompt, video prompt, audio prompt, dan Plan B. Penjelasan editorial panjang tidak masuk ke blok prompt.
