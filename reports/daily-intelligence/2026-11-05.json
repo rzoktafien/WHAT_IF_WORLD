@@ -1,0 +1,446 @@
+{
+  "report_id": "DI-20261105-01",
+  "run_at": "2026-11-05T01:02:00Z",
+  "observation_window": {
+    "start": "2026-10-29",
+    "end": "2026-11-05"
+  },
+  "region": "Indonesia",
+  "status": "COMPLETED",
+  "coverage": [
+    "EARTH",
+    "NATURE & PHYSICS",
+    "HUMAN",
+    "ECOSYSTEM",
+    "CIVILIZATION & TECHNOLOGY"
+  ],
+  "sources": [
+    {
+      "id": "SRC-001",
+      "title": "NASA Swift re-entry confirmation",
+      "publisher": "NASA Science / Goddard Space Flight Center.",
+      "url": "https://science.nasa.gov/blogs/swift/2026/11/02/nasas-swift-observatory-to-re-enter-atmosphere/",
+      "published_at": "original page 2026-11-02; editor update confirming re-entry 2026-11-04.",
+      "accessed_at": "2026-11-05T01:02:00Z",
+      "source_type": "PRIMARY",
+      "claim_ids": [
+        "CLM-001",
+        "CLM-002"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "NASA says most of the spacecraft was expected to burn up and some components may have survived; this page does not establish a ground impact."
+      ]
+    },
+    {
+      "id": "SRC-002",
+      "title": "Independent Swift re-entry reporting",
+      "publisher": "Reuters; reporter Steve Gorman.",
+      "url": "https://www.reuters.com/science/nasas-22-year-old-swift-satellite-telescope-falls-orbit-fiery-finale-2026-11-04/",
+      "published_at": "2026-11-04.",
+      "accessed_at": "2026-11-05T01:02:00Z",
+      "source_type": "SECONDARY",
+      "claim_ids": [
+        "CLM-001",
+        "CLM-002"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "secondary report; no independent ground survey of every possible fragment."
+      ]
+    },
+    {
+      "id": "SRC-003",
+      "title": "ESA Space Environment Report 2026",
+      "publisher": "European Space Agency.",
+      "url": "https://www.esa.int/articles/esa-space-environment-report-2026",
+      "published_at": "2026-09-14.",
+      "accessed_at": "2026-11-05T01:02:00Z",
+      "source_type": "PRIMARY",
+      "claim_ids": [
+        "CLM-003",
+        "CLM-004"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "not a live November 2026 count. Its average of more than three intact satellites or rocket bodies re-entering per day and around ten payloads launched per day describes the report's 2025 data basis. Collision-cascade projections are long-term scenarios, not an imminent event forecast."
+      ]
+    },
+    {
+      "id": "SRC-004",
+      "title": "Satellite Earth-observation applications",
+      "publisher": "European Space Agency.",
+      "url": "https://www.esa.int/Applications/Observing_the_Earth/ESA_for_Earth",
+      "published_at": null,
+      "accessed_at": "2026-11-05T01:02:00Z",
+      "source_type": "TERTIARY",
+      "claim_ids": [
+        "CLM-005"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "examples include weather forecasting, agriculture, maritime safety, and disaster response; the page does not establish that loss of any single satellite would disable those services in Indonesia."
+      ]
+    },
+    {
+      "id": "SRC-005",
+      "title": "BMKG weekly forecast and hotspot monitoring",
+      "publisher": "BMKG.",
+      "url": "https://www.bmkg.go.id/cuaca/potensi-hujan-sepekan/prakiraan-cuaca-indonesia-sepekan-periode-3-10-november-2026-hujan-berpeluang-terjadi-di-sejumlah-wilayah-panas-dan-kering-masih-bertahan-di-wilayah-lain",
+      "published_at": "2026-11-05.",
+      "accessed_at": "2026-11-05T01:02:00Z",
+      "source_type": "PRIMARY",
+      "claim_ids": [
+        "CLM-006"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "BMKG explicitly states hotspots do not always represent an actual fire. Temperature and rainfall figures are regional observations, not national uniform conditions."
+      ]
+    },
+    {
+      "id": "SRC-006",
+      "title": "BMKG Papua Selatan fire response",
+      "publisher": "BMKG.",
+      "url": "https://www.bmkg.go.id/berita/bmkg-dukung-penanganan-karhutla-dan-antisipasi-banjir-di-papua-selatan",
+      "published_at": "2026-11-02.",
+      "accessed_at": "2026-11-05T01:02:00Z",
+      "source_type": "PRIMARY",
+      "claim_ids": [
+        "CLM-006",
+        "CLM-007"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "operational update for a defined region; not evidence that all high-confidence hotspots across Indonesia are confirmed fires."
+      ]
+    },
+    {
+      "id": "SRC-007",
+      "title": "GAMBUT peat-fire field experiment",
+      "publisher": "International Journal of Wildland Fire, 2022, volume 31, issue 10, pages 949–966.",
+      "url": "https://doi.org/10.1071/WF21135",
+      "published_at": "2022.",
+      "accessed_at": "2026-11-05T01:02:00Z",
+      "source_type": "PRIMARY",
+      "claim_ids": [
+        "CLM-008"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "experimental findings are site- and condition-specific. The 4–10-day observation window must not be presented as a universal duration for peat fires. The paper reports smouldering combustion and lethal biological-system effects in peat to 30 cm depth at the experimental site."
+      ]
+    },
+    {
+      "id": "SRC-008",
+      "title": "Oxford summary of seabird clock-shift study",
+      "publisher": "University of Oxford.",
+      "url": "https://www.ox.ac.uk/news/2026-10-26-study-finds-that-long-distance-flights-can-throw-seabirds-internal-clocks-out-of",
+      "published_at": "2026-10-30.",
+      "accessed_at": "2026-11-05T01:02:00Z",
+      "source_type": "PRIMARY",
+      "claim_ids": [
+        "CLM-009"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "findings are species- and route-specific. The release reports navigational deviations up to approximately 15° and a possible internal-clock lag up to around one hour. Health, feeding, and survival consequences were not established."
+      ]
+    },
+    {
+      "id": "SRC-009",
+      "title": "Peer-reviewed seabird navigation paper",
+      "publisher": "Science, volume 394, issue 6823, pages 520–524.",
+      "url": "https://doi.org/10.1126/science.adz2542",
+      "published_at": "2026-10-29.",
+      "accessed_at": "2026-11-05T01:02:00Z",
+      "source_type": "PRIMARY",
+      "claim_ids": [
+        "CLM-009"
+      ],
+      "inspection": "ABSTRACT_OR_METADATA",
+      "limitations": []
+    },
+    {
+      "id": "SRC-010",
+      "title": "Independent seabird study reporting",
+      "publisher": "Reuters; reporter Marta Serafinko.",
+      "url": "https://www.reuters.com/science/long-distance-flights-can-interfere-with-internal-clocks-seabirds-2026-10-30/",
+      "published_at": "2026-10-30.",
+      "accessed_at": "2026-11-05T01:02:00Z",
+      "source_type": "SECONDARY",
+      "claim_ids": [
+        "CLM-009"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "reports that effects on feeding, rest, and broader health have not yet been investigated."
+      ]
+    },
+    {
+      "id": "SRC-011",
+      "title": "Indonesia migratory-waterbird context",
+      "publisher": "Wetlands International Indonesia.",
+      "url": "https://indonesia.wetlands.org/id/pendekatan-kami/likungan-lahan-basah-yang-sehat/jenis/",
+      "published_at": null,
+      "accessed_at": "2026-11-05T01:02:00Z",
+      "source_type": "TERTIARY",
+      "claim_ids": [
+        "CLM-010"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "contextual evidence only. It does not show that Manx shearwater clock-shift findings have been observed in Indonesian migratory species."
+      ]
+    },
+    {
+      "id": "SRC-012",
+      "title": "Mars hydrogen-chloride research communication",
+      "publisher": "Space Research Institute of the Russian Academy of Sciences (IKI RAN).",
+      "url": "https://iki.cosmos.ru/news/2026/11/04/khlorovodorod-v-atmosfere-marsa-mozhet-byt-priznakom-deystvuyuschego-vulkanizma",
+      "published_at": "2026-11-04.",
+      "accessed_at": "2026-11-05T01:02:00Z",
+      "source_type": "TERTIARY",
+      "claim_ids": [
+        "CLM-011",
+        "CLM-012"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "possible magmatic source is an interpretation. No observed lava flow or eruption is reported."
+      ]
+    },
+    {
+      "id": "SRC-013",
+      "title": "Independent Mars research reporting",
+      "publisher": "Reuters; reporter Will Dunham.",
+      "url": "https://www.reuters.com/science/pungent-gas-above-martian-fissures-hints-ongoing-volcanism-2026-11-04/",
+      "published_at": "2026-11-04.",
+      "accessed_at": "2026-11-05T01:02:00Z",
+      "source_type": "SECONDARY",
+      "claim_ids": [
+        "CLM-011",
+        "CLM-012"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "supports the interpretation as a possibility, not a confirmed eruption or evidence of life."
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-001",
+      "claim": "NASA and the U.S. Space Force confirmed that the Neil Gehrels Swift Observatory re-entered the atmosphere on 2026-11-04 at 7:39 a.m. EST (12:39 UTC; 19:39 WIB) over North Sumatra, approximately 3.4° N, 98.6° E.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-001",
+        "SRC-002"
+      ],
+      "confidence": "HIGH",
+      "status": "SUPPORTED",
+      "safe_wording": "“Satelit observatorium Swift kembali memasuki atmosfer di atas wilayah Sumatera Utara pada 4 November 2026.”",
+      "critical": true,
+      "caveat": "re-entry region is approximate; do not infer a precise ground impact point."
+    },
+    {
+      "id": "CLM-002",
+      "claim": "most of Swift was expected to burn up during atmospheric re-entry; some components may have survived, while Reuters reported no ground damage or injuries.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-001",
+        "SRC-002"
+      ],
+      "confidence": "HIGH",
+      "status": "QUALIFIED",
+      "safe_wording": "“Sebagian besar diperkirakan terbakar; beberapa komponen mungkin bertahan. Tidak ada kerusakan atau korban di darat yang dilaporkan.”",
+      "critical": false,
+      "caveat": "avoid claiming every fragment's fate is known."
+    },
+    {
+      "id": "CLM-003",
+      "claim": "ESA's 2026 report, using data through the end of 2025, reports an average of more than three intact satellites or rocket bodies re-entering per day and around ten new payloads launched daily.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-003"
+      ],
+      "confidence": "HIGH",
+      "status": "SUPPORTED",
+      "safe_wording": "“Laporan ESA berbasis data 2025 mencatat lebih dari tiga objek utuh kembali memasuki atmosfer per hari secara rata-rata.”",
+      "critical": false,
+      "caveat": "historical annual average, not a live count for 2026-11-05."
+    },
+    {
+      "id": "CLM-004",
+      "claim": "collisions can create fragments that trigger further collisions; without mitigation and active debris removal, some orbital regions could become increasingly unsafe or unusable over the long term.",
+      "class": "EXTRAPOLATION",
+      "source_ids": [
+        "SRC-003"
+      ],
+      "confidence": "HIGH",
+      "status": "QUALIFIED",
+      "safe_wording": "“Dalam skenario jangka panjang, tabrakan berantai dapat membuat sebagian orbit semakin sulit digunakan.”",
+      "critical": false,
+      "caveat": "not imminent, not inevitable, and not equivalent to all satellites failing simultaneously."
+    },
+    {
+      "id": "CLM-005",
+      "claim": "satellite observations support weather forecasting, agricultural decisions, maritime safety, and disaster response.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-004"
+      ],
+      "confidence": "HIGH",
+      "status": "SUPPORTED",
+      "safe_wording": "“Data satelit membantu pemantauan cuaca, pertanian, keselamatan maritim, dan respons bencana.”",
+      "critical": false,
+      "caveat": "do not imply that losing one satellite would disable these services."
+    },
+    {
+      "id": "CLM-006",
+      "claim": "BMKG's 2026-11-05 outlook reports maximum daily temperatures above 37°C in five named provinces during 2026-10-29 to 2026-11-01; high-confidence hotspot detections during the preceding ten days were highest in Papua Selatan (685), Sumatera Selatan (168), and Sulawesi Tenggara (167); smoke was observed in parts of Jambi, Kalimantan Tengah, Maluku, and Papua Selatan.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-005",
+        "SRC-006"
+      ],
+      "confidence": "HIGH",
+      "status": "SUPPORTED",
+      "safe_wording": "cite the exact observation period and say “hotspot terdeteksi”, not “kebakaran terkonfirmasi”.",
+      "critical": true,
+      "caveat": "BMKG explicitly says a hotspot does not always indicate an actual fire; regional rainfall and temperature conditions differ."
+    },
+    {
+      "id": "CLM-007",
+      "claim": "BMKG reported ongoing support for karhutla response and flood preparedness in Papua Selatan, with weather-modification operations and a shift toward increased rainfall potential.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-006"
+      ],
+      "confidence": "HIGH",
+      "status": "SUPPORTED",
+      "safe_wording": "“Papua Selatan menghadapi kebutuhan penanganan karhutla sekaligus kesiapsiagaan terhadap hujan dan banjir.”",
+      "critical": false,
+      "caveat": "specific to Papua Selatan and the operational dates in the report."
+    },
+    {
+      "id": "CLM-008",
+      "claim": "peat fires can smoulder without visible flames, persist below the surface, release carbon and toxic gases, and damage peat biological systems at depth. A Sumatra field experiment measured severe thermal effects down to 30 cm in the experimental peat.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-007"
+      ],
+      "confidence": "HIGH",
+      "status": "QUALIFIED",
+      "safe_wording": "“Api gambut dapat membara tanpa nyala besar di permukaan; kedalaman dan lamanya bergantung pada kondisi gambut, air, dan cuaca.”",
+      "critical": true,
+      "caveat": "do not universalize the experiment's 4–10-day observation window or 30 cm measurement to every peat fire."
+    },
+    {
+      "id": "CLM-009",
+      "claim": "rapid eastward homing flights can leave Manx shearwaters' internal clocks behind local solar time by up to around one hour, producing systematic Sun-compass errors; the study reports deviations up to approximately 15°.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-008",
+        "SRC-009",
+        "SRC-010"
+      ],
+      "confidence": "HIGH",
+      "status": "SUPPORTED",
+      "safe_wording": "“Pada Manx shearwater yang diteliti, pergeseran jam biologis saat terbang cepat ke timur berkaitan dengan kesalahan arah kompas Matahari.”",
+      "critical": true,
+      "caveat": "do not generalize to all bird species or claim measured health/survival effects."
+    },
+    {
+      "id": "CLM-010",
+      "claim": "Indonesia is part of the East Asian–Australasian Flyway and supports a large diversity of waterbirds, including migratory species.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-011"
+      ],
+      "confidence": "HIGH",
+      "status": "SUPPORTED",
+      "safe_wording": "“Indonesia berada di jalur migrasi burung air Asia Timur–Australasia.”",
+      "critical": false,
+      "caveat": "this does not prove the Manx shearwater clock-shift mechanism occurs in Indonesian species."
+    },
+    {
+      "id": "CLM-011",
+      "claim": "the ExoMars Trace Gas Orbiter's ACS instrument detected hydrogen chloride with an unusual seasonal and geographic pattern near Alba Mons.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-012",
+        "SRC-013"
+      ],
+      "confidence": "HIGH",
+      "status": "SUPPORTED",
+      "safe_wording": "“Peneliti melaporkan pola gas hidrogen klorida yang terlokalisasi di atas wilayah Alba Mons.”",
+      "critical": true,
+      "caveat": "detection is not itself a direct observation of an eruption."
+    },
+    {
+      "id": "CLM-012",
+      "claim": "researchers interpret the localized hydrogen-chloride signal and nearby fissures as potentially consistent with magmatic gas seepage from below the surface.",
+      "class": "EXTRAPOLATION",
+      "source_ids": [
+        "SRC-012",
+        "SRC-013"
+      ],
+      "confidence": "MEDIUM",
+      "status": "QUALIFIED",
+      "safe_wording": "“Temuan ini mengisyaratkan kemungkinan sumber magmatik di bawah permukaan Mars.”",
+      "critical": false,
+      "caveat": "no active lava flow or eruption was observed; no evidence of life was found."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "DI-20261105-01-A",
+      "title": "Orbital debris and collision cascade",
+      "evidence_label": "CURRENT_VERIFIED",
+      "score": 91,
+      "source_claim_ids": [
+        "CLM-001",
+        "CLM-002",
+        "CLM-003",
+        "CLM-004",
+        "CLM-005"
+      ]
+    },
+    {
+      "id": "DI-20261105-01-B",
+      "title": "Underground peat smouldering",
+      "evidence_label": "CURRENT_LIMITED",
+      "score": 93,
+      "source_claim_ids": [
+        "CLM-006",
+        "CLM-007",
+        "CLM-008"
+      ]
+    },
+    {
+      "id": "DI-20261105-01-C",
+      "title": "Migratory bird jet lag",
+      "evidence_label": "CURRENT_VERIFIED",
+      "score": 88,
+      "source_claim_ids": [
+        "CLM-009",
+        "CLM-010"
+      ]
+    }
+  ],
+  "platform_access": {
+    "TikTok Creative Center": "LIMITED",
+    "Google Trends": "UNAVAILABLE",
+    "TikTok account analytics": "UNAVAILABLE"
+  },
+  "limitations": [
+    "TikTok Creative Center redirected to a login-only shell; no Indonesian trend metrics were exposed.",
+    "Google Trends Indonesia trending-search page was inaccessible; no search-volume or ranking claim is made.",
+    "TikTok account analytics were not connected.",
+    "Science full-text for SRC-009 returned HTTP 403; metadata/abstract and independent reporting were inspected.",
+    "Hotspot detections are not equivalent to confirmed fires.",
+    "This report is evidence input, not human-approved production."
+  ],
+  "truncated": false
+}
