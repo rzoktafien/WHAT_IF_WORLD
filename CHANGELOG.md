@@ -1,5 +1,12 @@
 # Changelog
 
+## [Unreleased] — WW-005 STORY approval and pre-production
+- Recorded explicit Human Producer approval of WW-005 STORY and VO master (2026-11-05T17:08:00+07:00).
+- Added the complete eight-shot pre-production plan, typed keyframe/video/audio asset allocations, continuity and rights registers, subtitle map, and provisional edit timeline.
+- Added separate copy-ready Google Flow keyframe, video, and per-shot audio prompts with Plan B for all eight shots.
+- Kept Google Flow execution manual; no generation, render, audio output, editing, or rights clearance is claimed.
+- Pilot generation is limited to SH-001 and SH-003; batch generation remains gated on returned render inspection and explicit producer approval.
+
 ## [Unreleased] — START GitHub-first session bootstrap
 - Added START as the one-word alias of MULAI for new Project chats.
 - Required repository/active-branch verification and source-of-truth reads before Daily Intelligence.
