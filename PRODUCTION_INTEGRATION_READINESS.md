@@ -81,3 +81,6 @@ A scheduled GitHub Actions monitor validates the newest persisted JSON report un
 
 ## 7. Stage-specific human approval enforcement
 The semantic manifest validator requires timestamped `APPROVED` records with a non-empty approver for each state transition: idea, pilot, batch, generation, asset QA, master QA, and release. This data-contract gate is separate from GitHub code review. The repository ruleset's PR approval count remains zero and must not be represented as mandatory human code-review approval.
+
+
+**Activation constraint:** GitHub scheduled workflows execute from the repository's default branch. This monitor is present and testable in the V3.2 feature PR, but its daily cron will not become active until the repository owner deliberately merges the workflow to the default branch. This remediation does not modify `main`; before that merge, report freshness can be checked by the validation command and CI on the feature branch.
