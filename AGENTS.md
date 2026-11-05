@@ -31,6 +31,9 @@ Read 02A_MODULE_ARCHITECTURE.md and 01_INSTRUKSI_PROJECT.md first, then relevant
 - Hold, replace, or exclude material whose ownership, provenance, or permissions are unresolved.
 - Publish license terms or claim commercial permissions only after qualified legal review and explicit owner approval.
 
+## Approval-driven handoff
+- Follow `APPROVAL_DRIVEN_PRODUCTION_HANDOFF.md`; explicit STORY approval auto-advances AI through complete PRE-PRODUCTION and prompt-pack delivery without an extra `LANJUT`.
+
 ## Scientific and production integrity
 - Preserve MONITOR → TRIAGE → RESEARCH → STORY → PRE-PRODUCTION → GENERATE → EDIT → QA → RELEASE → ARCHIVE.
 - Google Flow generation is intentionally manual: ChatGPT prepares the complete copy-ready per-shot prompt pack, Plan B, and supporting original still/reference assets when available tools permit; the Human Producer operates Flow and returns renders. After explicit STORY approval, the agent automatically completes PRE-PRODUCTION and delivers all prompts without another continuation request or a user-created intermediate asset. Never invent a Flow adapter or claim automatic submission/retrieval.
