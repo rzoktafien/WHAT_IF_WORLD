@@ -282,10 +282,11 @@ class ProjectContracts(unittest.TestCase):
   schema=json.loads((ROOT/"schemas/generation_attempt.schema.json").read_text(encoding="utf-8"))
   attempt={"id":"GEN-SH-001-01","production_id":"WW-003","shot_id":"SH-001","status":"SUCCEEDED",
    "requested_at":"2026-11-05T00:00:00Z","provider":"Example Provider","model":"Example Model","mode":"image-to-video",
-   "prompt_sha256":"a"*64}
+   "prompt_sha256":"a"*64,"execution_mode":"MANUAL_USER","aspect_ratio":"9:16","duration_seconds":8}
   with self.assertRaises(Exception):
    Draft202012Validator(schema,format_checker=FormatChecker()).validate(attempt)
   attempt["completed_at"]="2026-11-05T00:01:00Z"; attempt["output_asset_id"]="AST-VIDEO-001"
+  attempt["output_uri"]="https://example.invalid/render.mp4"
   Draft202012Validator(schema,format_checker=FormatChecker()).validate(attempt)
 
  def test_media_asset_requires_checksum_and_provenance(self):
