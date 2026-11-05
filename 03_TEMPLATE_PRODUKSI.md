@@ -142,14 +142,18 @@ Tracks: VO, music, ambience, SFX. Include no-audio/silence decisions explicitly.
 - Optional interchange file (OTIO/EDL/XML):
 
 ## 13. TikTok package
-- Cover title:
-- Caption (must identify hypothetical scenario):
-- Hashtags (relevant, no misleading factual tag):
-- Pinned comment:
+- Cover title (exact Indonesian overlay text):
+- Cover image prompt (English; copy-ready; generate image without embedded typography):
+- Cover composition / focal subject / contrast / negative space:
+- Cover safe-zone and crop check (9:16; TikTok UI clearance):
+- Cover output spec and asset ID/status (do not mark generated until file is returned):
+- Caption / description (Indonesian; state the hypothetical framing and distinguish evidence from scenario):
+- Hashtags (relevant, limited, no misleading factual tag):
+- Pinned comment (source/model caveat where needed):
 - CTA:
-- Posting-time hypothesis and basis:
+- Posting-time hypothesis and basis (omit if no reliable account analytics):
 - AI-content disclosure check:
-- Thumbnail/cover file:
+- Thumbnail/cover file URI and rights status:
 
 ## 14. QA report
 | Check | Type | Pass/fail | Evidence/file/timecode | Defect ID | Owner |

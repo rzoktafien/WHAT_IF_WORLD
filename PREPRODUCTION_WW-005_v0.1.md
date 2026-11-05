@@ -207,15 +207,21 @@ Safe-zone guidance: keep essential text within central 80% width and away from t
 - Project file path / export preset: not yet created.
 - No EDL file exported; this table is the current edit instruction.
 
-## 11. TikTok package draft
-- **Cover title:** DUNIA YANG HAMPIR KITA HANCURKAN
-- **Caption:** Bagaimana jika dunia tidak pernah menyepakati Protokol Montreal? Video ini membandingkan pengamatan lubang ozon Antarktika 2026 dengan satu skenario model ilmiah tahun 2009—bukan ramalan pasti, melainkan gambaran tentang jalur kerusakan yang berhasil kita hindari.
+## 11. TikTok package — copy-ready
+- **Cover title / exact overlay:** JIKA OZON TAK PERNAH DILINDUNGI?
+- **Caption / description:** Bagaimana jika dunia tidak pernah menyepakati Protokol Montreal? Kita bandingkan kondisi lubang ozon Antarktika pada 2026 dengan satu skenario model ilmiah tahun 2009. Angka dalam skenario itu bukan ramalan pasti—melainkan gambaran tentang risiko yang berhasil dihindari melalui kerja sama global.
 - **Hashtags:** #WhatIfWorld #Sains #LapisanOzon #Antarktika #ProtokolMontreal
-- **Pinned comment:** Angka 17% dan 67% berasal dari satu model tahun 2009 dengan asumsi produksi bahan perusak ozon terus tumbuh 3% per tahun tanpa regulasi. Itu bukan pengukuran aktual.
+- **Pinned comment:** Angka 17% dan 67% berasal dari satu model tahun 2009 dengan asumsi produksi bahan perusak ozon terus tumbuh 3% per tahun tanpa regulasi. Itu hasil simulasi, bukan pengukuran aktual atau ramalan pasti.
 - **CTA:** Menurutmu, keputusan global apa lagi yang dampaknya baru terasa puluhan tahun kemudian?
 - **Posting-time hypothesis:** not researched; do not specify a best time without platform analytics.
-- **AI-content disclosure:** CHECK REQUIRED at publication; determine current platform disclosure requirement and label synthetic/illustrative scenes clearly.
-- Cover file: not created.
+- **AI-content disclosure:** CHECK REQUIRED at publication; label synthetic/illustrative scenes clearly and follow the platform's current disclosure requirement.
+- **Cover image prompt (English; generate image only, add typography in edit):**
+```text
+Create a premium, photorealistic cinematic science-documentary TikTok cover in a vertical 9:16 composition. Show planet Earth from space with Antarctica clearly visible near the lower third, dramatic but scientifically restrained atmospheric rim lighting, and a subtle translucent blue-violet stratospheric band surrounding the planet to symbolize the ozone layer. Suggest the importance of protecting the atmosphere through visual contrast between deep space and the delicate luminous atmospheric edge; do not depict a literal hole, torn atmosphere, fire, planetary destruction, or an ozone hole above Indonesia. Strong central focal point, crisp high-detail Earth textures, natural cloud systems, deep navy background, restrained cyan highlights, premium documentary color grading. Reserve clean dark negative space across the upper third for a large Indonesian title overlay and keep Antarctica unobstructed. No text, letters, numbers, labels, flags, logos, UI, watermark, borders, or fake scientific data. Designed for immediate readability as a small TikTok thumbnail.
+```
+- **Cover layout:** overlay the exact title “JIKA OZON TAK PERNAH DILINDUNGI?” in bold high-contrast type across the upper third; keep all text within TikTok safe zones. Add no extra statistics to the cover.
+- **Cover asset status:** PROMPT READY; image not generated; file/URI not created.
+- **Rights status:** PENDING for generated cover output until the exact image-generation terms and provenance are checked.
 
 ## 12. PRE-PRODUCTION PLAN_QA
 
