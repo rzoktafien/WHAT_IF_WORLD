@@ -168,6 +168,20 @@ class ProjectContracts(unittest.TestCase):
   self.assertEqual(result.returncode,0,result.stdout+result.stderr)
 
 
+ def test_start_command_is_github_first_bootstrap(self):
+  instructions=(ROOT/"01_INSTRUKSI_PROJECT.md").read_text(encoding="utf-8")
+  setup=(ROOT/"00_SETUP_AND_OPERATIONS.md").read_text(encoding="utf-8")
+  architecture=(ROOT/"02A_MODULE_ARCHITECTURE.md").read_text(encoding="utf-8")
+  daily=(ROOT/"06_DAILY_INTELLIGENCE_PROTOCOL.md").read_text(encoding="utf-8")
+  self.assertIn("START (alias MULAI)",instructions)
+  self.assertIn("feat/v3.2-character-reference-system",instructions)
+  self.assertIn("START session bootstrap",setup)
+  self.assertIn("START interaction contract",architecture)
+  self.assertIn("START command entry contract",daily)
+  for text in (instructions,setup,architecture,daily):
+   self.assertIn("HOLD",text)
+   self.assertIn("3",text)
+
  def test_daily_intelligence_contract_matches_project_instructions(self):
   instructions=(ROOT/"01_INSTRUKSI_PROJECT.md").read_text(encoding="utf-8")
   daily=(ROOT/"06_DAILY_INTELLIGENCE_PROTOCOL.md").read_text(encoding="utf-8")
