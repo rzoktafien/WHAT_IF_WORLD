@@ -72,3 +72,15 @@ Treat publishing as a separately authorized action. Use least-privilege OAuth sc
 
 ## 6. Release-readiness rule
 Green CI proves repository contracts and tests only. It does not prove provider connection, shot generation, edit render, master inspection, rights clearance or publication. Until Phases 2–3 are implemented and a real production passes human gates, automated end-to-end production remains HOLD. Manual production remains possible when artifacts, rights and approvals are recorded.
+
+
+## 6. UAT P0 remediation — automated Daily Intelligence freshness control
+A scheduled GitHub Actions monitor validates the newest persisted JSON report under `reports/daily-intelligence/`. The report schema requires run timestamp, observation window, five discovery lanes, source records, claim-to-source links, candidate evidence labels/scores, platform-access limitations, and truncation status. The validator checks schema, freshness (maximum seven days), completion, all five lanes, reciprocal source/claim references, critical-claim support, and candidate references.
+
+**Boundary:** this monitor is a freshness/provenance guard, not an automated research agent. It does not crawl the web, access private TikTok/Google analytics, verify scientific truth, score trends from platform telemetry, or approve ideas. When a report is missing or invalid, GitHub Actions opens or updates one issue for follow-up. A real research provider integration remains unimplemented until an authorized provider and credentials are selected and tested.
+
+## 7. Stage-specific human approval enforcement
+The semantic manifest validator requires timestamped `APPROVED` records with a non-empty approver for each state transition: idea, pilot, batch, generation, asset QA, master QA, and release. This data-contract gate is separate from GitHub code review. The repository ruleset's PR approval count remains zero and must not be represented as mandatory human code-review approval.
+
+
+**Activation constraint:** GitHub scheduled workflows execute from the repository's default branch. This monitor is present and testable in the V3.2 feature PR, but its daily cron will not become active until the repository owner deliberately merges the workflow to the default branch. This remediation does not modify `main`; before that merge, report freshness can be checked by the validation command and CI on the feature branch.

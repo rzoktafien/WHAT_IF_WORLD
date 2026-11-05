@@ -1,0 +1,21 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"WHAT IF WORLD Daily Intelligence Report",
+  "type":"object",
+  "required":["report_id","run_at","observation_window","region","status","coverage","sources","claims","candidates","platform_access","limitations","truncated"],
+  "properties":{
+    "report_id":{"type":"string","pattern":"^DI-[A-Z0-9-]+$"},
+    "run_at":{"type":"string","format":"date-time"},
+    "observation_window":{"type":"object","required":["start","end"],"properties":{"start":{"type":"string","format":"date"},"end":{"type":"string","format":"date"}},"additionalProperties":false},
+    "region":{"type":"string","minLength":2},
+    "status":{"enum":["COMPLETED","PARTIAL","FAILED"]},
+    "coverage":{"type":"array","uniqueItems":true,"items":{"enum":["EARTH","NATURE & PHYSICS","HUMAN","ECOSYSTEM","CIVILIZATION & TECHNOLOGY"]}},
+    "sources":{"type":"array","items":{"type":"object","required":["id","title","publisher","url","accessed_at","source_type","claim_ids"],"properties":{"id":{"type":"string","pattern":"^SRC-[0-9]{3,}$"},"title":{"type":"string","minLength":3},"publisher":{"type":"string","minLength":2},"url":{"type":"string","format":"uri"},"published_at":{"type":["string","null"]},"event_or_data_period":{"type":["string","null"]},"accessed_at":{"type":"string","format":"date-time"},"source_type":{"enum":["PRIMARY","SECONDARY","TERTIARY"]},"claim_ids":{"type":"array","items":{"type":"string","pattern":"^CLM-[0-9]{3,}$"}},"inspection":{"enum":["FULL_TEXT","ABSTRACT_OR_METADATA","SEARCH_ONLY"]},"limitations":{"type":"array","items":{"type":"string"}}},"additionalProperties":true}},
+    "claims":{"type":"array","items":{"type":"object","required":["id","claim","class","source_ids","confidence","status","safe_wording"],"properties":{"id":{"type":"string","pattern":"^CLM-[0-9]{3,}$"},"claim":{"type":"string","minLength":5},"class":{"enum":["FACT","EXTRAPOLATION","FICTIONAL_ASSUMPTION"]},"source_ids":{"type":"array","items":{"type":"string","pattern":"^SRC-[0-9]{3,}$"}},"confidence":{"enum":["HIGH","MEDIUM","LOW"]},"status":{"enum":["SUPPORTED","QUALIFIED","UNVERIFIED","REJECTED"]},"safe_wording":{"type":"string","minLength":5},"critical":{"type":"boolean"},"caveat":{"type":"string"}},"additionalProperties":true}},
+    "candidates":{"type":"array","maxItems":5,"items":{"type":"object","required":["id","title","evidence_label","score","source_claim_ids"],"properties":{"id":{"type":"string","minLength":3},"title":{"type":"string","minLength":3},"evidence_label":{"enum":["CURRENT_VERIFIED","CURRENT_LIMITED","EVERGREEN","ORIGINAL_EDITORIAL"]},"score":{"type":"number","minimum":0,"maximum":100},"source_claim_ids":{"type":"array","items":{"type":"string","pattern":"^CLM-[0-9]{3,}$"}}},"additionalProperties":true}},
+    "platform_access":{"type":"object","additionalProperties":{"enum":["AVAILABLE","LIMITED","UNAVAILABLE","NOT_CHECKED"]}},
+    "limitations":{"type":"array","items":{"type":"string"}},
+    "truncated":{"type":"boolean"}
+  },
+  "additionalProperties":true
+}

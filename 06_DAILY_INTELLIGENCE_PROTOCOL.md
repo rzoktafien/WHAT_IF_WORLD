@@ -102,3 +102,7 @@ Atribusikan klaim material ke lembaga/publikasi/peneliti yang dapat diidentifika
 - Factual-risk exception, rights exception, canonical character, inspeksi hasil generasi, dan final release memerlukan persetujuan manusia sesuai stage gate.
 - Gunakan PASS, REWORK, HOLD, FAIL hanya dengan bukti.
 - Jangan mengklaim monitoring hari ini, persistensi, rendering, editing, publishing, atau approval tanpa bukti.
+
+
+## 11. Persisted report machine contract
+Persist reports to `reports/daily-intelligence/YYYY-MM-DD.json` using `schemas/daily_intelligence_report.schema.json`. Run `python tools/validate_daily_intelligence.py --latest` to check the latest report. A scheduled GitHub Actions monitor runs at 08:00 WIB and opens/updates an issue if no complete, untruncated report no older than seven days is available. This monitor only detects freshness and provenance gaps; it does not perform web research, claim platform trend access, validate scientific truth, or approve candidates.

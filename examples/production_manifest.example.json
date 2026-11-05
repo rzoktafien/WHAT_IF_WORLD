@@ -2,7 +2,7 @@
   "production_id": "WW-003",
   "version": "0.1.0",
   "title": "[Judul setelah ide disetujui]",
-  "state": "IDEA_APPROVED",
+  "state": "IDEA_CANDIDATE",
   "pillar": "[PILAR]",
   "premise": "[Premis hipotetis]",
   "intelligence_report_id": "[REPORT-ID]",
@@ -24,8 +24,16 @@
   "character_references": [],
   "shots": [],
   "approvals": {
-    "idea": {"status": "PENDING", "by": null, "at": null},
-    "release": {"status": "PENDING", "by": null, "at": null}
+    "idea": {
+      "status": "PENDING",
+      "by": null,
+      "at": null
+    },
+    "release": {
+      "status": "PENDING",
+      "by": null,
+      "at": null
+    }
   },
   "release": {
     "status": "UNRELEASED",

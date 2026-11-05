@@ -7,7 +7,7 @@ WHAT IF WORLD is a document-driven, stage-gated production system for Indonesian
 Read 02A_MODULE_ARCHITECTURE.md and 01_INSTRUKSI_PROJECT.md first, then relevant domain documents. Character identity and continuity are governed by 03A_CHARACTER_REFERENCE_BIBLE.md and 10_ASSET_AND_SHOT_REGISTER.md. Licensing direction and gates are governed by LICENSING_DECISION_RECORD.md; ownership and third-party provenance are tracked in RIGHTS_AND_PROVENANCE_REGISTER.md. Machine contracts live in schemas/, examples/, tools/, and tests/. Identify conflicts; do not silently resolve them.
 
 ## Change control
-- Feature work uses a branch from current main; never commit feature work directly to main.
+- WHAT IF WORLD V3.2 feature work must branch from the active development branch `feat/v3.2-character-reference-system`; never branch from or commit to `main` unless the project owner explicitly changes this instruction. Open a PR targeting the active development branch.
 - Keep changes scoped, reversible, and reviewable.
 - Preserve released dossiers and historical evidence; version revisions.
 - Update docs, schemas, examples, validators, tests, and CHANGELOG.md together when contracts change.
