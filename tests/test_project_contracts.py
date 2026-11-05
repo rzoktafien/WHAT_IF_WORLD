@@ -310,4 +310,32 @@ class ProjectContracts(unittest.TestCase):
   with self.assertRaises(Exception):
    Draft202012Validator(schema,format_checker=FormatChecker()).validate(timeline)
 
-if __name__=="__main__": unittest.main()
+ def test_stage_approval_gates_require_explicit_timestamped_human_approval(self):
+  data=copy.deepcopy(self.manifest); data["state"]="IDEA_APPROVED"
+  errors,blockers=validate(data); self.assertEqual(errors,[])
+  self.assertTrue(any("human idea approval" in b for b in blockers))
+  data["approvals"]["idea"]={"status":"APPROVED","by":"Producer","at":"2026-11-05T01:00:00Z"}
+  errors,blockers=validate(data); self.assertFalse(any("human idea approval" in b for b in blockers))
+  data["state"]="BATCH_GENERATION"
+  errors,blockers=validate(data); self.assertTrue(any("human pilot_generation approval" in b for b in blockers))
+  data["approvals"]["pilot_generation"]={"status":"APPROVED","by":"Producer","at":"2026-11-05T01:10:00Z"}
+  errors,blockers=validate(data); self.assertFalse(any("human pilot_generation approval" in b for b in blockers))
+  data["approvals"]["pilot_generation"]["at"]="not-a-date"
+  errors,blockers=validate(data); self.assertTrue(any("human pilot_generation approval" in b for b in blockers))
+
+ def test_daily_intelligence_report_validator_enforces_provenance_and_freshness(self):
+  sys.path.insert(0,str(ROOT/"tools"))
+  from validate_daily_intelligence import validate_report
+  from datetime import datetime, timezone
+  report={"report_id":"DI-20261105-01","run_at":"2026-11-05T01:00:00Z","observation_window":{"start":"2026-10-29","end":"2026-11-05"},"region":"Indonesia","status":"COMPLETED","coverage":["EARTH","NATURE & PHYSICS","HUMAN","ECOSYSTEM","CIVILIZATION & TECHNOLOGY"],"sources":[{"id":"SRC-001","title":"Primary source title","publisher":"Official Agency","url":"https://example.org/source","accessed_at":"2026-11-05T01:00:00Z","source_type":"PRIMARY","claim_ids":["CLM-001"],"inspection":"FULL_TEXT","limitations":[]}],"claims":[{"id":"CLM-001","claim":"A sufficiently detailed test claim","class":"FACT","source_ids":["SRC-001"],"confidence":"HIGH","status":"SUPPORTED","safe_wording":"A safely worded claim","critical":True}],"candidates":[{"id":"IDEA-001","title":"Test candidate","evidence_label":"CURRENT_VERIFIED","score":85,"source_claim_ids":["CLM-001"]}],"platform_access":{"TikTok Creative Center":"UNAVAILABLE","Google Trends":"UNAVAILABLE"},"limitations":[],"truncated":False}
+  now=datetime(2026,11,5,2,0,tzinfo=timezone.utc)
+  self.assertEqual(validate_report(report,now),[])
+  broken=copy.deepcopy(report); broken["coverage"].remove("HUMAN")
+  self.assertTrue(any("missing discovery lanes" in e for e in validate_report(broken,now)))
+  broken=copy.deepcopy(report); broken["claims"][0]["source_ids"]=["SRC-999"]
+  self.assertTrue(any("references missing source" in e for e in validate_report(broken,now)))
+  broken=copy.deepcopy(report); broken["truncated"]=True
+  self.assertTrue(any("materially truncated" in e for e in validate_report(broken,now)))
+  self.assertTrue(any("older than 7 days" in e for e in validate_report(report,datetime(2026,11,14,tzinfo=timezone.utc))))
+
+ if __name__=="__main__": unittest.main()
