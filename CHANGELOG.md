@@ -64,3 +64,10 @@
 - Split plan QA, asset QA, and master QA; defined non-compensatory blockers.
 - Added JSON Schemas, dependency-free validators, tests, and architecture reference review.
 - Preserved WW-001/WW-002 as legacy archive entries; no claim that their videos are rendered or published.
+
+
+## [Unreleased] — UAT P0 remediation
+- Enforced stage-specific, timestamped human approvals for idea selection, pilot, batch, generation, asset QA, master QA, and release transitions.
+- Corrected the example manifest to remain an unapproved IDEA_CANDIDATE rather than implying producer approval.
+- Integrated the 2026-11-05 Daily Intelligence source and claim provenance into the active development line.
+- Added a machine-readable Daily Intelligence report schema, freshness/provenance validator, and scheduled GitHub issue monitor. The monitor detects missing/stale/incomplete reports; it does not perform research or claim trend discovery.
