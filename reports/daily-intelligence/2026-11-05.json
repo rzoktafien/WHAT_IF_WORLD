@@ -1,6 +1,7 @@
 {
-  "report_id": "DI-20261105-01",
-  "run_at": "2026-11-05T01:02:00Z",
+  "report_id": "DI-20261105-02",
+  "previous_report_id": "DI-20261105-01",
+  "run_at": "2026-11-05T07:37:00Z",
   "observation_window": {
     "start": "2026-10-29",
     "end": "2026-11-05"
@@ -16,431 +17,303 @@
   ],
   "sources": [
     {
-      "id": "SRC-001",
-      "title": "NASA Swift re-entry confirmation",
-      "publisher": "NASA Science / Goddard Space Flight Center.",
-      "url": "https://science.nasa.gov/blogs/swift/2026/11/02/nasas-swift-observatory-to-re-enter-atmosphere/",
-      "published_at": "original page 2026-11-02; editor update confirming re-entry 2026-11-04.",
-      "accessed_at": "2026-11-05T01:02:00Z",
+      "id": "SRC-014",
+      "title": "Single-neuron encoding of rapidly learned visual information reshapes human perception",
+      "publisher": "Nature Neuroscience; Marcelo Armendariz et al.",
+      "url": "https://www.nature.com/articles/s41593-026-02496-6",
+      "published_at": "2026-11-04",
+      "accessed_at": "2026-11-05T07:37:00Z",
       "source_type": "PRIMARY",
       "claim_ids": [
-        "CLM-001",
-        "CLM-002"
-      ],
-      "inspection": "FULL_TEXT",
-      "limitations": [
-        "NASA says most of the spacecraft was expected to burn up and some components may have survived; this page does not establish a ground impact."
-      ]
-    },
-    {
-      "id": "SRC-002",
-      "title": "Independent Swift re-entry reporting",
-      "publisher": "Reuters; reporter Steve Gorman.",
-      "url": "https://www.reuters.com/science/nasas-22-year-old-swift-satellite-telescope-falls-orbit-fiery-finale-2026-11-04/",
-      "published_at": "2026-11-04.",
-      "accessed_at": "2026-11-05T01:02:00Z",
-      "source_type": "SECONDARY",
-      "claim_ids": [
-        "CLM-001",
-        "CLM-002"
-      ],
-      "inspection": "FULL_TEXT",
-      "limitations": [
-        "secondary report; no independent ground survey of every possible fragment."
-      ]
-    },
-    {
-      "id": "SRC-003",
-      "title": "ESA Space Environment Report 2026",
-      "publisher": "European Space Agency.",
-      "url": "https://www.esa.int/articles/esa-space-environment-report-2026",
-      "published_at": "2026-09-14.",
-      "accessed_at": "2026-11-05T01:02:00Z",
-      "source_type": "PRIMARY",
-      "claim_ids": [
-        "CLM-003",
-        "CLM-004"
-      ],
-      "inspection": "FULL_TEXT",
-      "limitations": [
-        "not a live November 2026 count. Its average of more than three intact satellites or rocket bodies re-entering per day and around ten payloads launched per day describes the report's 2025 data basis. Collision-cascade projections are long-term scenarios, not an imminent event forecast."
-      ]
-    },
-    {
-      "id": "SRC-004",
-      "title": "Satellite Earth-observation applications",
-      "publisher": "European Space Agency.",
-      "url": "https://www.esa.int/Applications/Observing_the_Earth/ESA_for_Earth",
-      "published_at": null,
-      "accessed_at": "2026-11-05T01:02:00Z",
-      "source_type": "TERTIARY",
-      "claim_ids": [
-        "CLM-005"
-      ],
-      "inspection": "FULL_TEXT",
-      "limitations": [
-        "examples include weather forecasting, agriculture, maritime safety, and disaster response; the page does not establish that loss of any single satellite would disable those services in Indonesia."
-      ]
-    },
-    {
-      "id": "SRC-005",
-      "title": "BMKG weekly forecast and hotspot monitoring",
-      "publisher": "BMKG.",
-      "url": "https://www.bmkg.go.id/cuaca/potensi-hujan-sepekan/prakiraan-cuaca-indonesia-sepekan-periode-3-10-november-2026-hujan-berpeluang-terjadi-di-sejumlah-wilayah-panas-dan-kering-masih-bertahan-di-wilayah-lain",
-      "published_at": "2026-11-05.",
-      "accessed_at": "2026-11-05T01:02:00Z",
-      "source_type": "PRIMARY",
-      "claim_ids": [
-        "CLM-006"
-      ],
-      "inspection": "FULL_TEXT",
-      "limitations": [
-        "BMKG explicitly states hotspots do not always represent an actual fire. Temperature and rainfall figures are regional observations, not national uniform conditions."
-      ]
-    },
-    {
-      "id": "SRC-006",
-      "title": "BMKG Papua Selatan fire response",
-      "publisher": "BMKG.",
-      "url": "https://www.bmkg.go.id/berita/bmkg-dukung-penanganan-karhutla-dan-antisipasi-banjir-di-papua-selatan",
-      "published_at": "2026-11-02.",
-      "accessed_at": "2026-11-05T01:02:00Z",
-      "source_type": "PRIMARY",
-      "claim_ids": [
-        "CLM-006",
-        "CLM-007"
-      ],
-      "inspection": "FULL_TEXT",
-      "limitations": [
-        "operational update for a defined region; not evidence that all high-confidence hotspots across Indonesia are confirmed fires."
-      ]
-    },
-    {
-      "id": "SRC-007",
-      "title": "GAMBUT peat-fire field experiment",
-      "publisher": "International Journal of Wildland Fire, 2022, volume 31, issue 10, pages 949–966.",
-      "url": "https://doi.org/10.1071/WF21135",
-      "published_at": "2022.",
-      "accessed_at": "2026-11-05T01:02:00Z",
-      "source_type": "PRIMARY",
-      "claim_ids": [
-        "CLM-008"
-      ],
-      "inspection": "FULL_TEXT",
-      "limitations": [
-        "experimental findings are site- and condition-specific. The 4–10-day observation window must not be presented as a universal duration for peat fires. The paper reports smouldering combustion and lethal biological-system effects in peat to 30 cm depth at the experimental site."
-      ]
-    },
-    {
-      "id": "SRC-008",
-      "title": "Oxford summary of seabird clock-shift study",
-      "publisher": "University of Oxford.",
-      "url": "https://www.ox.ac.uk/news/2026-10-26-study-finds-that-long-distance-flights-can-throw-seabirds-internal-clocks-out-of",
-      "published_at": "2026-10-30.",
-      "accessed_at": "2026-11-05T01:02:00Z",
-      "source_type": "PRIMARY",
-      "claim_ids": [
-        "CLM-009"
-      ],
-      "inspection": "FULL_TEXT",
-      "limitations": [
-        "findings are species- and route-specific. The release reports navigational deviations up to approximately 15° and a possible internal-clock lag up to around one hour. Health, feeding, and survival consequences were not established."
-      ]
-    },
-    {
-      "id": "SRC-009",
-      "title": "Peer-reviewed seabird navigation paper",
-      "publisher": "Science, volume 394, issue 6823, pages 520–524.",
-      "url": "https://doi.org/10.1126/science.adz2542",
-      "published_at": "2026-10-29.",
-      "accessed_at": "2026-11-05T01:02:00Z",
-      "source_type": "PRIMARY",
-      "claim_ids": [
-        "CLM-009"
+        "CLM-013"
       ],
       "inspection": "ABSTRACT_OR_METADATA",
-      "limitations": []
+      "limitations": [
+        "The article is marked open access, but direct page retrieval redirected to an inaccessible authentication interstitial; the indexed result exposed the abstract and substantial methods/results text.",
+        "Intracranial recordings were from 13 adults with drug-resistant epilepsy; do not treat the neuronal sample as representative of the general population."
+      ]
     },
     {
-      "id": "SRC-010",
-      "title": "Independent seabird study reporting",
-      "publisher": "Reuters; reporter Marta Serafinko.",
-      "url": "https://www.reuters.com/science/long-distance-flights-can-interfere-with-internal-clocks-seabirds-2026-10-30/",
-      "published_at": "2026-10-30.",
-      "accessed_at": "2026-11-05T01:02:00Z",
+      "id": "SRC-015",
+      "title": "New Insights into Venus’s Volatile Cycles Revealed by the Formation of Magnesite and Fluoro–Micas",
+      "publisher": "The Planetary Science Journal; Sara Taeko Port et al.; American Astronomical Society",
+      "url": "https://doi.org/10.3847/PSJ/aea909",
+      "published_at": "2026-10-30",
+      "accessed_at": "2026-11-05T07:37:00Z",
+      "source_type": "PRIMARY",
+      "claim_ids": [
+        "CLM-014",
+        "CLM-015"
+      ],
+      "inspection": "ABSTRACT_OR_METADATA",
+      "limitations": [
+        "The DOI landing page could not be opened directly; the indexed publisher result exposed the abstract and detailed experimental excerpts.",
+        "This is a laboratory simulation, not a measurement of Venus surface samples; the past-water interpretation is conditional."
+      ]
+    },
+    {
+      "id": "SRC-016",
+      "title": "UT San Antonio research offers new clues to Venus’ past and future exploration",
+      "publisher": "The University of Texas at San Antonio; Ryan Schoensee",
+      "url": "https://news.utsa.edu/2026/11/ut-san-antonio-research-offers-new-clues-to-venus-past-and-future-exploration/",
+      "published_at": "2026-11-04",
+      "accessed_at": "2026-11-05T07:37:00Z",
       "source_type": "SECONDARY",
       "claim_ids": [
-        "CLM-009"
+        "CLM-014",
+        "CLM-015"
       ],
       "inspection": "FULL_TEXT",
       "limitations": [
-        "reports that effects on feeding, rest, and broader health have not yet been investigated."
+        "Institutional research communication describing the same study; it is not an independent replication."
       ]
     },
     {
-      "id": "SRC-011",
-      "title": "Indonesia migratory-waterbird context",
-      "publisher": "Wetlands International Indonesia.",
-      "url": "https://indonesia.wetlands.org/id/pendekatan-kami/likungan-lahan-basah-yang-sehat/jenis/",
-      "published_at": null,
-      "accessed_at": "2026-11-05T01:02:00Z",
-      "source_type": "TERTIARY",
+      "id": "SRC-017",
+      "title": "NASA’s Hubble Uncovers Case of Missing Oxygen in Nearby Dwarf Galaxies",
+      "publisher": "NASA Science / Goddard Space Flight Center",
+      "url": "https://science.nasa.gov/missions/hubble/nasas-hubble-uncovers-case-of-missing-oxygen-in-nearby-dwarf-galaxies/",
+      "published_at": "2026-11-02",
+      "accessed_at": "2026-11-05T07:37:00Z",
+      "source_type": "PRIMARY",
       "claim_ids": [
-        "CLM-010"
+        "CLM-016"
       ],
       "inspection": "FULL_TEXT",
       "limitations": [
-        "contextual evidence only. It does not show that Manx shearwater clock-shift findings have been observed in Indonesian migratory species."
+        "The study covers 37 nearby dwarf galaxies; the fate of all missing oxygen remains unresolved, including whether it is in circumgalactic space or farther into the intergalactic medium."
       ]
     },
     {
-      "id": "SRC-012",
-      "title": "Mars hydrogen-chloride research communication",
-      "publisher": "Space Research Institute of the Russian Academy of Sciences (IKI RAN).",
-      "url": "https://iki.cosmos.ru/news/2026/11/04/khlorovodorod-v-atmosfere-marsa-mozhet-byt-priznakom-deystvuyuschego-vulkanizma",
-      "published_at": "2026-11-04.",
-      "accessed_at": "2026-11-05T01:02:00Z",
-      "source_type": "TERTIARY",
-      "claim_ids": [
-        "CLM-011",
-        "CLM-012"
-      ],
-      "inspection": "FULL_TEXT",
-      "limitations": [
-        "possible magmatic source is an interpretation. No observed lava flow or eruption is reported."
-      ]
-    },
-    {
-      "id": "SRC-013",
-      "title": "Independent Mars research reporting",
-      "publisher": "Reuters; reporter Will Dunham.",
-      "url": "https://www.reuters.com/science/pungent-gas-above-martian-fissures-hints-ongoing-volcanism-2026-11-04/",
-      "published_at": "2026-11-04.",
-      "accessed_at": "2026-11-05T01:02:00Z",
+      "id": "SRC-018",
+      "title": "New Research Explores How Offshore Wind Development May Alter Marine Food Webs",
+      "publisher": "Biodiversity Research Institute via Newswise",
+      "url": "https://www.newswise.com/articles/new-research-explores-how-offshore-wind-development-may-alter-marine-food-webs",
+      "published_at": "2026-11-04",
+      "event_or_data_period": "Models compare pre-construction conditions with observed or projected conditions approximately four years after construction at three southern New England sites.",
+      "accessed_at": "2026-11-05T07:37:00Z",
       "source_type": "SECONDARY",
       "claim_ids": [
-        "CLM-011",
-        "CLM-012"
+        "CLM-017"
       ],
       "inspection": "FULL_TEXT",
       "limitations": [
-        "supports the interpretation as a possibility, not a confirmed eruption or evidence of life."
+        "Institutional press release rather than inspected journal full text; modeled findings vary by site and ecological measure and concern the U.S. Atlantic, not Indonesian waters."
+      ]
+    },
+    {
+      "id": "SRC-019",
+      "title": "Pusat Data Butuh Tambahan 20 GW, Bahlil Siapkan Energi Bersih dan Hub Baru di Batam–Karimun–Bintan",
+      "publisher": "Kementerian Energi dan Sumber Daya Mineral Republik Indonesia",
+      "url": "https://www.esdm.go.id/en/media-center/news-archives/pusat-data-butuh-tambahan-20-gw-bahlil-siapkan-energi-bersih-dan-hub-baru-di-batam-karimun-bintan",
+      "published_at": "2026-10-19",
+      "accessed_at": "2026-11-05T07:37:00Z",
+      "source_type": "PRIMARY",
+      "claim_ids": [
+        "CLM-018",
+        "CLM-019"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "The 20 GW figure is an official ministerial estimate relayed after discussion with PLN, not an independently validated forecast in the article.",
+        "The quoted 100 MW–1 GW range for AI data centers is attributed to the minister; do not present it as a universal value for every facility or as current realized load."
       ]
     }
   ],
   "claims": [
     {
-      "id": "CLM-001",
-      "claim": "NASA and the U.S. Space Force confirmed that the Neil Gehrels Swift Observatory re-entered the atmosphere on 2026-11-04 at 7:39 a.m. EST (12:39 UTC; 19:39 WIB) over North Sumatra, approximately 3.4° N, 98.6° E.",
+      "id": "CLM-013",
+      "claim": "In a controlled image-recognition experiment, brief exposure to intact grayscale images improved recognition of corresponding degraded two-tone images; single-neuron recordings from 13 patients with drug-resistant epilepsy showed learning-related changes in occipital and medial temporal regions.",
       "class": "FACT",
       "source_ids": [
-        "SRC-001",
-        "SRC-002"
+        "SRC-014"
       ],
       "confidence": "HIGH",
       "status": "SUPPORTED",
-      "safe_wording": "“Satelit observatorium Swift kembali memasuki atmosfer di atas wilayah Sumatera Utara pada 4 November 2026.”",
+      "safe_wording": "Dalam eksperimen, setelah melihat versi gambar utuh, peserta lebih mampu mengenali versi dua-warna yang sama; rekaman neuron menunjukkan perubahan aktivitas di area visual dan temporal otak.",
       "critical": true,
-      "caveat": "re-entry region is approximate; do not infer a precise ground impact point."
+      "caveat": "The neuronal recordings came from 13 epilepsy patients; the result is not a universal claim that everyone learns an image after one glance. The separate healthy cohort was used for eye-tracking, not intracranial recordings."
     },
     {
-      "id": "CLM-002",
-      "claim": "most of Swift was expected to burn up during atmospheric re-entry; some components may have survived, while Reuters reported no ground damage or injuries.",
+      "id": "CLM-014",
+      "claim": "Six rock-forming minerals were exposed for 60 days to simulated Venus surface conditions of approximately 460 °C and 93 bar; the experiment produced magnesite and fluorine-bearing micas from selected starting minerals.",
       "class": "FACT",
       "source_ids": [
-        "SRC-001",
-        "SRC-002"
-      ],
-      "confidence": "HIGH",
-      "status": "QUALIFIED",
-      "safe_wording": "“Sebagian besar diperkirakan terbakar; beberapa komponen mungkin bertahan. Tidak ada kerusakan atau korban di darat yang dilaporkan.”",
-      "critical": false,
-      "caveat": "avoid claiming every fragment's fate is known."
-    },
-    {
-      "id": "CLM-003",
-      "claim": "ESA's 2026 report, using data through the end of 2025, reports an average of more than three intact satellites or rocket bodies re-entering per day and around ten new payloads launched daily.",
-      "class": "FACT",
-      "source_ids": [
-        "SRC-003"
+        "SRC-015",
+        "SRC-016"
       ],
       "confidence": "HIGH",
       "status": "SUPPORTED",
-      "safe_wording": "“Laporan ESA berbasis data 2025 mencatat lebih dari tiga objek utuh kembali memasuki atmosfer per hari secara rata-rata.”",
-      "critical": false,
-      "caveat": "historical annual average, not a live count for 2026-11-05."
+      "safe_wording": "Dalam eksperimen laboratorium selama 60 hari pada kondisi simulasi Venus, beberapa mineral berubah dan membentuk magnesite serta mika yang mengandung fluor.",
+      "critical": true,
+      "caveat": "These are laboratory reactions under simulated conditions, not direct detections on Venus."
     },
     {
-      "id": "CLM-004",
-      "claim": "collisions can create fragments that trigger further collisions; without mitigation and active debris removal, some orbital regions could become increasingly unsafe or unusable over the long term.",
+      "id": "CLM-015",
+      "claim": "Fluorine substitution may increase the stability of hydrous micas; if comparable minerals are found on Venus, they could provide clues to earlier water-bearing mineral formation.",
       "class": "EXTRAPOLATION",
       "source_ids": [
-        "SRC-003"
-      ],
-      "confidence": "HIGH",
-      "status": "QUALIFIED",
-      "safe_wording": "“Dalam skenario jangka panjang, tabrakan berantai dapat membuat sebagian orbit semakin sulit digunakan.”",
-      "critical": false,
-      "caveat": "not imminent, not inevitable, and not equivalent to all satellites failing simultaneously."
-    },
-    {
-      "id": "CLM-005",
-      "claim": "satellite observations support weather forecasting, agricultural decisions, maritime safety, and disaster response.",
-      "class": "FACT",
-      "source_ids": [
-        "SRC-004"
-      ],
-      "confidence": "HIGH",
-      "status": "SUPPORTED",
-      "safe_wording": "“Data satelit membantu pemantauan cuaca, pertanian, keselamatan maritim, dan respons bencana.”",
-      "critical": false,
-      "caveat": "do not imply that losing one satellite would disable these services."
-    },
-    {
-      "id": "CLM-006",
-      "claim": "BMKG's 2026-11-05 outlook reports maximum daily temperatures above 37°C in five named provinces during 2026-10-29 to 2026-11-01; high-confidence hotspot detections during the preceding ten days were highest in Papua Selatan (685), Sumatera Selatan (168), and Sulawesi Tenggara (167); smoke was observed in parts of Jambi, Kalimantan Tengah, Maluku, and Papua Selatan.",
-      "class": "FACT",
-      "source_ids": [
-        "SRC-005",
-        "SRC-006"
-      ],
-      "confidence": "HIGH",
-      "status": "SUPPORTED",
-      "safe_wording": "cite the exact observation period and say “hotspot terdeteksi”, not “kebakaran terkonfirmasi”.",
-      "critical": true,
-      "caveat": "BMKG explicitly says a hotspot does not always indicate an actual fire; regional rainfall and temperature conditions differ."
-    },
-    {
-      "id": "CLM-007",
-      "claim": "BMKG reported ongoing support for karhutla response and flood preparedness in Papua Selatan, with weather-modification operations and a shift toward increased rainfall potential.",
-      "class": "FACT",
-      "source_ids": [
-        "SRC-006"
-      ],
-      "confidence": "HIGH",
-      "status": "SUPPORTED",
-      "safe_wording": "“Papua Selatan menghadapi kebutuhan penanganan karhutla sekaligus kesiapsiagaan terhadap hujan dan banjir.”",
-      "critical": false,
-      "caveat": "specific to Papua Selatan and the operational dates in the report."
-    },
-    {
-      "id": "CLM-008",
-      "claim": "peat fires can smoulder without visible flames, persist below the surface, release carbon and toxic gases, and damage peat biological systems at depth. A Sumatra field experiment measured severe thermal effects down to 30 cm in the experimental peat.",
-      "class": "FACT",
-      "source_ids": [
-        "SRC-007"
-      ],
-      "confidence": "HIGH",
-      "status": "QUALIFIED",
-      "safe_wording": "“Api gambut dapat membara tanpa nyala besar di permukaan; kedalaman dan lamanya bergantung pada kondisi gambut, air, dan cuaca.”",
-      "critical": true,
-      "caveat": "do not universalize the experiment's 4–10-day observation window or 30 cm measurement to every peat fire."
-    },
-    {
-      "id": "CLM-009",
-      "claim": "rapid eastward homing flights can leave Manx shearwaters' internal clocks behind local solar time by up to around one hour, producing systematic Sun-compass errors; the study reports deviations up to approximately 15°.",
-      "class": "FACT",
-      "source_ids": [
-        "SRC-008",
-        "SRC-009",
-        "SRC-010"
-      ],
-      "confidence": "HIGH",
-      "status": "SUPPORTED",
-      "safe_wording": "“Pada Manx shearwater yang diteliti, pergeseran jam biologis saat terbang cepat ke timur berkaitan dengan kesalahan arah kompas Matahari.”",
-      "critical": true,
-      "caveat": "do not generalize to all bird species or claim measured health/survival effects."
-    },
-    {
-      "id": "CLM-010",
-      "claim": "Indonesia is part of the East Asian–Australasian Flyway and supports a large diversity of waterbirds, including migratory species.",
-      "class": "FACT",
-      "source_ids": [
-        "SRC-011"
-      ],
-      "confidence": "HIGH",
-      "status": "SUPPORTED",
-      "safe_wording": "“Indonesia berada di jalur migrasi burung air Asia Timur–Australasia.”",
-      "critical": false,
-      "caveat": "this does not prove the Manx shearwater clock-shift mechanism occurs in Indonesian species."
-    },
-    {
-      "id": "CLM-011",
-      "claim": "the ExoMars Trace Gas Orbiter's ACS instrument detected hydrogen chloride with an unusual seasonal and geographic pattern near Alba Mons.",
-      "class": "FACT",
-      "source_ids": [
-        "SRC-012",
-        "SRC-013"
-      ],
-      "confidence": "HIGH",
-      "status": "SUPPORTED",
-      "safe_wording": "“Peneliti melaporkan pola gas hidrogen klorida yang terlokalisasi di atas wilayah Alba Mons.”",
-      "critical": true,
-      "caveat": "detection is not itself a direct observation of an eruption."
-    },
-    {
-      "id": "CLM-012",
-      "claim": "researchers interpret the localized hydrogen-chloride signal and nearby fissures as potentially consistent with magmatic gas seepage from below the surface.",
-      "class": "EXTRAPOLATION",
-      "source_ids": [
-        "SRC-012",
-        "SRC-013"
+        "SRC-015",
+        "SRC-016"
       ],
       "confidence": "MEDIUM",
       "status": "QUALIFIED",
-      "safe_wording": "“Temuan ini mengisyaratkan kemungkinan sumber magmatik di bawah permukaan Mars.”",
+      "safe_wording": "Jika mineral sejenis ditemukan di Venus, mineral itu dapat menjadi petunjuk bahwa sebagian batuannya pernah terbentuk ketika air lebih tersedia.",
       "critical": false,
-      "caveat": "no active lava flow or eruption was observed; no evidence of life was found."
+      "caveat": "This would not by itself prove an ocean, a habitable climate, or life on Venus."
+    },
+    {
+      "id": "CLM-016",
+      "claim": "A NASA-reported study analyzed 37 nearby dwarf galaxies and found that much of the oxygen expected from their stars is missing from the galaxies; galactic winds driven by massive stars and supernovae are a proposed explanation.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-017"
+      ],
+      "confidence": "HIGH",
+      "status": "QUALIFIED",
+      "safe_wording": "Pengamatan Hubble terhadap 37 galaksi katai menemukan banyak oksigen yang tidak lagi berada di dalam galaksi; angin galaksi akibat bintang masif dan supernova diduga membawanya keluar.",
+      "critical": false,
+      "caveat": "The destination of all the missing oxygen is not yet established."
+    },
+    {
+      "id": "CLM-017",
+      "claim": "Food-web models for three U.S. Atlantic offshore-wind study areas suggest turbine structures may alter benthic communities and marine energy flows, with modeled effects varying by site and ecological measure.",
+      "class": "EXTRAPOLATION",
+      "source_ids": [
+        "SRC-018"
+      ],
+      "confidence": "MEDIUM",
+      "status": "QUALIFIED",
+      "safe_wording": "Model pada tiga lokasi di Atlantik AS menunjukkan fondasi turbin angin lepas pantai dapat mengubah jejaring makanan dasar laut; dampaknya berbeda antar lokasi.",
+      "critical": false,
+      "caveat": "Do not generalize the modeled U.S. findings to all offshore wind farms or Indonesian ecosystems."
+    },
+    {
+      "id": "CLM-018",
+      "claim": "On 2026-10-19, Indonesia’s Ministry of Energy and Mineral Resources reported the minister’s estimate that data-center development could require an additional 20 GW of electricity capacity, described as about 20% of existing capacity.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-019"
+      ],
+      "confidence": "MEDIUM",
+      "status": "QUALIFIED",
+      "safe_wording": "Kementerian ESDM melaporkan estimasi pemerintah bahwa ekspansi pusat data dapat membutuhkan tambahan kapasitas listrik sekitar 20 GW.",
+      "critical": true,
+      "caveat": "This is an attributed estimate, not proof of an immediate shortage, a finalized build schedule, or demand already being consumed."
+    },
+    {
+      "id": "CLM-019",
+      "claim": "The same ESDM communication attributes to the minister a comparison of approximately 10–30 MW for cloud-era data centers and 100 MW–1 GW for AI-oriented data centers.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-019"
+      ],
+      "confidence": "MEDIUM",
+      "status": "QUALIFIED",
+      "safe_wording": "Menurut pernyataan yang dikutip ESDM, pusat data berbasis AI dapat memiliki kebutuhan daya jauh lebih besar daripada pusat data cloud generasi sebelumnya.",
+      "critical": false,
+      "caveat": "Keep the range attributed to the minister; it is not a universal specification for every data center."
     }
   ],
   "candidates": [
     {
-      "id": "DI-20261105-01-A",
-      "title": "Orbital debris and collision cascade",
-      "evidence_label": "CURRENT_VERIFIED",
-      "score": 91,
-      "source_claim_ids": [
-        "CLM-001",
-        "CLM-002",
-        "CLM-003",
-        "CLM-004",
-        "CLM-005"
-      ]
-    },
-    {
-      "id": "DI-20261105-01-B",
-      "title": "Underground peat smouldering",
+      "id": "IDEA-20261105-01",
+      "title": "Saat Gambar yang Sama Tiba-Tiba Terlihat Berbeda",
+      "pillar": "HUMAN BODY & MIND",
       "evidence_label": "CURRENT_LIMITED",
-      "score": 93,
+      "score": 90,
       "source_claim_ids": [
-        "CLM-006",
-        "CLM-007",
-        "CLM-008"
-      ]
+        "CLM-013"
+      ],
+      "what_if": "Bagaimana satu paparan terhadap gambar utuh bisa membuat otak mengenali gambar dua-warna yang sebelumnya tampak seperti pola acak?",
+      "hook": "Gambar hitam-putih abstrak memenuhi layar; setelah satu kilas gambar aslinya, gambar yang sama kembali muncul dan kini langsung terbaca.",
+      "premise": "Skenario edukatif mengikuti eksperimen pengenalan gambar; jumlah paparan dan keberhasilan pengenalan tidak digeneralisasi ke semua orang.",
+      "mechanism": "Pembelajaran singkat mengubah representasi neuronal di korteks oksipital dan area temporal medial; pengenalan gambar terdegradasi memerlukan pemrosesan tambahan.",
+      "consequences": "Perubahan persepsi terjadi pada tugas eksperimen setelah satu atau beberapa urutan belajar; tidak ada timeline klinis atau klaim peningkatan kecerdasan.",
+      "human_stakes": "Memperlihatkan bagaimana pengalaman singkat dapat mengubah apa yang kita kenali dan cara otak memproses informasi visual.",
+      "indonesia_relevance": "Relevan lintas usia untuk pendidikan, literasi visual, dan pengalaman belajar.",
+      "misinterpretation_risk": "Jangan klaim semua orang belajar hanya dengan sekali lihat; sampel rekaman neuron terdiri dari pasien epilepsi dan bukan populasi umum.",
+      "confidence": "HIGH untuk temuan eksperimen; MEDIUM untuk generalisasi.",
+      "weighted_scores": {
+        "freshness_relevance": 5,
+        "scientific_foundation": 4,
+        "human_stakes": 4,
+        "visual_originality": 5,
+        "story_potential": 5,
+        "novelty_vs_archive": 5,
+        "indonesian_relevance": 3
+      }
     },
     {
-      "id": "DI-20261105-01-C",
-      "title": "Migratory bird jet lag",
+      "id": "IDEA-20261105-02",
+      "title": "Bisakah Batu Venus Menyimpan Jejak Air Purba?",
+      "pillar": "EARTH & COSMOS",
       "evidence_label": "CURRENT_VERIFIED",
-      "score": 88,
+      "score": 86,
       "source_claim_ids": [
-        "CLM-009",
-        "CLM-010"
-      ]
+        "CLM-014",
+        "CLM-015"
+      ],
+      "what_if": "Jika mineral di permukaan Venus bisa berubah sekaligus menyimpan jejak kimia dari mineral yang pernah mengandung air, apa yang dapat dibaca oleh wahana pendarat masa depan?",
+      "hook": "Dua sampel mineral sebelum dan sesudah simulasi Venus 460 °C; tekstur dan warna berubah di depan kamera.",
+      "premise": "Eksperimen laboratorium mensimulasikan suhu, tekanan, dan komposisi atmosfer Venus selama 60 hari; bukan rekaman atau sampel langsung dari Venus.",
+      "mechanism": "Reaksi gas-atmosfer dengan mineral mengubah komposisi; fluor dapat menggantikan gugus hidroksil pada mika dan membantu stabilitas mineral tertentu.",
+      "consequences": "Jika mineral serupa terdeteksi di Venus, ia dapat membantu merekonstruksi siklus air dan volatil masa lalu; tidak membuktikan lautan.",
+      "human_stakes": "Menunjukkan bagaimana ilmuwan membaca sejarah planet dari perubahan kimia batuan.",
+      "indonesia_relevance": "Topik astronomi dan geokimia yang mudah diterjemahkan menjadi visual edukasi untuk audiens Indonesia.",
+      "misinterpretation_risk": "Jangan menyajikan eksperimen sebagai bukti langsung bahwa Venus pernah memiliki samudra atau kehidupan.",
+      "confidence": "HIGH untuk hasil eksperimen; MEDIUM untuk interpretasi sejarah air.",
+      "weighted_scores": {
+        "freshness_relevance": 5,
+        "scientific_foundation": 5,
+        "human_stakes": 2,
+        "visual_originality": 5,
+        "story_potential": 4,
+        "novelty_vs_archive": 5,
+        "indonesian_relevance": 3
+      }
+    },
+    {
+      "id": "IDEA-20261105-03",
+      "title": "Awan AI Butuh Listrik Sebesar Apa?",
+      "pillar": "CIVILIZATION & FUTURE",
+      "evidence_label": "CURRENT_LIMITED",
+      "score": 82,
+      "source_claim_ids": [
+        "CLM-018",
+        "CLM-019"
+      ],
+      "what_if": "Apa yang terjadi jika ekspansi pusat data Indonesia tumbuh lebih cepat daripada penambahan pasokan listrik dan infrastruktur pendukungnya?",
+      "hook": "Satu kompleks server menyala; angka kebutuhan daya di layar melonjak dari puluhan megawatt menuju ratusan megawatt.",
+      "premise": "Gunakan estimasi pemerintah tentang tambahan 20 GW sebagai skenario perencanaan, bukan beban aktual yang sudah terserap atau krisis yang sedang terjadi.",
+      "mechanism": "Pusat data memerlukan listrik kontinu, pendinginan, air, konektivitas serat optik, serta pembangkit dan jaringan transmisi yang memadai.",
+      "consequences": "Dalam horizon pembangunan beberapa tahun, lokasi, pasokan energi bersih, dan jaringan menjadi faktor pembatas; dampak aktual bergantung pada realisasi proyek dan bauran energi.",
+      "human_stakes": "Keandalan listrik, penggunaan lahan dan air, investasi daerah, serta biaya transisi energi.",
+      "indonesia_relevance": "Sangat tinggi; ESDM menyebut Batam–Karimun–Bintan sebagai calon hub pusat data dan mengaitkan pertumbuhan ini dengan kebutuhan energi Indonesia.",
+      "misinterpretation_risk": "Jangan menyebut 20 GW sebagai konsumsi saat ini, ancaman blackout, atau seluruhnya kebutuhan AI; atribusikan angka kepada estimasi pemerintah.",
+      "confidence": "MEDIUM; estimasi resmi tetapi belum divalidasi independen dalam riset ini.",
+      "weighted_scores": {
+        "freshness_relevance": 4,
+        "scientific_foundation": 3,
+        "human_stakes": 4,
+        "visual_originality": 5,
+        "story_potential": 4,
+        "novelty_vs_archive": 5,
+        "indonesian_relevance": 5
+      }
     }
   ],
   "platform_access": {
-    "TikTok Creative Center": "LIMITED",
-    "Google Trends": "UNAVAILABLE",
-    "TikTok account analytics": "UNAVAILABLE"
+    "TikTok Creative Center": "NOT_CHECKED",
+    "Google Trends": "NOT_CHECKED",
+    "TikTok account analytics": "NOT_CHECKED"
   },
   "limitations": [
-    "TikTok Creative Center redirected to a login-only shell; no Indonesian trend metrics were exposed.",
-    "Google Trends Indonesia trending-search page was inaccessible; no search-volume or ranking claim is made.",
-    "TikTok account analytics were not connected.",
-    "Science full-text for SRC-009 returned HTTP 403; metadata/abstract and independent reporting were inspected.",
-    "Hotspot detections are not equivalent to confirmed fires.",
-    "This report is evidence input, not human-approved production."
+    "Fresh public-web discovery was performed on 2026-11-05; no platform-wide TikTok or Google Trends metric was accessed in this run.",
+    "Nature Neuroscience and Planetary Science Journal direct pages redirected or failed to load; indexed publisher results exposed abstracts and detailed excerpts, but full-text direct access was not verified.",
+    "The offshore-wind result was reviewed through the lead institute's press release; the journal full text was not inspected.",
+    "The 20 GW data-center figure is an attributed ESDM ministerial estimate and was not independently validated against a detailed demand model.",
+    "Research discovery and candidate scoring are not human idea approval or production authorization."
   ],
   "truncated": false
 }
