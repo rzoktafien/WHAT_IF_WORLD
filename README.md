@@ -29,12 +29,16 @@ In a new chat inside the WHAT IF WORLD ChatGPT Project, send `START`. This is th
 - 01_INSTRUKSI_PROJECT.md — compact project instructions (8,000-character limit).
 - 02_PANDUAN_PRODUKSI_UTAMA.md — production/editorial standards.
 - 02A_MODULE_ARCHITECTURE.md — lifecycle, contracts, roles, recovery.
-- 03_TEMPLATE_PRODUKSI.md — production dossier.
+- 03_TEMPLATE_PRODUKSI.md — production dossier, including TikTok caption/hashtags and cover-image prompt.
 - 03A_CHARACTER_REFERENCE_BIBLE.md — character identity, reference, approval, continuity.
 - 05–09 — archive, intelligence, claim ledger, idea scoring, backlog.
 - 10_ASSET_AND_SHOT_REGISTER.md — asset and shot IDs.
 - 11_QA_AND_RELEASE_PROTOCOL.md — quality and release gates.
 - 12_GITHUB_REFERENCE_REVIEW.md — architecture references.
+- APPROVAL_DRIVEN_PRODUCTION_HANDOFF.md — mandatory auto-advance and direct chat handoff contract.
+- GOOGLE_FLOW_MANUAL_HANDOFF.md — manual Flow responsibility and render-return contract.
+- Active production artifacts are named `STORY_WW-XXX`, `PREPRODUCTION_WW-XXX`, and `GOOGLE_FLOW_PROMPT_PACK_WW-XXX`; research dossiers are retained as evidence/history, not duplicate operating manuals.
+- `reports/` contains dated intelligence evidence; GitHub Actions CI is the authoritative current engineering test record.
 - LICENSING_DECISION_RECORD.md — owner-selected licensing direction and remaining release gates; not a license grant.
 - RIGHTS_AND_PROVENANCE_REGISTER.md — evidence-based ownership and third-party rights audit; no project-wide clearance claimed.
 - PRODUCTION_INTEGRATION_READINESS.md — verified automation boundary, adapter contracts, security controls and implementation phases.
@@ -44,6 +48,8 @@ In a new chat inside the WHAT IF WORLD ChatGPT Project, send `START`. This is th
 - tests/ — automated contract and JSON Schema tests.
 - requirements-dev.txt — pinned development-only schema validation dependency.
 - .github/workflows/validate.yml — CI on push, pull request, and manual dispatch.
+
+Do not use an unversioned root-level validation snapshot as a live status dashboard. Current engineering status must be read from the active branch head and its GitHub Actions runs; historical evidence belongs under `reports/` with its validated commit and date.
 
 ## Not automated
 Google Flow/Veo generation, TTS rendering, editing, TikTok publishing, account-level trend analytics, third-party rights clearance, and actual rendered-media inspection remain manual or require separately approved integrations.
