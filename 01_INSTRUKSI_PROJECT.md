@@ -35,16 +35,9 @@ Setiap klaim material wajib punya source ID + claim ID, klasifikasi FACT/EXTRAPO
 Ikuti MONITOR → TRIAGE → RESEARCH → STORY → PRE-PRODUCTION → GENERATE → EDIT → QA → RELEASE → ARCHIVE dan state machine 02A. Setiap tahap memerlukan artefak, acceptance criteria, dan status berbukti: PASS/REWORK/HOLD/FAIL.
 Persetujuan manusia wajib untuk pemilihan ide, pengecualian risiko fakta/hak/keselamatan, persetujuan karakter kanonik, inspeksi media hasil generasi, persetujuan pilot/batch bila diwajibkan state machine, dan rilis final. Jangan menganggap file, CI sukses, automation selesai, atau output generatif sebagai approval.
 
-### AUTO-ADVANCE SETELAH APPROVAL (WAJIB)
-- Setelah pengguna memilih/menyetujui IDEA, AI langsung mengerjakan RESEARCH sampai dossier dan claim ledger siap ditinjau; berhenti hanya untuk approval RESEARCH.
-- Setelah pengguna menyetujui RESEARCH, AI langsung mengerjakan STORY sampai beat sheet, VO, claim mapping, dan risk framing siap ditinjau; berhenti hanya untuk approval STORY.
-- Setelah pengguna menyetujui STORY (misalnya `SETUJU` dalam konteks review STORY), AI WAJIB otomatis mengerjakan PRE-PRODUCTION sampai seluruh paket prompt siap pakai. Tidak boleh meminta `LANJUT`, approval PRE-PRODUCTION tambahan, atau meminta pengguna membuka PR/dokumen untuk menyalin prompt.
-- Paket prompt mencakup setiap shot: keyframe/image prompt, video prompt, audio prompt atau keputusan silence, negative constraints, asset/reference instructions, acceptance criteria, dan Plan B; ditambah VO, subtitle/timecode, edit assembly, platform package, rights/provenance register, serta QA/release checklist sesuai template 03.
-- Jika stimulus visual orisinal diperlukan, AI membuatnya dengan kemampuan image generation yang tersedia, lalu memeriksa hasil dan menyiapkan derivatif deterministik bila didukung. Jangan menugaskan pengguna membuat aset perantara yang dapat dikerjakan AI. Jika tool tidak tersedia, berikan prompt copy-ready langsung di chat dan tandai aset belum dibuat.
-- Pengguna hanya menjalankan generasi eksternal yang memang manual (saat ini Google Flow), mengembalikan hasil, dan memberi approval manusia yang diwajibkan. AI menyiapkan seluruh prompt dan instruksi; AI tidak boleh mengklaim submit/render/inspect tanpa bukti.
-- Setelah prompt pack lengkap, serahkan satu paket ringkas di chat; jangan melempar tugas administratif seperti membuka PR, mencari bagian dokumen, atau membuat file turunan kepada pengguna.
-- Auto-advance tidak melewati blocker sains, hak, keselamatan, karakter kanonik, inspeksi media, pilot/batch approval, atau final release. Bedakan `PROMPT_PACK_READY` dari `GENERATION_AUTHORIZED` dan `RENDER_COMPLETE`.
-- Bila ada blocker yang hanya dapat diselesaikan pengguna (mis. tindakan manual di Google Flow atau approval wajib), kerjakan semua bagian lain yang tidak terblokir terlebih dahulu, lalu minta hanya satu tindakan konkret yang benar-benar diperlukan.
+### Auto-advance setelah approval
+Setelah IDEA dipilih, kerjakan RESEARCH; setelah RESEARCH disetujui, kerjakan STORY; setelah STORY disetujui, kerjakan seluruh PRE-PRODUCTION dan prompt pack tanpa LANJUT atau approval PRE-PRODUCTION tambahan. Rincian wajib dan batas eksekusi ada di APPROVAL_DRIVEN_PRODUCTION_HANDOFF.md.
+
 Jangan mengklaim telah membuat, merender, mengedit, mengunggah, memublikasikan, menyimpan, atau mengubah GitHub kecuali tindakan/tool mengonfirmasi.
 
 ## CHARACTER REFERENCE & CONTINUITY V3.2
