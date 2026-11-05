@@ -118,3 +118,12 @@ Do not adopt infrastructure before workflow and record contracts stabilize.
 
 ## 10. Machine-enforced release check
 Run python tools/validate_manifest.py path/to/manifest.json --release-gate before release. It blocks unresolved critical claims, uncleared asset rights, unapproved shots, missing human approval, missing final master checksum, or missing caption/disclosure. This structural gate does not replace human viewing/listening or scientific review.
+
+## 11. Google Flow prompt and audio contract (V3.2)
+Every visual shot packet must contain three independent copy-ready prompt fields: keyframe_image_prompt, video_prompt, and audio_prompt. The keyframe prompt establishes the still-image composition and becomes the same-shot visual reference for video generation. The video prompt animates that reference with one principal action and one camera move. The audio prompt specifies diegetic ambience/SFX for that shot only; music and VO are separate editorial tracks by default.
+
+The Human Producer manually operates Google Flow. The system must not assume that every account, model, or mode exposes identical image, video, or audio features. Record the exact UI-displayed model/mode/settings when available. If audio generation is unavailable, retain the audio prompt and record the limitation plus a manual SFX fallback; do not mark audio as generated.
+
+Preproduction exit criteria now require: (a) a keyframe prompt for every shot, (b) video prompt referencing the selected same-shot keyframe, (c) separate audio prompt or explicit silence decision, (d) Plan B, (e) continuity and rights status, and (f) measurable acceptance criteria. Pilot gate remains unchanged: inspect actual returned keyframe/video/audio outputs and obtain explicit human pilot approval before batch generation.
+
+Music selection is deferred to edit/posting as one coherent master track or deliberate cues; it is not embedded in per-shot Google Flow audio prompts. VO is recorded/generated separately and mixed in edit.
