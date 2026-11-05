@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased] — Google Flow manual generation handoff
+- Documented the responsibility split: ChatGPT prepares per-shot prompt packs and Plan B; the Human Producer manually operates Google Flow and returns renders for inspection.
+- Clarified that Google Flow has no assumed API/connector, Runway is optional, and TTS/music/editing are not claimed as automated.
+- Extended generation-attempt records with manual execution mode, aspect ratio, duration, references, submission timestamp, and returned output metadata.
+- Added regression coverage for prompt-ready, submitted, and completed manual generation attempts.
+
 ## [Unreleased]
 
 ### Added
