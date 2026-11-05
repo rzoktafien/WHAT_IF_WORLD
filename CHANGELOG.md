@@ -1,3 +1,9 @@
+## [Unreleased] — Repository audit and TikTok delivery contract
+- Added a mandatory TikTok cover-image prompt, exact Indonesian cover overlay, caption/description, hashtags, pinned comment and CTA to the production template and WW-005 delivery artifacts.
+- Required the complete prompt and metadata package to be delivered directly in chat; GitHub remains the canonical archive, not a user-facing prompt retrieval task.
+- Updated README and compact Project Instructions to match the approval-driven handoff.
+- Removed the stale root validation snapshot tied to an older feature-branch commit; GitHub Actions runs on the current branch/PR are the authoritative engineering evidence.
+
 ## [Unreleased] — CI remediation for approval-driven handoff
 - Moved detailed auto-advance rules into `APPROVAL_DRIVEN_PRODUCTION_HANDOFF.md` to keep `01_INSTRUKSI_PROJECT.md` within the repository's 8,000-character contract limit.
 - Kept the short mandatory progression summary in Project Instructions and linked the detailed contract from setup and AGENTS.
