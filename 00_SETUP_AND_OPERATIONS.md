@@ -50,6 +50,8 @@ Check the latest completed report's date/time, observation window, completion st
 6. Keep unresolved or uncleared materials out of commercial distributions.
 
 ## F. Responsibility split
+
+Follow `APPROVAL_DRIVEN_PRODUCTION_HANDOFF.md`: after explicit STORY approval ChatGPT completes PRE-PRODUCTION and delivers all prompts without another continuation request.
 AI / ChatGPT: research synthesis, claim ledger, story, VO, complete pre-production dossier, continuity and asset/shot registers, original supporting still/reference assets when image tools are available, all per-shot keyframe/video/audio-or-silence prompts, Plan B, subtitles/timecodes, edit instructions, rights/provenance documentation, render inspection, QA, release package, archive preparation, and engineering on the authorized feature branch. After explicit STORY approval, ChatGPT automatically completes PRE-PRODUCTION and delivers the entire copy-ready prompt pack without asking for `LANJUT`, another PRE-PRODUCTION approval, or asking the user to create intermediate assets.
 Human Producer: makes strategic selections and required human approvals; manually operates Google Flow with the supplied prompts; returns renders and actual visible generation metadata; performs/approves editing and publication. The user is not responsible for writing prompts, creating stimulus/reference assets that ChatGPT can generate, editing repository documents, or extracting prompt text from PRs. Google Flow has no assumed API/connector; Runway is optional and never a blocker. No automatic publishing is implied.
 
