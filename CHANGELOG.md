@@ -1,3 +1,9 @@
+## [Unreleased] — Approval-driven production handoff
+- STORY approval now automatically advances the AI through the complete PRE-PRODUCTION work package and copy-ready prompt pack; no extra LANJUT or PRE-PRODUCTION approval prompt is required.
+- Assigned prompt writing, continuity/asset/shot documentation, supporting original still/reference generation when tools permit, subtitles/timecodes, edit instructions, and QA/release checklists to ChatGPT.
+- Kept Google Flow execution manual for the Human Producer and retained all required human approval, rights, safety, pilot, media-inspection, and final-release gates.
+- Distinguished prompt-pack readiness from generation authorization and completed renders; unavailable tools or unresolved rights remain explicit blockers.
+
 # Changelog
 
 ## [Unreleased] — START GitHub-first session bootstrap
