@@ -39,6 +39,22 @@ def _ids(items,label,pattern,errors):
         seen.add(value); found.add(value)
     return found
 
+
+APPROVAL_STATES = {
+ "IDEA_APPROVED": ("idea",), "RESEARCH": ("idea",), "STORY": ("idea",), "PREPRODUCTION": ("idea",),
+ "PILOT_GENERATION": ("idea",), "BATCH_GENERATION": ("idea", "pilot_generation"),
+ "GENERATION": ("idea", "pilot_generation", "batch_generation"),
+ "EDITING": ("idea", "pilot_generation", "batch_generation", "generation"),
+ "QA": ("idea", "pilot_generation", "batch_generation", "generation", "asset_qa"),
+ "RELEASE_APPROVED": ("idea", "pilot_generation", "batch_generation", "generation", "asset_qa", "master_qa", "release"),
+ "PUBLISHED": ("idea", "pilot_generation", "batch_generation", "generation", "asset_qa", "master_qa", "release"),
+ "ARCHIVED": ("idea", "pilot_generation", "batch_generation", "generation", "asset_qa", "master_qa", "release")
+}
+def _approval_is_valid(value):
+    return (isinstance(value,dict) and value.get("status")=="APPROVED"
+            and isinstance(value.get("by"),str) and bool(value.get("by").strip())
+            and _valid_datetime(value.get("at")))
+
 def validate(data,release_gate=False):
     errors=[]; blockers=[]
     if not isinstance(data,dict): return ["manifest root must be an object"],[]
@@ -224,12 +240,14 @@ def validate(data,release_gate=False):
                 asset=asset_by_id.get(aid)
                 if asset is not None and asset.get("rights_status") not in {"CLEARED","NOT_REQUIRED"}:
                     blockers.append(f"shot {sid} asset {aid} rights are unresolved")
+    approvals=data.get("approvals") if isinstance(data.get("approvals"),dict) else {}
+    for approval_stage in APPROVAL_STATES.get(data.get("state"),()):
+        if not _approval_is_valid(approvals.get(approval_stage)):
+            blockers.append(f"human {approval_stage} approval is missing or lacks approver/time evidence")
     if release_gate:
         if data.get("state") not in {"RELEASE_APPROVED","PUBLISHED","ARCHIVED"}: blockers.append("production state has not reached release approval")
-        approvals=data.get("approvals") if isinstance(data.get("approvals"),dict) else {}
-        approval=approvals.get("release",{})
-        if not isinstance(approval,dict) or approval.get("status")!="APPROVED" or not approval.get("by") or not approval.get("at"):
-            blockers.append("human release approval is missing")
+        if not _approval_is_valid(approvals.get("release")):
+            blockers.append("human release approval is missing or lacks approver/time evidence")
         release=data.get("release") if isinstance(data.get("release"),dict) else {}
         if not release.get("final_master"): blockers.append("final master path is required")
         if not re.fullmatch(r"[a-fA-F0-9]{64}",str(release.get("sha256",""))): blockers.append("final master SHA-256 is missing or invalid")
