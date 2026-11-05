@@ -6,9 +6,9 @@
 - Idea ID: IDEA-20261105-02
 - Daily Intelligence: DI-20261105-02
 - Pillar: EARTH & COSMOS
-- Stage: STORY
+- Stage: STORY → PRE-PRODUCTION
 - Version: 1.0.0
-- Story status: DRAFT — READY FOR PRODUCER APPROVAL
+- Story status: APPROVED — explicit Human Producer approval received in ChatGPT conversation on 2026-11-05; no external timestamp asserted
 - Research approval: explicit user approval received in chat on 2026-11-05.
 - Branch target: feat/v3.2-character-reference-system
 - Format: 9:16 vertical; target 55–58 seconds; realistic cinematic/scientific documentary.
@@ -136,4 +136,4 @@ Shot IDs above are STORY placeholders; PRE-PRODUCTION must allocate final produc
 - RENDER_QA: NOT RUN.
 - Blockers before PRE-PRODUCTION: producer approval of this Story draft; no scientific blocker identified in the current script.
 - Story acceptance criteria: approve the central question, conditional premise, causal chain, and VO wording. If the producer approves, PRE-PRODUCTION may proceed to continuity bible, asset/shot register, detailed per-shot keyframe/video/audio prompts and Plan B.
-- Approval status: PENDING HUMAN PRODUCER APPROVAL.
+- Approval status: APPROVED — Human Producer explicit approval received in ChatGPT conversation on 2026-11-05. Approval evidence is the conversation; no machine-generated approval timestamp is asserted.
