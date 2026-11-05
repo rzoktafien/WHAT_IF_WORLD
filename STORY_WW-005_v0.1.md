@@ -1,5 +1,5 @@
 # STORY DOSSIER — WW-005
-## v0.1 — DRAFT FOR PRODUCER REVIEW
+## v0.2 — STORY APPROVED; PRE-PRODUCTION AUTHORIZED
 
 - Artifact ID: STORY-WW-005
 - Production ID: WW-005
@@ -8,15 +8,15 @@
 - Alternate title: **Bagaimana Jika Protokol Montreal Tak Pernah Ada?**
 - Pillar: EARTH & COSMOS
 - Stage: STORY
-- Status: DRAFT — AWAITING HUMAN STORY APPROVAL
+- Status: APPROVED — HUMAN PRODUCER
 - Owner: AI Creative Director / Story Designer
-- Human Producer: pending review
+- Human Producer: explicit approval in Project chat
 - Created: 2026-11-05 (Asia/Jakarta)
 - Research source: RESEARCH_IDEA-20261105-05.md
 - Research gate: APPROVED by explicit Human Producer decision in Project chat on 2026-11-05
 - Target format: 9:16 vertical; 58–60 seconds (working target)
 - Editorial label: CURRENT_VERIFIED for 2026 observation + EXTRAPOLATION for counterfactual model scenario
-- Change note: First STORY draft after approved research. No Google Flow prompts, generated assets, or render claims are included.
+- Change note: Story and VO explicitly approved by Human Producer on 2026-11-05 17:08 Asia/Jakarta; PRE-PRODUCTION authorized. Prompts and assets are maintained in separate pre-production artifacts.
 
 ## 1. Creative brief
 
@@ -151,11 +151,11 @@ No new factual claim is intended. All factual VO and material overlays map to ex
 - Claim mapping: PASS.
 - Causal integrity and counterfactual framing: PASS.
 - PLAN_QA: not numerically scored; runtime and visual-source feasibility remain provisional.
-- Story exit: **HOLD_PENDING_HUMAN_STORY_APPROVAL**.
-- Pre-production: NOT STARTED.
+- Story exit: **APPROVED** — Human Producer, 2026-11-05T17:08:00+07:00.
+- Pre-production: AUTHORIZED; see PREPRODUCTION_WW-005_v0.1.md.
 - Character profiles: NOT REQUIRED for current concept.
 - Asset/shot IDs: NOT ASSIGNED; to be assigned during PRE-PRODUCTION.
-- Google Flow prompts: NOT CREATED; to be created after STORY approval.
+- Google Flow prompts: created in GOOGLE_FLOW_PROMPT_PACK_WW-005_v0.1.md; prompt readiness is not generation success.
 - Generation/edit/QA/release: NOT STARTED.
 
 **Requested decision:** approve STORY WW-005 and its VO master, or request specific revisions. On explicit STORY approval, proceed to PRE-PRODUCTION and prepare the complete copy-ready Google Flow prompt pack (keyframe image, video, and separate per-shot audio prompt, with Plan B) plus asset/shot registers. Human Producer will operate Google Flow manually; no render is implied by prompt readiness.
