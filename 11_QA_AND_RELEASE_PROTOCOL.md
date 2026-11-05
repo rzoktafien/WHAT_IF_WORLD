@@ -47,3 +47,13 @@ Check frame rate, resolution, codec, audio sync, peak/clipping, safe zones, capt
 Required: zero blockers, score ≥85, all claim records resolved, all asset rights cleared, final master checksum, final caption/cover, human approval timestamp. Only then `RELEASE_APPROVED`.
 
 `PUBLISHED` requires actual URL/date confirmation. `ARCHIVED` requires dossier, source ledger, prompts, assets, final master reference/checksum, QA, release metadata, and lessons.
+
+## 7. Keyframe, video, and per-shot audio QA (V3.2)
+For every shot, verify three independent prompt/output layers:
+- **Keyframe QA:** composition, subject geometry, scale, environment, lighting, texture, scientific plausibility, continuity anchor, unwanted text/logo/watermark.
+- **Video QA:** same-shot keyframe fidelity, one principal action, one camera move, motion stability, first/middle/final frame, duration/aspect ratio, no invented objects or scene drift.
+- **Audio QA:** audio matches the visible environment/action, no unintended speech/music, no clipping/distortion, no contradictory weather/space cues, and no abrupt boundary artifacts. Check generated audio separately before edit assembly.
+
+Per-shot audio prompt must describe ambience/SFX only unless the dossier explicitly approves another diegetic sound. Music is a separate master track selected during edit/posting; VO is separate. Do not score audio QA until the returned audio is actually listened to. A prompt existing is PLAN_QA evidence, not ASSET_QA evidence.
+
+Pilot acceptance requires at least one simple/environmental shot and one technically difficult shot when the production includes both. Inspect the keyframe, video, and audio outputs together. If keyframe fails, do not proceed to video for that shot; revise keyframe first. If video drifts from the keyframe, revise video prompt or use Plan B. If audio is unavailable in the selected Flow mode, record the limitation and use a rights-cleared manual SFX fallback.
