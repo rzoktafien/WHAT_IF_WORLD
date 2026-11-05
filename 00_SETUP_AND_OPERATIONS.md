@@ -48,3 +48,10 @@ Human: strategic decisions, idea approval, factual-risk exceptions, rights clear
 ## G. Recovery and change control
 Retain disappeared-source metadata and seek independent sources. Preserve failed prompts/renders and failure notes. Resume from last persisted approved artifact. If premise or canonical character changes, increment version and reopen affected science, story, continuity, and QA gates.
 For repository work, change only the authorized feature branch, inspect diffs, run validators/tests/CI, and verify main remains unchanged. Update docs, schemas, examples, validators, tests, and CHANGELOG together when a machine contract changes.
+
+
+## H. Daily Intelligence freshness monitor
+Persist completed reports as `reports/daily-intelligence/YYYY-MM-DD.json` using `schemas/daily_intelligence_report.schema.json`. Validate locally with `python tools/validate_daily_intelligence.py path/to/report.json` or check the newest persisted report with `python tools/validate_daily_intelligence.py --latest`. GitHub Actions checks at 08:00 WIB and opens/updates an issue when the report is missing, stale, truncated, incomplete, or has broken claim/source references. It does not conduct the research itself.
+
+## I. Human approval records
+Every stage transition must include `approvals.<stage>` with `status: APPROVED`, a non-empty `by`, and timezone-aware `at`. Required stages are idea, pilot_generation, batch_generation, generation, asset_qa, master_qa, and release as applicable to the manifest state. The validator blocks transitions with missing or invalid approval evidence. Never populate these records on behalf of the producer.
