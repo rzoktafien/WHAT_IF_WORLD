@@ -335,3 +335,100 @@ Scoring order: freshness/relevance, scientific foundation, human stakes, visual 
 - Main recommendation: DI-20261105-01-B, underground peat smouldering, due to strong Indonesian relevance, clear human stakes, and a distinctive visual/scientific mechanism.
 - No final script, voice-over, Google Flow prompt, caption, or production dossier created.
 - No content archive or idea backlog record created or modified; approval is still required before a candidate becomes an approved production concept.
+
+
+---
+
+## Research provenance — WW-005 / IDEA-20261105-05
+
+- Research dossier: `RESEARCH_IDEA-20261105-05.md`
+- Research run: `DI-20261105-03` (candidate IDE 02 selected by Human Producer on 2026-11-05).
+- Research timestamp: 2026-11-05 16:38:24 WIB (Asia/Jakarta).
+- Observation/current-data focus: 2026 Antarctic ozone-hole season; supporting treaty, model, and scientific assessment sources.
+- Internal deduplication: archive and backlog read on active feature branch. The selected question is not present as a production in the canonical archive; no equivalent ozone scenario appears in the current backlog.
+- Research status: draft complete; producer science review required. No STORY or production prompts created.
+
+### Source records
+
+#### SRC-033 — NOAA/NASA 2026 ozone-hole measurement release
+- Title: “NOAA, NASA release measurements of 2026 ozone hole”.
+- Publisher: NOAA; joint NOAA/NASA analysis; named experts Paul Newman and Amy Butler.
+- URL: https://www.noaa.gov/news-release/noaa-nasa-release-measurements-of-2026-ozone-hole
+- Published: 2026-11-04.
+- Data: seasonal mean 2026-09-07 to 2026-10-13; maximum area 2026-09-18; South Pole minimum ozone 2026-10-17.
+- Accessed: 2026-11-05.
+- Type/scope: primary institutional science-agency summary; Antarctic ozone satellite monitoring and balloon/ozonesonde observations.
+- Claims: CLM-033–CLM-037.
+- Inspection: full release opened; metrics, named expert statements, and mechanism explanation inspected.
+- Limits: not a fresh raw-data reprocessing; 1–2 million square mile counterfactual is an attributed estimate. NASA/NOAA release is joint reporting, not two independent datasets.
+
+#### SRC-034 — NASA 2026 ozone-hole explainer
+- Title: “NASA, NOAA Track 2026 Antarctic Ozone Hole”; Sally Younger, NASA Science.
+- URL: https://science.nasa.gov/earth/2026-ozone-hole/
+- Published: 2026-11-04; accessed: 2026-11-05.
+- Type/scope: primary institutional science-agency communication using joint NASA/NOAA data.
+- Claims: CLM-033–CLM-036.
+- Inspection: full page opened.
+- Limits: shares the underlying joint analysis with SRC-033; not independent replication.
+
+#### SRC-035 — Peer-reviewed no-regulation model
+- Title: “What would have happened to the ozone layer if chlorofluorocarbons (CFCs) had not been regulated?”
+- Authors: Newman et al.
+- Journal: Atmospheric Chemistry and Physics 9, 2113–2128 (2009).
+- DOI: 10.5194/acp-9-2113-2009.
+- URL: https://acp.copernicus.org/articles/9/2113/2009/
+- Published: 2009-03-23; accessed: 2026-11-05.
+- Type/scope: peer-reviewed primary coupled radiation-chemical-dynamical modelling study.
+- Claims: CLM-038, CLM-039.
+- Inspection: publisher full-text page and abstract opened.
+- Limits: scenario assumes no regulation and 3% annual ODS production growth; outcomes are modelled, not observations or deterministic forecasts.
+
+#### SRC-036 — WMO Scientific Assessment of Ozone Depletion 2022
+- Publisher: WMO, GAW Report No. 278.
+- URL: https://csl.noaa.gov/assessments/ozone/2022/executivesummary/
+- Published: 2022; accessed: 2026-11-05.
+- Type/scope: authoritative international scientific assessment of ozone chemistry, observed changes, and future projections.
+- Claims: CLM-037, CLM-039–CLM-041.
+- Inspection: full executive summary and Antarctic future-evolution section opened.
+- Limits: projections depend on emissions and climate assumptions; recovery date is a model benchmark with range.
+
+#### SRC-037 — UN Treaty Collection: Montreal Protocol status
+- Publisher: United Nations Office of Legal Affairs, Treaty Section.
+- URL: https://treaties.un.org/Pages/ViewDetails.aspx?chapter=27&clang=_en&mtdsg_no=XXVII-2-a&src=TREATY
+- Status page: 2026-11-03; treaty adopted 1987-09-16; entered into force 1989-01-01; accessed 2026-11-05.
+- Type/scope: primary legal registry.
+- Claims: CLM-042.
+- Inspection: treaty status and metadata page opened.
+- Limits: party count is a time-stamped legal registry snapshot.
+
+#### SRC-038 — UNEP Ozone Secretariat treaty overview
+- Publisher: UNEP Ozone Secretariat.
+- URL: https://ozone.unep.org/treaties/montreal-protocol
+- Accessed: 2026-11-05; publication date not displayed.
+- Type/scope: official treaty explainer on ODS production/consumption phase-out.
+- Claims: CLM-042.
+- Inspection: official page text inspected.
+- Limits: overview, not a compliance audit.
+
+#### SRC-039 — NASA Ozone Watch data definition
+- Publisher: NASA Goddard Space Flight Center.
+- Title: “2026 Antarctic OMPS and MERRA-2 Ozone”.
+- URL: https://ozonewatch.gsfc.nasa.gov/meteorology/SH.html
+- Data period: 2026; accessed: 2026-11-05.
+- Type/scope: primary agency data portal for Antarctic total-column ozone and area statistics.
+- Claims: CLM-034.
+- Inspection: portal definition and daily progression description inspected.
+- Limits: raw time-series were not downloaded or independently recalculated.
+
+### Claim records
+
+- CLM-033 FACT — 2026 seasonal mean area about 25 million km², seventh-largest in 48 years; SRC-033, SRC-034; HIGH/SUPPORTED.
+- CLM-034 FACT — 2026 one-day maximum 27.1 million km² on 18 Sep; area definition below 220 DU south of 40°S; SRC-033, SRC-034, SRC-039; HIGH/SUPPORTED.
+- CLM-035 FACT — unusually strong/large polar vortex and weak planetary-wave activity contributed to favourable ozone-loss conditions in 2026; SRC-033, SRC-034; HIGH/SUPPORTED.
+- CLM-036 EXTRAPOLATION — Paul Newman estimated 2026 area could be 1–2 million square miles larger if ODS levels matched their 2000 peak; SRC-033, SRC-034; MEDIUM/QUALIFIED.
+- CLM-037 FACT — chlorine/bromine activation on polar stratospheric cloud surfaces and catalytic ozone destruction after sunlight returns; SRC-033, SRC-034, SRC-036; HIGH/SUPPORTED.
+- CLM-038 EXTRAPOLATION — 2009 coupled model with no regulation and 3% annual ODS production growth projected global column-ozone losses of 17% by 2020 and 67% by 2065 versus 1980; SRC-035; HIGH for model output, MEDIUM for real counterfactual/QUALIFIED.
+- CLM-039 EXTRAPOLATION — same model projected year-round polar depletion and >2× erythemal UV in northern summer mid-latitudes by 2060; SRC-035, SRC-036; MEDIUM/QUALIFIED.
+- CLM-040 FACT — chlorine/bromine participate in catalytic cycles and are regenerated; SRC-036; HIGH/SUPPORTED.
+- CLM-041 EXTRAPOLATION — Antarctic total-column ozone projected to return to 1980 value around 2066, model range 2049–2077, under continued compliance; SRC-036; MEDIUM/QUALIFIED.
+- CLM-042 FACT — Montreal Protocol adopted 1987-09-16, entered into force 1989-01-01, 198 parties on 2026-11-03 registry; SRC-037, SRC-038; HIGH/SUPPORTED.
