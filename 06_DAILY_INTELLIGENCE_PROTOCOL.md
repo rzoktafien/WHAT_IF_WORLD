@@ -106,3 +106,9 @@ Atribusikan klaim material ke lembaga/publikasi/peneliti yang dapat diidentifika
 
 ## 11. Persisted report machine contract
 Persist reports to `reports/daily-intelligence/YYYY-MM-DD.json` using `schemas/daily_intelligence_report.schema.json`. Run `python tools/validate_daily_intelligence.py --latest` to check the latest report. A scheduled GitHub Actions monitor runs at 08:00 WIB and opens/updates an issue if no complete, untruncated report no older than seven days is available. This monitor only detects freshness and provenance gaps; it does not perform web research, claim platform trend access, validate scientific truth, or approve candidates.
+
+
+## 12. START command entry contract
+START is an interaction alias for MULAI. On each new Project chat, the operator sends only START. Before any trend or idea output, the assistant must verify the current GitHub repository/active branch, read the current operating instructions and relevant source-of-truth documents, and inspect the latest persisted report. It then performs fresh discovery across all five lanes, checks primary sources and material claims, internally deduplicates against archive/backlog, applies the official scoring rubric, and presents three qualified ideas when evidence supports them (fewer if not). Recommend one and stop for explicit selection.
+
+If GitHub cannot be read or the active branch/source documents cannot be verified, mark startup HOLD and explain the precise blocker. Never imply that a report freshness GitHub Action performed research; it only validates persisted report freshness/provenance. A current report is context, not a substitute for new discovery on this START run.

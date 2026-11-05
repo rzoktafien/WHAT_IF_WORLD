@@ -1,5 +1,12 @@
 # Changelog
 
+## [Unreleased] — START GitHub-first session bootstrap
+- Added START as the one-word alias of MULAI for new Project chats.
+- Required repository/active-branch verification and source-of-truth reads before Daily Intelligence.
+- Required latest-report inspection, fresh five-lane discovery, internal archive/backlog deduplication, official scoring, three qualified ideas when evidence permits, one recommendation, and an explicit human selection stop.
+- Added a HOLD path when GitHub/branch/source documents cannot be verified; the scheduled freshness monitor is explicitly not treated as a research agent.
+
+
 ## [Unreleased] — Google Flow manual generation handoff
 - Documented the responsibility split: ChatGPT prepares per-shot prompt packs and Plan B; the Human Producer manually operates Google Flow and returns renders for inspection.
 - Clarified that Google Flow has no assumed API/connector, Runway is optional, and TTS/music/editing are not claimed as automated.

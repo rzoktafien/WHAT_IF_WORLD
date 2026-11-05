@@ -18,6 +18,9 @@ WHAT IF WORLD is a repeatable production system turning monitored questions and 
 7. Validate a production record with `python tools/validate_manifest.py path/to/manifest.json`.
 8. Never pass a stage gate without evidence and human approval.
 
+## New-chat quick start
+In a new chat inside the WHAT IF WORLD ChatGPT Project, send `START`. This is the single-command alias of `MULAI`: it verifies the active GitHub development branch and source documents first, checks the latest Daily Intelligence report, performs fresh research, internally deduplicates, then offers three qualified ideas and one recommendation. It stops for the Producer's explicit selection. If GitHub cannot be read, the session must report HOLD rather than use stale context.
+
 ## Core operating model
 `MONITOR → TRIAGE → RESEARCH → STORY → PRE-PRODUCTION → GENERATE → EDIT → QA → RELEASE → ARCHIVE`
 

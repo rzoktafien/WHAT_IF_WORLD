@@ -127,3 +127,11 @@ The Human Producer manually operates Google Flow. The system must not assume tha
 Preproduction exit criteria now require: (a) a keyframe prompt for every shot, (b) video prompt referencing the selected same-shot keyframe, (c) separate audio prompt or explicit silence decision, (d) Plan B, (e) continuity and rights status, and (f) measurable acceptance criteria. Pilot gate remains unchanged: inspect actual returned keyframe/video/audio outputs and obtain explicit human pilot approval before batch generation.
 
 Music selection is deferred to edit/posting as one coherent master track or deliberate cues; it is not embedded in per-shot Google Flow audio prompts. VO is recorded/generated separately and mixed in edit.
+
+
+## 12. START interaction contract (V3.2)
+START is the single-command alias of MULAI and is the entry point for every new Project chat. Its deterministic order is: (1) verify repository identity and read the active development branch ref/head; (2) read current Project Instructions plus the required source-of-truth documents (AGENTS, setup, architecture, daily protocol, archive, backlog, scoring rubric); (3) fetch and validate the latest persisted Daily Intelligence report; (4) perform fresh five-lane web discovery and source/claim checks; (5) internally deduplicate against archive/backlog; (6) produce three qualified idea cards when evidence permits, fewer if quality threshold is not met; (7) recommend one with trade-offs and stop for explicit human selection.
+
+GitHub access is a hard startup dependency for repository-state claims. If the connector is unavailable, the target branch cannot be read, or required files are missing/conflicting, report HOLD with the exact limitation; do not silently use main, stale conversation context, or pretend the repository was read. START does not approve an idea or authorize research-to-story progression. A command triggers the workflow; only evidence and explicit approvals advance gates.
+
+The persisted report freshness monitor is a separate scheduled validator. It does not perform discovery. Every START run performs fresh discovery as required by 06_DAILY_INTELLIGENCE_PROTOCOL.md even when the persisted report is current.
