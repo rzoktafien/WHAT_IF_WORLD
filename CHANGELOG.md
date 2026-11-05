@@ -1,3 +1,7 @@
+## [Unreleased] — CI remediation for approval-driven handoff
+- Moved detailed auto-advance rules into `APPROVAL_DRIVEN_PRODUCTION_HANDOFF.md` to keep `01_INSTRUKSI_PROJECT.md` within the repository's 8,000-character contract limit.
+- Kept the short mandatory progression summary in Project Instructions and linked the detailed contract from setup and AGENTS.
+
 ## [Unreleased] — Approval-driven production handoff
 - STORY approval now automatically advances the AI through the complete PRE-PRODUCTION work package and copy-ready prompt pack; no extra LANJUT or PRE-PRODUCTION approval prompt is required.
 - Assigned prompt writing, continuity/asset/shot documentation, supporting original still/reference generation when tools permit, subtitles/timecodes, edit instructions, and QA/release checklists to ChatGPT.
