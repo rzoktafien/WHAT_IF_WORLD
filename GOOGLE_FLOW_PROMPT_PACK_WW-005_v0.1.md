@@ -221,6 +221,44 @@ Natural Antarctic surface ambience from a low exterior perspective: soft steady 
 
 ---
 
+## TikTok release package — copy-ready
+
+**Cover title / exact Indonesian overlay**
+
+JIKA OZON TAK PERNAH DILINDUNGI?
+
+**Caption / description (Indonesian)**
+
+Bagaimana jika dunia tidak pernah menyepakati Protokol Montreal? Kita bandingkan kondisi lubang ozon Antarktika pada 2026 dengan satu skenario model ilmiah tahun 2009. Angka dalam skenario itu bukan ramalan pasti—melainkan gambaran tentang risiko yang berhasil dihindari melalui kerja sama global.
+
+**Hashtags**
+
+#WhatIfWorld #Sains #LapisanOzon #Antarktika #ProtokolMontreal
+
+**Pinned comment**
+
+Angka 17% dan 67% berasal dari satu model tahun 2009 dengan asumsi produksi bahan perusak ozon terus tumbuh 3% per tahun tanpa regulasi. Itu hasil simulasi, bukan pengukuran aktual atau ramalan pasti.
+
+**CTA**
+
+Menurutmu, keputusan global apa lagi yang dampaknya baru terasa puluhan tahun kemudian?
+
+**TikTok cover image prompt (English; generate the image without typography)**
+
+```text
+Create a premium, photorealistic cinematic science-documentary TikTok cover in a vertical 9:16 composition. Show planet Earth from space with Antarctica clearly visible near the lower third, dramatic but scientifically restrained atmospheric rim lighting, and a subtle translucent blue-violet stratospheric band surrounding the planet to symbolize the ozone layer. Suggest the importance of protecting the atmosphere through visual contrast between deep space and the delicate luminous atmospheric edge; do not depict a literal hole, torn atmosphere, fire, planetary destruction, or an ozone hole above Indonesia. Strong central focal point, crisp high-detail Earth textures, natural cloud systems, deep navy background, restrained cyan highlights, premium documentary color grading. Reserve clean dark negative space across the upper third for a large Indonesian title overlay and keep Antarctica unobstructed. No text, letters, numbers, labels, flags, logos, UI, watermark, borders, or fake scientific data. Designed for immediate readability as a small TikTok thumbnail.
+```
+
+**Cover typography / edit instruction**
+
+Overlay the exact title “JIKA OZON TAK PERNAH DILINDUNGI?” in bold high-contrast type across the upper third. Keep the text within TikTok safe zones and do not add unsupported statistics. Cover image status: PROMPT READY; not generated; no output file exists yet.
+
+**Posting time:** no recommendation; no authorized account analytics were accessed.
+
+**AI disclosure:** verify TikTok's current disclosure requirement at publication and clearly frame generated scenes as illustrative/hypothetical.
+
+---
+
 ## Global handoff and execution controls
 1. Generate keyframes first. Do not generate video until the keyframe for that same shot has been selected and supplied as the reference.
 2. Run pilot only on SH-001 (simple orbital/data plate) and SH-003 (technically difficult molecular visualization) to test both simple and difficult visual demands.
