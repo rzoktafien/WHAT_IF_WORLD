@@ -12,7 +12,7 @@
 No legacy dossier is assumed to exist in this repository. Preserve external legacy files separately; do not treat them as validated releases.
 
 ## B. Session commands
-- MULAI — validate latest intelligence report, perform fresh research when required, internally deduplicate, then present 3–5 qualified ideas when evidence permits (fewer are valid).
+- START (alias MULAI) — first read/verify the active GitHub branch and required operating files, then inspect the latest Daily Intelligence report, perform fresh five-lane research, internally deduplicate, and present 3–5 qualified ideas when evidence permits (fewer are valid). Stop for the user's explicit idea selection.
 - PILIH 1 — select candidate 1 and start the research gate.
 - STATUS WW-XXX — report current stage, blockers, and next action.
 - LANJUT — continue only the currently authorized stage.
@@ -21,6 +21,14 @@ No legacy dossier is assumed to exist in this repository. Preserve external lega
 - ARSIPKAN WW-XXX — archive only after release decision and evidence capture.
 
 A command is a request, not proof that a gate passed. If governing documents conflict, HOLD the affected operation and report the conflict.
+
+### START session bootstrap (every new Project chat)
+1. Confirm repository and exact active branch; never silently fall back to main.
+2. Read current Project Instructions and repository source-of-truth files, including architecture, setup, daily protocol, archive, backlog, scoring rubric, and latest report.
+3. Report branch/head and any inaccessible or conflicting source. If required GitHub access fails, HOLD rather than pretending it was read.
+4. Validate the latest report's date, status, five-lane coverage, source freshness/access, truncation, and claim/source links.
+5. Run fresh web discovery and evidence checks under section C; a fresh existing report does not replace this run's new discovery.
+6. Deduplicate internally; present three strong ideas when evidence supports them (fewer are acceptable), score them, recommend one, then wait for explicit selection.
 
 ## C. Daily Intelligence
 Check the latest completed report's date/time, observation window, completion status, source freshness/accessibility, coverage across five discovery lanes, source attribution, and truncation. If missing, failed, materially truncated, or older than 7 days, perform fresh research. Internally compare against 05_ARSIP_KONTEN.md and 09_IDEA_BACKLOG.md without exposing internal titles/IDs/comparison. Map findings to HUMAN BODY & MIND, EARTH & COSMOS, or CIVILIZATION & FUTURE. Target 3–5 qualified ideas; fewer are acceptable if evidence is insufficient. Preserve claim-to-source provenance; never claim persistence without a confirmed write.
