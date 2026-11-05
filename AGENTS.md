@@ -31,14 +31,18 @@ Read 02A_MODULE_ARCHITECTURE.md and 01_INSTRUKSI_PROJECT.md first, then relevant
 - Hold, replace, or exclude material whose ownership, provenance, or permissions are unresolved.
 - Publish license terms or claim commercial permissions only after qualified legal review and explicit owner approval.
 
+## Approval-driven handoff
+- Follow `APPROVAL_DRIVEN_PRODUCTION_HANDOFF.md`; explicit STORY approval auto-advances AI through complete PRE-PRODUCTION and prompt-pack delivery without an extra `LANJUT`.
+
 ## Scientific and production integrity
 - Preserve MONITOR → TRIAGE → RESEARCH → STORY → PRE-PRODUCTION → GENERATE → EDIT → QA → RELEASE → ARCHIVE.
-- Google Flow generation is intentionally manual: ChatGPT prepares copy-ready per-shot prompts and Plan B; the Human Producer operates Flow and returns renders. Never invent a Flow adapter or claim automatic submission/retrieval.
+- Google Flow generation is intentionally manual: ChatGPT prepares the complete copy-ready per-shot prompt pack, Plan B, and supporting original still/reference assets when available tools permit; the Human Producer operates Flow and returns renders. After explicit STORY approval, the agent automatically completes PRE-PRODUCTION and delivers all prompts without another continuation request or a user-created intermediate asset. Never invent a Flow adapter or claim automatic submission/retrieval.
 - Runway is optional, not a dependency or blocker. TTS/music/SFX/editing are not claimed as rendered unless a real authorized tool confirms execution.
 - Separate FACT, EXTRAPOLATION, and FICTIONAL_ASSUMPTION.
 - Critical claims need traceable sources; unsupported claims must be qualified, removed, or held.
 - Do not invent tool capabilities, evidence, metrics, rights clearance, or test results.
 - Plan QA is not render QA. Human approval is mandatory at required gates and final publication.
+- Do not offload prompt writing, repository-document navigation, or creation of intermediate stimulus/reference assets to the user when the agent can do the work. The user's external production action is the manual Google Flow run and return of actual outputs.
 
 ## Engineering and validation
 Run `python tools/validate_project.py`, `python -m unittest discover -s tests -v`, and `python tools/validate_manifest.py path/to/manifest.json`. The release gate blocks unresolved critical claims, unknown references, uncleared rights, unapproved shots/characters, missing human approval, and missing final-master evidence. Do not weaken tests to make a build green.

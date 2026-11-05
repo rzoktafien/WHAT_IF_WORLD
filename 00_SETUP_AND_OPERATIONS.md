@@ -15,7 +15,7 @@ No legacy dossier is assumed to exist in this repository. Preserve external lega
 - START (alias MULAI) — first read/verify the active GitHub branch and required operating files, then inspect the latest Daily Intelligence report, perform fresh five-lane research, internally deduplicate, and present 3–5 qualified ideas when evidence permits (fewer are valid). Stop for the user's explicit idea selection.
 - PILIH 1 — select candidate 1 and start the research gate.
 - STATUS WW-XXX — report current stage, blockers, and next action.
-- LANJUT — continue only the currently authorized stage.
+- LANJUT — continue only the currently authorized stage; not required after an explicit STORY approval because PRE-PRODUCTION and prompt-pack preparation auto-advance.
 - REVISI WW-XXX — diagnose supplied render/artifact and open rework.
 - AUDIT WW-XXX — audit evidence, continuity, and QA.
 - ARSIPKAN WW-XXX — archive only after release decision and evidence capture.
@@ -50,11 +50,13 @@ Check the latest completed report's date/time, observation window, completion st
 6. Keep unresolved or uncleared materials out of commercial distributions.
 
 ## F. Responsibility split
-AI: research synthesis, claim-ledger draft, story, prompts, timing, asset naming, QA checklist, package assembly, and engineering changes on the authorized feature branch.
-Human Producer: strategic decisions and required approvals; manually operates Google Flow using ChatGPT's copy-ready shot prompts; supplies returned renders and actual visible generation metadata; performs/approves editing and publication. ChatGPT: research, claim ledger, story, VO, shot/character/asset/rights documentation, per-shot Google Flow prompts and Plan B, audio/edit instructions, render inspection and QA, release package, archive preparation, and engineering on the authorized feature branch. Google Flow has no assumed API/connector; Runway is optional and never a blocker. No automatic publishing is implied.
+
+Follow `APPROVAL_DRIVEN_PRODUCTION_HANDOFF.md`: after explicit STORY approval ChatGPT completes PRE-PRODUCTION and delivers all prompts without another continuation request.
+AI / ChatGPT: research synthesis, claim ledger, story, VO, complete pre-production dossier, continuity and asset/shot registers, original supporting still/reference assets when image tools are available, all per-shot keyframe/video/audio-or-silence prompts, Plan B, subtitles/timecodes, edit instructions, rights/provenance documentation, render inspection, QA, release package, archive preparation, and engineering on the authorized feature branch. After explicit STORY approval, ChatGPT automatically completes PRE-PRODUCTION and delivers the entire copy-ready prompt pack without asking for `LANJUT`, another PRE-PRODUCTION approval, or asking the user to create intermediate assets.
+Human Producer: makes strategic selections and required human approvals; manually operates Google Flow with the supplied prompts; returns renders and actual visible generation metadata; performs/approves editing and publication. The user is not responsible for writing prompts, creating stimulus/reference assets that ChatGPT can generate, editing repository documents, or extracting prompt text from PRs. Google Flow has no assumed API/connector; Runway is optional and never a blocker. No automatic publishing is implied.
 
 ## F1. Google Flow manual generation handoff
-Follow GOOGLE_FLOW_MANUAL_HANDOFF.md. ChatGPT prepares the complete prompt pack; Human Producer manually runs it in Google Flow and returns the render. Record actual model/version/mode/settings only when known; otherwise use belum ditentukan. Do not mark generation successful until the output is supplied and accessible. ChatGPT then records and inspects it.
+Follow GOOGLE_FLOW_MANUAL_HANDOFF.md. STORY approval automatically triggers ChatGPT to finish PRE-PRODUCTION and prepare the complete prompt pack (including supporting original reference stills where tools permit). Human Producer only needs to run the supplied prompts manually in Google Flow and return the render. Record actual model/version/mode/settings only when known; otherwise use belum ditentukan. Do not mark generation successful until the output is supplied and accessible. ChatGPT then records and inspects it.
 
 ## G. Recovery and change control
 Retain disappeared-source metadata and seek independent sources. Preserve failed prompts/renders and failure notes. Resume from last persisted approved artifact. If premise or canonical character changes, increment version and reopen affected science, story, continuity, and QA gates.
