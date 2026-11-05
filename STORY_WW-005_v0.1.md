@@ -57,22 +57,21 @@
 
 | Segment | In | Out | Text | Approx. words | Claim IDs |
 |---|---:|---:|---|---:|---|
-| VO-01 | 00:00 | 00:08 | “Pada 2026, lubang ozon Antarktika rata-rata membentang sekitar 25 juta kilometer persegi. Ini salah satu yang terbesar dalam hampir lima dekade.” | 22 | CLM-033 |
-| VO-02 | 00:08 | 00:16 | “Tapi angka besar ini bukan bukti pemulihan berbalik. Lubang ozon adalah penipisan musiman yang dipengaruhi kimia atmosfer dan pusaran kutub.” | 21 | CLM-034, CLM-035 |
-| VO-03 | 00:16 | 00:24 | “Bahan perusak ozon melepaskan klorin dan bromin di stratosfer. Keduanya dapat menghancurkan ozon melalui reaksi berantai.” | 17 | CLM-037, CLM-040 |
-| VO-04 | 00:24 | 00:30 | “Pada 1987, dunia menyepakati Protokol Montreal untuk mengendalikan bahan-bahan itu.” | 12 | CLM-042 |
-| VO-05 | 00:30 | 00:46 | “Tapi bagaimana jika kesepakatan itu tak pernah ada? Satu model ilmiah 2009 mengasumsikan produksi bahan perusak ozon terus tumbuh tiga persen setiap tahun. Dalam skenario itu, kolom ozon global rata-rata turun 17 persen pada 2020 dan 67 persen pada 2065, dibanding tingkat 1980.” | 45 | CLM-038 |
-| VO-06 | 00:46 | 00:51 | “Ini bukan ramalan pasti. Ini hasil satu simulasi dengan asumsi tertentu.” | 12 | CLM-038 |
-| VO-07 | 00:51 | 01:00 | “Dunia nyata memilih jalur berbeda. Pemulihan tetap lambat: WMO memperkirakan ozon total Antarktika kembali ke tingkat 1980 sekitar 2066, jika kepatuhan berlanjut.” | 25 | CLM-041 |
+| VO-01 | 00:00 | 00:08 | “Pada 2026, lubang ozon Antarktika rata-rata mencapai sekitar 25 juta kilometer persegi—ketujuh terbesar dalam 48 tahun.” | 18 | CLM-033 |
+| VO-02 | 00:08 | 00:14 | “Ini bukan tanda pemulihan berbalik. Ukurannya juga dipengaruhi kondisi atmosfer di kutub.” | 13 | CLM-034, CLM-035 |
+| VO-03 | 00:14 | 00:21 | “Di stratosfer, klorin dan bromin dari bahan perusak ozon memicu reaksi yang menghancurkan ozon.” | 15 | CLM-037, CLM-040 |
+| VO-04 | 00:21 | 00:27 | “Pada 1987, dunia menyepakati Protokol Montreal untuk mengendalikan bahan-bahan itu.” | 11 | CLM-042 |
+| VO-05 | 00:27 | 00:45 | “Bagaimana jika kesepakatan itu tak pernah ada? Model ilmiah 2009 mengasumsikan produksi bahan itu terus naik tiga persen tiap tahun. Dalam skenario tersebut, kolom ozon global rata-rata turun 17 persen pada 2020, dan 67 persen pada 2065, dibanding tingkat 1980.” | 42 | CLM-038 |
+| VO-06 | 00:45 | 00:50 | “Itu bukan ramalan pasti, melainkan hasil satu simulasi.” | 9 | CLM-038 |
+| VO-07 | 00:50 | 01:00 | “Dunia nyata memilih jalur berbeda. WMO memperkirakan ozon total Antarktika kembali ke tingkat 1980 sekitar 2066, jika kepatuhan berlanjut.” | 21 | CLM-041 |
 
-- **Total VO:** approximately 154 words.
-- **Effective speaking rate:** target 155–165 words/minute, with pauses and visual-only moments budgeted separately. This is a fast but plausible documentary read; timed read-through is required before STORY exit.
-- **Pause budget:** 0.4–0.6 seconds after the 2026 measurement; 0.5 seconds before “Tapi bagaimana jika…”; 0.4 seconds before the 17%/67% values; 0.5 seconds before the final WMO benchmark.
-- **Pronunciation:** ODS: “o-de-es” if shown as acronym; WMO: “we-em-o” or say “Organisasi Meteorologi Dunia”; Dobson Unit is not used in VO.
+- **Total VO:** approximately 129 words.
+- **Effective speaking rate:** target 130–140 words/minute, with short visual-only pauses included in the 60-second target. Timed read-through remains mandatory.
+- **Pause budget:** approximately 0.5 seconds after the opening measurement, 0.5 seconds before the counterfactual question, and 0.5 seconds before the final recovery benchmark.
+- **Pronunciation:** ODS may be omitted from VO; say “Organisasi Meteorologi Dunia” if WMO is unclear. “Antarktika” should be read consistently.
 - **TTS voice/model/settings:** not selected; no tool or voice settings assumed.
 - **TTS output:** not generated.
-- **Timing status:** PROVISIONAL. Final read-through may require trimming; do not remove the 3% model assumption or the “bukan ramalan pasti” qualifier to save time. If necessary, shorten the mechanism explanation or use on-screen source note for the WMO model range.
-
+- **Timing status:** PROVISIONAL. If the timed read exceeds 60 seconds, trim supporting explanation but retain the 3% model assumption and the “bukan ramalan pasti” qualifier.
 ## 4. Visual narrative logic (not generation prompts)
 
 1. **2026 observed state:** Open with a data-led Antarctic ozone-hole map or a newly authored data visualization. The 25 million km² seasonal mean and “ketujuh terbesar dalam 48 tahun” must be legible. Do not use an unlabeled dramatic purple hole that could be mistaken for a literal opening in the atmosphere.
