@@ -33,6 +33,8 @@ Read 02A_MODULE_ARCHITECTURE.md and 01_INSTRUKSI_PROJECT.md first, then relevant
 
 ## Scientific and production integrity
 - Preserve MONITOR → TRIAGE → RESEARCH → STORY → PRE-PRODUCTION → GENERATE → EDIT → QA → RELEASE → ARCHIVE.
+- Google Flow generation is intentionally manual: ChatGPT prepares copy-ready per-shot prompts and Plan B; the Human Producer operates Flow and returns renders. Never invent a Flow adapter or claim automatic submission/retrieval.
+- Runway is optional, not a dependency or blocker. TTS/music/SFX/editing are not claimed as rendered unless a real authorized tool confirms execution.
 - Separate FACT, EXTRAPOLATION, and FICTIONAL_ASSUMPTION.
 - Critical claims need traceable sources; unsupported claims must be qualified, removed, or held.
 - Do not invent tool capabilities, evidence, metrics, rights clearance, or test results.
