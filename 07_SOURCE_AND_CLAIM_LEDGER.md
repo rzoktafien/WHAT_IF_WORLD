@@ -551,3 +551,26 @@ Scoring order: freshness/relevance, scientific foundation, human stakes, visual 
 5. Ancient climate models are scenario-dependent and must not be presented as direct evidence.
 6. No claim of ancient life, a confirmed ocean, or a proven habitable Venus is allowed.
 7. Use generated scientific reconstructions unless exact source-media rights are verified; journal sample photographs are not automatically cleared for reuse.
+
+
+#### SRC-047 — University research news / institutional corroboration
+- Title: “UT San Antonio research offers new clues to Venus’ past and future exploration”
+- Author: Ryan Schoensee; publisher: UT San Antonio Today.
+- Published: 2026-11-04.
+- URL: https://news.utsa.edu/2026/11/ut-san-antonio-research-offers-new-clues-to-venus-past-and-future-exploration/
+- Accessed: 2026-11-05.
+- Type/scope: institutional research news summarizing the Port et al. 2026 mineral-exposure study and quoting the conditional interpretation of fluorine-bearing minerals as possible clues if found on Venus.
+- Claims/context: supports editorial context for CLM-046–CLM-047; not independent primary evidence.
+- Inspection: full article text surfaced in search results and was inspected.
+- Limitations: university news release, not a peer-reviewed independent replication; experimental claims remain sourced to SRC-040.
+
+#### SRC-048 — NASA DAVINCI engineering update
+- Title: “NASA’s DAVINCI Beats Heat in Preparation for Blistering Venus Descent”
+- Publisher/author: NASA Science, Ashley Balzer.
+- Published: 2026-09-24.
+- URL: https://science.nasa.gov/blogs/davinci/2026/09/24/nasas-davinci-beats-heat-in-preparation-for-blistering-venus-descent/
+- Accessed: 2026-11-05.
+- Type/scope: official NASA mission engineering update; reports thermal testing of a DAVINCI engineering development unit at Venus-like temperatures.
+- Claims/context: contextualizes future mission preparation only; no new mineral detection claim.
+- Inspection: full article text surfaced in search results and was inspected.
+- Limitations: engineering test update, not evidence that the mission has launched, arrived at Venus, or detected surface minerals.
