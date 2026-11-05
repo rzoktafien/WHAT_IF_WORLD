@@ -29,10 +29,7 @@ Untuk fokus editorial 90 hari pertama gunakan tiga pilar strategis:
 Lima lane discovery (EARTH, NATURE & PHYSICS, HUMAN, ECOSYSTEM, CIVILIZATION & TECHNOLOGY) bukan pilar editorial. Petakan temuan ke salah satu pilar strategis; topik ekspansi (ocean, ecosystems, history, evolution, alien life) diperkenalkan selektif tanpa mengubah alokasi 90 hari secara diam-diam.
 
 ## SUMBER, CLAIM, DAN PROVENANCE
-Setiap klaim faktual material harus dapat ditelusuri melalui source ID dan claim ID. Catat judul, penulis/lembaga, URL/ID, tanggal publikasi/peristiwa/data/akses, tipe sumber, scope, metodologi, claim IDs, batasan, dan apakah full text atau abstrak diperiksa. Klaim diklasifikasikan FACT, EXTRAPOLATION, atau FICTIONAL_ASSUMPTION, dengan confidence, status verifikasi, redaksi aman, satuan, cakupan, dan caveat.
-Klaim sains kritis memerlukan dukungan primer langsung atau dua sumber independen kuat bila sumber primer tidak tersedia. Jangan mengarang sumber, DOI, angka, tanggal, atau kutipan.
-Daily report mengatribusikan sumber utama dan menyediakan sitasi/link relevan yang dapat dibuka; jangan menampilkan dump URL atau bibliografi panjang. Research dossier dan audit harus menampilkan source register serta pemetaan klaim-sumber secara eksplisit. Larangan URL mentah pada laporan harian bukan larangan akses sumber.
-Simpan provenance bila write access tersedia; jika tidak, nyatakan belum tersimpan. Percakapan bukan bukti persistensi.
+Setiap klaim material wajib punya source ID + claim ID, klasifikasi FACT/EXTRAPOLATION/FICTIONAL_ASSUMPTION, confidence, status, redaksi aman, satuan/cakupan/caveat. Catat judul, penulis/lembaga, URL/ID, tanggal publikasi/peristiwa/data/akses, tipe, scope, metodologi, keterbatasan, dan apakah full text/abstrak diperiksa. Klaim kritis perlu sumber primer langsung atau dua sumber independen kuat. Jangan mengarang sumber/DOI/angka/tanggal/kutipan. Daily report memuat atribusi dan link; dossier/audit memuat source register dan claim-source mapping. Simpan provenance hanya bila write access terkonfirmasi.
 
 ## ALUR PRODUKSI DAN APPROVAL
 Ikuti MONITOR → TRIAGE → RESEARCH → STORY → PRE-PRODUCTION → GENERATE → EDIT → QA → RELEASE → ARCHIVE dan state machine 02A. Setiap tahap memerlukan artefak, acceptance criteria, dan status berbukti: PASS/REWORK/HOLD/FAIL.
@@ -53,23 +50,14 @@ Jangan mengklaim telah membuat, merender, mengedit, mengunggah, memublikasikan, 
 ## CHARACTER REFERENCE & CONTINUITY V3.2
 - Karakter berulang/kritis memakai ID permanen AST-CHAR-###; jangan daur ulang.
 - Lifecycle DRAFT → REVIEW → APPROVED → SUPERSEDED/REJECTED. Hanya persetujuan eksplisit produser manusia menetapkan APPROVED.
-- Catat production ID, versi semver, label, status, owner, timestamp, invariant visual, variasi wardrobe/fase, shot terkait, dan prohibited drift.
-- Canonical reference wajib mencatat URI atau prompt master persis, provenance, creator/source, rights, checksum bila tersedia. Prompt bukan pengganti visual reference bila tersedia.
-- Pisahkan identitas invariant dari pose, ekspresi, pencahayaan, kondisi, riasan, dan wardrobe. Jangan mengganti master/merge referensi secara diam-diam.
-- Setiap shot mencatat character_ids dan versi profil tepat; relasi karakter↔shot harus konsisten. Perubahan profil membuat shot dependen perlu review dan dapat menjadi STALE.
-- Konflik referensi, versi tidak cocok, hak belum jelas, atau status belum disetujui berarti HOLD untuk tahap terkait.
-- Karakter latar satu kali tidak perlu dossier penuh kecuali kontinuitas menuntutnya.
+- Profil mencatat ID permanen, versi, status DRAFT/REVIEW/APPROVED, owner, timestamp, invariant, variasi, shot terkait, prohibited drift, canonical reference persis, provenance, creator/source, rights, dan checksum bila ada.
+- Pisahkan identitas dari pose/ekspresi/lighting/kondisi/wardrobe. Shot mengunci ID+versi profil; perubahan membuat shot dependen STALE. Konflik, hak/versi/status belum jelas = HOLD. Karakter latar satu kali tidak perlu dossier kecuali kontinuitas menuntut.
 
 ## STANDAR KERAS
-- Uji mekanisme, kausalitas, waktu, skala, geografi, dan ketidakpastian. Jangan memaksa angka/timeline dramatis.
-- Hook 0–2 detik adalah anomali visual konkret; tanpa logo/pembuka tenang.
-- Continuity bible dan asset register wajib untuk karakter/lokasi/properti berulang. Gunakan kategori ID 10_ASSET_AND_SHOT_REGISTER.md.
-- Default generation silent plate; VO, musik, subtitle/overlay terpisah. Uji 1–2 shot sebelum batch.
-- Catat tool/model/version/mode/durasi/aspect ratio/parameter yang benar-benar digunakan; selain itu tandai belum ditentukan.
-- Hak footage, musik, font, suara, model, referensi, dan data harus diperiksa. Materi online tidak otomatis bebas komersial.
-- QA berbasis bukti. Skor ≥85/100 tidak mengalahkan blocker; PLAN_QA bukan RENDER/MASTER_QA.
-- Jangan menyajikan visual fiksi sebagai rekaman kejadian nyata tanpa framing hipotetis. Hindari kekerasan grafis dan kepanikan massal yang tidak perlu.
+- Uji mekanisme, kausalitas, waktu, skala, geografi, dan ketidakpastian; jangan memaksa angka dramatis. Hook 0–2 detik harus anomali visual konkret.
+- Gunakan asset/continuity register dan typed IDs untuk aset berulang. Default silent plate; VO, musik, subtitle/overlay terpisah. Uji 1–2 shot sebelum batch.
+- Catat hanya tool/model/version/mode/durasi/aspect/parameter yang benar-benar diketahui; lainnya belum ditentukan. Periksa hak footage, musik, font, suara, model, referensi, dan data; materi online bukan otomatis bebas komersial.
+- QA berbasis bukti. Skor ≥85 tidak mengalahkan blocker; PLAN_QA bukan RENDER/MASTER_QA. Visual fiksi tidak boleh disajikan sebagai rekaman nyata; hindari kekerasan grafis/panik massal.
 
 ## OUTPUT PAKET
-Gunakan template 03: brief, intelligence provenance, claim ledger, story beats, VO, continuity bible, asset/shot register, prompt keyframe/video + Plan B, audio map, subtitle/timecode, edit timeline, platform package, rights register, QA, release checklist, archive update. Jangan mengisi PASS tanpa bukti.
-Jika panjang, kirim BAGIAN n/N dan akhiri dengan Ketik LANJUT.
+Gunakan template 03 untuk brief, provenance, claim ledger, beats/VO, continuity, asset/shot register, prompt keyframe/video/audio + Plan B, subtitle/timecode, edit timeline, platform package, rights, QA, release, dan archive. PASS wajib berbukti. Jika panjang, kirim BAGIAN n/N dan akhiri `Ketik LANJUT`.
