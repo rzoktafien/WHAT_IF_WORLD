@@ -1,0 +1,39 @@
+name: Daily Intelligence freshness monitor
+
+on:
+  schedule:
+    - cron: "0 1 * * *" # 08:00 Asia/Jakarta (GitHub cron is UTC)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  freshness:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.0.1
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.12"
+      - name: Install validator dependency
+        run: python -m pip install -r requirements-dev.txt
+      - name: Validate latest persisted report
+        id: report
+        continue-on-error: true
+        run: python tools/validate_daily_intelligence.py --latest
+      - name: Open one actionable issue when report is missing or stale
+        if: steps.report.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="Daily Intelligence report missing or stale"
+          existing="$(gh issue list --state open --search "${title} in:title" --json number --jq '.[0].number // empty')"
+          if [ -z "$existing" ]; then
+            gh issue create --title "$title" --body "The scheduled freshness monitor could not validate a current, complete report under reports/daily-intelligence/*.json. This alert does not generate research or assert that trends were monitored. Run the Daily Intelligence research protocol, persist the source/claim provenance JSON, then close this issue after validation passes."
+          else
+            gh issue comment "$existing" --body "Scheduled check still fails on $(date -u +%Y-%m-%dT%H:%M:%SZ). Please persist and validate a fresh report."
+          fi
