@@ -19,9 +19,9 @@ REQUIRED=[
  "LICENSING_DECISION_RECORD.md","RIGHTS_AND_PROVENANCE_REGISTER.md",
  "schemas/claim.schema.json","schemas/idea.schema.json","schemas/shot.schema.json",
  "schemas/character_reference.schema.json","schemas/production_manifest.schema.json",
- "schemas/generation_attempt.schema.json","schemas/media_asset.schema.json","schemas/edit_timeline.schema.json",
+ "schemas/generation_attempt.schema.json","schemas/media_asset.schema.json","schemas/edit_timeline.schema.json","schemas/daily_intelligence_report.schema.json",
  "examples/production_manifest.example.json","tools/validate_manifest.py",
- "tests/test_project_contracts.py","requirements-dev.txt",".github/workflows/validate.yml"]
+ "tests/test_project_contracts.py","tools/validate_daily_intelligence.py","requirements-dev.txt",".github/workflows/validate.yml",".github/workflows/daily-intelligence-monitor.yml"]
 
 def check():
  errors=[]
