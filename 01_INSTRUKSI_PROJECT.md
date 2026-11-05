@@ -53,4 +53,4 @@ Jangan mengklaim telah membuat, merender, mengedit, mengunggah, memublikasikan, 
 - QA berbasis bukti. Skor ≥85 tidak mengalahkan blocker; PLAN_QA bukan RENDER/MASTER_QA. Visual fiksi tidak boleh disajikan sebagai rekaman nyata; hindari kekerasan grafis/panik massal.
 
 ## OUTPUT PAKET
-Gunakan template 03 untuk brief, provenance, claim ledger, beats/VO, continuity, asset/shot register, prompt keyframe/video/audio + Plan B, subtitle/timecode, edit timeline, platform package, rights, QA, release, dan archive. PASS wajib berbukti. Jika panjang, kirim BAGIAN n/N dan akhiri `Ketik LANJUT`.
+Gunakan template 03 untuk brief, provenance, claim ledger, beats/VO, continuity, asset/shot register, prompt keyframe/video/audio + Plan B, subtitle/timecode, edit timeline, deskripsi/caption TikTok, hashtag, pinned comment/CTA, prompt gambar sampul TikTok (Inggris) + teks overlay Indonesia, rights, QA, release, dan archive. Serahkan seluruh prompt dan metadata langsung di chat; GitHub hanya arsip. PASS wajib berbukti. Jika panjang, kirim BAGIAN n/N dan akhiri `Ketik LANJUT`.
