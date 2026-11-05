@@ -3,7 +3,9 @@ name: WHAT IF WORLD validation
 on:
   push:
   pull_request:
-    branches: [main]
+    branches:
+      - main
+      - feat/v3.2-character-reference-system
   workflow_dispatch:
 
 permissions:
