@@ -1,3 +1,8 @@
+## [Unreleased] — Connected provider capability audit (2026-11-06)
+- Recorded the connected Runway workspace as image-generation capable only: no video, speech, music/SFX models or saved workflows were exposed; recent images were not mapped to project assets.
+- Recorded the Canva design inventory and the current plan/trial restriction returned for video production; no project video timeline or render was verified.
+- Kept Phase 2 PARTIAL, Phase 3 NOT STARTED, and Phase 4 DEFERRED; no media generation, editing, or publication was executed.
+
 ## [Unreleased] — Repository audit and TikTok delivery contract
 - Added a mandatory TikTok cover-image prompt, exact Indonesian cover overlay, caption/description, hashtags, pinned comment and CTA to the production template and WW-005 delivery artifacts.
 - Required the complete prompt and metadata package to be delivered directly in chat; GitHub remains the canonical archive, not a user-facing prompt retrieval task.
