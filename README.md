@@ -59,3 +59,15 @@ Google Flow/Veo generation, TTS rendering, editing, TikTok publishing, account-l
 
 ## Versioning
 MAJOR: incompatible workflow/schema changes. MINOR: new stages/artifacts/capabilities. PATCH: non-breaking clarifications and QA improvements. See CHANGELOG.md.
+
+
+## Global media workstream (draft)
+- 13_GLOBAL_EDITORIAL_STRATEGY_2026_2030.md — global brand and editorial strategy.
+- 14_90_DAY_LAUNCH_AND_REVENUE_PLAN.md — launch phases and revenue hypotheses.
+- 15_PLATFORM_DISTRIBUTION_AND_ANALYTICS.md — platform roles and analytics plan.
+- 16_BRAND_LAUNCH_AND_30_DAY_CALENDAR.md — brand launch and first-month calendar.
+- WW-003_RESEARCH_ADDENDUM_02.md and WW-003_PRODUCTION_DOSSIER_V0.1.md — research clarification and story/production-plan draft; not rendered or released.
+- WW-003_PREPRODUCTION_COMPLETION_ADDENDUM_V0.2.md — typed asset/shot continuity, claim mapping, audio/subtitle/edit plan, rights status, and current stage gates; generation remains on HOLD.
+- site/ — static landing-page MVP draft; not deployed.
+
+These additions do not override the V3.2 operating contract. Account ownership, rights clearance, legal review, rendering, media QA, and publication remain subject to their existing gates.
