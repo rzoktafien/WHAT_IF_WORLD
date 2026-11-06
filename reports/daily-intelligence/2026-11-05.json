@@ -1,7 +1,7 @@
 {
-  "report_id": "DI-20261105-02",
-  "previous_report_id": "DI-20261105-01",
-  "run_at": "2026-11-05T07:37:00Z",
+  "report_id": "DI-20261105-03",
+  "previous_report_id": "DI-20261105-02",
+  "run_at": "2026-11-05T16:30:00+07:00",
   "observation_window": {
     "start": "2026-10-29",
     "end": "2026-11-05"
@@ -17,290 +17,266 @@
   ],
   "sources": [
     {
-      "id": "SRC-014",
-      "title": "Single-neuron encoding of rapidly learned visual information reshapes human perception",
-      "publisher": "Nature Neuroscience; Marcelo Armendariz et al.",
-      "url": "https://www.nature.com/articles/s41593-026-02496-6",
+      "id": "SRC-023",
+      "title": "Brain activity patterns may predict Alzheimer’s years before memory slips",
+      "publisher": "Stanford Medicine; Nina Bai; reporting on a Science Advances study led by Yu Zhang and Alex Zhao",
+      "url": "https://med.stanford.edu/news/all-news/2026/11/alzheimers-brain-activity.html",
       "published_at": "2026-11-04",
-      "accessed_at": "2026-11-05T07:37:00Z",
+      "event_or_data_period": "Resting-state fMRI cohorts; longitudinal datasets up to 12 years, most approximately 5–6 years",
+      "accessed_at": "2026-11-05T16:30:00+07:00",
+      "source_type": "SECONDARY",
+      "claim_ids": [
+        "CLM-027"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "Stanford institutional research communication inspected; direct Science Advances article returned HTTP 403 in this session.",
+        "ARC score is not diagnostic; ~85% accuracy separates extreme comparison groups, not validated individual prediction accuracy for the general population.",
+        "Longitudinal follow-up varied; longest up to 12 years, most around 5–6 years."
+      ]
+    },
+    {
+      "id": "SRC-024",
+      "title": "NOAA, NASA release measurements of 2026 ozone hole",
+      "publisher": "NOAA, jointly reporting NASA/NOAA monitoring",
+      "url": "https://www.noaa.gov/news-release/noaa-nasa-release-measurements-of-2026-ozone-hole",
+      "published_at": "2026-11-04",
+      "event_or_data_period": "Antarctic ozone depletion season; seasonal mean 7 Sep–13 Oct 2026; daily maximum 18 Sep 2026",
+      "accessed_at": "2026-11-05T16:30:00+07:00",
       "source_type": "PRIMARY",
       "claim_ids": [
-        "CLM-013"
+        "CLM-028",
+        "CLM-029"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "Official NASA/NOAA measurement summary; underlying satellite and balloon datasets were not independently reprocessed in this run.",
+        "The 1–2 million square mile counterfactual is an attributed scientist estimate, not an observed measurement."
+      ]
+    },
+    {
+      "id": "SRC-025",
+      "title": "NTT DATA Opens Jakarta Data Center, Expanding AI-Ready Capacity in Indonesia",
+      "publisher": "NTT DATA",
+      "url": "https://www.nttdata.com/en-gb/news/2026/ntt-data-opens-jakarta-data-center",
+      "published_at": "2026-11-03",
+      "event_or_data_period": "Jakarta 2 Annex Data Center opening and APN Connect launch, 3 Nov 2026",
+      "accessed_at": "2026-11-05T16:30:00+07:00",
+      "source_type": "PRIMARY",
+      "claim_ids": [
+        "CLM-030"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "Company announcement; specifications and performance statements are operator claims, not independently benchmarked in this run.",
+        "The 35 km interconnection and disaster-recovery capabilities do not establish seamless failover or immunity from shared infrastructure failures."
+      ]
+    },
+    {
+      "id": "SRC-026",
+      "title": "When humans disappear, biodiversity takes a surprising turn",
+      "publisher": "Nature; Emma Marris",
+      "url": "https://www.nature.com/articles/d41586-026-03505-1",
+      "published_at": "2026-11-04",
+      "event_or_data_period": "Japan landscapes monitored over 5–17 years from 2004; more than 150 landscapes, 464 animal species and nearly 3,000 plant species described",
+      "accessed_at": "2026-11-05T16:30:00+07:00",
+      "source_type": "SECONDARY",
+      "claim_ids": [
+        "CLM-031"
       ],
       "inspection": "ABSTRACT_OR_METADATA",
       "limitations": [
-        "The article is marked open access, but direct page retrieval redirected to an inaccessible authentication interstitial; the indexed result exposed the abstract and substantial methods/results text.",
-        "Intracranial recordings were from 13 adults with drug-resistant epilepsy; do not treat the neuronal sample as representative of the general population."
+        "Nature page could not be opened directly because of authentication redirect; search-indexed article text reviewed.",
+        "Underlying primary study was not opened; Japan-specific findings must not be generalized to Indonesia."
       ]
     },
     {
-      "id": "SRC-015",
-      "title": "New Insights into Venus’s Volatile Cycles Revealed by the Formation of Magnesite and Fluoro–Micas",
-      "publisher": "The Planetary Science Journal; Sara Taeko Port et al.; American Astronomical Society",
-      "url": "https://doi.org/10.3847/PSJ/aea909",
-      "published_at": "2026-10-30",
-      "accessed_at": "2026-11-05T07:37:00Z",
+      "id": "SRC-027",
+      "title": "Prakiraan Cuaca Indonesia Sepekan Periode 3–10 November 2026",
+      "publisher": "BMKG",
+      "url": "https://www.bmkg.go.id/cuaca/potensi-hujan-sepekan/prakiraan-cuaca-indonesia-sepekan-periode-3-10-november-2026-hujan-berpeluang-terjadi-di-sejumlah-wilayah-panas-dan-kering-masih-bertahan-di-wilayah-lain",
+      "published_at": "2026-11-05",
+      "event_or_data_period": "Observed maximum temperatures 29 Oct–1 Nov; high-confidence hotspot detections over preceding 10 days; forecast 3–10 Nov 2026",
+      "accessed_at": "2026-11-05T16:30:00+07:00",
       "source_type": "PRIMARY",
       "claim_ids": [
-        "CLM-014",
-        "CLM-015"
-      ],
-      "inspection": "ABSTRACT_OR_METADATA",
-      "limitations": [
-        "The DOI landing page could not be opened directly; the indexed publisher result exposed the abstract and detailed experimental excerpts.",
-        "This is a laboratory simulation, not a measurement of Venus surface samples; the past-water interpretation is conditional."
-      ]
-    },
-    {
-      "id": "SRC-016",
-      "title": "UT San Antonio research offers new clues to Venus’ past and future exploration",
-      "publisher": "The University of Texas at San Antonio; Ryan Schoensee",
-      "url": "https://news.utsa.edu/2026/11/ut-san-antonio-research-offers-new-clues-to-venus-past-and-future-exploration/",
-      "published_at": "2026-11-04",
-      "accessed_at": "2026-11-05T07:37:00Z",
-      "source_type": "SECONDARY",
-      "claim_ids": [
-        "CLM-014",
-        "CLM-015"
+        "CLM-032"
       ],
       "inspection": "FULL_TEXT",
       "limitations": [
-        "Institutional research communication describing the same study; it is not an independent replication."
-      ]
-    },
-    {
-      "id": "SRC-017",
-      "title": "NASA’s Hubble Uncovers Case of Missing Oxygen in Nearby Dwarf Galaxies",
-      "publisher": "NASA Science / Goddard Space Flight Center",
-      "url": "https://science.nasa.gov/missions/hubble/nasas-hubble-uncovers-case-of-missing-oxygen-in-nearby-dwarf-galaxies/",
-      "published_at": "2026-11-02",
-      "accessed_at": "2026-11-05T07:37:00Z",
-      "source_type": "PRIMARY",
-      "claim_ids": [
-        "CLM-016"
-      ],
-      "inspection": "FULL_TEXT",
-      "limitations": [
-        "The study covers 37 nearby dwarf galaxies; the fate of all missing oxygen remains unresolved, including whether it is in circumgalactic space or farther into the intergalactic medium."
-      ]
-    },
-    {
-      "id": "SRC-018",
-      "title": "New Research Explores How Offshore Wind Development May Alter Marine Food Webs",
-      "publisher": "Biodiversity Research Institute via Newswise",
-      "url": "https://www.newswise.com/articles/new-research-explores-how-offshore-wind-development-may-alter-marine-food-webs",
-      "published_at": "2026-11-04",
-      "event_or_data_period": "Models compare pre-construction conditions with observed or projected conditions approximately four years after construction at three southern New England sites.",
-      "accessed_at": "2026-11-05T07:37:00Z",
-      "source_type": "SECONDARY",
-      "claim_ids": [
-        "CLM-017"
-      ],
-      "inspection": "FULL_TEXT",
-      "limitations": [
-        "Institutional press release rather than inspected journal full text; modeled findings vary by site and ecological measure and concern the U.S. Atlantic, not Indonesian waters."
-      ]
-    },
-    {
-      "id": "SRC-019",
-      "title": "Pusat Data Butuh Tambahan 20 GW, Bahlil Siapkan Energi Bersih dan Hub Baru di Batam–Karimun–Bintan",
-      "publisher": "Kementerian Energi dan Sumber Daya Mineral Republik Indonesia",
-      "url": "https://www.esdm.go.id/en/media-center/news-archives/pusat-data-butuh-tambahan-20-gw-bahlil-siapkan-energi-bersih-dan-hub-baru-di-batam-karimun-bintan",
-      "published_at": "2026-10-19",
-      "accessed_at": "2026-11-05T07:37:00Z",
-      "source_type": "PRIMARY",
-      "claim_ids": [
-        "CLM-018",
-        "CLM-019"
-      ],
-      "inspection": "FULL_TEXT",
-      "limitations": [
-        "The 20 GW figure is an official ministerial estimate relayed after discussion with PLN, not an independently validated forecast in the article.",
-        "The quoted 100 MW–1 GW range for AI data centers is attributed to the minister; do not present it as a universal value for every facility or as current realized load."
+        "Hotspot detections are satellite indicators, not individually confirmed fires.",
+        "Forecasts are time-bounded and regional; not a long-term climate projection."
       ]
     }
   ],
   "claims": [
     {
-      "id": "CLM-013",
-      "claim": "In a controlled image-recognition experiment, brief exposure to intact grayscale images improved recognition of corresponding degraded two-tone images; single-neuron recordings from 13 patients with drug-resistant epilepsy showed learning-related changes in occipital and medial temporal regions.",
+      "id": "CLM-027",
+      "claim": "An ARC score derived from resting-state functional connectivity patterns distinguished the study’s super-ager and Alzheimer’s groups with roughly 85% accuracy and showed association with later cognitive decline in cognitively unimpaired adults aged 55–70 in longitudinal datasets.",
       "class": "FACT",
       "source_ids": [
-        "SRC-014"
+        "SRC-023"
+      ],
+      "confidence": "MEDIUM",
+      "status": "QUALIFIED",
+      "safe_wording": "Peneliti melaporkan pola koneksi aktivitas otak saat istirahat yang berkaitan dengan risiko penurunan kognitif pada sebagian orang paruh baya yang belum menunjukkan gangguan; metode ini masih penelitian, bukan alat diagnosis.",
+      "critical": true,
+      "caveat": "Do not call ARC diagnostic or say it predicts an individual’s future with 85% accuracy. The ~85% figure refers to distinguishing extreme comparison groups; longitudinal follow-up was variable."
+    },
+    {
+      "id": "CLM-028",
+      "claim": "The 2026 Antarctic ozone hole ranked seventh largest by seasonal mean area in 48 years of monitoring; its seasonal mean extent was about 25 million square kilometers and its one-day maximum was about 27.1 million square kilometers on 18 September 2026.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-024"
       ],
       "confidence": "HIGH",
       "status": "SUPPORTED",
-      "safe_wording": "Dalam eksperimen, setelah melihat versi gambar utuh, peserta lebih mampu mengenali versi dua-warna yang sama; rekaman neuron menunjukkan perubahan aktivitas di area visual dan temporal otak.",
+      "safe_wording": "Pemantauan NASA dan NOAA menempatkan lubang ozon Antarktika 2026 sebagai yang terbesar ketujuh berdasarkan rata-rata luas musiman dalam 48 tahun pengamatan.",
       "critical": true,
-      "caveat": "The neuronal recordings came from 13 epilepsy patients; the result is not a universal claim that everyone learns an image after one glance. The separate healthy cohort was used for eye-tracking, not intracranial recordings."
+      "caveat": "The ozone hole is a seasonal Antarctic stratospheric phenomenon; it is not a hole in the atmosphere and is distinct from ground-level ozone pollution."
     },
     {
-      "id": "CLM-014",
-      "claim": "Six rock-forming minerals were exposed for 60 days to simulated Venus surface conditions of approximately 460 °C and 93 bar; the experiment produced magnesite and fluorine-bearing micas from selected starting minerals.",
+      "id": "CLM-029",
+      "claim": "A NASA ozone research leader estimated that the 2026 Antarctic ozone hole could have been approximately 1–2 million square miles larger if ozone-depleting substances had remained as prevalent as at their year-2000 peak.",
+      "class": "EXTRAPOLATION",
+      "source_ids": [
+        "SRC-024"
+      ],
+      "confidence": "MEDIUM",
+      "status": "QUALIFIED",
+      "safe_wording": "Menurut estimasi ilmuwan NASA yang dikutip NOAA, tanpa penurunan bahan perusak ozon sejak puncaknya sekitar tahun 2000, lubang ozon tahun ini mungkin akan lebih luas lagi.",
+      "critical": false,
+      "caveat": "Attributed counterfactual estimate, not a directly observed alternate-world measurement. Keep conditional wording and attribution."
+    },
+    {
+      "id": "CLM-030",
+      "claim": "NTT DATA announced that its Jakarta 2 Annex facility provides 12 MW of IT capacity and APN Connect links JKT2/JKT2A with JKT3 approximately 35 km away using low-latency Layer 1 connectivity for data synchronization and multi-site resilience use cases.",
       "class": "FACT",
       "source_ids": [
-        "SRC-015",
-        "SRC-016"
+        "SRC-025"
+      ],
+      "confidence": "MEDIUM",
+      "status": "QUALIFIED",
+      "safe_wording": "NTT DATA mengumumkan fasilitas pusat data baru berkapasitas IT 12 MW dan koneksi optik antarfasilitas Jakarta yang dirancang mendukung sinkronisasi data serta pemulihan bencana.",
+      "critical": true,
+      "caveat": "Operator-announced specifications; do not claim independent performance verification, seamless failover, or guaranteed continuity during every outage."
+    },
+    {
+      "id": "CLM-031",
+      "claim": "A Japan landscape study described in Nature reported biodiversity declines in some landscapes where human populations were decreasing, with irrigation cessation and loss of managed habitat mosaics among proposed mechanisms.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-026"
+      ],
+      "confidence": "MEDIUM",
+      "status": "QUALIFIED",
+      "safe_wording": "Di sebagian lanskap Jepang yang diteliti, berkurangnya aktivitas manusia dapat diikuti hilangnya habitat yang selama ini bergantung pada pengelolaan rutin.",
+      "critical": false,
+      "caveat": "Secondary reporting only; context-specific and does not establish that depopulation generally reduces biodiversity or that the mechanism applies to Indonesian ecosystems."
+    },
+    {
+      "id": "CLM-032",
+      "claim": "BMKG’s 5 November 2026 weekly outlook reported maximum daily temperatures above 37°C in five provinces during 29 October–1 November and high-confidence hotspot detections concentrated in Papua Selatan, Sumatera Selatan and Sulawesi Tenggara over the preceding ten days.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-027"
       ],
       "confidence": "HIGH",
       "status": "SUPPORTED",
-      "safe_wording": "Dalam eksperimen laboratorium selama 60 hari pada kondisi simulasi Venus, beberapa mineral berubah dan membentuk magnesite serta mika yang mengandung fluor.",
-      "critical": true,
-      "caveat": "These are laboratory reactions under simulated conditions, not direct detections on Venus."
-    },
-    {
-      "id": "CLM-015",
-      "claim": "Fluorine substitution may increase the stability of hydrous micas; if comparable minerals are found on Venus, they could provide clues to earlier water-bearing mineral formation.",
-      "class": "EXTRAPOLATION",
-      "source_ids": [
-        "SRC-015",
-        "SRC-016"
-      ],
-      "confidence": "MEDIUM",
-      "status": "QUALIFIED",
-      "safe_wording": "Jika mineral sejenis ditemukan di Venus, mineral itu dapat menjadi petunjuk bahwa sebagian batuannya pernah terbentuk ketika air lebih tersedia.",
+      "safe_wording": "BMKG melaporkan suhu maksimum di atas 37°C di sejumlah provinsi dan mendeteksi hotspot berkepercayaan tinggi di beberapa wilayah selama periode pengamatan yang disebutkan.",
       "critical": false,
-      "caveat": "This would not by itself prove an ocean, a habitable climate, or life on Venus."
-    },
-    {
-      "id": "CLM-016",
-      "claim": "A NASA-reported study analyzed 37 nearby dwarf galaxies and found that much of the oxygen expected from their stars is missing from the galaxies; galactic winds driven by massive stars and supernovae are a proposed explanation.",
-      "class": "FACT",
-      "source_ids": [
-        "SRC-017"
-      ],
-      "confidence": "HIGH",
-      "status": "QUALIFIED",
-      "safe_wording": "Pengamatan Hubble terhadap 37 galaksi katai menemukan banyak oksigen yang tidak lagi berada di dalam galaksi; angin galaksi akibat bintang masif dan supernova diduga membawanya keluar.",
-      "critical": false,
-      "caveat": "The destination of all the missing oxygen is not yet established."
-    },
-    {
-      "id": "CLM-017",
-      "claim": "Food-web models for three U.S. Atlantic offshore-wind study areas suggest turbine structures may alter benthic communities and marine energy flows, with modeled effects varying by site and ecological measure.",
-      "class": "EXTRAPOLATION",
-      "source_ids": [
-        "SRC-018"
-      ],
-      "confidence": "MEDIUM",
-      "status": "QUALIFIED",
-      "safe_wording": "Model pada tiga lokasi di Atlantik AS menunjukkan fondasi turbin angin lepas pantai dapat mengubah jejaring makanan dasar laut; dampaknya berbeda antar lokasi.",
-      "critical": false,
-      "caveat": "Do not generalize the modeled U.S. findings to all offshore wind farms or Indonesian ecosystems."
-    },
-    {
-      "id": "CLM-018",
-      "claim": "On 2026-10-19, Indonesia’s Ministry of Energy and Mineral Resources reported the minister’s estimate that data-center development could require an additional 20 GW of electricity capacity, described as about 20% of existing capacity.",
-      "class": "FACT",
-      "source_ids": [
-        "SRC-019"
-      ],
-      "confidence": "MEDIUM",
-      "status": "QUALIFIED",
-      "safe_wording": "Kementerian ESDM melaporkan estimasi pemerintah bahwa ekspansi pusat data dapat membutuhkan tambahan kapasitas listrik sekitar 20 GW.",
-      "critical": true,
-      "caveat": "This is an attributed estimate, not proof of an immediate shortage, a finalized build schedule, or demand already being consumed."
-    },
-    {
-      "id": "CLM-019",
-      "claim": "The same ESDM communication attributes to the minister a comparison of approximately 10–30 MW for cloud-era data centers and 100 MW–1 GW for AI-oriented data centers.",
-      "class": "FACT",
-      "source_ids": [
-        "SRC-019"
-      ],
-      "confidence": "MEDIUM",
-      "status": "QUALIFIED",
-      "safe_wording": "Menurut pernyataan yang dikutip ESDM, pusat data berbasis AI dapat memiliki kebutuhan daya jauh lebih besar daripada pusat data cloud generasi sebelumnya.",
-      "critical": false,
-      "caveat": "Keep the range attributed to the minister; it is not a universal specification for every data center."
+      "caveat": "State the exact observation period; hotspot is not proof of a confirmed fire. This is a current weather/environment signal, not a long-term climate trend."
     }
   ],
   "candidates": [
     {
-      "id": "IDEA-20261105-01",
-      "title": "Saat Gambar yang Sama Tiba-Tiba Terlihat Berbeda",
+      "id": "IDEA-20261105-04",
+      "title": "Bisakah Pola Aktivitas Otak Memberi Peringatan Sebelum Memori Menurun?",
       "pillar": "HUMAN BODY & MIND",
       "evidence_label": "CURRENT_LIMITED",
-      "score": 90,
+      "what_if": "Bagaimana jika perubahan pola koneksi otak bisa memberi petunjuk risiko penurunan kognitif sebelum seseorang menyadari ada masalah memori?",
+      "hook": "Dua peta aktivitas otak saat seseorang berbaring diam: satu berpola berbeda, sementara orangnya masih tampak sehat dan mampu berbincang normal.",
+      "premise": "Skenario edukatif tentang riset biomarker dini berbasis resting-state fMRI; bukan tes diagnosis atau prediksi pasti untuk individu.",
+      "mechanism": "Peneliti membandingkan pola functional connectivity pada kelompok super-ager dan pasien Alzheimer, lalu mengembangkan ARC score untuk menguji kaitannya dengan perubahan kognitif pada kelompok lebih muda yang belum menunjukkan gangguan.",
+      "consequences": "Dalam data longitudinal yang tersedia, skor berkaitan dengan perubahan kognitif selama periode pengamatan yang bervariasi, paling lama hingga 12 tahun; mayoritas sekitar 5–6 tahun. Intervensi untuk mengubah pola ini belum terbukti mencegah penyakit.",
+      "human_stakes": "Membuka pertanyaan tentang deteksi dini, penuaan, dan kapan perubahan otak mulai tampak sebelum gejala yang dirasakan.",
+      "indonesia_relevance": "Relevan untuk percakapan publik tentang penuaan dan kesehatan otak di Indonesia, tetapi penerapan klinis lokal belum dibuktikan.",
+      "misinterpretation_risk": "Jangan menyebutnya alat diagnosis, jangan mengklaim akurasi prediksi individu 85%, dan jangan menyarankan pemirsa menilai risiko Alzheimer dari video.",
+      "confidence": "MEDIUM; Stanford institutional report inspected, primary Science Advances paper inaccessible in this session.",
       "source_claim_ids": [
-        "CLM-013"
+        "CLM-027"
       ],
-      "what_if": "Bagaimana satu paparan terhadap gambar utuh bisa membuat otak mengenali gambar dua-warna yang sebelumnya tampak seperti pola acak?",
-      "hook": "Gambar hitam-putih abstrak memenuhi layar; setelah satu kilas gambar aslinya, gambar yang sama kembali muncul dan kini langsung terbaca.",
-      "premise": "Skenario edukatif mengikuti eksperimen pengenalan gambar; jumlah paparan dan keberhasilan pengenalan tidak digeneralisasi ke semua orang.",
-      "mechanism": "Pembelajaran singkat mengubah representasi neuronal di korteks oksipital dan area temporal medial; pengenalan gambar terdegradasi memerlukan pemrosesan tambahan.",
-      "consequences": "Perubahan persepsi terjadi pada tugas eksperimen setelah satu atau beberapa urutan belajar; tidak ada timeline klinis atau klaim peningkatan kecerdasan.",
-      "human_stakes": "Memperlihatkan bagaimana pengalaman singkat dapat mengubah apa yang kita kenali dan cara otak memproses informasi visual.",
-      "indonesia_relevance": "Relevan lintas usia untuk pendidikan, literasi visual, dan pengalaman belajar.",
-      "misinterpretation_risk": "Jangan klaim semua orang belajar hanya dengan sekali lihat; sampel rekaman neuron terdiri dari pasien epilepsi dan bukan populasi umum.",
-      "confidence": "HIGH untuk temuan eksperimen; MEDIUM untuk generalisasi.",
+      "score": 90,
       "weighted_scores": {
         "freshness_relevance": 5,
         "scientific_foundation": 4,
+        "human_stakes": 5,
+        "visual_originality": 4,
+        "story_potential": 5,
+        "novelty_vs_archive": 5,
+        "indonesian_relevance": 4
+      },
+      "trade_off": "Taruhan manusia kuat dan visual data otak menarik; topik medis memerlukan framing hati-hati dan bukti primer penuh sebelum STORY."
+    },
+    {
+      "id": "IDEA-20261105-05",
+      "title": "Seberapa Besar Lubang Ozon Jika Dunia Tidak Pernah Sepakat Menguranginya?",
+      "pillar": "EARTH & COSMOS",
+      "evidence_label": "CURRENT_VERIFIED",
+      "what_if": "Bagaimana jika dunia tidak pernah membatasi bahan kimia perusak ozon melalui Protokol Montreal?",
+      "hook": "Peta Antarktika 2026 memperlihatkan area lubang ozon, lalu lapisan visual hipotetis melebar 1–2 juta mil persegi dengan label jelas: estimasi kontrafaktual ilmuwan.",
+      "premise": "Skenario kontrafaktual memakai estimasi NASA/NOAA tentang seberapa lebih luas lubang ozon 2026 jika tingkat bahan perusak ozon tetap setinggi puncak sekitar tahun 2000.",
+      "mechanism": "Senyawa yang mengandung klorin dan bromin mencapai stratosfer; reaksi pada awan stratosfer kutub membantu menghancurkan ozon, sementara pusaran kutub dan kondisi atmosfer memengaruhi luas musiman.",
+      "consequences": "Lubang ozon Antarktika 2026 berada di peringkat ketujuh terbesar berdasarkan rata-rata musiman dalam 48 tahun pengamatan, tetapi pemulihan jangka panjang tetap berjalan berkat pengurangan bahan perusak ozon; proyeksi pemulihan penuh diperkirakan hingga paruh akhir abad ini.",
+      "human_stakes": "Lapisan ozon mengurangi paparan radiasi ultraviolet berbahaya; kisah ini menunjukkan bagaimana kerja sama internasional mengubah risiko lingkungan lintas generasi.",
+      "indonesia_relevance": "Menunjukkan dampak kebijakan lingkungan global bagi perlindungan kehidupan, meski fenomena lubang ozon berpusat di Antarktika dan bukan kondisi ozon harian Indonesia.",
+      "misinterpretation_risk": "Jangan menyamakan lubang ozon dengan pemanasan global, ozon permukaan, atau menyatakan Indonesia sedang berada di bawah lubang ozon; visual alternatif harus ditandai sebagai skenario.",
+      "confidence": "HIGH for official 2026 measurements and general mechanism; MEDIUM for the attributed counterfactual estimate.",
+      "source_claim_ids": [
+        "CLM-028",
+        "CLM-029"
+      ],
+      "score": 92.5,
+      "weighted_scores": {
+        "freshness_relevance": 5,
+        "scientific_foundation": 4.5,
         "human_stakes": 4,
         "visual_originality": 5,
         "story_potential": 5,
         "novelty_vs_archive": 5,
         "indonesian_relevance": 3
-      }
+      },
+      "trade_off": "Hook visual dan bukti kebijakan kuat; relevansi lokal lebih rendah dan estimasi dunia alternatif wajib diatribusikan."
     },
     {
-      "id": "IDEA-20261105-02",
-      "title": "Bisakah Batu Venus Menyimpan Jejak Air Purba?",
-      "pillar": "EARTH & COSMOS",
-      "evidence_label": "CURRENT_VERIFIED",
-      "score": 86,
-      "source_claim_ids": [
-        "CLM-014",
-        "CLM-015"
-      ],
-      "what_if": "Jika mineral di permukaan Venus bisa berubah sekaligus menyimpan jejak kimia dari mineral yang pernah mengandung air, apa yang dapat dibaca oleh wahana pendarat masa depan?",
-      "hook": "Dua sampel mineral sebelum dan sesudah simulasi Venus 460 °C; tekstur dan warna berubah di depan kamera.",
-      "premise": "Eksperimen laboratorium mensimulasikan suhu, tekanan, dan komposisi atmosfer Venus selama 60 hari; bukan rekaman atau sampel langsung dari Venus.",
-      "mechanism": "Reaksi gas-atmosfer dengan mineral mengubah komposisi; fluor dapat menggantikan gugus hidroksil pada mika dan membantu stabilitas mineral tertentu.",
-      "consequences": "Jika mineral serupa terdeteksi di Venus, ia dapat membantu merekonstruksi siklus air dan volatil masa lalu; tidak membuktikan lautan.",
-      "human_stakes": "Menunjukkan bagaimana ilmuwan membaca sejarah planet dari perubahan kimia batuan.",
-      "indonesia_relevance": "Topik astronomi dan geokimia yang mudah diterjemahkan menjadi visual edukasi untuk audiens Indonesia.",
-      "misinterpretation_risk": "Jangan menyajikan eksperimen sebagai bukti langsung bahwa Venus pernah memiliki samudra atau kehidupan.",
-      "confidence": "HIGH untuk hasil eksperimen; MEDIUM untuk interpretasi sejarah air.",
-      "weighted_scores": {
-        "freshness_relevance": 5,
-        "scientific_foundation": 5,
-        "human_stakes": 2,
-        "visual_originality": 5,
-        "story_potential": 4,
-        "novelty_vs_archive": 5,
-        "indonesian_relevance": 3
-      }
-    },
-    {
-      "id": "IDEA-20261105-03",
-      "title": "Awan AI Butuh Listrik Sebesar Apa?",
+      "id": "IDEA-20261105-06",
+      "title": "Bisakah Dua Pusat Data yang Terpisah 35 Kilometer Tetap Bekerja Bersama?",
       "pillar": "CIVILIZATION & FUTURE",
       "evidence_label": "CURRENT_LIMITED",
-      "score": 82,
+      "what_if": "Apa yang terjadi jika pusat data utama terganggu, tetapi fasilitas lain yang terhubung harus menjaga salinan data dan layanan tetap tersedia?",
+      "hook": "Satu pusat data Jakarta padam dalam visual simulasi; garis cahaya optik menghubungkan fasilitas lain sejauh 35 km dan aliran data berpindah ke lokasi cadangan.",
+      "premise": "Skenario edukatif tentang interkoneksi antarpusat data yang diumumkan NTT DATA di Jakarta; gangguan layanan adalah asumsi cerita, bukan klaim insiden nyata.",
+      "mechanism": "APN Connect diumumkan sebagai konektivitas All-Photonics Network Layer 1 berlatensi rendah antara fasilitas JKT2/JKT2A dan JKT3, mendukung sinkronisasi data serta operasi multi-data-center.",
+      "consequences": "Konektivitas dapat membantu replikasi dan pemulihan bencana, tetapi keberhasilan failover tetap bergantung pada desain sistem, jalur listrik, redundansi, perangkat lunak, dan prosedur operator.",
+      "human_stakes": "Keandalan layanan digital yang digunakan bisnis dan masyarakat; memperlihatkan bahwa internet dan cloud bergantung pada infrastruktur fisik yang nyata.",
+      "indonesia_relevance": "Sangat tinggi karena fasilitas dan jaringan yang diumumkan berada di Jakarta dan menjadi bagian dari infrastruktur digital Indonesia.",
+      "misinterpretation_risk": "Jangan mengklaim jaringan kebal gangguan, menjamin layanan tanpa jeda, atau menganggap kapasitas 12 MW sebagai konsumsi listrik total seluruh kampus.",
+      "confidence": "MEDIUM; facility and service details come from operator announcement and were not independently benchmarked.",
       "source_claim_ids": [
-        "CLM-018",
-        "CLM-019"
+        "CLM-030"
       ],
-      "what_if": "Apa yang terjadi jika ekspansi pusat data Indonesia tumbuh lebih cepat daripada penambahan pasokan listrik dan infrastruktur pendukungnya?",
-      "hook": "Satu kompleks server menyala; angka kebutuhan daya di layar melonjak dari puluhan megawatt menuju ratusan megawatt.",
-      "premise": "Gunakan estimasi pemerintah tentang tambahan 20 GW sebagai skenario perencanaan, bukan beban aktual yang sudah terserap atau krisis yang sedang terjadi.",
-      "mechanism": "Pusat data memerlukan listrik kontinu, pendinginan, air, konektivitas serat optik, serta pembangkit dan jaringan transmisi yang memadai.",
-      "consequences": "Dalam horizon pembangunan beberapa tahun, lokasi, pasokan energi bersih, dan jaringan menjadi faktor pembatas; dampak aktual bergantung pada realisasi proyek dan bauran energi.",
-      "human_stakes": "Keandalan listrik, penggunaan lahan dan air, investasi daerah, serta biaya transisi energi.",
-      "indonesia_relevance": "Sangat tinggi; ESDM menyebut Batam–Karimun–Bintan sebagai calon hub pusat data dan mengaitkan pertumbuhan ini dengan kebutuhan energi Indonesia.",
-      "misinterpretation_risk": "Jangan menyebut 20 GW sebagai konsumsi saat ini, ancaman blackout, atau seluruhnya kebutuhan AI; atribusikan angka kepada estimasi pemerintah.",
-      "confidence": "MEDIUM; estimasi resmi tetapi belum divalidasi independen dalam riset ini.",
+      "score": 89,
       "weighted_scores": {
-        "freshness_relevance": 4,
-        "scientific_foundation": 3,
+        "freshness_relevance": 5,
+        "scientific_foundation": 4,
         "human_stakes": 4,
         "visual_originality": 5,
         "story_potential": 4,
         "novelty_vs_archive": 5,
         "indonesian_relevance": 5
-      }
+      },
+      "trade_off": "Konteks Indonesia dan visual sistem fisik kuat; verifikasi teknis independen masih diperlukan."
     }
   ],
   "platform_access": {
@@ -309,11 +285,13 @@
     "TikTok account analytics": "NOT_CHECKED"
   },
   "limitations": [
-    "Fresh public-web discovery was performed on 2026-11-05; no platform-wide TikTok or Google Trends metric was accessed in this run.",
-    "Nature Neuroscience and Planetary Science Journal direct pages redirected or failed to load; indexed publisher results exposed abstracts and detailed excerpts, but full-text direct access was not verified.",
-    "The offshore-wind result was reviewed through the lead institute's press release; the journal full text was not inspected.",
-    "The 20 GW data-center figure is an attributed ESDM ministerial estimate and was not independently validated against a detailed demand model.",
-    "Research discovery and candidate scoring are not human idea approval or production authorization."
+    "Fresh public-web discovery was performed on 2026-11-05 across all five discovery lanes; no private platform analytics or Google Trends metrics were accessed.",
+    "Stanford Medicine institutional article inspected in full; linked Science Advances paper returned HTTP 403. Medical claims remain qualified and require primary-paper review before STORY.",
+    "NASA/NOAA official ozone measurements inspected; the 1–2 million square mile counterfactual is an attributed scientist estimate, not an observed measurement.",
+    "NTT DATA announcement is an operator source and was not independently benchmarked.",
+    "Nature ecosystem feature was available through search-indexed content only; Japan-specific findings were not promoted to a candidate.",
+    "BMKG hotspot detections are not confirmed fire counts; forecast and observed temperature periods are time-bounded.",
+    "Candidates are editorial proposals only. None is human-approved; no new production dossier or prompts were created."
   ],
   "truncated": false
 }
