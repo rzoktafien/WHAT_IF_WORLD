@@ -1,0 +1,457 @@
+{
+  "report_id": "DI-20261107-01",
+  "previous_report_id": "DI-20261106-01",
+  "run_at": "2026-11-07T00:58:06Z",
+  "observation_window": {
+    "start": "2026-10-31",
+    "end": "2026-11-07"
+  },
+  "region": "Indonesia",
+  "status": "COMPLETED",
+  "coverage": [
+    "EARTH",
+    "NATURE & PHYSICS",
+    "HUMAN",
+    "ECOSYSTEM",
+    "CIVILIZATION & TECHNOLOGY"
+  ],
+  "sources": [
+    {
+      "id": "SRC-001",
+      "title": "Prakiraan Cuaca Indonesia Sepekan Periode 6–12 November 2026",
+      "publisher": "Badan Meteorologi, Klimatologi, dan Geofisika (BMKG)",
+      "url": "https://www.bmkg.go.id/cuaca/potensi-hujan-sepekan/prakiraan-cuaca-indonesia-sepekan-periode-6-12-november-2026-waspada-peningkatan-potensi-hujan-di-tengah-el-nino-sangat-kuat-yang-masih-berlangsung",
+      "published_at": "2026-11-06",
+      "event_or_data_period": "Curah hujan harian 1–4 November 2026; prakiraan 6–12 November 2026; pemantauan hari tanpa hujan dan hotspot pada laporan BMKG.",
+      "accessed_at": "2026-11-07T00:58:06Z",
+      "source_type": "PRIMARY",
+      "claim_ids": [
+        "CLM-001"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "Data curah hujan merupakan pengamatan pada tanggal dan wilayah yang disebutkan, bukan kondisi seluruh Indonesia.",
+        "Kategori hari tanpa hujan dan hotspot harus dipisahkan dari klaim kebakaran terkonfirmasi."
+      ]
+    },
+    {
+      "id": "SRC-002",
+      "title": "Potensi Pertumbuhan Awan Cb di Wilayah Udara Indonesia, Berlaku 6–12 November 2026",
+      "publisher": "Direktorat Meteorologi Penerbangan BMKG",
+      "url": "https://web-aviation.bmkg.go.id/web/prediksi_cb.php",
+      "published_at": null,
+      "event_or_data_period": "Perkiraan validitas 6–12 November 2026.",
+      "accessed_at": "2026-11-07T00:58:06Z",
+      "source_type": "PRIMARY",
+      "claim_ids": [
+        "CLM-002"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "Halaman tidak menampilkan timestamp publikasi yang terpisah dari periode berlaku.",
+        "Persentase yang ditampilkan adalah cakupan spasial maksimum awan Cb, bukan probabilitas kejadian di satu titik, bukan probabilitas hujan, dan bukan pernyataan bahwa setiap jalur penerbangan terdampak."
+      ]
+    },
+    {
+      "id": "SRC-003",
+      "title": "Life Cycle of a Thunderstorm",
+      "publisher": "National Oceanic and Atmospheric Administration (NOAA)",
+      "url": "https://www.noaa.gov/jetstream/thunderstorms/life-cycle-of-thunderstorm",
+      "published_at": null,
+      "event_or_data_period": null,
+      "accessed_at": "2026-11-07T00:58:06Z",
+      "source_type": "PRIMARY",
+      "claim_ids": [
+        "CLM-003"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "Sumber edukasi teknis umum; angka ketinggian merupakan gambaran tipikal tahap badai, bukan batas universal untuk setiap awan Cb."
+      ]
+    },
+    {
+      "id": "SRC-004",
+      "title": "Aeronautical Information Manual, Chapter 7: Safety of Flight",
+      "publisher": "Federal Aviation Administration (FAA)",
+      "url": "https://www.faa.gov/Air_traffic/publications/atpubs/aim_html/chap7_section_1.html",
+      "published_at": null,
+      "event_or_data_period": null,
+      "accessed_at": "2026-11-07T00:58:06Z",
+      "source_type": "PRIMARY",
+      "claim_ids": [
+        "CLM-004"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "Panduan operasional Amerika Serikat; digunakan untuk prinsip bahaya meteorologi penerbangan, bukan untuk menyatakan prosedur atau jarak penghindaran yang berlaku di Indonesia."
+      ]
+    },
+    {
+      "id": "SRC-005",
+      "title": "European orbiter detects hints of volcanic activity on Mars",
+      "publisher": "European Space Agency (ESA)",
+      "url": "https://www.esa.int/articles/news-media/news/european-orbiter-detects-hints-of-volcanic-activity-on-mars",
+      "published_at": "2026-11-05",
+      "event_or_data_period": "Pengamatan ExoMars Trace Gas Orbiter lintas beberapa tahun Mars; artikel merangkum temuan HCl di wilayah Alba Mons.",
+      "accessed_at": "2026-11-07T00:58:06Z",
+      "source_type": "PRIMARY",
+      "claim_ids": [
+        "CLM-005",
+        "CLM-006"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "ESA menjelaskan interpretasi tim peneliti; belum ada aliran lava atau letusan baru yang diamati.",
+        "Kemungkinan lingkungan hidrotermal adalah implikasi untuk penelitian masa depan, bukan bukti kehidupan."
+      ]
+    },
+    {
+      "id": "SRC-006",
+      "title": "Hydrogen chloride in the atmosphere of Mars may be a sign of active volcanism",
+      "publisher": "Space Research Institute of the Russian Academy of Sciences (IKI RAS)",
+      "url": "https://iki.cosmos.ru/news/2026/11/05/khlorovodorod-v-atmosfere-marsa-mozhet-byt-priznakom-deystvuyuschego-vulkanizma",
+      "published_at": "2026-11-04",
+      "event_or_data_period": "Pengamatan ACS pada ExoMars Trace Gas Orbiter; temuan HCl lokal di sekitar Alba Mons.",
+      "accessed_at": "2026-11-07T00:58:06Z",
+      "source_type": "PRIMARY",
+      "claim_ids": [
+        "CLM-005",
+        "CLM-006"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "Komunikasi institusi yang berafiliasi dengan instrumen dan penulis penelitian, bukan replikasi independen.",
+        "IKI menyebut sumber magmatik lokal sebagai penjelasan terbaik saat ini, bukan observasi langsung magma atau letusan."
+      ]
+    },
+    {
+      "id": "SRC-007",
+      "title": "Enigmatic HCl detections as a potential signature of igneous activity on Mars",
+      "publisher": "Science Advances, DOI 10.1126/sciadv.aeb9422",
+      "url": "https://doi.org/10.1126/sciadv.aeb9422",
+      "published_at": "2026-11-04",
+      "event_or_data_period": "Data pengamatan atmosfer Mars oleh instrumen ACS pada ExoMars Trace Gas Orbiter.",
+      "accessed_at": "2026-11-07T00:58:06Z",
+      "source_type": "PRIMARY",
+      "claim_ids": [
+        "CLM-005",
+        "CLM-006"
+      ],
+      "inspection": "ABSTRACT_OR_METADATA",
+      "limitations": [
+        "Halaman penerbit tidak dapat dibuka langsung dalam sesi ini; metadata/abstrak bibliografis tersedia melalui indeks publikasi. Klaim utama juga diperiksa silang melalui ESA dan IKI RAS, sehingga metadata ini tidak dipakai sebagai satu-satunya bukti."
+      ]
+    },
+    {
+      "id": "SRC-008",
+      "title": "A mid-Cretaceous island as a cradle of Southeast Asian plant biodiversity",
+      "publisher": "Nature Ecology & Evolution",
+      "url": "https://www.nature.com/articles/s41559-026-03219-7",
+      "published_at": "2026-10-27",
+      "event_or_data_period": "Fosil tumbuhan dalam amber Kachin, Myanmar, berusia sekitar 99 juta tahun; paper diterbitkan 27 Oktober 2026.",
+      "accessed_at": "2026-11-07T00:58:06Z",
+      "source_type": "PRIMARY",
+      "claim_ids": [
+        "CLM-007",
+        "CLM-008"
+      ],
+      "inspection": "ABSTRACT_OR_METADATA",
+      "limitations": [
+        "Halaman penerbit mengalihkan ke autentikasi dan tidak dapat dibuka penuh; abstrak dan metadata penerbit terindeks.",
+        "Paper berada dalam jendela konteks 8–30 hari, bukan publikasi 0–7 hari."
+      ]
+    },
+    {
+      "id": "SRC-009",
+      "title": "Ancient Australian landmass helped seed Southeast Asia’s tropical forests",
+      "publisher": "Curtin University",
+      "url": "https://www.curtin.edu.au/news/media-release/ancient-australian-landmass-helped-seed-southeast-asias-tropical-forests/",
+      "published_at": "2026-10-28",
+      "event_or_data_period": "Riset atas lebih dari 3.000 spesimen fosil tumbuhan dalam amber Myanmar berusia sekitar 99 juta tahun.",
+      "accessed_at": "2026-11-07T00:58:06Z",
+      "source_type": "SECONDARY",
+      "claim_ids": [
+        "CLM-007",
+        "CLM-008"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "Rilis institusi dari universitas tempat salah satu penulis berafiliasi; bukan replikasi independen."
+      ]
+    },
+    {
+      "id": "SRC-010",
+      "title": "A tiny chunk of Australia seeded Southeast Asia's tropical forests 50 million years ago",
+      "publisher": "Live Science",
+      "url": "https://www.livescience.com/planet-earth/plants/a-tiny-chunk-of-australia-seeded-southeast-asias-tropical-forests-150-million-years-ago-plant-fossils-preserved-in-amber-reveal",
+      "published_at": "2026-11-05",
+      "event_or_data_period": "Liputan atas paper Nature Ecology & Evolution yang terbit 27 Oktober 2026; wawancara dengan salah satu penulis.",
+      "accessed_at": "2026-11-07T00:58:06Z",
+      "source_type": "SECONDARY",
+      "claim_ids": [
+        "CLM-007",
+        "CLM-008"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "Liputan sekunder; bukti fosil berasal dari Myanmar dan tidak berarti seluruh flora modern Indonesia berasal dari satu fragmen benua."
+      ]
+    },
+    {
+      "id": "SRC-011",
+      "title": "Leonids Meteor Shower",
+      "publisher": "NASA Science",
+      "url": "https://science.nasa.gov/solar-system/meteors-meteorites/leonids/",
+      "published_at": null,
+      "event_or_data_period": "Aktif 6–30 November 2026; puncak malam 16–17 November 2026.",
+      "accessed_at": "2026-11-07T00:58:06Z",
+      "source_type": "PRIMARY",
+      "claim_ids": [
+        "CLM-009"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "Perkiraan kurang dari tiga meteor per jam berlaku untuk pengamatan di bawah langit gelap; kondisi aktual bergantung pada cuaca, polusi cahaya, dan lokasi."
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-001",
+      "claim": "BMKG melaporkan curah hujan harian tertinggi 358 mm/hari di Jawa Timur selama 1–4 November 2026; Bali mencapai 300 mm/hari. Pada laporan yang sama BMKG menyebut 543 titik pengamatan berada dalam kategori hari tanpa hujan sangat panjang hingga ekstrem panjang.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-001"
+      ],
+      "confidence": "HIGH",
+      "status": "SUPPORTED",
+      "safe_wording": "BMKG mencatat hujan harian hingga 358 mm di Jawa Timur pada 1–4 November, sementara ratusan titik pengamatan lain masih mengalami periode tanpa hujan yang sangat panjang.",
+      "critical": false,
+      "caveat": "Jangan menyimpulkan bahwa hujan ekstrem dan kekeringan terjadi di titik yang sama atau bahwa seluruh Indonesia mengalami kondisi yang sama."
+    },
+    {
+      "id": "CLM-002",
+      "claim": "BMKG Aviation memprakirakan cakupan spasial maksimum awan Cumulonimbus kategori OCNL 50–75% di banyak wilayah udara Indonesia dan kategori FRQ lebih dari 75% di Laut Natuna Utara, Samudra Hindia barat Aceh, serta Selat Malaka bagian utara selama 6–12 November 2026.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-002"
+      ],
+      "confidence": "HIGH",
+      "status": "SUPPORTED",
+      "safe_wording": "BMKG memprakirakan cakupan spasial maksimum awan Cb mencapai kategori 50–75% di banyak wilayah udara dan lebih dari 75% di tiga area yang disebutkan; angka ini bukan peluang hujan pada satu titik.",
+      "critical": true,
+      "caveat": "Jangan mengubah persentase cakupan spasial menjadi probabilitas badai pada satu rute atau klaim bahwa penerbangan tertentu pasti terganggu."
+    },
+    {
+      "id": "CLM-003",
+      "claim": "NOAA menjelaskan bahwa sel badai pada tahap matang dapat mencapai sekitar 12–18 km dan memiliki updraft serta downdraft kuat yang berlangsung bersamaan; tahap ini dapat menghasilkan hujan lebat, hujan es, angin merusak, dan banjir bandang.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-003"
+      ],
+      "confidence": "HIGH",
+      "status": "SUPPORTED",
+      "safe_wording": "Pada tahap matang, awan badai dapat menjulang sekitar 12–18 km dan di dalamnya terdapat arus udara naik serta turun yang kuat.",
+      "critical": true,
+      "caveat": "Rentang ketinggian adalah gambaran umum NOAA, bukan ukuran tetap semua badai di Indonesia."
+    },
+    {
+      "id": "CLM-004",
+      "claim": "FAA menyatakan sistem badai konvektif memiliki bahaya turbulensi, hujan es, petir, icing, updraft dan downdraft; turbulensi dapat meluas melampaui batas awan yang terlihat, dan petir dapat menyambar pesawat di udara cerah dekat badai.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-004"
+      ],
+      "confidence": "HIGH",
+      "status": "SUPPORTED",
+      "safe_wording": "Bahaya badai tidak selalu berhenti pada batas awan yang terlihat; turbulensi dapat meluas ke udara di sekitarnya, sehingga penerbangan perlu menghindari sel badai.",
+      "critical": true,
+      "caveat": "FAA adalah otoritas Amerika Serikat; gunakan sebagai referensi mekanisme bahaya, bukan sebagai pengganti prosedur operasi penerbangan Indonesia."
+    },
+    {
+      "id": "CLM-005",
+      "claim": "Instrumen ACS pada ExoMars Trace Gas Orbiter mendeteksi hidrogen klorida yang terlokalisasi di atmosfer dekat retakan wilayah Alba Mons; pola musiman dan lokasi deteksi berbeda dari pola HCl yang biasa diamati di Mars.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-005",
+        "SRC-006",
+        "SRC-007"
+      ],
+      "confidence": "HIGH",
+      "status": "SUPPORTED",
+      "safe_wording": "Pengorbit Mars mendeteksi gas hidrogen klorida di atas retakan dekat Alba Mons, dengan pola lokasi dan musim yang tidak biasa.",
+      "critical": true,
+      "caveat": "Deteksi gas dilakukan dari orbit; bukan pengamatan langsung magma atau ventilasi gas dari permukaan."
+    },
+    {
+      "id": "CLM-006",
+      "claim": "Para peneliti menilai rembesan gas dari sumber magmatik lokal di bawah permukaan sebagai penjelasan terbaik untuk deteksi HCl di Alba Mons; belum ada aliran lava atau letusan baru yang diamati.",
+      "class": "EXTRAPOLATION",
+      "source_ids": [
+        "SRC-005",
+        "SRC-006",
+        "SRC-007"
+      ],
+      "confidence": "MEDIUM",
+      "status": "QUALIFIED",
+      "safe_wording": "Data tersebut konsisten dengan kemungkinan adanya sumber magmatik lokal yang masih melepaskan gas, tetapi belum ada letusan atau aliran lava baru yang teramati.",
+      "critical": true,
+      "caveat": "Jangan menyatakan Mars terbukti sedang meletus, memiliki kehidupan, atau memiliki sistem hidrotermal aktif yang sudah terkonfirmasi."
+    },
+    {
+      "id": "CLM-007",
+      "claim": "Penelitian yang terbit 27 Oktober 2026 menganalisis lebih dari 3.000 fosil tumbuhan dalam amber Myanmar berusia sekitar 99 juta tahun dan mengidentifikasi setidaknya 392 tipe morfologi tumbuhan berbunga.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-008",
+        "SRC-009",
+        "SRC-010"
+      ],
+      "confidence": "HIGH",
+      "status": "SUPPORTED",
+      "safe_wording": "Lebih dari 3.000 fosil tumbuhan dalam amber Myanmar berusia sekitar 99 juta tahun memperlihatkan setidaknya 392 tipe morfologi tumbuhan berbunga.",
+      "critical": true,
+      "caveat": "Fosil berasal dari Myanmar dan merupakan satu assemblage fosil, bukan sensus lengkap semua tumbuhan Asia Tenggara."
+    },
+    {
+      "id": "CLM-008",
+      "claim": "Paper tersebut menafsirkan West Burma Block sebagai mikro-lempeng yang terpisah dari tepi barat laut Lempeng Australia pada Jura, bergerak ke utara, dan bertabrakan dengan Sundaland pada Eosen; isolasi dan posisi lintang rendahnya dapat menjadi tempat perlindungan serta jalur perpindahan garis keturunan tumbuhan Gondwana ke Asia Tenggara.",
+      "class": "EXTRAPOLATION",
+      "source_ids": [
+        "SRC-008",
+        "SRC-009",
+        "SRC-010"
+      ],
+      "confidence": "MEDIUM",
+      "status": "QUALIFIED",
+      "safe_wording": "Satu fragmen kerak yang bergerak dari kawasan Australia mungkin membantu membawa dan mempertahankan sebagian garis keturunan tumbuhan purba ke Asia Tenggara.",
+      "critical": true,
+      "caveat": "Jangan menyatakan seluruh hutan Indonesia berasal dari fragmen ini; penelitian membahas kontribusi pada flora Asia Tenggara dan bukti fosil utama berasal dari Myanmar."
+    },
+    {
+      "id": "CLM-009",
+      "claim": "NASA mencatat hujan meteor Leonid aktif 6–30 November 2026, dengan puncak malam 16–17 November, kecepatan sekitar 69,7 km/detik, dan kurang dari tiga meteor per jam di bawah langit gelap.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-011"
+      ],
+      "confidence": "HIGH",
+      "status": "SUPPORTED",
+      "safe_wording": "Leonid sedang aktif pada November dan diperkirakan mencapai puncak pada malam 16–17 November, tetapi jumlah meteor yang terlihat biasanya rendah.",
+      "critical": false,
+      "caveat": "Jangan menjanjikan hujan meteor spektakuler atau badai meteor; jumlah yang terlihat dipengaruhi kondisi langit dan lokasi."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "IDEA-20261107-01",
+      "title": "Awan Raksasa yang Tidak Boleh Didekati Pesawat",
+      "pillar": "EARTH / NATURE & PHYSICS / CIVILIZATION & TECHNOLOGY",
+      "evidence_label": "CURRENT_VERIFIED",
+      "score": 89.75,
+      "source_claim_ids": [
+        "CLM-002",
+        "CLM-003",
+        "CLM-004"
+      ],
+      "what_if": "Bagaimana jika sebuah awan Cumulonimbus tumbuh tepat di jalur penerbangan Indonesia—dan pesawat harus memutar, bukan menembusnya?",
+      "hook": "Awan ini bisa menjulang 12–18 kilometer. Pesawat tidak sekadar menghindari hujan.",
+      "premise": "Cerita fiktif mengikuti satu penerbangan yang mendeteksi sel badai konvektif di depan jalurnya. Awak penerbangan dan pengatur lalu lintas mengubah rute; visual kemudian membongkar struktur awan dan turbulensi di sekitarnya. Tidak menggambarkan insiden penerbangan nyata.",
+      "mechanism": "Udara hangat-lembap yang terangkat membentuk awan vertikal; pada tahap matang, updraft dan downdraft kuat berlangsung bersamaan. Sistem turbulen, petir, hujan es dan angin dapat melampaui batas awan yang tampak.",
+      "consequences": "Rute dapat dialihkan, waktu terbang bertambah, konsumsi bahan bakar dan kepadatan lalu lintas udara dapat berubah; penghindaran merupakan tindakan keselamatan, bukan tanda bahwa pesawat hampir jatuh.",
+      "human_stakes": "Keselamatan penumpang, keputusan awak penerbangan, jadwal perjalanan dan logistik antarpulau.",
+      "indonesia_relevance": "BMKG Aviation mengeluarkan prakiraan awan Cb untuk wilayah udara Indonesia selama 6–12 November 2026, termasuk kategori cakupan spasial maksimum yang tinggi di beberapa area.",
+      "misinterpretation_risk": "Jangan mengubah persentase cakupan spasial BMKG menjadi peluang badai pada satu rute. Jangan menyatakan penerbangan Indonesia tertentu terdampak tanpa TAF/SIGMET atau bukti operator. FAA digunakan hanya untuk mekanisme bahaya, bukan sebagai aturan operasi Indonesia.",
+      "confidence": "HIGH untuk mekanisme badai dan prakiraan Cb; MEDIUM untuk konsekuensi rute fiktif.",
+      "weighted_scores": {
+        "freshness_relevance_10pct": 9.5,
+        "scientific_foundation_25pct": 9.5,
+        "human_stakes_15pct": 8.5,
+        "visual_originality_20pct": 9,
+        "story_potential_15pct": 9,
+        "novelty_10pct": 7.5,
+        "indonesian_relevance_5pct": 9.5
+      }
+    },
+    {
+      "id": "IDEA-20261107-02",
+      "title": "Mars Masih Menyimpan Magma?",
+      "pillar": "NATURE & PHYSICS",
+      "evidence_label": "CURRENT_VERIFIED",
+      "score": 82.25,
+      "source_claim_ids": [
+        "CLM-005",
+        "CLM-006"
+      ],
+      "what_if": "Bagaimana jika Mars belum sepenuhnya mati di bagian dalam, dan gas yang keluar dari retakan menjadi petunjuknya?",
+      "hook": "Di Mars tidak terlihat letusan. Tapi gas dari retakan mungkin datang dari sumber magma di bawah permukaan.",
+      "premise": "Sebuah pengorbit mengamati gas HCl yang terkonsentrasi di atas retakan Alba Mons pada musim yang tidak biasa. Peneliti membandingkan kemungkinan proses kimia atmosfer dan interaksi permukaan sebelum menilai sumber magmatik lokal sebagai penjelasan terbaik.",
+      "mechanism": "HCl dapat dilepaskan dari sistem magmatik dan tertahan oleh es atau lapisan beku; ketika es menyublim pada musim yang lebih hangat, gas dapat terlepas ke atmosfer dan terdeteksi instrumen orbit.",
+      "consequences": "Temuan dapat mengubah pemahaman tentang panas internal Mars dan membantu menentukan lokasi eksplorasi berikutnya; sistem hidrotermal yang mungkin terbentuk hanya hipotesis untuk pencarian kehidupan.",
+      "human_stakes": "Memperluas pencarian lingkungan yang mungkin menyediakan panas dan energi bagi mikroorganisme, tanpa mengklaim adanya kehidupan.",
+      "indonesia_relevance": "Relevansi langsung rendah, tetapi tinggi untuk edukasi astronomi dan eksplorasi planet.",
+      "misinterpretation_risk": "Belum ada letusan atau aliran lava baru yang diamati. Gas HCl bukan bukti kehidupan. Sumber magmatik adalah interpretasi terbaik peneliti, bukan pengukuran magma secara langsung.",
+      "confidence": "HIGH untuk deteksi HCl; MEDIUM untuk interpretasi sumber magmatik.",
+      "weighted_scores": {
+        "freshness_relevance_10pct": 10,
+        "scientific_foundation_25pct": 8.5,
+        "human_stakes_15pct": 4.5,
+        "visual_originality_20pct": 9.5,
+        "story_potential_15pct": 9,
+        "novelty_10pct": 9.5,
+        "indonesian_relevance_5pct": 4.5
+      }
+    },
+    {
+      "id": "IDEA-20261107-03",
+      "title": "Pulau yang Berlayar Membawa Leluhur Hutan Asia Tenggara",
+      "pillar": "EARTH / ECOSYSTEM / NATURE & PHYSICS",
+      "evidence_label": "CURRENT_LIMITED",
+      "score": 85,
+      "source_claim_ids": [
+        "CLM-007",
+        "CLM-008"
+      ],
+      "what_if": "Bagaimana jika sebagian leluhur tumbuhan hutan tropis Asia Tenggara datang menumpang pada pecahan benua yang bergerak dari Australia?",
+      "hook": "Hutan Asia Tenggara mungkin punya sejarah yang dimulai dari pecahan Australia yang bergerak melintasi samudra purba.",
+      "premise": "Rekonstruksi geologi mengikuti West Burma Block sejak terpisah dari kawasan barat laut Australia, bergerak di dekat khatulistiwa, lalu bergabung dengan Sundaland. Fosil tumbuhan dalam amber Myanmar menjadi petunjuk tentang komunitas flora purba yang pernah dibawanya.",
+      "mechanism": "Gerak lempeng tektonik memindahkan mikro-lempeng selama puluhan hingga ratusan juta tahun. Iklim tropis dan isolasi dapat menjadi tempat perlindungan bagi garis keturunan tumbuhan, lalu memungkinkan perpindahan biota ketika fragmen kerak bergabung dengan Asia Tenggara.",
+      "consequences": "Memberi perspektif baru tentang sejarah biogeografi dan keragaman tumbuhan Asia Tenggara; tidak membuktikan bahwa seluruh flora modern berasal dari satu fragmen benua.",
+      "human_stakes": "Membantu penonton memahami bahwa biodiversitas hutan tropis memiliki sejarah geologi dan evolusi yang jauh lebih tua daripada batas negara modern.",
+      "indonesia_relevance": "Kuat secara regional karena Sundaland dan sejarah flora Asia Tenggara berkaitan dengan kawasan Indonesia; bukti fosil utama penelitian berasal dari Myanmar, bukan Indonesia.",
+      "misinterpretation_risk": "Jangan menggambarkan mikro-lempeng sebagai rakit yang mengapung di permukaan laut. Jangan menyatakan semua hutan Indonesia berasal dari Australia atau bahwa 392 tipe fosil adalah jumlah spesies modern. Paper terbit 27 Oktober, sehingga termasuk konteks 8–30 hari, bukan temuan publikasi 0–7 hari.",
+      "confidence": "HIGH untuk keberadaan dan identifikasi fosil; MEDIUM untuk rekonstruksi kontribusi biogeografi terhadap flora modern.",
+      "weighted_scores": {
+        "freshness_relevance_10pct": 7.5,
+        "scientific_foundation_25pct": 8.5,
+        "human_stakes_15pct": 6,
+        "visual_originality_20pct": 9.5,
+        "story_potential_15pct": 9.5,
+        "novelty_10pct": 9.5,
+        "indonesian_relevance_5pct": 9
+      }
+    }
+  ],
+  "recommendation": {
+    "candidate_id": "IDEA-20261107-01",
+    "rationale": "Memiliki sinyal operasional paling segar dari BMKG, mekanisme meteorologi yang dapat dijelaskan, visual berskala besar, serta dampak manusia yang mudah dipahami. Skor tertinggi berasal dari freshness, scientific foundation, visual originality, dan Indonesian relevance.",
+    "trade_off": "Topik penerbangan membutuhkan kehati-hatian agar prakiraan cakupan spasial Cb tidak disalahartikan sebagai peluang badai pada rute tertentu atau bukti gangguan penerbangan nyata.",
+    "next_test": "Jika dipilih, tentukan rute atau bandara cerita lalu periksa TAF, SIGMET, dan pembaruan BMKG Aviation yang berlaku pada tanggal produksi. Pertahankan penerbangan sebagai skenario fiktif jika tidak ada kejadian nyata terverifikasi."
+  },
+  "platform_access": {
+    "TikTok Creative Center Indonesia": "LIMITED",
+    "Google Trends Indonesia": "UNAVAILABLE",
+    "TikTok account analytics": "UNAVAILABLE"
+  },
+  "limitations": [
+    "TikTok Creative Center hanya menampilkan shell navigasi/login; tidak ada ranking hashtag, video, atau metrik Indonesia yang dapat diverifikasi.",
+    "Google Trends Indonesia tidak dapat diakses pada sesi ini; tidak ada klaim volume atau ranking pencarian.",
+    "Analytics akun TikTok WHAT IF WORLD tidak tersedia untuk diperiksa.",
+    "Tidak menggunakan tracker pihak ketiga sebagai pengganti data TikTok atau Google Trends.",
+    "Lane HUMAN tidak menghasilkan temuan 0–7 hari dengan kombinasi bukti primer, dampak manusia, dan kualitas visual yang cukup kuat untuk dijadikan kandidat; kuota tidak diisi dengan ide lemah.",
+    "Persentase pada prakiraan Cb BMKG adalah cakupan spasial maksimum, bukan probabilitas badai pada titik atau rute tertentu.",
+    "Halaman Science Advances dan Nature tidak dapat dibuka langsung; klaim terkait Mars dan flora Asia Tenggara diuji silang melalui sumber lembaga/penulis dan liputan penuh, dengan batasan akses dicatat.",
+    "Penilaian skor merupakan penilaian editorial berbobot, bukan prediksi viral atau performa akun."
+  ],
+  "truncated": false
+}
