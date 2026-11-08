@@ -1,0 +1,369 @@
+{
+  "report_id": "DI-20261108-01",
+  "run_at": "2026-11-08T01:04:41Z",
+  "observation_window": {
+    "start": "2026-11-01",
+    "end": "2026-11-08"
+  },
+  "region": "Indonesia",
+  "status": "COMPLETED",
+  "coverage": [
+    "EARTH",
+    "NATURE & PHYSICS",
+    "HUMAN",
+    "ECOSYSTEM",
+    "CIVILIZATION & TECHNOLOGY"
+  ],
+  "sources": [
+    {
+      "id": "SRC-001",
+      "title": "Prakiraan Cuaca Samudra Hindia barat Kep. Mentawai",
+      "publisher": "BMKG",
+      "url": "https://www.bmkg.go.id/cuaca/maritim/M.05",
+      "published_at": "2026-11-06T19:00:00+07:00",
+      "event_or_data_period": "Prakiraan perairan 7–10 November 2026; tabel diperbarui 6 November 2026 pukul 19.00 WIB.",
+      "accessed_at": "2026-11-08T01:04:41Z",
+      "source_type": "PRIMARY",
+      "claim_ids": [
+        "CLM-001",
+        "CLM-003"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "Angka 2,5 m dan angin 7 knot adalah satu titik waktu prakiraan, bukan observasi aktual.",
+        "Tabel perairan tidak memisahkan komponen swell dan wind-wave; penyebab spesifik tinggi gelombang belum ditentukan."
+      ]
+    },
+    {
+      "id": "SRC-002",
+      "title": "Waves",
+      "publisher": "NOAA JetStream",
+      "url": "https://www.noaa.gov/jetstream/ocean/waves",
+      "published_at": null,
+      "event_or_data_period": null,
+      "accessed_at": "2026-11-08T01:04:41Z",
+      "source_type": "PRIMARY",
+      "claim_ids": [
+        "CLM-002"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "Penjelasan mekanisme umum; tidak membuktikan bahwa gelombang di Mentawai pada tanggal prakiraan tertentu berasal dari swell jarak jauh."
+      ]
+    },
+    {
+      "id": "SRC-003",
+      "title": "Synergy in viral–bacterial co-infection expedites algal bloom demise",
+      "publisher": "Nature",
+      "url": "https://www.nature.com/articles/s41586-026-11243-7",
+      "published_at": "2026-11-04",
+      "event_or_data_period": "Eksperimen komunitas alga–virus–bakteri dan pengamatan bloom Gephyrocapsa huxleyi; paper diterbitkan 4 November 2026.",
+      "accessed_at": "2026-11-08T01:04:41Z",
+      "source_type": "PRIMARY",
+      "claim_ids": [
+        "CLM-004",
+        "CLM-005"
+      ],
+      "inspection": "ABSTRACT_OR_METADATA",
+      "limitations": [
+        "Halaman Nature mengalihkan ke autentikasi saat dibuka langsung; abstrak dan bagian utama artikel terindeks pada halaman hasil penerbit.",
+        "Eksperimen komunitas sintetis dan bukti lapangan utama berfokus pada G. huxleyi; generalisasi ke seluruh bloom laut tidak dibenarkan.",
+        "Implikasi pada carbon shunt/shuttle tidak mengukur besarnya dampak iklim global."
+      ]
+    },
+    {
+      "id": "SRC-004",
+      "title": "Sedang Trending — Google Trends Indonesia",
+      "publisher": "Google Trends",
+      "url": "https://trends.google.com/trending?geo=ID&hl=id",
+      "published_at": null,
+      "event_or_data_period": "Tampilan 24 jam terakhir; query “minyak bumi” ditampilkan pada snapshot 8 November 2026 sekitar pukul 08.04 WIB.",
+      "accessed_at": "2026-11-08T01:04:41Z",
+      "source_type": "PRIMARY",
+      "claim_ids": [
+        "CLM-006"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "Volume ditampilkan sebagai bucket 1rb+, bukan hitungan pasti.",
+        "Kenaikan 500% dan waktu mulai sekitar lima jam adalah snapshot antarmuka; tidak membuktikan penyebab kenaikan atau minat terhadap konten What If."
+      ]
+    },
+    {
+      "id": "SRC-005",
+      "title": "Perkuat Ketahanan Energi, Pemerintah Siapkan Storage Minyak hingga 60 Hari dan Bioetanol E20",
+      "publisher": "Kementerian Energi dan Sumber Daya Mineral Republik Indonesia",
+      "url": "https://www.esdm.go.id/id/media-center/arsip-berita/perkuat-ketahanan-energi-pemerintah-siapkan-storage-minyak-hingga-60-hari-dan-bioetanol-e20",
+      "published_at": "2026-11-03",
+      "event_or_data_period": "Rapat terbatas pemerintah pada 3 November 2026; studi kelayakan disebut selesai; peninjauan lokasi direncanakan mulai akhir 2026.",
+      "accessed_at": "2026-11-08T01:04:41Z",
+      "source_type": "PRIMARY",
+      "claim_ids": [
+        "CLM-007"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "Target hingga 60 hari adalah kapasitas fasilitas yang direncanakan, bukan stok minyak aktual yang sudah tersedia.",
+        "Belum ada data terverifikasi pada sumber ini tentang lokasi final, jadwal konstruksi, utilisasi, atau volume stok berjalan."
+      ]
+    },
+    {
+      "id": "SRC-006",
+      "title": "Scientists discover mysterious “lonely” brain waves linked to memory loss",
+      "publisher": "ScienceDaily, materi dari University of California, Berkeley",
+      "url": "https://www.sciencedaily.com/releases/2026/11/261101010556.htm",
+      "published_at": "2026-11-05",
+      "event_or_data_period": "Liputan/komunikasi riset diterbitkan 5 November 2026; merangkum studi Nature Neuroscience yang lebih dahulu terbit daring 11 September 2026.",
+      "accessed_at": "2026-11-08T01:04:41Z",
+      "source_type": "SECONDARY",
+      "claim_ids": [
+        "CLM-008",
+        "CLM-009"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "Tanggal 5 November adalah tanggal liputan/komunikasi, bukan tanggal publikasi awal paper.",
+        "ScienceDaily menyatakan hubungan asosiasi dan secara eksplisit tidak menetapkan sebab-akibat."
+      ]
+    },
+    {
+      "id": "SRC-007",
+      "title": "New UC Berkeley study links deep-sleep loss to Alzheimer’s-related protein buildup",
+      "publisher": "Berkeley News, University of California, Berkeley",
+      "url": "https://news.berkeley.edu/2026/09/11/new-uc-berkeley-study-links-deep-sleep-loss-to-alzheimers-related-protein-buildup/",
+      "published_at": "2026-09-11",
+      "event_or_data_period": "Komunikasi institusi tentang studi manusia; pembandingan kelompok dewasa muda dan dewasa lebih tua, EEG, PET, pengukuran cairan serebrospinal, serta tes ingatan pasangan kata.",
+      "accessed_at": "2026-11-08T01:04:41Z",
+      "source_type": "PRIMARY",
+      "claim_ids": [
+        "CLM-008",
+        "CLM-009"
+      ],
+      "inspection": "FULL_TEXT",
+      "limitations": [
+        "Sumber adalah komunikasi institusi, bukan replikasi independen.",
+        "Studi menunjukkan asosiasi; arah kausal antara tau, pola gelombang, dan penurunan ingatan belum dipastikan."
+      ]
+    },
+    {
+      "id": "SRC-008",
+      "title": "Human tau pathology is associated with lonely, nontraveling slow waves linked to memory impairment",
+      "publisher": "Nature Neuroscience; metadata dan abstrak melalui PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42728376/",
+      "published_at": "2026-09-11",
+      "event_or_data_period": "Epub 11 September 2026; volume/issue Nature Neuroscience 2026 Nov;29(11):2652–2658.",
+      "accessed_at": "2026-11-08T01:04:41Z",
+      "source_type": "PRIMARY",
+      "claim_ids": [
+        "CLM-008",
+        "CLM-009"
+      ],
+      "inspection": "ABSTRACT_OR_METADATA",
+      "limitations": [
+        "Abstrak PubMed diperiksa; teks lengkap jurnal tidak diakses dalam sesi ini.",
+        "Sumber mencakup manusia dan asosiasi tau frontal, propagasi gelombang lambat NREM, serta retensi memori."
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-001",
+      "claim": "BMKG memperbarui prakiraan Samudra Hindia barat Kepulauan Mentawai pada 6 November 2026 pukul 19.00 WIB. Tabel menampilkan gelombang 2,2 m dan angin 10 knot pada 7 November pukul 10.00 WIB, serta satu prakiraan 2,5 m dengan angin 7 knot pada 9 November pukul 10.00 WIB.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-001"
+      ],
+      "confidence": "HIGH",
+      "status": "SUPPORTED",
+      "safe_wording": "“Prakiraan BMKG untuk Samudra Hindia barat Mentawai menampilkan gelombang hingga 2,5 meter pada salah satu waktu prakiraan, ketika angin lokal yang ditampilkan 7 knot.”",
+      "critical": true,
+      "caveat": "Prakiraan, bukan observasi. Jangan menggeneralisasi ke seluruh pantai Sumatera Barat atau mengklaim penyebab gelombang tertentu."
+    },
+    {
+      "id": "CLM-002",
+      "claim": "NOAA menjelaskan bahwa swell dapat bergerak lebih cepat daripada badai pembangkitnya, menempuh jarak sangat jauh, lalu berinteraksi dengan dasar laut dan kontur pantai saat mendekati daratan.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-002"
+      ],
+      "confidence": "HIGH",
+      "status": "SUPPORTED",
+      "safe_wording": "“Gelombang swell dapat tiba jauh dari lokasi badai yang membangkitkannya.”",
+      "critical": true,
+      "caveat": "Mekanisme umum; bukan atribusi otomatis terhadap prakiraan Mentawai."
+    },
+    {
+      "id": "CLM-003",
+      "claim": "Swell jarak jauh merupakan salah satu penjelasan yang mungkin untuk gelombang relatif tinggi ketika angin lokal yang ditampilkan rendah, tetapi kontribusinya pada prakiraan Mentawai belum dibuktikan oleh tabel BMKG yang diakses.",
+      "class": "EXTRAPOLATION",
+      "source_ids": [
+        "SRC-001",
+        "SRC-002"
+      ],
+      "confidence": "LOW",
+      "status": "UNVERIFIED",
+      "safe_wording": "“Salah satu kemungkinan yang perlu diuji adalah energi swell dari badai jauh.”",
+      "critical": true,
+      "caveat": "Perlu spektrum, periode, arah swell, dan kondisi sumber gelombang sebelum menjadikannya penjelasan faktual."
+    },
+    {
+      "id": "CLM-004",
+      "claim": "Paper Nature terbit 4 November 2026 melaporkan bahwa bakteri meningkatkan kematian alga akibat infeksi virus pada Gephyrocapsa huxleyi dan tiga mikroalga lain dalam sistem yang diteliti.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-003"
+      ],
+      "confidence": "HIGH",
+      "status": "QUALIFIED",
+      "safe_wording": "“Dalam sistem yang diuji, bakteri dapat mempercepat kematian mikroalga yang sedang terinfeksi virus.”",
+      "critical": true,
+      "caveat": "Bukan klaim bahwa seluruh jenis alga atau semua bloom laut selalu runtuh dengan mekanisme ini."
+    },
+    {
+      "id": "CLM-005",
+      "claim": "Interaksi virus–bakteri dapat memodulasi keseimbangan antara daur ulang karbon di lapisan permukaan laut dan ekspor karbon melalui agregat yang tenggelam; besarnya dampak global belum dihitung oleh studi ini.",
+      "class": "EXTRAPOLATION",
+      "source_ids": [
+        "SRC-003"
+      ],
+      "confidence": "MEDIUM",
+      "status": "QUALIFIED",
+      "safe_wording": "“Interaksi mikroba ini dapat memengaruhi ke mana karbon dari bloom bergerak: didaur ulang di permukaan atau ikut tenggelam.”",
+      "critical": true,
+      "caveat": "Jangan menyatakan studi membuktikan perubahan iklim global atau besaran penyerapan karbon tertentu."
+    },
+    {
+      "id": "CLM-006",
+      "claim": "Pada snapshot Google Trends Indonesia 24 jam terakhir, query “minyak bumi” tampil dalam daftar tren dengan volume bucket 1rb+, kenaikan 500%, dan waktu mulai sekitar lima jam sebelum halaman diperiksa.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-004"
+      ],
+      "confidence": "HIGH",
+      "status": "QUALIFIED",
+      "safe_wording": "“Google Trends menampilkan query ‘minyak bumi’ sebagai salah satu tren pencarian pada snapshot 8 November.”",
+      "critical": false,
+      "caveat": "Bucket bukan volume pasti; tidak ada bukti penyebab atau hubungan langsung dengan kebutuhan konten What If."
+    },
+    {
+      "id": "CLM-007",
+      "claim": "ESDM mengumumkan rencana fasilitas crude storage di sejumlah wilayah Sumatra dengan target kapasitas penyimpanan hingga 60 hari; studi kelayakan disebut selesai dan peninjauan lokasi direncanakan mulai akhir 2026.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-005"
+      ],
+      "confidence": "HIGH",
+      "status": "SUPPORTED",
+      "safe_wording": "“Pemerintah merencanakan fasilitas penyimpanan crude di Sumatra dengan target kapasitas hingga 60 hari.”",
+      "critical": true,
+      "caveat": "Target kapasitas rencana bukan cadangan minyak aktual yang sudah ada atau jaminan pasokan BBM selama 60 hari."
+    },
+    {
+      "id": "CLM-008",
+      "claim": "Liputan ScienceDaily bertanggal 5 November 2026 membahas studi tentang tau, gelombang lambat NREM, dan retensi memori; paper terkait pertama kali diterbitkan daring pada 11 September 2026.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-006",
+        "SRC-007",
+        "SRC-008"
+      ],
+      "confidence": "HIGH",
+      "status": "SUPPORTED",
+      "safe_wording": "“Liputan baru pada 5 November mengangkat studi yang paper aslinya terbit daring pada 11 September.”",
+      "critical": false,
+      "caveat": "Jangan menyebut paper tersebut sebagai publikasi baru 5 November."
+    },
+    {
+      "id": "CLM-009",
+      "claim": "Pada peserta penelitian manusia, lebih banyak tau di korteks frontal berasosiasi dengan gelombang lambat NREM yang lebih terisolasi dan retensi memori yang lebih lemah; penelitian tidak membuktikan hubungan sebab-akibat.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-006",
+        "SRC-007",
+        "SRC-008"
+      ],
+      "confidence": "HIGH",
+      "status": "QUALIFIED",
+      "safe_wording": "“Pola gelombang tidur yang lebih terisolasi berhubungan dengan retensi ingatan yang lebih lemah pada kelompok yang diteliti.”",
+      "critical": true,
+      "caveat": "Bukan alat diagnosis, bukan bukti bahwa satu malam tidur buruk menyebabkan Alzheimer, dan bukan prediksi individual."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "DI-20261108-01-A",
+      "title": "Ombak dari Badai yang Sudah Pergi",
+      "evidence_label": "CURRENT_LIMITED",
+      "score": 90.5,
+      "source_claim_ids": [
+        "CLM-001",
+        "CLM-002",
+        "CLM-003"
+      ],
+      "score_dimensions_0_to_5": {
+        "freshness": 5,
+        "science": 4.5,
+        "human_stakes": 4.5,
+        "visual_originality": 4.5,
+        "story_potential": 4.5,
+        "novelty": 4,
+        "indonesia_relevance": 5
+      },
+      "editorial_note": "Sinyal prakiraan BMKG sangat relevan untuk Mentawai; penjelasan swell pada lokasi tersebut masih hipotesis dan perlu spektrum gelombang."
+    },
+    {
+      "id": "DI-20261108-01-B",
+      "title": "Saat Virus dan Bakteri Menjatuhkan Ledakan Mikroalga",
+      "evidence_label": "CURRENT_VERIFIED",
+      "score": 91.5,
+      "source_claim_ids": [
+        "CLM-004",
+        "CLM-005"
+      ],
+      "score_dimensions_0_to_5": {
+        "freshness": 5,
+        "science": 5,
+        "human_stakes": 3.5,
+        "visual_originality": 5,
+        "story_potential": 4.5,
+        "novelty": 4.5,
+        "indonesia_relevance": 3.5
+      },
+      "editorial_note": "Paper peer-reviewed terbit 4 November; visual mikroba kuat. Generalisasi ekologi dan implikasi karbon harus dibatasi pada ruang lingkup studi."
+    },
+    {
+      "id": "DI-20261108-01-C",
+      "title": "Gelombang Tidur yang Terputus, Kenangan yang Melemah",
+      "evidence_label": "CURRENT_LIMITED",
+      "score": 89,
+      "source_claim_ids": [
+        "CLM-008",
+        "CLM-009"
+      ],
+      "score_dimensions_0_to_5": {
+        "freshness": 3.5,
+        "science": 4.5,
+        "human_stakes": 5,
+        "visual_originality": 4.5,
+        "story_potential": 4.5,
+        "novelty": 4.5,
+        "indonesia_relevance": 4
+      },
+      "editorial_note": "Liputan bertanggal 5 November, tetapi paper aslinya e-pub 11 September. Asosiasi, bukan sebab-akibat; peserta dan hasil tidak mewakili seluruh populasi."
+    }
+  ],
+  "platform_access": {
+    "TikTok Creative Center Indonesia": "UNAVAILABLE",
+    "Google Trends Indonesia": "AVAILABLE",
+    "TikTok account analytics": "UNAVAILABLE"
+  },
+  "limitations": [
+    "TikTok Creative Center tidak dapat diakses pada sesi ini; tidak ada metrik tren TikTok.",
+    "Google Trends dapat diakses, tetapi snapshot hanya memberi bucket volume dan bukan alasan di balik lonjakan query.",
+    "BMKG tidak menampilkan pemisahan komponen swell dan wind-wave pada tabel prakiraan Mentawai yang diperiksa.",
+    "Halaman Nature mengalihkan ke autentikasi; metadata dan isi terindeks penerbit diperiksa, tetapi akses langsung full text tidak tersedia.",
+    "Paper tidur diterbitkan daring 11 September 2026; tanggal 5 November adalah tanggal liputan/komunikasi baru.",
+    "Data cadangan crude aktual dan kapasitas storage yang telah beroperasi tidak tersedia dalam pengumuman rencana ESDM."
+  ],
+  "truncated": false
+}
