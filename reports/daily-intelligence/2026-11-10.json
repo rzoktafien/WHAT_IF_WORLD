@@ -1,0 +1,575 @@
+{
+  "report_id": "DI-20261110-01",
+  "run_at": "2026-11-10T01:01:36Z",
+  "timezone": "Asia/Jakarta",
+  "region": "Indonesia",
+  "observation_window": {
+    "start": "2026-11-03",
+    "end": "2026-11-10"
+  },
+  "status": "COMPLETED",
+  "coverage": [
+    "EARTH",
+    "NATURE & PHYSICS",
+    "HUMAN",
+    "ECOSYSTEM",
+    "CIVILIZATION & TECHNOLOGY"
+  ],
+  "methodology": {
+    "fresh_web_discovery": true,
+    "source_inspection": "Opened primary and authoritative pages; cross-checked critical claims where possible.",
+    "archive_backlog_use": "Internal deduplication only; no prior candidate used as evidence.",
+    "platform_signal_policy": "No third-party proxy substituted for inaccessible native platforms."
+  },
+  "sources": [
+    {
+      "id": "SRC-001",
+      "title": "State of the climate in 2026 gives new meaning to phrase off the charts",
+      "publisher": "World Meteorological Organization",
+      "url": "https://wmo.int/media/news/state-of-climate-2026-gives-new-meaning-phrase-charts",
+      "published_at": "2026-11-09",
+      "accessed_at": "2026-11-10T01:01:36Z",
+      "source_type": "PRIMARY",
+      "inspection": "FULL_TEXT",
+      "data_period": "Global temperature January-September 2026; preliminary ocean heat content data through July 2026.",
+      "claim_ids": [
+        "CLM-001",
+        "CLM-002",
+        "CLM-003"
+      ],
+      "limitations": [
+        "The 1.47 C value is January-September, not a final annual mean.",
+        "The 2026 ocean-heat assessment is preliminary through July."
+      ]
+    },
+    {
+      "id": "SRC-002",
+      "title": "State of the Climate Update for COP31",
+      "publisher": "World Meteorological Organization",
+      "url": "https://public.wmo.int/resources/publication-series/state-of-climate-update-cop/state-of-climate-update-cop31",
+      "published_at": "2026-11-09",
+      "accessed_at": "2026-11-10T01:01:36Z",
+      "source_type": "PRIMARY",
+      "inspection": "FULL_PAGE; full report PDF link identified but library PDF text fetch was unavailable.",
+      "data_period": "Data available through September 2026; preliminary ocean data through July.",
+      "claim_ids": [
+        "CLM-001",
+        "CLM-002",
+        "CLM-003"
+      ],
+      "limitations": [
+        "The report landing page and key messages were inspected; full PDF was not read in this session."
+      ]
+    },
+    {
+      "id": "SRC-003",
+      "title": "Prakiraan Cuaca Indonesia Sepekan Periode 6-12 November 2026",
+      "publisher": "BMKG",
+      "url": "https://www.bmkg.go.id/cuaca/potensi-hujan-sepekan/prakiraan-cuaca-indonesia-sepekan-periode-6-12-november-2026-waspada-peningkatan-potensi-hujan-di-tengah-el-nino-sangat-kuat-yang-masih-berlangsung",
+      "published_at": "2026-11-06",
+      "accessed_at": "2026-11-10T01:01:36Z",
+      "source_type": "PRIMARY",
+      "inspection": "FULL_TEXT",
+      "data_period": "Observed rainfall and hotspots during 2026-11-01 to 2026-11-04; atmospheric monitoring Dasarian III October 2026.",
+      "claim_ids": [
+        "CLM-004"
+      ],
+      "limitations": [
+        "Rainfall and hotspot observations are geographically specific; hotspot is not equivalent to confirmed fire."
+      ]
+    },
+    {
+      "id": "SRC-004",
+      "title": "NOAA, NASA release measurements of 2026 ozone hole",
+      "publisher": "NOAA with NASA measurements",
+      "url": "https://www.noaa.gov/news-release/noaa-nasa-release-measurements-of-2026-ozone-hole",
+      "published_at": "2026-11-04",
+      "accessed_at": "2026-11-10T01:01:36Z",
+      "source_type": "PRIMARY",
+      "inspection": "FULL_TEXT",
+      "data_period": "Peak depletion average 2026-09-07 to 2026-10-13; annual maximum extent 2026-09-18; South Pole ozone minimum 2026-10-17.",
+      "claim_ids": [
+        "CLM-005",
+        "CLM-006"
+      ],
+      "limitations": [
+        "Seasonal area ranking is not a direct measure of depletion depth or severity."
+      ]
+    },
+    {
+      "id": "SRC-005",
+      "title": "2026 Antarctic ozone hole shaped by strong and persistent polar vortex",
+      "publisher": "UNEP Ozone Secretariat",
+      "url": "https://ozone.unep.org/2026-antarctic-ozone-hole-shaped-strong-and-persistent-polar-vortex",
+      "published_at": "2026-11-09",
+      "accessed_at": "2026-11-10T01:01:36Z",
+      "source_type": "PRIMARY_INTERGOVERNMENTAL",
+      "inspection": "FULL_TEXT",
+      "data_period": "2026 Antarctic ozone-hole season; reported average extent through 2026-10-31.",
+      "claim_ids": [
+        "CLM-005",
+        "CLM-006"
+      ],
+      "limitations": [
+        "Area and severity are distinct; the 2026 hole was large in area but not among the deepest."
+      ]
+    },
+    {
+      "id": "SRC-006",
+      "title": "The World We Avoided by Protecting the Ozone Layer",
+      "publisher": "NASA Earth Observatory",
+      "url": "https://science.nasa.gov/earth/earth-observatory/the-world-we-avoided-by-protecting-the-ozone-layer/",
+      "published_at": "2009-05-13",
+      "last_updated": "2025-11-14",
+      "accessed_at": "2026-11-10T01:01:36Z",
+      "source_type": "PRIMARY_RESEARCH_EXPLAINER",
+      "inspection": "FULL_TEXT",
+      "data_period": "Counterfactual model simulation from 1975 to 2065; CFC-like emissions increased 3% per year in the no-regulation scenario.",
+      "claim_ids": [
+        "CLM-007"
+      ],
+      "limitations": [
+        "This is a modeled counterfactual, not an observed forecast. The model's assumptions and uncertainty must be explicit."
+      ]
+    },
+    {
+      "id": "SRC-007",
+      "title": "Ozone layer: Earth's sunscreen protecting humans from harmful ultraviolet radiation",
+      "publisher": "UNEP Ozone Secretariat",
+      "url": "https://ozone.unep.org/did-you-know-ozone-layer-earths-sunscreen-protecting-humans-suns-harmful-ultraviolet-radiation",
+      "published_at": "2020-02-04",
+      "accessed_at": "2026-11-10T01:01:36Z",
+      "source_type": "PRIMARY_INTERGOVERNMENTAL",
+      "inspection": "FULL_TEXT",
+      "claim_ids": [
+        "CLM-008"
+      ],
+      "limitations": [
+        "Health-risk figures on the page include older modeled estimates; not used as current Indonesian incidence estimates."
+      ]
+    },
+    {
+      "id": "SRC-008",
+      "title": "CHAPEA Mission 2 Crew Reflects After 378 Days on Simulated Mars",
+      "publisher": "NASA Johnson Space Center",
+      "url": "https://www.nasa.gov/centers-and-facilities/johnson/chapea-mission-2-crew-reflects-after-378-days-on-simulated-mars/",
+      "published_at": "2026-11-09",
+      "event_date": "2026-10-31",
+      "accessed_at": "2026-11-10T01:01:36Z",
+      "source_type": "PRIMARY",
+      "inspection": "FULL_TEXT",
+      "data_period": "CHAPEA Mission 2 ran 2025-10-19 to 2026-10-31; 378 days.",
+      "claim_ids": [
+        "CLM-009",
+        "CLM-010",
+        "CLM-011"
+      ],
+      "limitations": [
+        "This was an Earth-based analog habitat in Houston, not a Mars mission. Detailed health/performance findings were still undergoing post-mission evaluation."
+      ]
+    },
+    {
+      "id": "SRC-009",
+      "title": "Crew from NASA's simulated Mars mission emerges after 378 days in isolation",
+      "publisher": "Reuters",
+      "url": "https://www.reuters.com/science/crew-nasas-simulated-mars-mission-emerges-after-378-days-isolation-2026-11-01/",
+      "published_at": "2026-11-01",
+      "event_date": "2026-10-31",
+      "accessed_at": "2026-11-10T01:01:36Z",
+      "source_type": "INDEPENDENT_SECONDARY",
+      "inspection": "FULL_TEXT",
+      "claim_ids": [
+        "CLM-009",
+        "CLM-010"
+      ],
+      "limitations": [
+        "Independent reporting corroborates mission duration and setting; it is not an independent scientific evaluation."
+      ]
+    },
+    {
+      "id": "SRC-010",
+      "title": "Persistent subsurface maxima of transparent exopolymer particles in the western Pacific Ocean: multi-cruise evidence and physical-biological influences",
+      "publisher": "Marine Environmental Research; indexed in PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42981973/",
+      "doi": "10.1016/j.marenvres.2026.108533",
+      "published_at": "2026-11-02",
+      "data_period": "Three cruises during 2020-2023; 621 samples from 95 stations.",
+      "accessed_at": "2026-11-10T01:01:36Z",
+      "source_type": "PRIMARY_PEER_REVIEWED_AHEAD_OF_PRINT",
+      "inspection": "ABSTRACT_AND_METADATA_ONLY; PubMed page direct fetch returned an access error; abstract exposed in indexed PubMed record and JoVE Visualize metadata.",
+      "claim_ids": [
+        "CLM-012"
+      ],
+      "limitations": [
+        "Full text was inaccessible. The suggested light-availability mechanism is explicitly a hypothesis requiring direct validation. Sampling stations cannot be assumed to represent Indonesian waters."
+      ]
+    },
+    {
+      "id": "SRC-011",
+      "title": "What is marine snow?",
+      "publisher": "NOAA Ocean Exploration",
+      "url": "https://oceanexplorer.noaa.gov/ocean-fact/marinesnow/",
+      "published_at": "2013-10-21",
+      "accessed_at": "2026-11-10T01:01:36Z",
+      "source_type": "PRIMARY_TECHNICAL_EXPLAINER",
+      "inspection": "FULL_TEXT",
+      "claim_ids": [
+        "CLM-013"
+      ],
+      "limitations": [
+        "General explanation of marine snow; not evidence for the specific 2026 Western Pacific TEP distribution."
+      ]
+    },
+    {
+      "id": "SRC-012",
+      "title": "Google Trends Indonesia daily trending searches",
+      "publisher": "Google Trends",
+      "url": "https://trends.google.com/trends/trendingsearches/daily?geo=ID",
+      "accessed_at": "2026-11-10T01:01:36Z",
+      "source_type": "PLATFORM_SIGNAL",
+      "inspection": "DIRECT_PAGE_INACCESSIBLE",
+      "claim_ids": [],
+      "limitations": [
+        "No trend metrics retrieved; no proxy substituted."
+      ]
+    },
+    {
+      "id": "SRC-013",
+      "title": "TikTok Creative Center Indonesia popular hashtags",
+      "publisher": "TikTok Creative Center",
+      "url": "https://ads.tiktok.com/business/creativecenter/inspiration/popular/hashtag/pc/en?countryCode=ID",
+      "accessed_at": "2026-11-10T01:01:36Z",
+      "source_type": "PLATFORM_SIGNAL",
+      "inspection": "DIRECT_PAGE_INACCESSIBLE",
+      "claim_ids": [],
+      "limitations": [
+        "No hashtag rankings or metrics retrieved."
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-001",
+      "claim": "WMO's 9 November 2026 update reports that global mean surface temperature for January-September 2026 was about 1.47 C above the 1850-1900 pre-industrial average.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-001",
+        "SRC-002"
+      ],
+      "confidence": "HIGH",
+      "safe_wording": "Rata-rata suhu permukaan global Januari-September 2026 sekitar 1,47 C di atas rata-rata praindustri 1850-1900.",
+      "caveat": "Not the final annual 2026 value."
+    },
+    {
+      "id": "CLM-002",
+      "claim": "WMO reports Earth's energy imbalance reached its highest level since monitoring began; the ocean absorbs about 90% of the excess heat, and preliminary data through July 2026 point to a tenth successive year of record ocean heat.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-001",
+        "SRC-002"
+      ],
+      "confidence": "HIGH",
+      "safe_wording": "Laut menyerap sekitar 90% kelebihan panas dalam sistem Bumi; data awal 2026 mengarah pada tahun kesepuluh berturut-turut dengan kandungan panas laut yang memecahkan rekor.",
+      "caveat": "Preliminary ocean data through July; do not imply the ocean has reached a physical saturation threshold."
+    },
+    {
+      "id": "CLM-003",
+      "claim": "WMO expects the very strong El Nino to intensify heat and raise risks of extreme heat, drought and heavy rainfall into 2027.",
+      "class": "FORECAST",
+      "source_ids": [
+        "SRC-001",
+        "SRC-002"
+      ],
+      "confidence": "HIGH",
+      "safe_wording": "WMO memperkirakan El Nino sangat kuat dapat meningkatkan risiko panas ekstrem, kekeringan, dan hujan lebat hingga 2027.",
+      "caveat": "Forecast risk, not a deterministic outcome for every Indonesian region."
+    },
+    {
+      "id": "CLM-004",
+      "claim": "BMKG's 6 November outlook reported very strong El Nino and positive IOD, while very heavy rain occurred in some Indonesian regions during 1-4 November and dry conditions/hotspots persisted in others.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-003"
+      ],
+      "confidence": "HIGH",
+      "safe_wording": "BMKG melaporkan kondisi Indonesia yang tidak seragam: hujan sangat lebat di beberapa wilayah sementara wilayah lain masih kering.",
+      "caveat": "Hotspot is a satellite detection, not proof of a confirmed fire; rainfall values apply only to reported locations and dates."
+    },
+    {
+      "id": "CLM-005",
+      "claim": "The Antarctic ozone hole in 2026 ranked seventh largest by seasonal mean area in 48 years of monitoring; NOAA/NASA reported a mean area around 25 million km2 during 7 September-13 October, with a maximum extent on 18 September.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-004",
+        "SRC-005"
+      ],
+      "confidence": "HIGH",
+      "safe_wording": "Lubang ozon Antarktika 2026 menjadi yang terbesar ketujuh berdasarkan luas musiman dalam 48 tahun pemantauan, tetapi tidak termasuk yang terdalam.",
+      "caveat": "Area ranking is distinct from ozone depletion severity; this is the Antarctic seasonal hole, not a hole over Indonesia."
+    },
+    {
+      "id": "CLM-006",
+      "claim": "A strong persistent polar vortex was a major meteorological factor in the large 2026 Antarctic ozone hole; NOAA/NASA say long-term ozone recovery remains on track.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-004",
+        "SRC-005"
+      ],
+      "confidence": "HIGH",
+      "safe_wording": "Pusaran angin kutub yang kuat memperluas lubang ozon Antarktika tahun ini, sementara pemulihan jangka panjang masih dinilai berada di jalur yang benar.",
+      "caveat": "Do not infer a reversal of long-term recovery from one year's seasonal area."
+    },
+    {
+      "id": "CLM-007",
+      "claim": "A NASA-led 2009 chemistry-climate model simulated a counterfactual world without CFC controls: emissions rose 3% per year after 1987 and global ozone fell dramatically by 2065, with modeled losses reaching about 67% relative to the 1970s.",
+      "class": "MODELLED_COUNTERFACTUAL",
+      "source_ids": [
+        "SRC-006"
+      ],
+      "confidence": "HIGH_FOR_MODEL_DESCRIPTION",
+      "safe_wording": "Dalam simulasi NASA tentang dunia tanpa pengendalian CFC, ozon global dapat turun sekitar dua pertiga pada 2065.",
+      "caveat": "This is a historical model scenario, not a present-day forecast; explicitly state the assumed emissions pathway."
+    },
+    {
+      "id": "CLM-008",
+      "claim": "Stratospheric ozone absorbs harmful UV radiation; increased UV-B exposure can harm human health, plants and ecosystems.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-006",
+        "SRC-007"
+      ],
+      "confidence": "HIGH",
+      "safe_wording": "Lapisan ozon stratosfer menyerap sebagian besar radiasi UV berbahaya dan membantu melindungi manusia serta ekosistem.",
+      "caveat": "Do not infer that the 2026 Antarctic hole directly causes elevated UV in Indonesia."
+    },
+    {
+      "id": "CLM-009",
+      "claim": "Four volunteers completed 378 days in NASA's CHAPEA Mission 2 analog habitat in Houston, exiting on 31 October 2026.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-008",
+        "SRC-009"
+      ],
+      "confidence": "HIGH",
+      "safe_wording": "Empat relawan menyelesaikan simulasi misi Mars selama 378 hari di habitat NASA di Houston dan keluar pada 31 Oktober 2026.",
+      "caveat": "They remained on Earth in an analog habitat."
+    },
+    {
+      "id": "CLM-010",
+      "claim": "CHAPEA Mission 2 involved simulated Marswalks, robotic operations, habitat maintenance, exercise, crop cultivation, limited resources and communication delays up to 22 minutes each way.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-008",
+        "SRC-009"
+      ],
+      "confidence": "HIGH",
+      "safe_wording": "Selama simulasi, kru berlatih Marswalk, mengoperasikan robot, merawat habitat, berolahraga, menanam tanaman, dan menghadapi jeda komunikasi hingga 22 menit sekali jalan.",
+      "caveat": "The analog does not reproduce Martian gravity, radiation, atmosphere, or every environmental hazard."
+    },
+    {
+      "id": "CLM-011",
+      "claim": "NASA was still conducting post-mission evaluations and debriefs to interpret CHAPEA Mission 2 health and performance data; detailed results were not yet presented in the 9 November article.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-008",
+        "SRC-009"
+      ],
+      "confidence": "HIGH",
+      "safe_wording": "Data kesehatan dan kinerja kru masih dievaluasi; jangan menyajikan hasil medis final yang belum dipublikasikan.",
+      "caveat": "No deterministic clinical conclusions."
+    },
+    {
+      "id": "CLM-012",
+      "claim": "A peer-reviewed ahead-of-print paper dated 2 November 2026 reports a persistent subsurface TEP maximum at 50-75 m at 92.6% of 95 Western Pacific Warm Pool stations, based on 621 samples from three cruises during 2020-2023.",
+      "class": "FACT_ABSTRACT_ONLY",
+      "source_ids": [
+        "SRC-010"
+      ],
+      "confidence": "MEDIUM_HIGH",
+      "safe_wording": "Abstrak penelitian baru melaporkan partikel gel organik laut TEP terkonsentrasi pada kedalaman 50-75 meter di sebagian besar stasiun pengamatan Western Pacific Warm Pool.",
+      "caveat": "Full text unavailable; the proposed light-availability explanation remains a hypothesis; do not claim the stations were Indonesian waters."
+    },
+    {
+      "id": "CLM-013",
+      "claim": "Marine snow consists largely of biological material originating near the ocean surface and sinking to the deep sea, where it provides energy for deep-ocean animals.",
+      "class": "FACT",
+      "source_ids": [
+        "SRC-011"
+      ],
+      "confidence": "HIGH",
+      "safe_wording": "Salju laut adalah material biologis dari lapisan atas laut yang tenggelam dan menjadi sumber makanan bagi organisme laut dalam.",
+      "caveat": "General marine snow explanation; not direct proof of the specific 2026 TEP study's carbon flux."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "CAND-01",
+      "title": "Panas Bumi yang Tersembunyi di Laut",
+      "pillar": "EARTH",
+      "secondary_pillars": [
+        "NATURE & PHYSICS",
+        "ECOSYSTEM"
+      ],
+      "evidence_label": "CURRENT_VERIFIED",
+      "what_if": "Bagaimana jika sebagian besar panas berlebih Bumi terus tersimpan di lautan, sementara dampaknya baru terasa perlahan di pesisir dan ekosistem?",
+      "hook_visual": "Dari permukaan, laut tampak tenang. Kamera turun ke kedalaman dan memperlihatkan lapisan laut yang menyimpan panas dalam jumlah besar.",
+      "mechanism": "Gas rumah kaca meningkatkan ketidakseimbangan energi Bumi. Laut menyerap sekitar 90% kelebihan panas dan kandungan panas laut terus meningkat. Pemanasan laut berkontribusi pada pemuaian air laut, tekanan terhadap ekosistem, dan kenaikan muka laut.",
+      "staged_impacts": [
+        "Panas tersimpan di lapisan laut, tidak seluruhnya terlihat dari suhu udara harian.",
+        "Peningkatan suhu laut dapat memperbesar risiko gelombang panas laut dan tekanan pada terumbu karang serta organisme laut.",
+        "Pemuaian termal air laut ikut menyumbang kenaikan muka laut; pencairan es daratan juga berkontribusi.",
+        "Perubahan laut dan atmosfer dapat memperbesar risiko bagi pesisir, perikanan, dan mata pencaharian, dengan dampak yang berbeda menurut wilayah."
+      ],
+      "indonesia_relevance": "Tinggi. Indonesia merupakan negara kepulauan dengan komunitas pesisir dan ekosistem laut luas. BMKG juga melaporkan kondisi cuaca yang tidak seragam selama El Nino sangat kuat: hujan sangat lebat di sejumlah daerah, sementara wilayah lain tetap kering.",
+      "format_duration": "THE WORLD AFTER / THE SCIENCE TWIST; 45-60 detik.",
+      "risk": [
+        "Jangan menyatakan laut telah mencapai titik jenuh atau akan berhenti menyerap panas.",
+        "Jangan menyamakan El Nino dengan satu-satunya penyebab pemanasan laut.",
+        "Jangan menyatakan semua wilayah Indonesia akan mengalami dampak yang sama.",
+        "Data WMO 1.47 C berlaku Januari-September, bukan nilai tahunan final."
+      ],
+      "confidence": "HIGH for WMO findings; MEDIUM-HIGH for regional consequence framing.",
+      "weighted_scores": {
+        "evidence_freshness_relevance": 5,
+        "scientific_foundation": 4.5,
+        "human_stakes": 4.5,
+        "visual_originality": 5,
+        "story_potential": 4.5,
+        "novelty_vs_archive": 4,
+        "indonesian_relevance": 5
+      },
+      "score": 92.5,
+      "score_note": "High current relevance and visual potential; broad climate theme requires a precise ocean-heat mechanism and regional caveats.",
+      "source_claim_ids": [
+        "CLM-001",
+        "CLM-002",
+        "CLM-003",
+        "CLM-004"
+      ]
+    },
+    {
+      "id": "CAND-02",
+      "title": "Jika Dunia Tidak Pernah Menghentikan CFC",
+      "pillar": "EARTH",
+      "secondary_pillars": [
+        "HUMAN",
+        "ECOSYSTEM",
+        "CIVILIZATION & TECHNOLOGY"
+      ],
+      "evidence_label": "CURRENT_VERIFIED",
+      "what_if": "Bagaimana jika dunia tidak pernah menyepakati pelarangan bahan kimia perusak ozon?",
+      "hook_visual": "Bumi terlihat normal dari luar angkasa, lalu lapisan pelindung UV menipis dalam simulasi waktu hingga sinar Matahari menembus jauh lebih kuat.",
+      "mechanism": "CFC mencapai stratosfer dan melepaskan klorin setelah terkena UV. Klorin mengkatalisis reaksi perusakan ozon. NASA memodelkan skenario tanpa regulasi dengan emisi CFC dan senyawa sejenis tumbuh 3% per tahun setelah 1987.",
+      "staged_impacts": [
+        "Penurunan ozon meningkatkan paparan UV-B di permukaan.",
+        "Paparan UV-B yang meningkat dapat memperbesar risiko kerusakan kulit dan mata.",
+        "Tumbuhan, fitoplankton, rantai makanan laut, dan produksi pangan dapat terdampak.",
+        "Model NASA menunjukkan dalam skenario tanpa pengendalian, penipisan ozon menjadi masalah global pada pertengahan abad ke-21."
+      ],
+      "indonesia_relevance": "Sedang. Mekanisme ozon bersifat global dan relevan bagi seluruh manusia, tetapi lubang ozon 2026 yang dibahas berada di Antarktika dan bukan berarti Indonesia sedang berada di bawah lubang ozon.",
+      "format_duration": "THE SCIENCE TWIST / THE WORLD AFTER; 45-60 detik.",
+      "risk": [
+        "Skenario 2065 adalah model counterfactual NASA tahun 2009, bukan prakiraan aktual.",
+        "Lubang ozon Antarktika 2026 besar berdasarkan luas tetapi tidak termasuk yang terdalam.",
+        "Jangan menyatakan UV di Indonesia meningkat karena lubang ozon Antarktika 2026.",
+        "Jangan menyamakan ozon stratosfer dengan polusi ozon di permukaan tanah."
+      ],
+      "confidence": "HIGH for 2026 measurements and ozone chemistry; HIGH for the model description but the no-protocol future remains conditional on model assumptions.",
+      "weighted_scores": {
+        "evidence_freshness_relevance": 5,
+        "scientific_foundation": 5,
+        "human_stakes": 4.5,
+        "visual_originality": 4.5,
+        "story_potential": 5,
+        "novelty_vs_archive": 4.5,
+        "indonesian_relevance": 3.5
+      },
+      "score": 94,
+      "score_note": "Exceptional counterfactual story with strong science and human stakes; geographically remote current event and historical model need clear framing.",
+      "source_claim_ids": [
+        "CLM-005",
+        "CLM-006",
+        "CLM-007",
+        "CLM-008"
+      ]
+    },
+    {
+      "id": "CAND-03",
+      "title": "378 Hari Tanpa Jendela: Jika Manusia Benar-Benar Tinggal di Mars",
+      "pillar": "HUMAN",
+      "secondary_pillars": [
+        "CIVILIZATION & TECHNOLOGY",
+        "NATURE & PHYSICS"
+      ],
+      "evidence_label": "CURRENT_VERIFIED",
+      "what_if": "Bagaimana jika empat manusia harus hidup di Mars selama lebih dari setahun, mengelola semua kebutuhan sendiri, dan tidak bisa meminta bantuan Bumi secara langsung?",
+      "hook_visual": "Empat orang keluar dari habitat tertutup setelah 378 hari. Mereka masih berada di Bumi—tetapi telah menjalani simulasi hidup di Mars.",
+      "mechanism": "Isolasi jangka panjang, keterbatasan sumber daya, operasi habitat, kebutuhan pangan dan air, beban kerja, kerja tim, serta jeda komunikasi antarbenda langit memengaruhi perencanaan dan kinerja kru. CHAPEA menguji sebagian faktor tersebut dalam analog di Houston.",
+      "staged_impacts": [
+        "Kru harus mengatur makanan, air, bahan habis pakai, perawatan habitat, dan jadwal kerja.",
+        "Jeda komunikasi hingga 22 menit sekali jalan membuat respons Bumi tidak dapat berlangsung seperti percakapan langsung.",
+        "Perawatan medis, kegagalan peralatan, dan keputusan operasional membutuhkan prosedur serta otonomi kru.",
+        "Data kesehatan dan kinerja dari analog membantu NASA merancang sistem dukungan untuk misi jangka panjang, tetapi hasil analisis Mission 2 masih dievaluasi."
+      ],
+      "indonesia_relevance": "Sedang-tinggi sebagai cerita universal tentang isolasi, kerja tim, manajemen sumber daya, dan batas kemampuan manusia; peristiwa aktual berlangsung di Amerika Serikat.",
+      "format_duration": "HUMAN SURVIVAL POV; 45-60 detik.",
+      "risk": [
+        "CHAPEA berlangsung di Houston, bukan di Mars.",
+        "Analog tidak mereproduksi gravitasi Mars, radiasi kosmik, atmosfer tipis, atau seluruh bahaya permukaan Mars.",
+        "Jangan menyatakan kru telah membuktikan manusia dapat bertahan hidup di Mars.",
+        "Jangan mengarang hasil kesehatan mental/fisik; NASA masih mengevaluasi data."
+      ],
+      "confidence": "HIGH for mission duration, operations and communication-delay description; MEDIUM for extrapolation to an actual Mars mission.",
+      "weighted_scores": {
+        "evidence_freshness_relevance": 5,
+        "scientific_foundation": 4.5,
+        "human_stakes": 5,
+        "visual_originality": 5,
+        "story_potential": 5,
+        "novelty_vs_archive": 4.5,
+        "indonesian_relevance": 4
+      },
+      "score": 95.5,
+      "score_note": "Strongest human POV and narrative arc; the key limitation is that an Earth analog cannot validate survival under actual Martian environmental conditions.",
+      "source_claim_ids": [
+        "CLM-009",
+        "CLM-010",
+        "CLM-011"
+      ]
+    }
+  ],
+  "recommendation": {
+    "candidate_id": "CAND-03",
+    "rationale": [
+      "The NASA story is current and independently corroborated.",
+      "The premise is easy to understand and has a clear beginning, escalation, and payoff.",
+      "The visual environment supports realistic cinematic production.",
+      "The story connects scientific constraints with universal human stakes."
+    ],
+    "tradeoffs": [
+      "Do not imply that the crew actually went to Mars.",
+      "Do not present unpublished post-mission health findings as established results.",
+      "The simulation omits several decisive Martian environmental hazards."
+    ],
+    "next_verification": [
+      "Confirm the exact one-way communication delay wording for the selected scene.",
+      "Use NASA's official habitat and crew descriptions as reference; distinguish actual footage from cinematic reconstruction.",
+      "Keep all Mars environmental conditions within documented ranges if adding them to the story."
+    ]
+  },
+  "platform_access": {
+    "TikTok Creative Center": "DIRECT_PAGE_INACCESSIBLE",
+    "Google Trends Indonesia": "DIRECT_PAGE_INACCESSIBLE",
+    "TikTok account analytics": "NOT_AVAILABLE_IN_THIS_SESSION",
+    "third_party_proxy_used": false
+  },
+  "limitations": [
+    "No native TikTok Creative Center or Google Trends metrics were retrieved; no trend or virality claim is made.",
+    "No private account analytics were available.",
+    "WMO full report PDF was linked but not retrieved; WMO's official report landing page and full press release were inspected.",
+    "The TEP study's PubMed abstract and metadata were visible, but the direct PubMed and publisher full text were inaccessible; it was not promoted to a candidate.",
+    "NASA CHAPEA Mission 2 detailed health and performance results were still undergoing post-mission evaluation in the 9 November article.",
+    "Ozone counterfactual is a 2009 model scenario and must not be presented as a present-day forecast."
+  ],
+  "truncated": false
+}
