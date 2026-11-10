@@ -50,7 +50,7 @@
       "published_at": "2026-11-09",
       "accessed_at": "2026-11-10T01:01:36Z",
       "source_type": "PRIMARY",
-      "inspection": "FULL_PAGE; full report PDF link identified but library PDF text fetch was unavailable.",
+      "inspection": "ABSTRACT_OR_METADATA",
       "data_period": "Data available through September 2026; preliminary ocean data through July.",
       "claim_ids": [
         "CLM-001",
@@ -196,7 +196,7 @@
       "data_period": "Three cruises during 2020-2023; 621 samples from 95 stations.",
       "accessed_at": "2026-11-10T01:01:36Z",
       "source_type": "PRIMARY",
-      "inspection": "ABSTRACT_AND_METADATA_ONLY; PubMed page direct fetch returned an access error; abstract exposed in indexed PubMed record and JoVE Visualize metadata.",
+      "inspection": "ABSTRACT_OR_METADATA",
       "claim_ids": [
         "CLM-012"
       ],
