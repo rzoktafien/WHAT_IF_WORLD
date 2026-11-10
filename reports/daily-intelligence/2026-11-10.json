@@ -103,7 +103,7 @@
       "url": "https://ozone.unep.org/2026-antarctic-ozone-hole-shaped-strong-and-persistent-polar-vortex",
       "published_at": "2026-11-09",
       "accessed_at": "2026-11-10T01:01:36Z",
-      "source_type": "PRIMARY_INTERGOVERNMENTAL",
+      "source_type": "PRIMARY",
       "inspection": "FULL_TEXT",
       "data_period": "2026 Antarctic ozone-hole season; reported average extent through 2026-10-31.",
       "claim_ids": [
@@ -122,7 +122,7 @@
       "published_at": "2009-05-13",
       "last_updated": "2025-11-14",
       "accessed_at": "2026-11-10T01:01:36Z",
-      "source_type": "PRIMARY_RESEARCH_EXPLAINER",
+      "source_type": "PRIMARY",
       "inspection": "FULL_TEXT",
       "data_period": "Counterfactual model simulation from 1975 to 2065; CFC-like emissions increased 3% per year in the no-regulation scenario.",
       "claim_ids": [
@@ -139,7 +139,7 @@
       "url": "https://ozone.unep.org/did-you-know-ozone-layer-earths-sunscreen-protecting-humans-suns-harmful-ultraviolet-radiation",
       "published_at": "2020-02-04",
       "accessed_at": "2026-11-10T01:01:36Z",
-      "source_type": "PRIMARY_INTERGOVERNMENTAL",
+      "source_type": "PRIMARY",
       "inspection": "FULL_TEXT",
       "claim_ids": [
         "CLM-008"
@@ -176,7 +176,7 @@
       "published_at": "2026-11-01",
       "event_date": "2026-10-31",
       "accessed_at": "2026-11-10T01:01:36Z",
-      "source_type": "INDEPENDENT_SECONDARY",
+      "source_type": "SECONDARY",
       "inspection": "FULL_TEXT",
       "claim_ids": [
         "CLM-009",
@@ -195,7 +195,7 @@
       "published_at": "2026-11-02",
       "data_period": "Three cruises during 2020-2023; 621 samples from 95 stations.",
       "accessed_at": "2026-11-10T01:01:36Z",
-      "source_type": "PRIMARY_PEER_REVIEWED_AHEAD_OF_PRINT",
+      "source_type": "PRIMARY",
       "inspection": "ABSTRACT_AND_METADATA_ONLY; PubMed page direct fetch returned an access error; abstract exposed in indexed PubMed record and JoVE Visualize metadata.",
       "claim_ids": [
         "CLM-012"
@@ -211,39 +211,13 @@
       "url": "https://oceanexplorer.noaa.gov/ocean-fact/marinesnow/",
       "published_at": "2013-10-21",
       "accessed_at": "2026-11-10T01:01:36Z",
-      "source_type": "PRIMARY_TECHNICAL_EXPLAINER",
+      "source_type": "PRIMARY",
       "inspection": "FULL_TEXT",
       "claim_ids": [
         "CLM-013"
       ],
       "limitations": [
         "General explanation of marine snow; not evidence for the specific 2026 Western Pacific TEP distribution."
-      ]
-    },
-    {
-      "id": "SRC-012",
-      "title": "Google Trends Indonesia daily trending searches",
-      "publisher": "Google Trends",
-      "url": "https://trends.google.com/trends/trendingsearches/daily?geo=ID",
-      "accessed_at": "2026-11-10T01:01:36Z",
-      "source_type": "PLATFORM_SIGNAL",
-      "inspection": "DIRECT_PAGE_INACCESSIBLE",
-      "claim_ids": [],
-      "limitations": [
-        "No trend metrics retrieved; no proxy substituted."
-      ]
-    },
-    {
-      "id": "SRC-013",
-      "title": "TikTok Creative Center Indonesia popular hashtags",
-      "publisher": "TikTok Creative Center",
-      "url": "https://ads.tiktok.com/business/creativecenter/inspiration/popular/hashtag/pc/en?countryCode=ID",
-      "accessed_at": "2026-11-10T01:01:36Z",
-      "source_type": "PLATFORM_SIGNAL",
-      "inspection": "DIRECT_PAGE_INACCESSIBLE",
-      "claim_ids": [],
-      "limitations": [
-        "No hashtag rankings or metrics retrieved."
       ]
     }
   ],
@@ -258,7 +232,8 @@
       ],
       "confidence": "HIGH",
       "safe_wording": "Rata-rata suhu permukaan global Januari-September 2026 sekitar 1,47 C di atas rata-rata praindustri 1850-1900.",
-      "caveat": "Not the final annual 2026 value."
+      "caveat": "Not the final annual 2026 value.",
+      "status": "SUPPORTED"
     },
     {
       "id": "CLM-002",
@@ -270,19 +245,21 @@
       ],
       "confidence": "HIGH",
       "safe_wording": "Laut menyerap sekitar 90% kelebihan panas dalam sistem Bumi; data awal 2026 mengarah pada tahun kesepuluh berturut-turut dengan kandungan panas laut yang memecahkan rekor.",
-      "caveat": "Preliminary ocean data through July; do not imply the ocean has reached a physical saturation threshold."
+      "caveat": "Preliminary ocean data through July; do not imply the ocean has reached a physical saturation threshold.",
+      "status": "SUPPORTED"
     },
     {
       "id": "CLM-003",
       "claim": "WMO expects the very strong El Nino to intensify heat and raise risks of extreme heat, drought and heavy rainfall into 2027.",
-      "class": "FORECAST",
+      "class": "EXTRAPOLATION",
       "source_ids": [
         "SRC-001",
         "SRC-002"
       ],
       "confidence": "HIGH",
       "safe_wording": "WMO memperkirakan El Nino sangat kuat dapat meningkatkan risiko panas ekstrem, kekeringan, dan hujan lebat hingga 2027.",
-      "caveat": "Forecast risk, not a deterministic outcome for every Indonesian region."
+      "caveat": "Forecast risk, not a deterministic outcome for every Indonesian region.",
+      "status": "QUALIFIED"
     },
     {
       "id": "CLM-004",
@@ -293,7 +270,8 @@
       ],
       "confidence": "HIGH",
       "safe_wording": "BMKG melaporkan kondisi Indonesia yang tidak seragam: hujan sangat lebat di beberapa wilayah sementara wilayah lain masih kering.",
-      "caveat": "Hotspot is a satellite detection, not proof of a confirmed fire; rainfall values apply only to reported locations and dates."
+      "caveat": "Hotspot is a satellite detection, not proof of a confirmed fire; rainfall values apply only to reported locations and dates.",
+      "status": "SUPPORTED"
     },
     {
       "id": "CLM-005",
@@ -305,7 +283,8 @@
       ],
       "confidence": "HIGH",
       "safe_wording": "Lubang ozon Antarktika 2026 menjadi yang terbesar ketujuh berdasarkan luas musiman dalam 48 tahun pemantauan, tetapi tidak termasuk yang terdalam.",
-      "caveat": "Area ranking is distinct from ozone depletion severity; this is the Antarctic seasonal hole, not a hole over Indonesia."
+      "caveat": "Area ranking is distinct from ozone depletion severity; this is the Antarctic seasonal hole, not a hole over Indonesia.",
+      "status": "SUPPORTED"
     },
     {
       "id": "CLM-006",
@@ -317,18 +296,20 @@
       ],
       "confidence": "HIGH",
       "safe_wording": "Pusaran angin kutub yang kuat memperluas lubang ozon Antarktika tahun ini, sementara pemulihan jangka panjang masih dinilai berada di jalur yang benar.",
-      "caveat": "Do not infer a reversal of long-term recovery from one year's seasonal area."
+      "caveat": "Do not infer a reversal of long-term recovery from one year's seasonal area.",
+      "status": "SUPPORTED"
     },
     {
       "id": "CLM-007",
       "claim": "A NASA-led 2009 chemistry-climate model simulated a counterfactual world without CFC controls: emissions rose 3% per year after 1987 and global ozone fell dramatically by 2065, with modeled losses reaching about 67% relative to the 1970s.",
-      "class": "MODELLED_COUNTERFACTUAL",
+      "class": "EXTRAPOLATION",
       "source_ids": [
         "SRC-006"
       ],
-      "confidence": "HIGH_FOR_MODEL_DESCRIPTION",
+      "confidence": "HIGH",
       "safe_wording": "Dalam simulasi NASA tentang dunia tanpa pengendalian CFC, ozon global dapat turun sekitar dua pertiga pada 2065.",
-      "caveat": "This is a historical model scenario, not a present-day forecast; explicitly state the assumed emissions pathway."
+      "caveat": "This is a historical model scenario, not a present-day forecast; explicitly state the assumed emissions pathway.",
+      "status": "QUALIFIED"
     },
     {
       "id": "CLM-008",
@@ -340,7 +321,8 @@
       ],
       "confidence": "HIGH",
       "safe_wording": "Lapisan ozon stratosfer menyerap sebagian besar radiasi UV berbahaya dan membantu melindungi manusia serta ekosistem.",
-      "caveat": "Do not infer that the 2026 Antarctic hole directly causes elevated UV in Indonesia."
+      "caveat": "Do not infer that the 2026 Antarctic hole directly causes elevated UV in Indonesia.",
+      "status": "SUPPORTED"
     },
     {
       "id": "CLM-009",
@@ -352,7 +334,8 @@
       ],
       "confidence": "HIGH",
       "safe_wording": "Empat relawan menyelesaikan simulasi misi Mars selama 378 hari di habitat NASA di Houston dan keluar pada 31 Oktober 2026.",
-      "caveat": "They remained on Earth in an analog habitat."
+      "caveat": "They remained on Earth in an analog habitat.",
+      "status": "SUPPORTED"
     },
     {
       "id": "CLM-010",
@@ -364,7 +347,8 @@
       ],
       "confidence": "HIGH",
       "safe_wording": "Selama simulasi, kru berlatih Marswalk, mengoperasikan robot, merawat habitat, berolahraga, menanam tanaman, dan menghadapi jeda komunikasi hingga 22 menit sekali jalan.",
-      "caveat": "The analog does not reproduce Martian gravity, radiation, atmosphere, or every environmental hazard."
+      "caveat": "The analog does not reproduce Martian gravity, radiation, atmosphere, or every environmental hazard.",
+      "status": "SUPPORTED"
     },
     {
       "id": "CLM-011",
@@ -376,18 +360,20 @@
       ],
       "confidence": "HIGH",
       "safe_wording": "Data kesehatan dan kinerja kru masih dievaluasi; jangan menyajikan hasil medis final yang belum dipublikasikan.",
-      "caveat": "No deterministic clinical conclusions."
+      "caveat": "No deterministic clinical conclusions.",
+      "status": "SUPPORTED"
     },
     {
       "id": "CLM-012",
       "claim": "A peer-reviewed ahead-of-print paper dated 2 November 2026 reports a persistent subsurface TEP maximum at 50-75 m at 92.6% of 95 Western Pacific Warm Pool stations, based on 621 samples from three cruises during 2020-2023.",
-      "class": "FACT_ABSTRACT_ONLY",
+      "class": "FACT",
       "source_ids": [
         "SRC-010"
       ],
-      "confidence": "MEDIUM_HIGH",
+      "confidence": "MEDIUM",
       "safe_wording": "Abstrak penelitian baru melaporkan partikel gel organik laut TEP terkonsentrasi pada kedalaman 50-75 meter di sebagian besar stasiun pengamatan Western Pacific Warm Pool.",
-      "caveat": "Full text unavailable; the proposed light-availability explanation remains a hypothesis; do not claim the stations were Indonesian waters."
+      "caveat": "Full text unavailable; the proposed light-availability explanation remains a hypothesis; do not claim the stations were Indonesian waters.",
+      "status": "QUALIFIED"
     },
     {
       "id": "CLM-013",
@@ -398,7 +384,8 @@
       ],
       "confidence": "HIGH",
       "safe_wording": "Salju laut adalah material biologis dari lapisan atas laut yang tenggelam dan menjadi sumber makanan bagi organisme laut dalam.",
-      "caveat": "General marine snow explanation; not direct proof of the specific 2026 TEP study's carbon flux."
+      "caveat": "General marine snow explanation; not direct proof of the specific 2026 TEP study's carbon flux.",
+      "status": "SUPPORTED"
     }
   ],
   "candidates": [
@@ -558,10 +545,9 @@
     ]
   },
   "platform_access": {
-    "TikTok Creative Center": "DIRECT_PAGE_INACCESSIBLE",
-    "Google Trends Indonesia": "DIRECT_PAGE_INACCESSIBLE",
-    "TikTok account analytics": "NOT_AVAILABLE_IN_THIS_SESSION",
-    "third_party_proxy_used": false
+    "TikTok Creative Center": "UNAVAILABLE",
+    "Google Trends Indonesia": "UNAVAILABLE",
+    "TikTok account analytics": "UNAVAILABLE"
   },
   "limitations": [
     "No native TikTok Creative Center or Google Trends metrics were retrieved; no trend or virality claim is made.",
