@@ -88,7 +88,7 @@ The semantic manifest validator requires timestamped `APPROVED` records with a n
 **Activation constraint:** GitHub scheduled workflows execute from the repository's default branch. This monitor is present and testable in the V3.2 feature PR, but its daily cron will not become active until the repository owner deliberately merges the workflow to the default branch. This remediation does not modify `main`; before that merge, report freshness can be checked by the validation command and CI on the feature branch.
 
 
-## 8. Connected-provider audit snapshot (2026-11-09)
+## 8. Connected-provider audit snapshot (2026-11-11)
 
 These are workspace-scoped observations from read-only capability checks. They are not guarantees about every provider plan, workspace, or future model release.
 
