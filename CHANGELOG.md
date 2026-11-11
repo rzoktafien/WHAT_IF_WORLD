@@ -108,7 +108,7 @@
 
 
 ## [Unreleased] — UAT P0 remediation
-- Refreshed the connected-provider readiness snapshot on 2026-11-09: Runway exposes image models and `sam3` background removal only, with no video/speech/music/SFX models or saved workflows; the 12 recent gallery items are images and are not project-ingested; Canva folder/design and video-guide checks remain limited.
+- Refreshed the connected-provider readiness snapshot on 2026-11-11: Runway exposes image models and `sam3` background removal only, with no video/speech/music/SFX models or saved workflows; the 14 recent gallery items are images and are not project-ingested; Canva folder/design and video-guide checks remain limited.
 
 - Enforced stage-specific, timestamped human approvals for idea selection, pilot, batch, generation, asset QA, master QA, and release transitions.
 - Corrected the example manifest to remain an unapproved IDEA_CANDIDATE rather than implying producer approval.
