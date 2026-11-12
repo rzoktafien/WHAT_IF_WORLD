@@ -1,3 +1,14 @@
+## [Unreleased] — Connected provider readiness correction (2026-11-12)
+- Revalidated the connected Runway workspace: eight image models, `sam3` background removal, no exposed video/speech/music/SFX models, zero saved workflows, and 14 recent gallery items, all images.
+- Corrected the provider snapshot's internal gallery-count inconsistency (12 versus 14) and aligned the audit date to 2026-11-12.
+- Rechecked Canva: no WHAT IF WORLD project folder, one YouTube Channel Banner design, and the video-guide response still reports an advanced-feature availability restriction; no project video timeline or render was verified.
+- No media generation, editing, upload, rights clearance, or publication was performed.
+
+## [Unreleased] — Connected provider capability audit (2026-11-06)
+- Recorded the connected Runway workspace as image-generation capable only: no video, speech, music/SFX models or saved workflows were exposed; recent images were not mapped to project assets.
+- Recorded the Canva design inventory and the current plan/trial restriction returned for video production; no project video timeline or render was verified.
+- Kept Phase 2 PARTIAL, Phase 3 NOT STARTED, and Phase 4 DEFERRED; no media generation, editing, or publication was executed.
+
 ## [Unreleased] — Repository audit and TikTok delivery contract
 - Added a mandatory TikTok cover-image prompt, exact Indonesian cover overlay, caption/description, hashtags, pinned comment and CTA to the production template and WW-005 delivery artifacts.
 - Required the complete prompt and metadata package to be delivered directly in chat; GitHub remains the canonical archive, not a user-facing prompt retrieval task.
@@ -103,6 +114,8 @@
 
 
 ## [Unreleased] — UAT P0 remediation
+- Refreshed the connected-provider readiness snapshot on 2026-11-11: Runway exposes image models and `sam3` background removal only, with no video/speech/music/SFX models or saved workflows; the 14 recent gallery items are images and are not project-ingested; Canva folder/design and video-guide checks remain limited.
+
 - Enforced stage-specific, timestamped human approvals for idea selection, pilot, batch, generation, asset QA, master QA, and release transitions.
 - Corrected the example manifest to remain an unapproved IDEA_CANDIDATE rather than implying producer approval.
 - Integrated the 2026-11-05 Daily Intelligence source and claim provenance into the active development line.
