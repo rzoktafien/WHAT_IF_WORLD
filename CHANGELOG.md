@@ -1,3 +1,9 @@
+## [Unreleased] — Connected provider readiness correction (2026-11-12)
+- Revalidated the connected Runway workspace: eight image models, `sam3` background removal, no exposed video/speech/music/SFX models, zero saved workflows, and 14 recent gallery items, all images.
+- Corrected the provider snapshot's internal gallery-count inconsistency (12 versus 14) and aligned the audit date to 2026-11-12.
+- Rechecked Canva: no WHAT IF WORLD project folder, one YouTube Channel Banner design, and the video-guide response still reports an advanced-feature availability restriction; no project video timeline or render was verified.
+- No media generation, editing, upload, rights clearance, or publication was performed.
+
 ## [Unreleased] — Connected provider capability audit (2026-11-06)
 - Recorded the connected Runway workspace as image-generation capable only: no video, speech, music/SFX models or saved workflows were exposed; recent images were not mapped to project assets.
 - Recorded the Canva design inventory and the current plan/trial restriction returned for video production; no project video timeline or render was verified.
