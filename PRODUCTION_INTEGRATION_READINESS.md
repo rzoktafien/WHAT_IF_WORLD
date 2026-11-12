@@ -1,7 +1,7 @@
 # WHAT IF WORLD — Production Integration Readiness
 
 **Document ID:** PIR-001  
-**Audit snapshot:** 2026-11-11  
+**Audit snapshot:** 2026-11-12  
 **Status:** PHASE 1 ENGINEERING BASELINE VERIFIED; GOOGLE FLOW REMAINS MANUAL; CONNECTED RUNWAY/CANVA CAPABILITIES ARE LIMITED (SEE SECTION 8)
 
 ## 1. Executive finding
@@ -19,8 +19,8 @@ Describe WHAT IF WORLD accurately as an AI-assisted, human-operated production w
 | GitHub CI | Python 3.11/3.12/3.13 matrix, schema/contract checks, tests, negative release-gate test | IMPLEMENTED | Monitor future CI |
 | Asset storage and immutable media versioning | No integrated object store or asset service evidenced | NOT IMPLEMENTED | Provider, access controls, immutable IDs, checksums, retention and backup test |
 | Google Flow / Veo | Copy-ready prompt pack + manual handoff and render-return procedure documented; no API/connector assumed | INTENDED MANUAL WORKFLOW | Human Producer runs prompts, supplies actual render and visible metadata; rights and render QA remain required |
-| Runway MCP (workspace snapshot 2026-11-11) | Authenticated; eight image models and `sam3` background removal exposed; no video/speech/music/SFX models; zero saved workflows; 14 recent gallery items are images and are not linked to production/shot IDs or project rights records | IMAGE-ONLY ACCESS; NO VIDEO/AUDIO ADAPTER | Keep project asset provenance and rights outside the provider gallery; verify each output and store it in project-controlled immutable storage |
-| Canva connector (workspace snapshot 2026-11-11) | One existing WHAT IF WORLD YouTube Channel Banner found; no project folder; video production guide returned the message that advanced AI features are unavailable on the current plan or trial; no project video timeline/render verified | DESIGN ACCESS; VIDEO GENERATION RESTRICTED BY CONNECTOR RESPONSE | Recheck actual capability before any video test; design-level editing tools do not establish a deterministic video-edit/export adapter |
+| Runway MCP (workspace snapshot 2026-11-12) | Authenticated; eight image models and `sam3` background removal exposed; no video/speech/music/SFX models; zero saved workflows; 14 recent gallery items are images and are not linked to production/shot IDs or project rights records | IMAGE-ONLY ACCESS; NO VIDEO/AUDIO ADAPTER | Keep project asset provenance and rights outside the provider gallery; verify each output and store it in project-controlled immutable storage |
+| Canva connector (workspace snapshot 2026-11-12) | One existing WHAT IF WORLD YouTube Channel Banner found; no project folder; video production guide returned the message that advanced AI features are unavailable on the current plan or trial; no project video timeline/render verified | DESIGN ACCESS; VIDEO GENERATION RESTRICTED BY CONNECTOR RESPONSE | Recheck actual capability before any video test; design-level editing tools do not establish a deterministic video-edit/export adapter |
 | TTS | No TTS adapter, voice consent ledger or render log evidenced | NOT IMPLEMENTED | Provider, licensed voice, pronunciation tests, audio export and provenance |
 | Editing / FFmpeg / Remotion / OTIO | No executable editing pipeline evidenced | NOT IMPLEMENTED | Versioned edit spec, media probes, audio mix, subtitle burn-in, export preset and render QA |
 | TikTok publishing | README specifies manual publishing; no publishing adapter or credential flow evidenced | MANUAL | Authorized app/scopes, disclosure workflow, upload test and confirmed public post URL |
@@ -88,7 +88,7 @@ The semantic manifest validator requires timestamped `APPROVED` records with a n
 **Activation constraint:** GitHub scheduled workflows execute from the repository's default branch. This monitor is present and testable in the V3.2 feature PR, but its daily cron will not become active until the repository owner deliberately merges the workflow to the default branch. This remediation does not modify `main`; before that merge, report freshness can be checked by the validation command and CI on the feature branch.
 
 
-## 8. Connected-provider audit snapshot (2026-11-11)
+## 8. Connected-provider audit snapshot (2026-11-12)
 
 These are workspace-scoped observations from read-only capability checks. They are not guarantees about every provider plan, workspace, or future model release.
 
@@ -98,7 +98,7 @@ These are workspace-scoped observations from read-only capability checks. They a
 - Video models: none exposed. Speech, music, and sound-effect model lists were also empty.
 - Saved workflows: zero.
 - Background-removal models exposed: `sam3`; this does not establish video generation, TTS, audio, or editing capability.
-- Recent gallery: 12 generated image assets were returned and no videos. Two newest entries, created 2026-11-08 UTC, were named as location-master and character-master references. The metadata did not establish a WHAT IF WORLD production ID, shot ID, canonical-reference approval, checksum in the project register, or rights disposition; none is counted as a project production asset.
+- Recent gallery: 14 generated image assets were returned and no videos. Two newest entries, created 2026-11-08 UTC, were named as location-master and character-master references. The metadata did not establish a WHAT IF WORLD production ID, shot ID, canonical-reference approval, checksum in the project register, or rights disposition; none is counted as a project production asset.
 - No image, video, speech, music, or sound-effect generation was initiated during this audit.
 
 ### Canva connector
