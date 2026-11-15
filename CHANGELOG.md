@@ -1,3 +1,9 @@
+## [Unreleased] — Connected provider readiness correction (2026-11-15)
+- Rechecked Runway: eight image models and `sam3` background removal are exposed; no video models are exposed by `whoami`; Eleven v4 voice-library search returned five voice records, but no speech-generation job or TTS render was tested; music/SFX capability remains unverified; zero saved workflows; 15 recent gallery items are generated images, with no video.
+- Recorded the newest gallery item as a generated TikTok cover thumbnail created 2026-11-14 14:41 UTC. It remains provider-gallery media, not a project-ingested asset; the two earlier location/character reference images also lack project registry and approval evidence.
+- Rechecked Canva: no WHAT IF WORLD project folder, one YouTube Channel Banner design, and the video-guide response still reports that advanced AI features are unavailable on the current plan or trial; no project video timeline or render was verified.
+- No media generation, speech rendering, editing, upload, rights clearance, or publication was performed.
+
 ## [Unreleased] — Connected provider readiness correction (2026-11-12)
 - Revalidated the connected Runway workspace: eight image models, `sam3` background removal, no exposed video/speech/music/SFX models, zero saved workflows, and 14 recent gallery items, all images.
 - Corrected the provider snapshot's internal gallery-count inconsistency (12 versus 14) and aligned the audit date to 2026-11-12.
