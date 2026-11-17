@@ -126,3 +126,4 @@
 - Corrected the example manifest to remain an unapproved IDEA_CANDIDATE rather than implying producer approval.
 - Integrated the 2026-11-05 Daily Intelligence source and claim provenance into the active development line.
 - Added a machine-readable Daily Intelligence report schema, freshness/provenance validator, and scheduled GitHub issue monitor. The monitor detects missing/stale/incomplete reports; it does not perform research or claim trend discovery.
+- Refreshed the 2026-11-17 connected-provider snapshot: Runway voice-library search returned 20 records on the first page with a continuation cursor; `whoami` still exposes no speech models, and no TTS render was run. Rechecked Canva folder/design/video-guide responses; no production video output was verified.
