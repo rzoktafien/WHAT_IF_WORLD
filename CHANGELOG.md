@@ -1,3 +1,27 @@
+## [Unreleased] — Connected provider readiness audit (2026-11-20)
+- Rechecked the authenticated Runway workspace: eight image models and `sam3` background removal are exposed; `whoami` returned empty video, speech, music, sound-effect, and listed video-tool model arrays.
+- Corrected the earlier five-record summary: Eleven v4 voice-library search returned 20 records on the first page with a continuation cursor; total library size remains unknown. Voice search is not speech generation; no TTS job or audio output was produced.
+- Reconfirmed 15 recent Runway gallery items are all images and no videos; the newest remains the generated TikTok cover created 2026-11-14 14:41 UTC. Gallery items are not project-ingested or canonically approved.
+- Rechecked Canva: no WHAT IF WORLD project folder, one existing YouTube Channel Banner design, and the video guide still reports that advanced AI features are unavailable on the current plan or trial; no project video timeline or render was verified.
+- No generation, TTS, editing, upload, rights clearance, or publication was performed. Phase 2 remains PARTIAL, Phase 3 NOT STARTED, and Phase 4 DEFERRED.
+
+## [Unreleased] — Connected provider readiness correction (2026-11-15)
+- Rechecked Runway: eight image models and `sam3` background removal are exposed; no video models are exposed by `whoami`; Eleven v4 voice-library search returned five voice records, but no speech-generation job or TTS render was tested; music/SFX capability remains unverified; zero saved workflows; 15 recent gallery items are generated images, with no video.
+- Recorded the newest gallery item as a generated TikTok cover thumbnail created 2026-11-14 14:41 UTC. It remains provider-gallery media, not a project-ingested asset; the two earlier location/character reference images also lack project registry and approval evidence.
+- Rechecked Canva: no WHAT IF WORLD project folder, one YouTube Channel Banner design, and the video-guide response still reports that advanced AI features are unavailable on the current plan or trial; no project video timeline or render was verified.
+- No media generation, speech rendering, editing, upload, rights clearance, or publication was performed.
+
+## [Unreleased] — Connected provider readiness correction (2026-11-12)
+- Revalidated the connected Runway workspace: eight image models, `sam3` background removal, no exposed video/speech/music/SFX models, zero saved workflows, and 14 recent gallery items, all images.
+- Corrected the provider snapshot's internal gallery-count inconsistency (12 versus 14) and aligned the audit date to 2026-11-12.
+- Rechecked Canva: no WHAT IF WORLD project folder, one YouTube Channel Banner design, and the video-guide response still reports an advanced-feature availability restriction; no project video timeline or render was verified.
+- No media generation, editing, upload, rights clearance, or publication was performed.
+
+## [Unreleased] — Connected provider capability audit (2026-11-06)
+- Recorded the connected Runway workspace as image-generation capable only: no video, speech, music/SFX models or saved workflows were exposed; recent images were not mapped to project assets.
+- Recorded the Canva design inventory and the current plan/trial restriction returned for video production; no project video timeline or render was verified.
+- Kept Phase 2 PARTIAL, Phase 3 NOT STARTED, and Phase 4 DEFERRED; no media generation, editing, or publication was executed.
+
 ## [Unreleased] — Repository audit and TikTok delivery contract
 - Added a mandatory TikTok cover-image prompt, exact Indonesian cover overlay, caption/description, hashtags, pinned comment and CTA to the production template and WW-005 delivery artifacts.
 - Required the complete prompt and metadata package to be delivered directly in chat; GitHub remains the canonical archive, not a user-facing prompt retrieval task.
@@ -103,7 +127,10 @@
 
 
 ## [Unreleased] — UAT P0 remediation
+- Refreshed the connected-provider readiness snapshot on 2026-11-11: Runway exposes image models and `sam3` background removal only, with no video/speech/music/SFX models or saved workflows; the 14 recent gallery items are images and are not project-ingested; Canva folder/design and video-guide checks remain limited.
+
 - Enforced stage-specific, timestamped human approvals for idea selection, pilot, batch, generation, asset QA, master QA, and release transitions.
 - Corrected the example manifest to remain an unapproved IDEA_CANDIDATE rather than implying producer approval.
 - Integrated the 2026-11-05 Daily Intelligence source and claim provenance into the active development line.
 - Added a machine-readable Daily Intelligence report schema, freshness/provenance validator, and scheduled GitHub issue monitor. The monitor detects missing/stale/incomplete reports; it does not perform research or claim trend discovery.
+- Refreshed the 2026-11-17 connected-provider snapshot: Runway voice-library search returned 20 records on the first page with a continuation cursor; `whoami` still exposes no speech models, and no TTS render was run. Rechecked Canva folder/design/video-guide responses; no production video output was verified.
