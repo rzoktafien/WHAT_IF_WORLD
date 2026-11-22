@@ -1,3 +1,10 @@
+## [Unreleased] — Connected provider readiness audit (2026-11-22)
+- Rechecked the authenticated Runway workspace: eight image models and `sam3` background removal are exposed; video, speech, music, sound-effect, and all listed video-tool model arrays are empty. 3D mesh generation is unavailable (`feature_unavailable`).
+- Eleven v4 voice-library search returned 20 records on the first page with a continuation cursor; total library size remains unknown. `availableSpeechModels` is empty, and no TTS job or audio output was produced.
+- Rechecked the 20 most recent Runway gallery items returned by the limit-20 query: all 20 are images, with no video or audio in that page. This is not a total workspace inventory; none of the returned items is verified as project-ingested or canonically approved. Zero saved Runway workflows were found.
+- Rechecked Canva: no WHAT IF WORLD folder, one existing YouTube Channel Banner design, and the video guide still reports that advanced AI features are unavailable on the current plan or trial. No project video timeline or render was verified.
+- No generation, TTS, editing, upload, rights clearance, or publication was performed. Phase 2 remains PARTIAL, Phase 3 NOT STARTED, and Phase 4 DEFERRED.
+
 ## [Unreleased] — Connected provider readiness audit (2026-11-20)
 - Rechecked the authenticated Runway workspace: eight image models and `sam3` background removal are exposed; `whoami` returned empty video, speech, music, sound-effect, and listed video-tool model arrays.
 - Corrected the earlier five-record summary: Eleven v4 voice-library search returned 20 records on the first page with a continuation cursor; total library size remains unknown. Voice search is not speech generation; no TTS job or audio output was produced.
