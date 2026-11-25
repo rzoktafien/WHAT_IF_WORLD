@@ -1,3 +1,11 @@
+## [Unreleased] — Connected provider capability recheck (2026-11-25)
+- Rechecked the authenticated Runway workspace `B4R4K4`: seven image models and `sam3` background removal are exposed; video, speech, music, sound-effect, listed video-tool, and mesh model lists are empty. Mesh generation reports `feature_unavailable`; zero saved workflows were returned.
+- The 2026-11-25 image-model list no longer includes `seedream-5-pro`, which appeared in the 2026-11-22 snapshot. The reason is not established; no retirement or plan restriction is inferred.
+- `list_recent(limit=20)` returned 15 recent items, all images, with no video/audio in the returned set. This is not a project asset inventory; no production/shot mapping, project checksum, rights disposition, or canonical approval was verified.
+- The last Eleven v4 voice-library search (2026-11-22) returned 20 first-page records with a continuation cursor; total library size is unknown. Current `availableSpeechModels` remains empty; no TTS job or audio output was produced.
+- Canva search returned one existing WHAT IF WORLD YouTube Channel Banner design and no project folder. The current video guide returned `upgrade_required` with `alternative_model_available: false`; no video generation or render was attempted.
+- No provider generation, TTS, editing, upload, rights clearance, or publication was performed. Phase 2 remains PARTIAL, Phase 3 NOT STARTED, and Phase 4 DEFERRED.
+
 ## [Unreleased] — Connected provider readiness audit (2026-11-22)
 - Rechecked the authenticated Runway workspace: eight image models and `sam3` background removal are exposed; video, speech, music, sound-effect, and all listed video-tool model arrays are empty. 3D mesh generation is unavailable (`feature_unavailable`).
 - Eleven v4 voice-library search returned 20 records on the first page with a continuation cursor; total library size remains unknown. `availableSpeechModels` is empty, and no TTS job or audio output was produced.
