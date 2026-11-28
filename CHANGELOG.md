@@ -1,3 +1,10 @@
+## [Unreleased] — Connected provider capability recheck (2026-11-28)
+- Rechecked Runway workspace `B4R4K4`: seven image models and `sam3` background removal are exposed; video, speech, music, sound-effect, listed video-tool, and mesh model lists are empty; mesh generation reports `feature_unavailable`.
+- Eleven v4 voice-library search returned 20 first-page records with a continuation cursor. This is catalog search only; `availableSpeechModels` is empty and no TTS job or audio output was run.
+- Runway `list_workflows` returned zero saved workflows.
+- Canva folder search returned no WHAT IF WORLD folder; design search returned one YouTube Channel Banner design (`DAHZ-ecP__Y`). The video guide returned `upgrade_required` with no alternative model.
+- No provider generation, editing, upload, rights clearance, or publication was performed. Phase 2 remains PARTIAL, Phase 3 NOT STARTED, and Phase 4 DEFERRED.
+
 ## [Unreleased] — Connected provider capability recheck (2026-11-25)
 - Rechecked the authenticated Runway workspace `B4R4K4`: seven image models and `sam3` background removal are exposed; video, speech, music, sound-effect, listed video-tool, and mesh model lists are empty. Mesh generation reports `feature_unavailable`; zero saved workflows were returned.
 - The 2026-11-25 image-model list no longer includes `seedream-5-pro`, which appeared in the 2026-11-22 snapshot. The reason is not established; no retirement or plan restriction is inferred.
