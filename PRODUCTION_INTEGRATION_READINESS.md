@@ -137,3 +137,28 @@ These are read-only observations from the currently connected workspaces. They s
 - Runway image-model access can support only an explicitly authorized still/reference task, subject to rights and provenance capture. It does not establish video, TTS, SFX, music, editing, or publishing readiness.
 - Canva design access does not establish a deterministic video-edit/export adapter.
 - Phase 2 remains PARTIAL, Phase 3 remains NOT STARTED, and Phase 4 remains DEFERRED. No provider generation, editing, upload, rights clearance, or publication was performed.
+
+## 10. Connected-provider recheck (2026-11-28)
+
+These are read-only observations from the currently connected Runway and Canva workspaces. They are workspace-scoped and do not establish capabilities for other accounts or plans.
+
+### Runway MCP
+- Authentication: confirmed for workspace `B4R4K4`; model availability response was marked fresh; no alternate workspace was reported.
+- Current image models: `nano-banana-pro`, `nano-banana-2.1`, `nano-banana-2`, `nano-banana-2-lite`, `p-image-ideogram`, `gen-4`, and `gen-4-image-turbo` (seven).
+- `availableVideoModels`, `availableSpeechModels`, `availableMusicModels`, `availableSoundEffectModels`, and all listed `availableVideoToolModels` arrays are empty.
+- `availableMeshModels` is empty and mesh generation reports `feature_unavailable`; `sam3` remains exposed for image background removal.
+- `list_workflows` returned zero saved workflows.
+- Eleven v4 voice-library search returned 20 records on the first page with a continuation cursor. This confirms voice-catalog search only; the empty `availableSpeechModels` list does not establish TTS generation capability. No speech-generation job or audio output was run.
+- No image, video, speech, music, sound-effect, editing, or upload job was initiated during this recheck.
+
+### Canva connector
+- Folder search returned no matching WHAT IF WORLD folder.
+- Design search returned one existing design: `WHAT IF WORLD — YouTube Channel Banner` (design ID `DAHZ-ecP__Y`).
+- The video production guide returned `upgrade_required` with `alternative_model_available: false`. No video generation was attempted; no project video timeline, export, or render was verified.
+
+### Operational consequence
+- Google Flow remains a manual Human Producer handoff; no API or connector is assumed.
+- Runway exposes image-generation models and voice-catalog search, but no video, speech-generation, music, sound-effect, listed video-tool, or mesh models in this workspace response. Voice search is not a TTS adapter.
+- Canva design access does not establish a video-generation or deterministic editing/export adapter.
+- Phase 2 remains PARTIAL, Phase 3 remains NOT STARTED, and Phase 4 remains DEFERRED. No provider generation, editing, upload, rights clearance, or publication was performed.
+
